@@ -1,0 +1,50 @@
+/* CONFIGURAÇÃO */
+@charset "UTF-8";
+* {
+    padding: 0;
+    margin: 0;
+    border: 1px solid black;
+}
+
+/* LAYOUT */
+.Container {
+    margin: 0 auto;
+}
+
+.Flex { 
+    display: flex;
+}
+
+header {
+    justify-content: space-between;
+}
+
+/* Smartphone Portrait (ATÉ 576px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+/* Smartphone landscape (ATÉ 768px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 576px) {
+    .Container {
+        width: 540px;
+    }
+}
+
+/* Tablet Portrait (ATÉ 992px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 768px) {
+    .Container {
+        width: 720px;
+    }
+}
+
+/* Tablet Landscape (ATÉ 992px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 992px) {
+    .Container {
+        width: 960px;
+    }
+}
+
+/* PC (>= 1200px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 1200px) {
+    .Container {
+        width: 1140px;
+    }
+}
