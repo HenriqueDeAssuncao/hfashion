@@ -27,9 +27,9 @@
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
-            <div id="nav-1">
-                <a href="<?=$CURRENT_URL?>/" id="logo" class="Hidden"><img src="" alt="Hfashion"></a>
+            <div id="nav-1" class="Flex">
                 <ul id="links-nav-1">
+                    <li class="links"><a href="<?=$CURRENT_URL?>/" id="logo" class="Hidden"><img src="" alt="Hfashion"></a></li>
                     <li class="links"><a href="<?=$CURRENT_URL?>/dashboard.php">Dashboard</a></li>
                     <li class="links"><a href="<?=$CURRENT_URL?>/edit_profile.php">Editar Perfil</a></li>
                     <li class="links"><a href="<?=$CURRENT_URL?>/quizzes.php">Quizzes</a></li>
