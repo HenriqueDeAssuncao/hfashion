@@ -72,6 +72,8 @@ nav#nav {
 }
 
 #links-nav-1 {
+    display: inline-block;
+    width: fit-content;
     list-style-type: none;
     padding: 20px;
     margin-bottom: 10px;
@@ -107,6 +109,12 @@ nav#nav {
     .Container {
         width: 960px;
     }
+
+    nav#nav {
+        align-items: center;
+        align-content: center;
+    }
+
     #nav-icons {
         display: none;
     }
@@ -119,12 +127,14 @@ nav#nav {
         height: fit-content;
         background-color: white;
         box-shadow: none;
+        align-items: center;
+        align-content: center;
     }
 
-    
     #links-nav-1 {
         padding: 0px;
         margin-bottom: 0px;
+        transition: none;
     }
     
     #links-nav-1 a {
@@ -135,9 +145,16 @@ nav#nav {
     #links-nav-1 > .links {
         margin-bottom: 0px;
         border-bottom: none;
+        float: left;
     }
 
+    #logo-mobile {
+        display: none;
+    }
 
+    #logo {
+        display: inline-block;
+    }
 }
 
 /* PC (>= 1200px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
