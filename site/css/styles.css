@@ -3,7 +3,6 @@
 * {
     padding: 0;
     margin: 0;
-    border: 1px solid black;
 }
 
 /* LAYOUT */
@@ -15,11 +14,12 @@
     display: flex;
 }
 
-header {
+/* Smartphone Portrait (ATÉ 576px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+/* HEADER */
+nav#nav {
     justify-content: space-between;
 }
-
-/* Smartphone Portrait (ATÉ 576px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
 /* Smartphone landscape (ATÉ 768px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 576px) {
