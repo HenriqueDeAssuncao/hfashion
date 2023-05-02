@@ -5,6 +5,11 @@
     margin: 0;
 }
 
+/* FONTES */
+/* Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+
 /* LAYOUT */
 .Container {
     margin: 0 auto;
@@ -14,11 +19,73 @@
     display: flex;
 }
 
+.Hidden {
+    display: none;
+}
+
 /* Smartphone Portrait (ATÉ 576px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
 /* HEADER */
+header#header {
+    font-family: Poppins, sans-serif;
+    height: 30px;
+    position: sticky;
+    top: 0;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: white;
+    -webkit-box-shadow: 0px 3px 10px 0px rgba(205,205,205,0.38);
+    -moz-box-shadow: 0px 3px 10px 0px rgba(205,205,205,0.38);
+    box-shadow: 0px 3px 10px 0px rgba(205,205,205,0.38);
+}
+
 nav#nav {
     justify-content: space-between;
+}
+
+#nav-icons {
+    position: relative;
+}
+
+#nav-icons button {
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+}
+
+#nav-icons #btn-close{
+    color: rgba(192, 36, 37, 1);
+}
+
+#nav-1 {
+    position: absolute;
+    left: -100%;
+    margin-top: 49px;
+    transition: 0.5s;
+    height: 100vh;
+    background-color: white;
+    box-shadow: 5px 0 5px -5px rgba(205,205,205,0.38);
+}
+
+#links-nav-1 {
+    list-style: inside;
+}
+
+#links-nav-1 {
+    list-style-type: none;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+#links-nav-1 a {
+    text-decoration: none;
+    color: black;
+}
+
+#links-nav-1 > .links {
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.644);
+    padding: 10px;
 }
 
 /* Smartphone landscape (ATÉ 768px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
@@ -40,6 +107,37 @@ nav#nav {
     .Container {
         width: 960px;
     }
+    #nav-icons {
+        display: none;
+    }
+
+    #nav-1 {
+        position: static;
+        display: inline-block;
+        margin-top: 0px;
+        left: 0;
+        height: fit-content;
+        background-color: white;
+        box-shadow: none;
+    }
+
+    
+    #links-nav-1 {
+        padding: 0px;
+        margin-bottom: 0px;
+    }
+    
+    #links-nav-1 a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    #links-nav-1 > .links {
+        margin-bottom: 0px;
+        border-bottom: none;
+    }
+
+
 }
 
 /* PC (>= 1200px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
