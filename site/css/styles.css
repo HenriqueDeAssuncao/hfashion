@@ -3,6 +3,7 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: Poppins, sans-serif;
 }
 
 /* FONTES */
@@ -27,12 +28,10 @@
 
 /* HEADER */
 header#header {
-    font-family: Poppins, sans-serif;
-    height: 30px;
+    height: fit-content;
     position: sticky;
     top: 0;
     margin-bottom: 20px;
-    padding: 20px;
     background-color: white;
     -webkit-box-shadow: 0px 3px 10px 0px rgba(205,205,205,0.38);
     -moz-box-shadow: 0px 3px 10px 0px rgba(205,205,205,0.38);
@@ -41,10 +40,17 @@ header#header {
 
 nav#nav {
     justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding: 20px;
 }
 
 #nav-icons {
     position: relative;
+}
+
+#nav-icons {
+    width: 20px;
 }
 
 #nav-icons button {
@@ -57,10 +63,15 @@ nav#nav {
     color: rgba(192, 36, 37, 1);
 }
 
+#logo {
+    margin-right: 25px;
+}
+
 #nav-1 {
     position: absolute;
     left: -100%;
-    margin-top: 49px;
+    top: 0;
+    margin-top: 70px;
     transition: 0.5s;
     height: 100vh;
     background-color: white;
@@ -84,10 +95,43 @@ nav#nav {
     color: black;
 }
 
+#links-nav-1 a:hover {
+    color: rgba(192, 36, 37, 1);
+}
+
 #links-nav-1 > .links {
     margin-bottom: 10px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.644);
     padding: 10px;
+}
+
+#nav-2 {
+    position: relative;
+}
+
+#profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+#dropdown-profile {
+    display: none;
+    position: absolute;
+    right: 0px;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+}
+
+#dropdown-profile:hover {
+    display: block;
+}
+
+#profile-img:hover ~ #dropdown-profile{
+    display: block;
 }
 
 /* Smartphone landscape (ATÉ 768px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
@@ -110,11 +154,6 @@ nav#nav {
         width: 960px;
     }
 
-    nav#nav {
-        align-items: center;
-        align-content: center;
-    }
-
     #nav-icons {
         display: none;
     }
@@ -134,7 +173,9 @@ nav#nav {
     #links-nav-1 {
         padding: 0px;
         margin-bottom: 0px;
-        transition: none;
+        display: flex;
+        align-items: center;
+        align-content: center;
     }
     
     #links-nav-1 a {
