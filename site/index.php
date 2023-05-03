@@ -1,29 +1,17 @@
 <?php
-    include_once("templates/header.php");
+    require_once("templates/header.php");
 ?>
+  
+<?php foreach($cards as $card):?>
+    <div class="card-Container">
+        <h2><?=$card['title'];?></h2>
 
-<main>
-    <!-- Na top-main eu coloco aquela imagem de fundo -->
-    <div class="top-main">
-    
+        <?php for ($i=0; $i < count($card['text']); $i++):?>
+            <p><?=$card['text'][$i];?></p>
+        <?php endfor;?>
     </div>
-
-    <!-- Abaixo eu coloco a linha do tempo -->
-        
-    <!-- Abaixo eu insiro os cards de forma dinâmica -->
-    <div class="Container">
-        <?php foreach($cards as $card):?>
-            <div class="card-Container">
-                <h2><?=$card['title'];?></h2>
-
-                <?php for ($i=0; $i < count($card['text']); $i++):?>
-                    <p><?=$card['text'][$i];?></p>
-                <?php endfor;?>
-            </div>
-        <?php endforeach;?>
-    </div>
-</main>
+<?php endforeach;?>
 
 <?php
-    include_once("templates/footer.php");
+    require_once("templates/footer.php");
 ?>

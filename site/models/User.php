@@ -8,6 +8,13 @@
         private $bio;
         private $token;
 
+        public function generateToken() {
+            return bin2hex(random_bytes(50)); //Aqui estou criando a hash
+        }
+        public function generatePassword($password)  {
+            return password_hash($password, PASSWORD_DEFAULT);
+        }
+
         //SETS E GETS
         public function getId() {
             return $this->id;
@@ -19,7 +26,7 @@
         public function getNickname() {
             return $this->nickname;
         }
-        public function setNickname($nickName) {
+        public function setNickname($nickname) {
             $this->nickname = $nickname;
         }
 
@@ -62,15 +69,16 @@
     }
 
     interface UserDAOInterface {
-        public function buildUser();
-        public function create();
-        public function update();
-        public function verifyToken();
-        public function setTokenToSession();
-        public function authenticateUser();
-        public function findBy();
-        public function findById();
-        public function findByToken();
+        public function buildUser($data);
+        public function create($user, $auth = false);
+        public function update(User $user, $redirect = true);
+        public function verifyToken($protected = false);
+        public function setTokenToSession($token, $redirect = true);
+        public function authenticateUser($nickname_email, $password);
+        public function findByNickname($nickname);
+        public function findByEmail($email);
+        public function findById($id);
+        public function findByToken($token);
         public function destroyToken();
-        public function changePassword();
+        public function changePassword(User $user);
     }
