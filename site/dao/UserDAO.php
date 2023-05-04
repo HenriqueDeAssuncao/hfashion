@@ -26,7 +26,7 @@
 
             return $user;
         }
-        public function create($user, $auth = false) {
+        public function create(User $user, $auth = false) {
             $stmt = $this->conn->prepare("INSERT INTO users (
                 nickname, email, password, token
                 ) VALUES (

@@ -19,18 +19,14 @@ function hide() {
 }
 
 //DROPDOWN BAR
-const btnDropdown = document.getElementById('btn-dropdown');
+const btnDropdown = document.getElementById('profile-img');
 const dropdownRect = document.getElementById('dropdown-rect');
 
-btnDropdown.addEventListener("click", dropdown);
-function dropdown() {
-    dropdownRect.style.display = "block";
-}
-//PARA OCULTAR A BARRA
-if (dropdownRect.style.display === "block") {
-    document.addEventListener("click", function (e) {
-        if (e.target.idName !== "btn-dropdown") {
-            dropdownRect.style.display = "none";
-        }
-    });
-}
+btnDropdown.addEventListener("click", () => {
+    dropdownRect.classList.toggle('Hidden');
+});
+document.addEventListener("click", ({target}) => {
+    if (target !== btnDropdown && !dropdownRect.contains(target)) {
+        dropdownRect.classList.add("Hidden");
+    }
+});

@@ -81,7 +81,7 @@
     </div>
 </header>
 
-<main>
+<main>                          
     <div class="Container">
         <?php if(!empty($flashMessage)):?>
             <div class="msg-<?=$flashMessage["type"];?> Flex">

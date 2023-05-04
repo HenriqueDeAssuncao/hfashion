@@ -70,7 +70,7 @@
 
     interface UserDAOInterface {
         public function buildUser($data);
-        public function create($user, $auth = false);
+        public function create(User $user, $auth = false);
         public function update(User $user, $redirect = true);
         public function verifyToken($protected = false);
         public function setTokenToSession($token, $redirect = true);

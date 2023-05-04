@@ -34,7 +34,7 @@
                         $user->setNickname($nickname);
                         $user->setEmail($email);
                         $user->setPassword($finalPassword);
-                        $user->setToken($token);
+                        $user->setToken($userToken);
 
                         $auth = true;
 
