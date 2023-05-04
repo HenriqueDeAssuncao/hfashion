@@ -25,7 +25,7 @@
                 }
                 if ($restrict === true) {
                     if ($email !== $admin) {
-                        $this->message->setMessage("Você não tem permissão para acessar essa página.", "error");
+                        $this->message->setMessage("Você não tem permissão para acessar esta página.", "error");
                     }
                 }
             }
