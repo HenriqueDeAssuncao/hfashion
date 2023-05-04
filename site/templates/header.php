@@ -4,7 +4,7 @@
     require_once ("data/cards.php");
     require_once ("dao/UserDAO.php");
     require_once ("models/User.php");
-    require_once ("models/Message.php");
+    require_once ("models/Adm.php");
 
     $message = new Message($CURRENT_URL);
     $flashMessage = $message->getMessage(); 
@@ -15,6 +15,7 @@
 
     $userDao = new UserDAO($conn, $CURRENT_URL);
     $userData = $userDao->verifyToken(false);
+    $adm = new Adm($CURRENT_URL);
 ?>
 
 <!DOCTYPE html>
@@ -49,7 +50,9 @@
                     <li class="links"><a href="<?=$CURRENT_URL?>/ranking.php">Classificação</a></li>
                     <!-- A página adm.php é restrita, então vai ter que ter tratamento do backend depois -->
                     <?php if($userData):?>
-                        <li class="links"><a href="<?=$CURRENT_URL?>/adm.php">ADM</a></li>
+                        <?php if($adm->isAdm($userDao, false)):?>
+                            <li class="links"><a href="<?=$CURRENT_URL?>/adm.php">ADM</a></li>
+                        <?php endif;?> 
                     <?php endif;?>
                 </ul>
             </div>

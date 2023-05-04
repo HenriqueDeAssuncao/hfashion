@@ -25,5 +25,12 @@ const dropdownRect = document.getElementById('dropdown-rect');
 btnDropdown.addEventListener("click", dropdown);
 function dropdown() {
     dropdownRect.style.display = "block";
-}   
+}
 //PARA OCULTAR A BARRA
+if (dropdownRect.style.display === "block") {
+    document.addEventListener("click", function (e) {
+        if (e.target.idName !== "btn-dropdown") {
+            dropdownRect.style.display = "none";
+        }
+    });
+}
