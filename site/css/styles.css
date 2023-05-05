@@ -35,16 +35,20 @@
 
 /* HEADER */
 header#header {
-    text-shadow: 1px 0px 1px rgba(0,0,0,0.10);
-    font-weight: 500;
+  header#header {
     height: fit-content;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #333333;
     position: sticky;
     top: 0;
-    margin-bottom: 20px;
     background-color: white;
-    -webkit-box-shadow: 0px 3px 10px 0px rgba(205,205,205,0.38);
-    -moz-box-shadow: 0px 3px 10px 0px rgba(205,205,205,0.38);
-    box-shadow: 0px 3px 10px 0px rgba(205,205,205,0.38);
+}
+
+nav#nav {
+    justify-content: space-between;
+    padding: 15px 10px 15px 10px;
 }
 
 nav#nav {
@@ -157,6 +161,20 @@ nav#nav {
 
 .msg-success {
     background-color: #5ee570;
+}
+
+/*index*/
+
+#banner{
+    width: 100%;
+}
+
+.titles{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    text-align: center;
+    color: #CE3C3C;
 }
 
 /* LOGIN */
