@@ -19,7 +19,7 @@ function hide() {
 }
 
 //DROPDOWN BAR
-const btnDropdown = document.getElementById('profile-img');
+const btnDropdown = document.getElementById('profile-pic-header');
 const dropdownRect = document.getElementById('dropdown-rect');
 
 btnDropdown.addEventListener("click", () => {

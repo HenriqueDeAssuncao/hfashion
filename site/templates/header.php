@@ -59,7 +59,7 @@
             <a href="<?=$CURRENT_URL?>"><img src="<?=$CURRENT_URL?>/img/logo-mobile.png" alt="Hfashion" id="logo-mobile" style="width: 40px"></a>
             <div id="nav-2">
                 <button id="btn-dropdown" class="Button">
-                    <div id="profile-img" style="background-image: url(<?=$CURRENT_URL?>/img/users/batman.jpg)" alt="Foto de Perfil"></div>
+                    <div id="profile-pic-header" class="profile-img" style="background-image: url(<?=$CURRENT_URL?>/img/users/user.png)" alt="Foto de Perfil"></div>
                 </button>
                 <div id="dropdown-rect" class="Hidden">
                     <div id="dropdown-tri">
