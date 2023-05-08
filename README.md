@@ -16,7 +16,7 @@
         token VARCHAR(100)
       );
 
-*SUBSTITUA O helpers/url.php POR:*
+*NA ESCOLA, SUBSTITUA O helpers/url.php POR:*
 
       session_start();
       $CURRENT_URL = "http://" . $_SERVER['SERVER_NAME'] .":8080". dirname($_SERVER['REQUEST_URI']. '?');
