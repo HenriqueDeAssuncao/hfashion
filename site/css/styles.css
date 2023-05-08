@@ -171,14 +171,12 @@ nav#nav {
     background-color: #5ee570;
 }
 
-/*INDEX*/
+/* INDEX >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */ 
 
-<<<<<<< HEAD
-#banner {
+#img-banner {
     width: 100%;
 }
 
-=======
 #img-line {
     margin-top: 25px;
 }
@@ -189,7 +187,6 @@ nav#nav {
     font-size: 60px;
     color: #CE3C3C;
     text-align: center;
-
 }
 
 .style_mediumtext {
@@ -204,7 +201,6 @@ nav#nav {
     width: fit-content;
 }
 
->>>>>>> 1668e257ab86772fe947a1bd8558f6a027791486
 .titles {
     font-style: normal;
     font-weight: 700;
@@ -213,7 +209,7 @@ nav#nav {
     color: #CE3C3C;
 }
 
-/* LOGIN */
+/* LOGIN >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */ 
 #register-container {
     padding-top: 120px;
     display: grid;
@@ -235,10 +231,6 @@ nav#nav {
 
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 1668e257ab86772fe947a1bd8558f6a027791486
 input {
     margin-top: 5px;
     border-radius: 4px;
@@ -262,16 +254,12 @@ p {
     margin-bottom: 10px;
 }
 
-<<<<<<< HEAD
 /* EDIT PROFILE */
 
 #update-img {
     width: 150px;
     height: 150px;
 }
-=======
-
->>>>>>> 1668e257ab86772fe947a1bd8558f6a027791486
 
 /* Smartphone landscape (ATÉ 768px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 576px) {
@@ -317,9 +305,6 @@ p {
         align-items: center;
     }
 
-<<<<<<< HEAD
-=======
->>>>>>> 1668e257ab86772fe947a1bd8558f6a027791486
     #links-nav-1>.links {
         margin-bottom: 0px;
         border-bottom: none;
