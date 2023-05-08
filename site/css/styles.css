@@ -7,10 +7,6 @@
     font-family: Poppins, sans-serif;
 }
 
-body {
-    margin: auto;
-}
-
 /* FONTES */
 /* Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@200;300;400;500;600&display=swap');
@@ -34,6 +30,10 @@ body {
 .Button {
     background-color: transparent;
     border: none;
+}
+
+.Auto {
+    margin: 0 auto;
 }
 
 /* Smartphone Portrait (ATÉ 576px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
@@ -199,6 +199,10 @@ nav#nav {
 #container-timeline {
     margin: 170px auto 16px auto;
     width: fit-content;
+}
+
+#img-timeline {
+    width: 100%;
 }
 
 .titles {
