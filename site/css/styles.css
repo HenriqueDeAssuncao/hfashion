@@ -7,6 +7,10 @@
     font-family: Poppins, sans-serif;
 }
 
+body {
+    margin: auto;
+}
+
 /* FONTES */
 /* Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@200;300;400;500;600&display=swap');
@@ -90,7 +94,7 @@ nav#nav {
 
 #links-nav-1 a {
     text-decoration: none;
-    color: black;
+    color: #333333;
 }
 
 #links-nav-1>.links {
@@ -169,10 +173,38 @@ nav#nav {
 
 /*INDEX*/
 
+<<<<<<< HEAD
 #banner {
     width: 100%;
 }
 
+=======
+#img-line {
+    margin-top: 25px;
+}
+
+.style_maintext {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    color: #CE3C3C;
+    text-align: center;
+
+}
+
+.style_mediumtext {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+}
+
+#container-timeline {
+    margin: 170px auto 16px auto;
+    width: fit-content;
+}
+
+>>>>>>> 1668e257ab86772fe947a1bd8558f6a027791486
 .titles {
     font-style: normal;
     font-weight: 700;
@@ -203,6 +235,10 @@ nav#nav {
 
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1668e257ab86772fe947a1bd8558f6a027791486
 input {
     margin-top: 5px;
     border-radius: 4px;
@@ -226,12 +262,16 @@ p {
     margin-bottom: 10px;
 }
 
+<<<<<<< HEAD
 /* EDIT PROFILE */
 
 #update-img {
     width: 150px;
     height: 150px;
 }
+=======
+
+>>>>>>> 1668e257ab86772fe947a1bd8558f6a027791486
 
 /* Smartphone landscape (ATÉ 768px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 576px) {
@@ -267,6 +307,7 @@ p {
         margin-top: 0px;
         left: 0;
         height: fit-content;
+        box-shadow: none;
     }
 
     #links-nav-1 {
@@ -276,11 +317,9 @@ p {
         align-items: center;
     }
 
-    #links-nav-1 a {
-        text-decoration: none;
-        color: black;
-    }
-
+<<<<<<< HEAD
+=======
+>>>>>>> 1668e257ab86772fe947a1bd8558f6a027791486
     #links-nav-1>.links {
         margin-bottom: 0px;
         border-bottom: none;
