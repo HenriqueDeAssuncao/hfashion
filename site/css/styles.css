@@ -1,9 +1,14 @@
 /* CONFIGURAÇÃO */
 @charset "UTF-8";
+
 * {
     padding: 0;
     margin: 0;
     font-family: Poppins, sans-serif;
+}
+
+body {
+    margin: auto;
 }
 
 /* FONTES */
@@ -16,7 +21,7 @@
     margin: 0 auto;
 }
 
-.Flex { 
+.Flex {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,7 +68,7 @@ nav#nav {
     font-size: 25px;
 }
 
-#nav-icons #btn-close{
+#nav-icons #btn-close {
     color: rgba(192, 36, 37, 1);
 }
 
@@ -75,7 +80,7 @@ nav#nav {
     transition: 0.5s;
     height: 100vh;
     background-color: white;
-    box-shadow: 5px 0 5px -5px rgba(205,205,205,0.38);
+    box-shadow: 5px 0 5px -5px rgba(205, 205, 205, 0.38);
 }
 
 #links-nav-1 {
@@ -89,10 +94,10 @@ nav#nav {
 
 #links-nav-1 a {
     text-decoration: none;
-    color: black;
+    color: #333333;
 }
 
-#links-nav-1 > .links {
+#links-nav-1>.links {
     margin-bottom: 10px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.644);
     padding: 10px;
@@ -148,7 +153,8 @@ nav#nav {
     padding: 10px;
 }
 
-.msg-success, .msg-error {
+.msg-success,
+.msg-error {
     width: 500px;
     height: 100px;
     margin: 0 auto;
@@ -162,13 +168,38 @@ nav#nav {
     background-color: #5ee570;
 }
 
-/*index*/
+/*INDEX*/
 
-#banner{
+#img-banner {
     width: 100%;
 }
 
-.titles{
+#img-timeline {
+    margin-top: 25px;
+}
+
+.style_maintext {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    color: #CE3C3C;
+    text-align: center;
+
+}
+
+.style_mediumtext {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+}
+
+#container-timeline {
+    margin: 170px auto 16px auto;
+    width: fit-content;
+}
+
+.titles {
     font-style: normal;
     font-weight: 700;
     font-size: 60px;
@@ -177,13 +208,13 @@ nav#nav {
 }
 
 /* LOGIN */
-#register-container{
- padding-top: 120px;
- display: grid;
+#register-container {
+    padding-top: 120px;
+    display: grid;
 
 }
 
-.form-group{
+.form-group {
     display: grid;
     margin: 0 45px;
     grid-template-rows: 1fr, 1fr;
@@ -192,22 +223,22 @@ nav#nav {
 }
 
 
-.email{
+.email {
     display: grid;
     grid-row: 1fr;
-    
+
 }
 
 
-input{
+input {
     margin-top: 5px;
     border-radius: 4px;
     height: 40px;
     background-color: aquamarine;
 }
 
-.btn-con
-{  display: grid;
+.btn-con {
+    display: grid;
     color: white;
     background-color: red;
     font-weight: 600;
@@ -216,11 +247,14 @@ input{
     margin-bottom: 20px;
 }
 
-p{
+p {
     display: grid;
     margin: 0 auto;
     margin-bottom: 10px;
 }
+
+
+
 /* Smartphone landscape (ATÉ 768px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 576px) {
     .Container {
@@ -255,6 +289,7 @@ p{
         margin-top: 0px;
         left: 0;
         height: fit-content;
+        box-shadow: none;
     }
 
     #links-nav-1 {
@@ -263,13 +298,8 @@ p{
         display: flex;
         align-items: center;
     }
-    
-    #links-nav-1 a {
-        text-decoration: none;
-        color: black;
-    }
-    
-    #links-nav-1 > .links {
+
+    #links-nav-1>.links {
         margin-bottom: 0px;
         border-bottom: none;
         float: left;
