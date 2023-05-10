@@ -16,6 +16,16 @@
     <form action="<?=$CURRENT_URL?>/user_process.php" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="type" value="update">
         <h1>Altere seus dados no formulário abaixo:</h1>
+		<h2>Perfil:</h2>
+        <div class="form-group">
+            <label for="image">Foto:</label>
+            <input type="file" name="image">
+			<div id="update-img" class="profile-img" style="background-image: url('<?=$CURRENT_URL?>/img/users/<?=$userData->getImage()?>')" alt="Foto de Perfil"></div>
+        </div>
+		<div class="form-group">
+            <label for="bio">Altere sua bio:</label>
+            <input type="bio" class="form-input" name="bio" value="<?=$userData->getBio()?>">
+        </div>
         <div class="form-group">
             <label for="nickname">Digite o seu novo apelido:</label>
             <input type="nickname" class="form-input" name="nickname" value="<?=$userData->getNickname()?>" placeholder="Digite o novo apelido">
@@ -27,14 +37,8 @@
             <input type="password" class="form-input" name="password" placeholder="Digite a nova senha">
         </div>
         <div class="form-group">
-            <label for="finalpassword">Confirmação de senha:</label>
-            <input type="finalpassword" class="form-input" name="finalpassword" placeholder="Confirme a senha">
-        </div>
-
-        <div id="update-img" class="profile-img" style="background-image: url('<?=$CURRENT_URL?>/img/users/<?=$userData->getImage()?>')" alt="Foto de Perfil"></div>
-        <div class="form-group">
-            <label for="image">Foto:</label>
-            <input type="file" name="image">
+            <label for="confirmpassword">Confirmação de senha:</label>
+            <input type="password" class="form-input" name="confirmpassword" placeholder="Confirme a senha">
         </div>
 
         <div class="form-container">
