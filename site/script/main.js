@@ -30,3 +30,5 @@ document.addEventListener("click", ({target}) => {
         dropdownRect.classList.add("Hidden");
     }
 });
+
+//DROPDOWN BAR -> CONECTAR/CRIAR CONTA

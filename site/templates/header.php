@@ -48,7 +48,6 @@
                     <li class="links"><a href="<?=$CURRENT_URL?>/dashboard.php">Dashboard</a></li>
                     <li class="links"><a href="<?=$CURRENT_URL?>/quizzes.php">Quizzes</a></li>
                     <li class="links"><a href="<?=$CURRENT_URL?>/ranking.php">Classificação</a></li>
-                    <!-- A página adm.php é restrita, então vai ter que ter tratamento do backend depois -->
                     <?php if($userData):?>
                         <?php if($adm->isAdm($userDao, false)):?>
                             <li class="links"><a href="<?=$CURRENT_URL?>/adm.php">ADM</a></li>
@@ -56,7 +55,9 @@
                     <?php endif;?>
                 </ul>
             </div>
+
             <a href="<?=$CURRENT_URL?>"><img src="<?=$CURRENT_URL?>/img/logo-mobile.png" alt="Hfashion" id="logo-mobile" style="width: 40px"></a>
+
             <div id="nav-2">
                 <button id="btn-dropdown" class="Button">
                     <div id="profile-pic-header" class="profile-img" style="background-image: url(<?=$CURRENT_URL?>/img/users/user.png)" alt="Foto de Perfil"></div>

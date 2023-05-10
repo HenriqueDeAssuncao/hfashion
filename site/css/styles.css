@@ -105,6 +105,7 @@ nav#nav {
 
 #nav-2 {
     position: relative;
+    display: block;
 }
 
 #profile-pic-header {
@@ -315,6 +316,10 @@ p {
         float: left;
         margin: 0 17px 0 17px;
         padding: 0px;
+    }
+
+    #nav-2-desktop {
+        display: block;
     }
 
     #nav-2 {
