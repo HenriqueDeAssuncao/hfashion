@@ -16,6 +16,14 @@
     $userDao = new UserDAO($conn, $CURRENT_URL);
     $userData = $userDao->verifyToken(false);
     $adm = new Adm($CURRENT_URL);
+
+    $image = "user.png";
+    if($userData) {
+        if($userData->getImage() !== "") {
+            $image = $userData->getImage();
+        }
+    }
+    
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +68,7 @@
 
             <div id="nav-2">
                 <button id="btn-dropdown" class="Button">
-                    <div id="profile-pic-header" class="profile-img" style="background-image: url(<?=$CURRENT_URL?>/img/users/user.png)" alt="Foto de Perfil"></div>
+                    <div id="profile-pic-header" class="profile-img" style="background-image: url(<?=$CURRENT_URL?>/img/users/<?=$image?>)" alt="Foto de Perfil"></div>
                 </button>
                 <div id="dropdown-rect" class="Hidden">
                     <div id="dropdown-tri">

@@ -63,7 +63,7 @@
 
             if ($redirect) {
                 //Redirecionapara o perfil do usuário
-                $this->message->setMessage("Dados atualizados com sucesso.", "success", "editprofile.php");
+                $this->message->setMessage("Dados atualizados com sucesso.", "success");
             }
         }
         public function verifyToken($protected = false) {
@@ -174,6 +174,13 @@
             $this->message->setMessage("Você fez logout com sucesso.", "success");
         }
         public function changePassword($user) {
+            if ($user) {
+                $stmt = $this->conn->prepare("UPDATE users SET password = :password WHERE id = :id");
+                $stmt->bindParam(":password", $user->getPassword());
+                $stmt->bindParam(":id", $user->getId());
+                $stmt->execute();
 
+                $this->message->setMessage("Senha atualizada com sucesso.", "success");
+            }
         }
     }

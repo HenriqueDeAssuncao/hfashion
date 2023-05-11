@@ -6,10 +6,6 @@
     $user = new User();
     $userDao = new UserDAO($conn, $CURRENT_URL);
     $userData = $userDao->verifyToken(true);
-
-    if ($userData->getImage() == "") {
-        $userData->setImage("user.png");
-    }
 ?>
 
 <div id="edit-container">
@@ -19,8 +15,8 @@
 		<h2>Perfil:</h2>
         <div class="form-group">
             <label for="image">Foto:</label>
-            <input type="file" name="image">
-			<div id="update-img" class="profile-img" style="background-image: url('<?=$CURRENT_URL?>/img/users/<?=$userData->getImage()?>')" alt="Foto de Perfil"></div>
+            <input type="file" name="image"> 
+			<div class="profile-img" style="width: 100px; height: 100px; background-image: url('<?=$CURRENT_URL?>/img/users/<?=$image?>')" alt="Foto de Perfil"></div>
         </div>
 		<div class="form-group">
             <label for="bio">Altere sua bio:</label>
@@ -30,6 +26,13 @@
             <label for="nickname">Digite o seu novo apelido:</label>
             <input type="nickname" class="form-input" name="nickname" value="<?=$userData->getNickname()?>" placeholder="Digite o novo apelido">
         </div>
+        <div class="form-container">
+            <input type="submit" class="Button" value="Salvar">
+        </div>
+    </form>
+
+    <form action="<?=$CURRENT_URL?>/user_process.php" method="POST">
+    <input type="hidden" name="type" value="changepassword">
         <h2>Senha:</h2>
         <p>Digite a sua nova senha e confirme para alterá-la:</p>
         <div class="form-group">
@@ -40,11 +43,11 @@
             <label for="confirmpassword">Confirmação de senha:</label>
             <input type="password" class="form-input" name="confirmpassword" placeholder="Confirme a senha">
         </div>
-
         <div class="form-container">
-            <input type="submit" class="Button" value="Editar">
+            <input type="submit" class="Button" value="Alterar">
         </div>
     </form>
+
 </div>
 
 <?php

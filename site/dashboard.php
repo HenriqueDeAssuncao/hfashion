@@ -9,7 +9,7 @@
 
 <h1>Teste Dashboard</h1>
 <h2>Olá, <?=$userData->getNickname()?>!</h2>
-<div class="profile-img" style="width: 100px; height: 100px; background-image: url(<?=$CURRENT_URL?>/img/users/user.png)">
+<div class="profile-img" style="width: 200px; height: 200px; background-image: url(<?=$CURRENT_URL?>/img/users/<?=$image?>)">
 </div>
 <div>
 	<p><?=$userData->getBio()?></p>
