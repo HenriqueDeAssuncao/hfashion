@@ -16,14 +16,15 @@
     $userDao = new UserDAO($conn, $CURRENT_URL);
     $userData = $userDao->verifyToken(false);
     $adm = new Adm($CURRENT_URL);
-
-    $image = "user.png";
-    if($userData) {
-        if($userData->getImage() !== "") {
-            $image = $userData->getImage();
+   
+    if (empty($userData)) {
+        $image = "user.png";
+    } else {
+        $image = $userData->getImage();
+        if ($userData->getImage() == "") {
+            $image = "user.png";
         }
     }
-    
 ?>
 
 <!DOCTYPE html>
@@ -53,7 +54,9 @@
             <div id="nav-1" class="Flex">
                 <ul id="links-nav-1">
                     <li class="links"><a href="<?=$CURRENT_URL?>/" id="logo" class="Hidden"><img src="img/logo.png" alt="Hfashion" style="width: 100px"></a></li>
-                    <li class="links"><a href="<?=$CURRENT_URL?>/dashboard.php">Dashboard</a></li>
+                    <?php if(!empty($userData)):?>
+                        <li class="links"><a href="<?=$CURRENT_URL?>/dashboard.php">Dashboard</a></li>
+                    <?php endif;?>
                     <li class="links"><a href="<?=$CURRENT_URL?>/quizzes.php">Quizzes</a></li>
                     <li class="links"><a href="<?=$CURRENT_URL?>/ranking.php">Classificação</a></li>
                     <?php if($userData):?>
