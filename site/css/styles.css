@@ -174,7 +174,18 @@ nav#nav {
 
 /* INDEX >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */ 
 
-#img-banner {
+#container-logo {
+    width: fit-content;
+
+}
+
+#container-banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#img_logo_high{
     width: 100%;
 }
 
@@ -202,9 +213,7 @@ nav#nav {
     width: fit-content;
 }
 
-#img-timeline {
-    width: 100%;
-}
+
 
 .titles {
     font-style: normal;
@@ -213,6 +222,16 @@ nav#nav {
     text-align: center;
     color: #CE3C3C;
 }
+
+#txt_logo_high{
+    letter-spacing: 0.225em;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    color: #FFFFFF;
+}
+
+
 
 /* LOGIN >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */ 
 #register-container {
