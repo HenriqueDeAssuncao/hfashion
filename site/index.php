@@ -2,8 +2,8 @@
     require_once("templates/header.php");
 ?>
   </div>
-    <div id="container-banner">
-    <img src="img/banner.png" alt="Principais personagens de High School" id="img-banner">   
+    <div id="container-banner" style="background-image: url(<?=$CURRENT_URL?>/img/index/banner.svg); width:100%; height:940px;">
+  
   </div>
     <div id="container-timeline">
       <p class="style_maintext"> 
@@ -20,3 +20,4 @@
 <?php
     require_once("templates/footer.php");
 ?>
+
