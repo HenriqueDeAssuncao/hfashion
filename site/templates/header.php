@@ -97,6 +97,7 @@
     <div class="Container">
         <?php if(!empty($flashMessage)):?>
             <div class="msg-<?=$flashMessage["type"];?> Flex">
+				<div id="msgIcon"><i class="<?=$flashMessage["icon"]?>"></i></div>
                 <p><?=$flashMessage["msg"];?></p>
             </div>
         <?php endif;?>
