@@ -1,0 +1,4 @@
+->parametro url
+	-carregar artigo,
+	-carregar quiz,
+	
