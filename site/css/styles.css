@@ -174,7 +174,16 @@ nav#nav {
 
 /* INDEX >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */ 
 
-#img-banner {
+.hr {
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 1065px;
+    border: 2px solid #E5E5E5;
+}
+
+btn-roll {}
+
+#img_logo_high {
     width: 100%;
 }
 
@@ -182,37 +191,106 @@ nav#nav {
     margin-top: 25px;
 }
 
-.style_maintext {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 60px;
-    color: #CE3C3C;
-    text-align: center;
+#img_logo_aboutus {
+    width: 210px;
 }
 
-.style_mediumtext {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    text-align: center;
-}
 
-#container-timeline {
-    margin: 170px auto 16px auto;
+#container-logo {
     width: fit-content;
+
 }
 
-#img-timeline {
+#container-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container-aboutus {
+    height: 430px;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#info-aboutus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1100px;
+    height: 210px;
+
+}
+
+#div_text_aboutus {
+    align-items: flex-start;
+    width: 790.87px;
+    height: 116px;
+
+}
+
+#align-aboutus {
+    margin: 0 0 40px 0;
+}
+
+#div_img_aboutus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 68 0 0;
+}
+
+#container-oqvcvera {
+    height: 615px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#info-oqvcvera{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 915px;
+    height: 395px;
+    background-color: #5ee570;
 }
 
 .titles {
     font-style: normal;
     font-weight: 700;
     font-size: 60px;
-    text-align: center;
     color: #CE3C3C;
 }
+
+#txt_logo_high {
+    letter-spacing: 0.225em;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    color: #FFFFFF;
+}
+
+.style-maintext {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 22px;
+    color: #3C3C3C;
+}
+
+.style-regulartext {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #777777;
+}
+
+
 
 /* LOGIN >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */ 
 #register-container {
