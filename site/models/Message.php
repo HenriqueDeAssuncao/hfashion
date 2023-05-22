@@ -16,10 +16,16 @@
         }
 
         public function getMessage() {
+			$icon = "fa-sharp fa-solid fa-circle-check";
+			if ($_SESSION["type"] == "error") {
+				$icon = "fa-sharp fa-solid fa-circle-exclamation";
+			}
+			
             if (!empty($_SESSION["msg"])) {
                 return [
                     "msg" => $_SESSION["msg"],
-                    "type" => $_SESSION["type"]
+                    "type" => $_SESSION["type"],
+					"icon" => $icon
                 ];
             }
             else {
@@ -29,5 +35,6 @@
         public function clearMessage() {
             $_SESSION["msg"] = "";
             $_SESSION["type"] = "";
+			$_SESSION["icon"] = "";
         }
     }
