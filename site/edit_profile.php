@@ -16,15 +16,15 @@
         <div class="form-group">
             <label for="image">Foto:</label>
             <input type="file" name="image"> 
-			<div class="profile-img" style="width: 100px; height: 100px; background-image: url('<?=$CURRENT_URL?>/img/users/<?=$image?>')" alt="Foto de Perfil"></div>
+	<div class="profile-img" style="width: 100px; height: 100px; background-image: url('<?=$CURRENT_URL?>/img/users/<?=$image?>')" alt="Foto de Perfil"></div>
         </div>
-		<div class="form-group">
+	<div class="form-group">
             <label for="bio">Altere sua bio:</label>
             <input type="bio" class="form-input" name="bio" value="<?=$userData->getBio()?>">
         </div>
         <div class="form-group">
             <label for="nickname">Digite o seu novo apelido:</label>
-            <input type="nickname" class="form-input" name="nickname" value="<?=$userData->getNickname()?>" placeholder="Digite o novo apelido">
+            <input type="nickname" class="form-input" name="nickname" placeholder="Digite o novo apelido">
         </div>
         <div class="form-container">
             <input type="submit" class="Button" value="Salvar">
