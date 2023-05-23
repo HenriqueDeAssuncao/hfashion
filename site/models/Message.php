@@ -24,7 +24,7 @@
                 return [
                     "msg" => $_SESSION["msg"],
                     "type" => $_SESSION["type"],
-		    "icon" => $icon
+		            "icon" => $icon
                 ];
             }
             else {
@@ -34,6 +34,6 @@
         public function clearMessage() {
             $_SESSION["msg"] = "";
             $_SESSION["type"] = "";
-	    $_SESSION["icon"] = "";
+	        $_SESSION["icon"] = "";
         }
     }

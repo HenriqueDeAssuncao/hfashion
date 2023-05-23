@@ -1,7 +1,6 @@
 <?php
     require_once("templates/header.php");
 ?>
-
 <!-- FOTO DE FUNDO -->
   </div>
     <div id="container-banner" style="background-image: url(<?=$CURRENT_URL?>/img/index/banner.svg); width:100%; height:940px;">

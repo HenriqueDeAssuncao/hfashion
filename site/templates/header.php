@@ -1,7 +1,6 @@
 <?php
     require_once ("helpers/url.php");
     require_once ("helpers/db.php");
-    require_once ("data/cards.php");
     require_once ("dao/UserDAO.php");
     require_once ("models/User.php");
     require_once ("models/Adm.php");
@@ -58,7 +57,6 @@
                         <li class="links"><a href="<?=$CURRENT_URL?>/dashboard.php">Dashboard</a></li>
                     <?php endif;?>
                     <li class="links"><a href="<?=$CURRENT_URL?>/quizzes.php">Quizzes</a></li>
-                    <li class="links"><a href="<?=$CURRENT_URL?>/ranking.php">Classificação</a></li>
                     <?php if($userData):?>
                         <?php if($adm->isAdm($userDao, false)):?>
                             <li class="links"><a href="<?=$CURRENT_URL?>/adm.php">ADM</a></li>
