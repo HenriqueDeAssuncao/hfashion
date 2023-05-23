@@ -16,10 +16,10 @@
 <!-- SOBRE NOS -->
     <div id="container-aboutus">
       <div id= "info-aboutus">
-        <div id="div_img_aboutus">
+        <div id="div-img-aboutus">
           <img src="img/index/logo_circle.svg" id="img_logo_aboutus">
         </div>
-        <div id="div_text_aboutus">
+        <div id="div-text-aboutus">
           <p class="style-maintext" id="align-aboutus"> De onde surgiu o HiFashion?</p>
           <p class="style-regulartext">Learning with Duolingo is fun, and research shows that it works! With quick, bite-sized lessons,you’ll earn points and unlock new levels while gaining real-world communication skills.</p>
         </div>
@@ -33,7 +33,18 @@
         <div id="div_title">
           <p class="style-maintext">O que você vai aprender?</p>
         </div>
+        <div id="div-topicos">
 
+          <div class="div-coluna">
+
+          </div>
+          <div id="div-ilustracaosharpay">
+
+          </div>
+          <div class="div-coluna">
+
+          </div>
+        </div>
       </div>
     </div>
     <hr class="hr">
