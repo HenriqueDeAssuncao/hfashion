@@ -5,6 +5,7 @@
     padding: 0;
     margin: 0;
     font-family: Poppins, sans-serif;
+    border: 1px solid black;
 }
 
 /* FONTES */
@@ -217,29 +218,28 @@ nav#nav {
 
 #info-aboutus {
     display: flex;
+    flex-direction : row;
     justify-content: center;
     align-items: center;
     width: 1100px;
     height: 210px;
-
 }
 
-#div_text_aboutus {
+#div-text-aboutus {
     align-items: flex-start;
     width: 790.87px;
     height: 116px;
-
 }
 
 #align-aboutus {
     margin: 0 0 40px 0;
 }
 
-#div_img_aboutus {
+#div-img-aboutus {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 68 0 0;
+    margin: 0 68px 0 0;
 }
 
 #container-oqvcvera {
@@ -248,15 +248,50 @@ nav#nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: lightgray;
 }
 
 #info-oqvcvera{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 915px;
     height: 395px;
     background-color: #5ee570;
+}
+
+#div-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#div-topicos{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #CE3C3C;
+
+}
+
+.div-coluna{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 255px;
+    height: 345px;
+    background-color: lightcoral;
+    border: 2px solid #333333;
+}
+#div-ilustracaosharpay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 345px;
+    background-color: lightsalmon;
+    border: 2px solid #333333;
 }
 
 .titles {
