@@ -38,6 +38,177 @@
 
 /* Smartphone Portrait (ATÉ 576px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
+.hr {
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 1065px;
+    border: 2px solid #E5E5E5;
+}
+
+
+#img_logo_high {
+    width: 100%;
+}
+
+#img-line {
+    margin-top: 25px;
+}
+
+#img_logo_aboutus {
+    width: 210px;
+}
+#img-logo-cursos{
+    width: 40px;
+}
+
+#container-logo {
+    width: fit-content;
+
+}
+
+#container-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container-aboutus {
+    height: 430px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#info-aboutus {
+    display: flex;
+    flex-direction : row;
+    justify-content: center;
+    align-items: center;
+    width: 1100px;
+    height: 210px;
+}
+
+#div-text-aboutus {
+    align-items: flex-start;
+    width: 790.87px;
+    height: 116px;
+}
+
+#align-aboutus {
+    margin: 0 0 40px 0;
+}
+
+#div-img-aboutus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 68px;
+}
+
+#container-oqvcvera {
+    height: 615px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#info-oqvcvera{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 915px;
+    height: 470px;
+}
+
+#div-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 75px;
+}
+#div-topicos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+.div-coluna{
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    width: 255px;
+    height: 345px;
+}
+
+.cursos{
+    display: flex;
+    flex-direction : row;
+    width: 255px;
+}
+
+.icon-cursos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;    
+}
+
+#div-ilustracaosharpay{
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 345px;
+}
+
+.titles {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+}
+
+#txt_logo_high {
+    letter-spacing: 0.225em;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    color: #FFFFFF;
+}
+
+.style-maintext {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 22px;
+    color: #3C3C3C;
+}
+
+.style-regulartext {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #777777;
+}
+
+#size-cursos-main{
+    font-size: 16px;
+}
+
+#size-cursos-regular{
+    font-size: 12px;
+    color: #777777;
+}
+
+}
+
+
 /* HEADER */
 header#header {
     height: fit-content;
@@ -375,7 +546,6 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: lightgray;
 }
 
 #info-oqvcvera{
@@ -385,7 +555,6 @@ p {
     align-items: center;
     width: 915px;
     height: 470px;
-    background-color: #5ee570;
 }
 
 #div-title{
@@ -401,17 +570,15 @@ p {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-color: #CE3C3C;
-
 }
 
 
 .div-coluna{
     display: flex;
     flex-direction: column;
+    gap: 80px;
     width: 255px;
     height: 345px;
-    background-color: lightcoral;
 }
 
 .cursos{
@@ -432,15 +599,12 @@ p {
     align-items: center;
     width: 300px;
     height: 345px;
-    background-color: lightsalmon;
-    border: 2px solid #333333;
 }
 
 .titles {
     font-style: normal;
     font-weight: 700;
     font-size: 60px;
-    color: #CE3C3C;
 }
 
 #txt_logo_high {
