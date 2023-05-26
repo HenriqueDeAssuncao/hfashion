@@ -59,7 +59,7 @@
                     <li class="links"><a href="<?=$CURRENT_URL?>/quizzes.php">Quizzes</a></li>
                     <?php if($userData):?>
                         <?php if($adm->isAdm($userDao, false)):?>
-                            <li class="links"><a href="<?=$CURRENT_URL?>/adm.php">ADM</a></li>
+                            <li class="links"><a href="<?=$CURRENT_URL?>/adm.php"><i class="fa-solid fa-gear"></i></a></li>
                         <?php endif;?> 
                     <?php endif;?>
                 </ul>

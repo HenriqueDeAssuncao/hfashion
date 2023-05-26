@@ -206,12 +206,10 @@
     color: #777777;
 }
 
-}
-
 
 /* HEADER */
 header#header {
-    height: fit-content;
+    z-index: 1;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
