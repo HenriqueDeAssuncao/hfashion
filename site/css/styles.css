@@ -318,6 +318,28 @@ nav#nav {
     list-style-type: none;
 }
 
+#links-nav-2 li { 
+    transform-origin: top center;
+    animation: translateX 300ms
+}
+
+@keyframes translateX {
+0% {
+    opacity: 0;
+    transform: translateX(60px);
+}
+
+80% {
+    transform: translateX(-5px);
+}
+
+100% {
+    opacity: 1;
+    transform: translateX(0px);
+}
+}
+
+
 #links-nav-2 a {
     text-decoration: none;
     color: white;
