@@ -5,6 +5,7 @@
     padding: 0;
     margin: 0;
     font-family: Poppins, sans-serif;
+    border: 1px solid black;
 }
 
 /* FONTES */
@@ -308,7 +309,6 @@ nav#nav {
     margin: 15px 5px 0px 0px;
     right: 0%;
     border-left: 60px solid transparent;
-
     background-color: black;
 }
 
@@ -373,7 +373,6 @@ input {
     margin-top: 5px;
     border-radius: 4px;
     height: 40px;
-    background-color: aquamarine;
 }
 
 .btn-con {
@@ -466,6 +465,16 @@ p {
     #logo {
         display: inline-block;
     }
+
+    #register-container{
+        display: grid;
+        grid-template-columns: 50vw 50vw;
+        grid-column: -1/-1;
+    }
+
+    .form-container{
+        display: grid;
+       }
 
 
 /* INDEX PC COMPUTADOR LINDAO */
