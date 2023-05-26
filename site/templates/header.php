@@ -17,11 +17,11 @@
     $adm = new Adm($CURRENT_URL);
    
     if (empty($userData)) {
-        $image = "user.png";
+        $image = "user.svg";
     } else {
         $image = $userData->getImage();
         if ($userData->getImage() == "") {
-            $image = "user.png";
+            $image = "user.svg";
         }
     }
 ?>
@@ -52,7 +52,7 @@
             </div>
             <div id="nav-1" class="Flex">
                 <ul id="links-nav-1">
-                    <li class="links"><a href="<?=$CURRENT_URL?>/" id="logo" class="Hidden"><img src="img/logo.png" alt="Hfashion" style="width: 100px"></a></li>
+                    <li class="links"><a href="<?=$CURRENT_URL?>/" id="logo" class="Hidden"><img src="img/logo.svg" alt="Hfashion" style="width: 100px"></a></li>
                     <?php if(!empty($userData)):?>
                         <li class="links"><a href="<?=$CURRENT_URL?>/dashboard.php">Dashboard</a></li>
                     <?php endif;?>
