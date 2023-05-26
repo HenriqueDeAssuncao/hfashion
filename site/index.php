@@ -28,6 +28,8 @@ require_once("templates/header.php");
       </div>
     </div>
   </div>
+
+  <!-- SEPARAR A PÁGINA -->
   <hr class="hr">
 
   <!-- O QUE VOCE VAI APRENDER -->
@@ -69,6 +71,7 @@ require_once("templates/header.php");
                 reading, listening, and speaking skills. Check out our</p>
             </div>
           </div>
+          
         </div>
 
  <!-- FUTURA ILUSTRAÇÃO DA SHARPAY -->
@@ -78,8 +81,12 @@ require_once("templates/header.php");
 <!-- FECHA CONTAINER E INFO -->
     </div>
   </div>
+
+<!-- SEPARAR A PÁGINA -->
   <hr class="hr">
+
 </div>
+
 <?php
 require_once("templates/footer.php");
 ?>
