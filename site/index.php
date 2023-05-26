@@ -48,31 +48,7 @@ require_once("templates/header.php");
   <!-- COLUNA ESQUERDA -->
         <div class="div-coluna">
 
-  <!-- PRIMEIRO CARD -->
-          <div class="cursos">
-            <div class="icon-cursos">
-              <img src="img/index/estetica.png" id="img-logo-cursos">
-            </div>
-            <div class="text-cursos">
-              <p class="style-maintext" id="size-cursos-main"> História da moda</p>
-              <p class="style-regulartext" id="size-cursos-regular">Our courses effectively and efficiently teach
-                reading, listening, and speaking skills. Check out our</p>
-            </div>
-          </div>
-          
-  <!-- SEGUNDO CARD -->
-          <div class="cursos">
-            <div class="icon-cursos">
-              <img src="img/index/estetica.png" id="img-logo-cursos">
-            </div>
-            <div class="text-cursos">
-              <p class="style-maintext" id="size-cursos-main"> História da moda</p>
-              <p class="style-regulartext" id="size-cursos-regular">Our courses effectively and efficiently teach
-                reading, listening, and speaking skills. Check out our</p>
-            </div>
-          </div>
-          
-        </div>
+
 
  <!-- FUTURA ILUSTRAÇÃO DA SHARPAY -->
         <div id="div-ilustracaosharpay" class=" Flex"></div>
