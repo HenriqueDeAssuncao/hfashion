@@ -6,7 +6,7 @@ require_once("templates/header.php");
 <div id="container-banner"
   style="background-image: url(<?= $CURRENT_URL ?>/img/index/banner.svg); width:100%; height:940px;">
   <div id="container-logo">
-    <p id="txt_logo_high">CONHEÇA A MODA DE</p>
+    <p id="txt_logo_high">CONHEÇA O MODO DE</p>
     <img src="img/index/logo_high.svg" id="img_logo_high">
     <div id="div-btn-roll">
       <a href="#container-aboutus" id="btn-roll"> CONHEÇA O HIFASHION </a>
@@ -48,7 +48,32 @@ require_once("templates/header.php");
   <!-- COLUNA ESQUERDA -->
         <div class="div-coluna">
 
-
+  <!-- PRIMEIRO CARD -->
+          <div class="cursos">
+            <div class="icon-cursos">
+              <img src="img/index/estetica.png" id="img-logo-cursos">
+            </div>
+            <div class="text-cursos">
+              <p class="style-maintext" id="size-cursos-main"> História da moda</p>
+              <p class="style-regulartext" id="size-cursos-regular">Our courses effectively and efficiently teach
+                reading, listening, and speaking skills. Check out our</p>
+            </div>
+          </div>
+          
+          
+  <!-- SEGUNDO CARD -->
+          <div class="cursos">
+            <div class="icon-cursos">
+              <img src="img/index/estetica.png" id="img-logo-cursos">
+            </div>
+            <div class="text-cursos">
+              <p class="style-maintext" id="size-cursos-main"> História da moda</p>
+              <p class="style-regulartext" id="size-cursos-regular">Our courses effectively and efficiently teach
+                reading, listening, and speaking skills. Check out our</p>
+            </div>
+          </div>
+          
+        </div>
 
  <!-- FUTURA ILUSTRAÇÃO DA SHARPAY -->
         <div id="div-ilustracaosharpay" class=" Flex"></div>
