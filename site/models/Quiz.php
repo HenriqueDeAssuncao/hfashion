@@ -1,12 +1,13 @@
 <?php
     class Quiz {
         private $quiz_id;
-        private $question_weight;
+        private $quiz_name;
+        private $content = [];
         private $answers;
+        private $question_weight;
         private $emblem;
         private $avatar;
         private $lives;
-        private $questions;
 
         public function getQuizId() {
             return $this->quiz_id;
