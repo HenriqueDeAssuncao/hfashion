@@ -2,6 +2,7 @@
     require_once("Message.php");
 
     class Adm {
+        private $url;
         private $message; 
         private $admins = [
             "henriqueestudante16@gmail.com",

@@ -1,9 +1,9 @@
 <?php
-    require_once ("helpers/url.php");
-    require_once ("helpers/db.php");
-    require_once ("dao/UserDAO.php");
-    require_once ("models/User.php");
-    require_once ("models/Adm.php");
+    require_once __DIR__ . ("/../helpers/url.php");
+    require_once __DIR__ . ("/../helpers/db.php");
+    require_once __DIR__ . ("/../dao/UserDAO.php");
+    require_once __DIR__ . ("/../models/User.php");
+    require_once __DIR__ . ("/../models/Adm.php");
 
     $message = new Message($CURRENT_URL);
     $flashMessage = $message->getMessage(); 
@@ -78,7 +78,7 @@
                     <ul id="links-nav-2">
                         <?php if(!empty($userData)):?>
                             <li class="links"><a href="<?=$CURRENT_URL?>/edit_profile.php">Editar Perfil</a></li>
-                            <li class="links"><a href="<?=$CURRENT_URL?>/logout.php">Sair</a></li>
+                            <li class="links"><a href="<?=$CURRENT_URL?>/process/logout_process.php">Sair</a></li>
                         <?php endif;?>
                         <?php if(empty($userData)):?>
                             <li class="links"><a href="<?=$CURRENT_URL?>/signin.php">Entrar</a></li>

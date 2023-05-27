@@ -1,5 +1,5 @@
 <?php
-require_once("templates/header.php");
+require_once "templates/header.php";
 ?>
 <!-- FOTO DE FUNDO -->
 </div>
@@ -119,5 +119,5 @@ require_once("templates/header.php");
 
 
 <?php
-require_once("templates/footer.php");
+require_once "templates/footer.php";
 ?>

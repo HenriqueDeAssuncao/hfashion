@@ -9,7 +9,7 @@
 ?>
 
 <div id="edit-container">
-    <form action="<?=$CURRENT_URL?>/user_process.php" method="POST" enctype="multipart/form-data">
+    <form action="<?=$CURRENT_URL?>/process/user_process.php" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="type" value="update">
         <h1>Altere seus dados no formulário abaixo:</h1>
 		<h2>Perfil:</h2>
@@ -31,7 +31,7 @@
         </div>
     </form>
 
-    <form action="<?=$CURRENT_URL?>/user_process.php" method="POST">
+    <form action="<?=$CURRENT_URL?>/process/user_process.php" method="POST">
     <input type="hidden" name="type" value="changepassword">
         <h2>Senha:</h2>
         <p>Digite a sua nova senha e confirme para alterá-la:</p>

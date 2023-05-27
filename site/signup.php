@@ -19,7 +19,7 @@
 ?>
 
 <div id="register-container">
-    <form action="<?=$CURRENT_URL?>/auth_process.php" method="POST">
+    <form action="<?=$CURRENT_URL?>/process/auth_process.php" method="POST">
         <input type="hidden" name="type" value="register">
         <div class="form-group">
             <label for="nickname">Apelido:</label>

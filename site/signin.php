@@ -14,7 +14,7 @@
 ?>
 
 <div id="register-container">
-    <form action="<?=$CURRENT_URL?>/auth_process.php" method="POST">
+    <form action="<?=$CURRENT_URL?>/process/auth_process.php" method="POST">
         <input type="hidden" name="type" value="login">
         <div class="form-group">
             <label class="email" for="nickname_email">E-mail ou Apelido:</label>

@@ -1,10 +1,11 @@
 <?php
-    require_once("helpers/url.php");
-    require_once("helpers/db.php");
-    require_once("models/User.php");
-    require_once("models/Message.php");
-    require_once("dao/UserDAO.php");
-
+	require_once __DIR__ . ("/../helpers/url.php");
+    require_once __DIR__ . ("/../helpers/db.php");
+    require_once __DIR__ . ("/../dao/UserDAO.php");
+    require_once __DIR__ . ("/../models/User.php");
+	require_once __DIR__ . ("/../models/Message.php");
+   
+	
     $message = new Message($CURRENT_URL);
     $userDao = new UserDao($conn, $CURRENT_URL);
 	$userData = $userDao->verifyToken(true);
