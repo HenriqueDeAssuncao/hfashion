@@ -30,3 +30,17 @@ document.addEventListener("click", ({target}) => {
         dropdownRect.classList.add("Hidden");
     }
 });
+
+//BOTÃO QUE ADICIONA MAIS UM FORMULÁRIO PARA CRIAR PERGUNTA
+const btnCreateQuestion = document.getElementById('btn-create-question');
+
+btnCreateQuestion.addEventListener('click', createQuestion);
+function createQuestion(event) {
+    event.preventDefault();
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+        document.getElementById("questions").innerHTML += this.responseText;
+    }
+    xhttp.open("GET", "templates/create_question.php");
+    xhttp.send();
+}
