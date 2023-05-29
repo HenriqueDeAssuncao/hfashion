@@ -2,7 +2,6 @@
     class Quiz {
         private $quiz_id;
         private $quiz_name;
-        private $content = [];
         private $answers;
         private $question_weight;
         private $emblem;
