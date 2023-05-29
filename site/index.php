@@ -4,7 +4,7 @@ require_once "templates/header.php";
 <!-- FOTO DE FUNDO -->
 </div>
 <div id="container-banner"
-  style="background-image: url(<?= $CURRENT_URL ?>/img/index/banner.svg); width:100%; height:940px;">
+  style="background-image: url(<?= $CURRENT_URL ?>/img/index/banner.svg); width: 100%;; height:100%;">
   <div id="container-logo">
     <p id="txt_logo_high">CONHEÇA A MODA DE</p>
     <img src="img/index/logo_high.svg" id="img_logo_high">
@@ -15,7 +15,6 @@ require_once "templates/header.php";
 </div>
 
 <!-- SOBRE NOS -->
-<div class="container">
   <div id="container-aboutus">
     <div id="info-aboutus">
       <div id="div-img-aboutus">
@@ -29,7 +28,7 @@ require_once "templates/header.php";
     </div>
   </div>
 
-  <!-- SEPARAR A PÁGINA -->
+ <!-- SEPARAR A PÁGINA
   <hr class="hr">
 
   <!-- O QUE VOCE VAI APRENDER -->
@@ -39,7 +38,7 @@ require_once "templates/header.php";
     <div id="info-oqvcvera">
 
       <div id="div-title">
-        <p class="style-maintext">O que você vai aprender?</p>
+        <p class="style-maintext">O  que você vai aprender?</p>
       </div>
 
 
@@ -114,7 +113,7 @@ require_once "templates/header.php";
 
 </div>
 <!-- SEPARAR A PÁGINA -->
-  <hr class="hr">
+  <hr class="hr"> -->
 
 
 
