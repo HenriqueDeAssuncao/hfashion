@@ -28,7 +28,7 @@ require_once "templates/header.php";
     </div>
   </div>
 
- <!-- SEPARAR A PÁGINA
+ <!-- SEPARAR A PÁGINA -->
   <hr class="hr">
 
   <!-- O QUE VOCE VAI APRENDER -->
@@ -51,9 +51,9 @@ require_once "templates/header.php";
           <div class="cursos">
             <div class="icon-cursos">
               <img src="img/index/estetica.png" id="img-logo-cursos">
+              <p class="style-maintext" id="size-cursos-main"> História da moda</p>
             </div>
             <div class="text-cursos">
-              <p class="style-maintext" id="size-cursos-main"> História da moda</p>
               <p class="style-regulartext" id="size-cursos-regular">Our courses effectively and efficiently teach
                 reading, listening, and speaking skills. Check out our</p>
             </div>
