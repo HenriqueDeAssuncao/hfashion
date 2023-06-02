@@ -91,6 +91,7 @@
 }
 #img-logo-cursos{
     width: 40px;
+    margin-right: 20px;
 }
 
 #container-logo {
@@ -153,6 +154,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #A43A1D;
 }
 
 #info-oqvcvera{
@@ -160,25 +162,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 915px;
-    height: 470px;
+    width: 82.5%;
+    background-color: #5ee570
 }
 
 #div-title{
     display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     margin-bottom: 75px;
 }
 #div-topicos{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-    align-items: center;
+    flex-direction: column;
     width: 100%;
+    background-color: aqua;
 }
 
 
@@ -200,9 +197,7 @@
 
 .icon-cursos{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 10px;    
+    justify-content: space-between;  
 }
 
 #div-ilustracaosharpay{
