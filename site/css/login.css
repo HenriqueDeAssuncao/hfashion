@@ -1,0 +1,81 @@
+/* Smartphone Portrait (ATÉ 576px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+#register-container {
+    padding-top: 120px;
+    display: grid;
+
+}
+
+.form-group {
+    display: grid;
+    margin: 0 45px;
+    grid-template-rows: 1fr, 1fr;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.email {
+    display: grid;
+    grid-row: 1fr;
+}
+
+input {
+    margin-top: 5px;
+    border-radius: 4px;
+    height: 40px;
+}
+
+.btn-con {
+    display: grid;
+    color: white;
+    background-color: red;
+    font-weight: 600;
+    margin: 0 auto;
+    width: 260px;
+    margin-bottom: 20px;
+}
+
+p {
+    display: grid;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+
+/* Smartphone landscape (ATÉ 768px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 576px) {
+    .Container {
+        width: 540px;
+    }
+}
+
+/* Tablet Portrait (ATÉ 992px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 768px) {
+    .Container {
+        width: 720px;
+    }
+}
+
+/* Tablet Landscape (ATÉ 992px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 992px) {
+    .Container {
+        width: 960px;
+    }
+
+    #register-container {
+        display: grid;
+        grid-template-columns: 50vw 50vw;
+        grid-column: -1/-1;
+    }
+
+    .form-container {
+        display: grid;
+    }
+}
+
+/* PC (>= 1200px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 1200px) {
+    .Container {
+        width: 90%;
+    }
+}

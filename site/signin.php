@@ -34,6 +34,7 @@
     </form>
 </div>
 
+<link rel="stylesheet" href="<?=$CURRENT_URL?>/css/login.css">
 <?php
     require_once("templates/footer.php");
 ?>

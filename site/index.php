@@ -113,10 +113,10 @@ require_once "templates/header.php";
 
 </div>
 <!-- SEPARAR A PÁGINA -->
-  <hr class="hr"> -->
+  <hr class="hr"> 
 
 
-
+<link rel="stylesheet" href="<?=$CURRENT_URL?>/css/index.css">
 <?php
 require_once "templates/footer.php";
 ?>
