@@ -21,15 +21,19 @@ require_once "templates/header.php";
         <img src="img/index/logo_circle.svg" id="img_logo_aboutus">
       </div>
       <div id="div-text-aboutus">
-        <p class="style-maintext" id="align-aboutus"> De onde surgiu o HiFashion?</p>
-        <p class="style-regulartext">Learning with Duolingo is fun, and research shows that it works! With quick,
-          bite-sized lessons,you’ll earn points and unlock new levels while gaining real-world communication skills.</p>
+        <p class="style-maintext" id="align-aboutus">
+           De onde surgiu o HiFashion?
+        </p>
+        <p class="style-regulartext">
+          Learning with Duolingo is fun, and research shows that it works! With quick,
+          bite-sized lessons,you’ll earn points and unlock new levels while gaining real-world communication skills.
+        </p>
       </div>
     </div>
   </div>
 
  <!-- SEPARAR A PÁGINA -->
-  <hr class="hr">
+  <hr class="hidden">
 
   <!-- O QUE VOCE VAI APRENDER -->
 
@@ -46,62 +50,73 @@ require_once "templates/header.php";
 
   <!-- COLUNA ESQUERDA -->
         <div class="div-coluna">
-
-    <!-- PRIMEIRO CARD -->
+        
+  <!-- PRIMEIRO CARD -->
           <div class="cursos">
             <div class="icon-cursos">
               <img src="img/index/estetica.png" id="img-logo-cursos">
-              <p class="style-maintext" id="size-cursos-main"> História da moda</p>
+              <p class="style-maintext" class="size-cursos-main"> História da moda</p>
             </div>
             <div class="text-cursos">
-              <p class="style-regulartext" id="size-cursos-regular">Our courses effectively and efficiently teach
-                reading, listening, and speaking skills. Check out our</p>
+              <p class="style-regulartext" id="size-cursos-regular">
+                Our courses effectively and efficiently teach
+                reading, listening, and speaking skills. Check out our
+              </p>
             </div>
           </div>
-          
     <!-- SEGUNDO CARD -->
+          
           <div class="cursos">
             <div class="icon-cursos">
               <img src="img/index/estetica.png" id="img-logo-cursos">
+              <p class="style-maintext" class="size-cursos-main"> História da moda</p>
             </div>
             <div class="text-cursos">
-              <p class="style-maintext" id="size-cursos-main"> História da moda</p>
-              <p class="style-regulartext" id="size-cursos-regular">Our courses effectively and efficiently teach
-                reading, listening, and speaking skills. Check out our</p>
+              <p class="style-regulartext" id="size-cursos-regular">
+                Our courses effectively and efficiently teach
+                reading, listening, and speaking skills. Check out our
+              </p>
             </div>
           </div>
+
           
         </div>
 
+
  <!-- FUTURA ILUSTRAÇÃO DA SHARPAY -->
- <div id="div-ilustracaosharpay" class=" Flex"></div>
+    
+ <div id="div-ilustracaosharpay" class="hidden"></div>
 
 <!-- COLUNA DIREITA -->
    <div class="div-coluna">
 
-  <!-- PRIMEIRO CARD -->
-        <div class="cursos">
-          <div class="icon-cursos">
-            <img src="img/index/estetica.png" id="img-logo-cursos">
+   <!-- PRIMEIRO CARD -->
+   <div class="cursos">
+            <div class="icon-cursos">
+              <img src="img/index/estetica.png" id="img-logo-cursos">
+              <p class="style-maintext" id="size-cursos-main"> História da moda</p>
+            </div>
+            <div class="text-cursos">
+              <p class="style-regulartext" class="size-cursos-regular">
+                Our courses effectively and efficiently teach
+                reading, listening, and speaking skills. Check out our
+              </p>
+            </div>
           </div>
-          <div class="text-cursos">
-            <p class="style-maintext" id="size-cursos-main"> História da moda</p>
-            <p class="style-regulartext" id="size-cursos-regular">Our courses effectively and efficiently teach
-              reading, listening, and speaking skills. Check out our</p>
+    <!-- SEGUNDO CARD -->
+          
+          <div class="cursos">
+            <div class="icon-cursos">
+              <img src="img/index/estetica.png" id="img-logo-cursos">
+              <p class="style-maintext" id="size-cursos-main"> História da moda</p>
+            </div>
+            <div class="text-cursos">
+              <p class="style-regulartext" class="size-cursos-regular">
+                Our courses effectively and efficiently teach
+                reading, listening, and speaking skills. Check out our
+              </p>
+            </div>
           </div>
-        </div>
-        
-  <!-- SEGUNDO CARD -->
-        <div class="cursos">
-          <div class="icon-cursos">
-            <img src="img/index/estetica.png" id="img-logo-cursos">
-          </div>
-          <div class="text-cursos">
-            <p class="style-maintext" id="size-cursos-main"> História da moda</p>
-            <p class="style-regulartext" id="size-cursos-regular">Our courses effectively and efficiently teach
-              reading, listening, and speaking skills. Check out our</p>
-          </div>
-        </div>
 
 
 
@@ -113,8 +128,77 @@ require_once "templates/header.php";
 
 </div>
 <!-- SEPARAR A PÁGINA -->
-  <hr class="hr"> 
+  <hr class="hidden"> 
 
+<!-- ABRE CONTAINER -->
+  <div id="container-cursos">
+<!-- ABRE DIV DE LIMITAÇÃO -->
+    <div id="div-info-cursos">
+
+<!-- LINHA DO TEMPO -->
+    <div class="div-space">
+<!-- TITULO E SUBTITULO -->
+      <div class="div-text-cursos">
+        <p class="style-maintext" id="align-aboutus">
+        Moda.
+        </p>
+        <p class="style-regulartext">
+        Veja os principais acontecimentos na história da moda.
+        </p>
+      </div>
+
+<!-- DIV CARDS -->
+      <div class="div-cards-cursos">
+
+        <a href="" class="cards">
+        <p>StreetWear</p>
+        </a>
+
+      </div>
+
+<!-- FECHA SPACE -->
+    </div>
+
+<!-- ESTETICAS -->
+    <div class="div-space">
+<!-- TITULO E SUBTITULO -->
+      <div class="div-text-cursos">
+        <p class="style-maintext" id="align-aboutus">
+        Estética.
+        </p>
+        <p class="style-regulartext">
+        Veja as principais estéticas de High School.
+        </p>
+      </div>
+
+<!-- DIV CARDS -->
+      <div class="div-cards-cursos">
+
+        <a href="" class="cards">
+        <p>StreetWear</p>
+        </a>
+
+        <a href="" class="cards">
+        <p>StreetWear</p>
+        </a>
+
+        <a href="" class="cards">
+        <p>StreetWear</p>
+        </a>
+
+        <a href="" class="cards">
+        <p>StreetWear</p>
+        </a>
+        
+      </div>
+
+<!-- FECHA SPACE -->
+    </div>
+
+
+<!-- FECHA CONTAINER INFO -->
+    </div>  
+  </div>
 
 <link rel="stylesheet" href="<?=$CURRENT_URL?>/css/index.css">
 <?php

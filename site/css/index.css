@@ -1,10 +1,14 @@
 /* Smartphone Portrait (ATÉ 576px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
-.hr {
+hr {
     box-sizing: border-box;
     margin: 0 auto;
     width: 1065px;
     border: 2px solid #E5E5E5;
+}
+
+.hidden {
+    display: none;
 }
 
 #btn-roll {
@@ -12,33 +16,33 @@
 }
 
 #btn-roll:link {
-    padding: 14px 32px 14px 32px;
+    padding: 20px 38px 20px 38px;
     text-decoration: none;
     color: #FFFFFF;
     font-weight: 700;
-    font-size: 9px;
+    font-size: 12px;
     background: #ED5227;
     box-shadow: 0px 4.85549px 0px #A43A1D;
     border-radius: 11.0983px;
 }
 
 #btn-roll:visited {
-    padding: 14px 32px 14px 32px;
+    padding: 20px 38px 20px 38px;
     text-decoration: none;
     color: #FFFFFF;
     font-weight: 700;
-    font-size: 9px;
+    font-size: 12px;
     background: #ED5227;
     box-shadow: 0px 4.85549px 0px #A43A1D;
     border-radius: 11.0983px;
 }
 
 #btn-roll:hover {
-    padding: 16px 34px 16px 34px;
+    padding: 25px 43px 25px 43px;
     text-decoration: none;
     color: #FFFFFF;
     font-weight: 700;
-    font-size: 11px;
+    font-size: 15px;
     background: #ED5227;
     box-shadow: 0px 4.85549px 0px #A43A1D;
     border-radius: 11.0983px;
@@ -57,7 +61,7 @@
 }
 
 #img-logo-cursos {
-    width: 40px;
+    width: 12%;
     margin-right: 20px;
 }
 
@@ -81,7 +85,12 @@
 }
 
 #div-btn-roll {
-    margin-top: 82px;
+    width: 271px;
+    height: 61px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10.25%;
 }
 
 #container-aboutus {
@@ -106,7 +115,7 @@
 }
 
 #align-aboutus {
-    margin: 0 0 40px 0;
+    margin-bottom: 22px;
 }
 
 #div-img-aboutus {
@@ -117,12 +126,11 @@
 }
 
 #container-oqvcvera {
-    height: 615px;
-    width: 82.5%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #A43A1D;
+    width: 100%;
 }
 
 #info-oqvcvera {
@@ -131,27 +139,25 @@
     justify-content: center;
     align-items: center;
     width: 82.5%;
-    background-color: #5ee570
 }
 
 #div-title {
     display: flex;
     width: 100%;
-    margin-bottom: 75px;
+    margin-bottom: 20%;
 }
 
 #div-topicos {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: aqua;
 }
 
 
 .div-coluna {
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    justify-content: space-between;
     width: 100%;
     height: 100%;
 }
@@ -159,21 +165,72 @@
 .cursos {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: 100%;
+    margin-bottom: 13%;
 }
 
 .icon-cursos {
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 4%;
 }
 
-#div-ilustracaosharpay {
+#container-cursos{
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 345px;
+}
+
+#div-info-cursos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 78%;
+}
+
+.div-space{
+    margin: 20% 0 20% 0;
+    width: 100%;
+}
+
+.div-text-cursos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.div-cards-cursos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4.6%;
+}
+.cards{
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 128px;
+    border-radius: 13.5011px;
+    background-color: #4E5BA6;
+    margin-bottom: 15px;
+}
+
+.cards:hover{
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110%;
+    height: 160px;
+    border-radius: 13.5011px;
+    background-color: #4E5BA6;
+    margin-bottom: 15px;
 }
 
 .titles {
@@ -183,10 +240,10 @@
 }
 
 #txt_logo_high {
-    letter-spacing: 0.225em;
+    letter-spacing: 0.330em;
     font-style: normal;
     font-weight: 600;
-    font-size: 13.5px;
+    width: 55.56%;
     display: flex;
     align-items: center;
     text-transform: uppercase;
@@ -209,12 +266,8 @@
     color: #777777;
 }
 
-#size-cursos-main {
-    font-size: 16px;
-}
-
 #size-cursos-regular {
-    font-size: 12px;
+    font-size: 16px;
     color: #777777;
 }
 
