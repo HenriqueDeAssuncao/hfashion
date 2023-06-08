@@ -11,7 +11,6 @@
 
 <div class="container">
     <h1>Criar quiz</h1>
-
     <form action="process/adm_process.php" method="POST" enctype="multipart/form-data"> 
         <div class="form-group">
             <h2>Atributos:</h2>
@@ -29,8 +28,6 @@
         <div class="form-group">
             <label for="avatar">Avatar:</label>
             <input type="file" name="avatar">
-        </div>
-            
         </div>
         
         <h2>Perguntas:</h2>
@@ -53,7 +50,6 @@
         <div id="questions">
             
         </div>
-
         <button id="btn-create-question" class="Button">Gerar Perguntas</button>
         <input type="submit" class="Button" value="Criar Quiz!">
     </form>
