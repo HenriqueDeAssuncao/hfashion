@@ -1,19 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+
+    <title>Dashboard</title>
+    
 <?php
     require_once("templates/header.php");
     require_once("models/User.php");
-    require_once("dao/UserDAO.php");
-	//Restringindo a página:
-	$userDao = new UserDAO($conn, $CURRENT_URL);
     $userData = $userDao->verifyToken(true);
 ?>
 
-<h1>Teste Dashboard</h1>
-<h2>Olá, <?=$userData->getNickname()?>!</h2>
-<div class="profile-img" style="width: 200px; height: 200px; background-image: url(<?=$CURRENT_URL?>/img/users/<?=$image?>)">
-</div>
-<div>
-	<p><?=$userData->getBio()?></p>
-</div>
+</head>
+<body>
+
+<!-------------------- PERFIL -------------------->
+
+<section>
+    <div>
+    
+        <!-- colocar input pro usuario alterar a foto -->
+<br>
+        <img src="#" alt="profile">
+        <img src="#" alt="alterar foto">
+<br>
+        <!-- colocar pra exibir de acordo com oq o user cadastrou -->
+<br>
+        <h1>Ana Carolina</h1>
+        <p>ana.gmail@</p>
+
+        <p>A vida é engual uma montanha russa, um dia <Br>
+        a gente estamos em cima e no outro embaixo</p>
+    </div>
+
+    <div>
+        <!-- onde exibe os emblemas -->
+        <br>
+        <img src="" alt="emblema 1">
+        <img src="" alt="emblema 2">
+
+        <button> Editar Perfil </button>
+    </div>
+</section>
+
+<Br>
+<br>
+
+<hr>
+
+<Br>
+<br>
+
+<!-------------------- Quizzes -------------------->
+
+
+<section>
+
+    <div>
+        <h1>Quizzes</h1>
+<Br>
+
+        <!-- quiz historia -->
+        <div>
+            <!-- botão precisa redirecionar para a pagina quiz-->
+            <button>
+                <img src="" alt="relogio">
+                <h3>Historia da Moda</h1>
+                <p>Veja suas respostas</p>
+            </button>
+        </div>
+
+        <!-- quiz historia -->
+        <div>
+            <!-- botão precisa redirecionar para a pagina quiz-->
+            <button>
+                <img src="" alt="relogio">
+                <h3>Historia da Moda</h1>
+                <p>Veja suas respostas</p>
+            </button>
+        </div>
+
+    </div>
+
+</section>
+
+    
+</body>
+</html>
+
 <?php
     require_once("templates/footer.php");
 ?>
