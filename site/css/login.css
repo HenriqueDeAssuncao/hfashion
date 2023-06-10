@@ -1,6 +1,6 @@
 /* Smartphone Portrait (ATÉ 576px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
-#register-container {
+register-container {
     padding-top: 120px;
     display: grid;
 
@@ -9,9 +9,9 @@
 .form-group {
     display: grid;
     margin: 0 45px;
-    grid-template-rows: 1fr, 1fr;
     margin-bottom: 30px;
     font-weight: 600;
+    grid-column: -1;
 }
 
 .email {
@@ -62,20 +62,53 @@ p {
         width: 960px;
     }
 
-    #register-container {
+
+    /*.grid{
         display: grid;
         grid-template-columns: 50vw 50vw;
+    }
+
+    #register-container {
         grid-column: -1/-1;
     }
 
     .form-container {
         display: grid;
     }
-}
+
+    .visual{
+        background-color: red;
+        display: grid;
+        grid-column: 1;  
+    }
+    
+}*/
 
 /* PC (>= 1200px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 1200px) {
     .Container {
         width: 90%;
     }
+
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .visual{
+        background-color: red;
+        display: grid;
+        grid-column: 1;
+    }
+     
+    #form-container {
+        display: grid;
+        grid-column: -1;
+
+    }
+
+
+}
+    
 }

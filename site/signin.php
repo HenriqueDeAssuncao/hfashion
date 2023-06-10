@@ -13,6 +13,7 @@
     }
 ?>
 
+<div class="visual" width="50vw" height="80vh"> <img src="component 9.png" alt=""></div>
 <div id="register-container">
     <form action="<?=$CURRENT_URL?>/process/auth_process.php" method="POST">
         <input type="hidden" name="type" value="login">
