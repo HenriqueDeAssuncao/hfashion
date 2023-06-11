@@ -57,7 +57,7 @@ input {
 .btn-con {
     display: grid;
     color: white;
-    background-color: greenyellow;
+    background-color: red;
     font-weight: 600;
     margin: 0 auto;
     width: 145px;
@@ -108,6 +108,7 @@ p {
     input{
          border: none;
          height: 175%;
+         height: 40px;
         }
          
 
@@ -128,7 +129,7 @@ p {
 
     .form-container a{
      font-size: 13px;
-     color: blue;
+     color: red;
      text-decoration: none;
 
     }
