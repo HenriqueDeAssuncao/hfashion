@@ -1,4 +1,32 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    overflow: hidden;
+}
+
+/* FONTES */
+/* Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@200;300;400;500;600&display=swap');
+
 /* Smartphone Portrait (ATÉ 576px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+.msg-success,
+.msg-error {
+    width: 500px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.msg-error {
+    background-color: rgb(234, 76, 76);
+}
+
+.msg-success {
+    background-color: #5ee570;
+}
 
 #register-container {
     padding-top: 120px;
@@ -23,16 +51,19 @@ input {
     margin-top: 5px;
     border-radius: 4px;
     height: 40px;
+    border: none;
 }
 
 .btn-con {
     display: grid;
     color: white;
-    background-color: blue;
+    background-color: greenyellow;
     font-weight: 600;
     margin: 0 auto;
-    width: 260px;
+    width: 145px;
+    height: 40px;
     margin-bottom: 20px;
+    border-radius: 10px;
 }
 
 p {
@@ -40,6 +71,8 @@ p {
     margin: 0 auto;
     margin-bottom: 10px;
 }
+
+
 
 
 /* Smartphone landscape (ATÉ 768px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
@@ -58,24 +91,70 @@ p {
 
 /* Tablet Landscape (ATÉ 992px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 992px) {
-    .Container {
-        width: 960px;
-    }
 
     #register-container {
         display: grid;
-        grid-template-columns: 50vw 50vw;
-        grid-column: -1/-1;
+        grid-template-columns: 1.40fr 1fr;
     }
 
-    .form-container {
+    .form-container , .form-group {
         display: grid;
+        grid-column: 1;
+    }
+
+    form{
+        padding:25%;
+    }
+    input{
+         border: none;
+         height: 175%;
+        }
+         
+
+    .btn-con{
+        grid-column: 1;
+        width: 25%;
+        text-align: center;
+        width: 120px;
+        height: 40px;
+    }
+
+    .form-container{
+        display:flex;
+        margin-top: 55px;
+        gap: 3.75%;
+        
+    }
+
+    .form-container a{
+     font-size: 13px;
+     color: blue;
+     text-decoration: none;
+
+    }
+
+    .form-container p{
+        font-size: 13px;
+   
+       }
+
+    .visual{
+        grid-template-rows: 1fr 1fr 2fr;
+        display: grid;
+        background-color: red;
+        grid-column: 2;
+        background-repeat: no-repeat;
+
+    }
+
+    label{
+        margin-top: 12px;
     }
 }
 
 /* PC (>= 1200px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 1200px) {
     .Container {
-        width: 90%;
+        width: 100%;
     }
 }
