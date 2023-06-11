@@ -1,5 +1,5 @@
 <?php
-    require_once("templates/header.php");
+    require_once("templates/header_log.php");
     if (!empty($_SESSION["fill_form"])) {
         $data_fill_form = $_SESSION["fill_form"];
         $nickname_email = $data_fill_form[0];
@@ -13,7 +13,6 @@
     }
 ?>
 
-<div class="visual" width="50vw" height="80vh"> <img src="component 9.png" alt=""></div>
 <div id="register-container">
     <form action="<?=$CURRENT_URL?>/process/auth_process.php" method="POST">
         <input type="hidden" name="type" value="login">
@@ -31,11 +30,9 @@
                 <p>Não tem uma conta?</p>
                 <p><a href="<?=$CURRENT_URL?>/signup.php">Faça seu cadastro</a></p>
             </div>
-        </div>
+            </div>
     </form>
+    <div class="visual" style="background-image:url(<?= $CURRENT_URL ?>/img/log1.png);"></div>
 </div>
 
 <link rel="stylesheet" href="<?=$CURRENT_URL?>/css/login.css">
-<?php
-    require_once("templates/footer.php");
-?>
