@@ -9,6 +9,8 @@
     transform: rotate(-0.08deg);
 }*/
 
+
+
 /* Smartphone Portrait (ATÉ 576px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
 hr {
@@ -20,13 +22,25 @@ hr {
 
 #img_topo {
 
-width: 100%;
-height: 175px;
-left: 88px;
-top: 234px;
-background: #FFFFFF;
-border-radius: 18px;
+    width: 100%;
+    height: 175px;
+    left: 88px;
+    top: 234px;
+    background: #FFFFFF;
+    border-radius: 18px;
 }
+
+#borda{
+    box-sizing: border-box;
+
+    position: relative;
+    width: 310.84px;
+    height: 106.74px;
+    
+    border: 2.3547px solid #CDCDCD;
+    border-radius: 5.86487px;
+}
+
 
 /* Smartphone landscape (ATÉ 768px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 576px) {
