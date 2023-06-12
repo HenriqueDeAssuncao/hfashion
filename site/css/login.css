@@ -29,7 +29,6 @@
 }
 
 #register-container {
-    padding-top: 120px;
     display: grid;
 
 }
@@ -52,6 +51,7 @@ input {
     border-radius: 4px;
     height: 40px;
     border: none;
+    background-color: gray;
 }
 
 .btn-con {
