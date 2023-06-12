@@ -26,35 +26,20 @@
             <input type="file" name="emblem">
         </div>
         <div class="form-group">
-            <label for="avatar">Avatar:</label>
-            <input type="file" name="avatar">
+            <label for="quiz-icon">ícone:</label>
+            <input type="file" name="icon">
         </div>
         
-        <h2>Perguntas:</h2>
-        <div id="create-question">
-            <label for="set-questions">Selecione quantas questões você deseja gerar:</label>
-            <select name="quant" id="quant">
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15</option>
-            </select>
+        <div id="avatars" class="form-group">
+            <label for="avatars">Insira os avatares:</label>
+            <input type="file" name="avatars[]">
+            <input type="file" name="avatars[]">
         </div>
-        <div id="questions">
-            
-        </div>
-        <button id="btn-create-question" class="Button">Gerar Perguntas</button>
         <input type="submit" class="Button" value="Criar Quiz!">
     </form>
 </div>
 
+<link rel="stylesheet" href="css/adm.css">
 <script src="<?=$CURRENT_URL?>/script/quiz.js"></script>
 <?php
     require_once("templates/footer.php");
