@@ -54,6 +54,7 @@
 <Br>
 <br>
 
+
 <!-------------------- Quizzes -------------------->
 
 
@@ -73,12 +74,35 @@
             </button>
         </div>
 
-        <!-- quiz historia -->
+
+        <!-- quiz influencias -->
         <div>
             <!-- botão precisa redirecionar para a pagina quiz-->
             <button>
-                <img src="" alt="relogio">
-                <h3>Historia da Moda</h1>
+                <img src="" alt="ampulheta">
+                <h3>Influências</h1>
+                <p>Veja suas respostas</p>
+            </button>
+        </div>
+
+
+        <!-- quiz estilistas -->
+        <div>
+            <!-- botão precisa redirecionar para a pagina quiz-->
+            <button>
+                <img src="" alt="pessoas">
+                <h3>Estilitas</h1>
+                <p>Veja suas respostas</p>
+            </button>
+        </div>
+
+
+        <!-- quiz estetica -->
+        <div>
+            <!-- botão precisa redirecionar para a pagina quiz-->
+            <button>
+                <img src="" alt="trofeu">
+                <h3>Estética</h1>
                 <p>Veja suas respostas</p>
             </button>
         </div>
@@ -87,7 +111,29 @@
 
 </section>
 
+
+<!-------------------- Emblemas -------------------->
+
+
+<section>
+
+<br> 
+<br>
+
+    <div>
+         <h1>Emblemas</h1>
+    </div>    
     
+<br>
+<br>
+
+    <div id='borda'>
+        <div></div>
+    </div>
+
+</section>
+    
+
 </body>
 </html>
 
