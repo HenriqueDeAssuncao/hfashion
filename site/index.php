@@ -42,7 +42,7 @@ require_once "templates/header.php";
     <div id="info-oqvcvera">
 
       <div id="div-title">
-        <p class="style-maintext">O  que você vai aprender?</p>
+        <p class="style-titles">O  que você vai aprender?</p>
       </div>
 
 
@@ -55,10 +55,10 @@ require_once "templates/header.php";
           <div class="cursos">
             <div class="icon-cursos">
               <img src="img/index/estetica.png" id="img-logo-cursos">
-              <p class="style-maintext" class="size-cursos-main"> História da moda</p>
+              <p class="style-maintext"> História da moda</p>
             </div>
             <div class="text-cursos">
-              <p class="style-regulartext" id="size-cursos-regular">
+              <p class="style-regulartext">
                 Our courses effectively and efficiently teach
                 reading, listening, and speaking skills. Check out our
               </p>
@@ -69,10 +69,10 @@ require_once "templates/header.php";
           <div class="cursos">
             <div class="icon-cursos">
               <img src="img/index/estetica.png" id="img-logo-cursos">
-              <p class="style-maintext" class="size-cursos-main"> História da moda</p>
+              <p class="style-maintext"> História da moda</p>
             </div>
             <div class="text-cursos">
-              <p class="style-regulartext" id="size-cursos-regular">
+              <p class="style-regulartext">
                 Our courses effectively and efficiently teach
                 reading, listening, and speaking skills. Check out our
               </p>
@@ -94,10 +94,10 @@ require_once "templates/header.php";
    <div class="cursos">
             <div class="icon-cursos">
               <img src="img/index/estetica.png" id="img-logo-cursos">
-              <p class="style-maintext" id="size-cursos-main"> História da moda</p>
+              <p class="style-maintext"> História da moda</p>
             </div>
             <div class="text-cursos">
-              <p class="style-regulartext" class="size-cursos-regular">
+              <p class="style-regulartext" >
                 Our courses effectively and efficiently teach
                 reading, listening, and speaking skills. Check out our
               </p>
@@ -108,10 +108,10 @@ require_once "templates/header.php";
           <div class="cursos">
             <div class="icon-cursos">
               <img src="img/index/estetica.png" id="img-logo-cursos">
-              <p class="style-maintext" id="size-cursos-main"> História da moda</p>
+              <p class="style-maintext"> História da moda</p>
             </div>
             <div class="text-cursos">
-              <p class="style-regulartext" class="size-cursos-regular">
+              <p class="style-regulartext" >
                 Our courses effectively and efficiently teach
                 reading, listening, and speaking skills. Check out our
               </p>
@@ -139,7 +139,7 @@ require_once "templates/header.php";
     <div class="div-space">
 <!-- TITULO E SUBTITULO -->
       <div class="div-text-cursos">
-        <p class="style-maintext" id="align-aboutus">
+        <p class="style-titles" id="align-aboutus">
         Moda.
         </p>
         <p class="style-regulartext">
@@ -163,7 +163,7 @@ require_once "templates/header.php";
     <div class="div-space">
 <!-- TITULO E SUBTITULO -->
       <div class="div-text-cursos">
-        <p class="style-maintext" id="align-aboutus">
+        <p class="style-titles" id="align-aboutus">
         Estética.
         </p>
         <p class="style-regulartext">
