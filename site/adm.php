@@ -6,12 +6,12 @@
     $userData = $userDao->verifyToken(true);
     $adm = new Adm($CURRENT_URL); 
     $adm->isAdm($userDao, true);
-
+    
 ?>
 
 <div class="container">
     <h1>Criar quiz</h1>
-    <form action="process/adm_process.php" method="POST" enctype="multipart/form-data"> 
+    <form action="process/quiz_process.php" method="POST" enctype="multipart/form-data"> 
         <div class="form-group">
             <h2>Atributos:</h2>
             <label for="quiz-name">Nome:</label>
@@ -27,7 +27,7 @@
         </div>
         <div class="form-group">
             <label for="quiz-icon">ícone:</label>
-            <input type="file" name="icon">
+            <input type="file" name="quiz-icon">
         </div>
         
         <div id="avatars" class="form-group">
