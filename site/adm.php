@@ -9,7 +9,11 @@ $adm->isAdm($userDao, true);
 
 ?>
 
-<div class="container">
+<?php 
+    require_once("templates/message.php");
+?>
+
+<div class="Container">
     <h1>Criar quiz</h1>
     <form action="process/quiz_process.php" method="POST" enctype="multipart/form-data">
         <div class="form-group">
