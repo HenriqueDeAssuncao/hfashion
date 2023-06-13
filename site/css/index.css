@@ -235,6 +235,30 @@ hr {
     margin-bottom: 15px;
 }
 
+.cards-timeline{
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 128px;
+    border-radius: 13.5011px;
+    background-color: #4E5BA6;
+    margin-bottom: 15px;
+}
+
+.cards-timeline:hover{
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110%;
+    height: 160px;
+    border-radius: 13.5011px;
+    background-color: #4E5BA6;
+    margin-bottom: 15px;
+}
+
 .titles {
     font-style: normal;
     font-weight: 700;
@@ -272,6 +296,14 @@ hr {
 }
 
 .style-titles {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    color: #C02425;
+}
+.style-titles-main {
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -349,7 +381,7 @@ hr {
     }
     
     #img-logo-cursos {
-        width: 12%;
+        width: 3vw;
         margin-right: 20px;
     }
     
@@ -413,7 +445,7 @@ hr {
     }
     
     #container-oqvcvera {
-        height: 615px;
+        height: 635px;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -435,6 +467,7 @@ hr {
         align-items: center;
         width: 100%;
         margin-bottom: 75px;
+        margin-top: 105px;
     }
 
     #div-topicos {
@@ -443,6 +476,7 @@ hr {
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        margin-bottom: 75px;
     }
 
 
@@ -450,21 +484,20 @@ hr {
         display: flex;
         flex-direction: column;
         gap: 80px;
-        width: 255px;
+        width: 21vw;
         height: 345px;
     }
 
     .cursos {
         display: flex;
         flex-direction: column;
-        width: 255px;
+        width: 21vw;
     }
 
     .icon-cursos {
         display: flex;
-        justify-content: center;
         align-items: center;
-        margin-right: 10px;
+        margin-bottom: 20px;
     }
 
     #div-ilustracaosharpay {
@@ -483,13 +516,19 @@ hr {
     
     #div-info-cursos{
         display: flex;
+        justify-content: center;
         flex-direction: column;
         align-items: center;
-        width: 78%;
+        text-align: center;
+        width: 100%;
     }
     
     .div-space{
-        margin: 20% 0 20% 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 5% 0 0 0;
         width: 100%;
     }
     
@@ -499,12 +538,19 @@ hr {
         align-items: center;
         width: 100%;
     }
-    
-    .div-cards-cursos{
+    #div-cards-cursos-timeline{
         width: 100%;
         display: flex;
-        flex-direction: column;
         align-items: center;
+        justify-content: space-between;
+        margin-top: 4.6%;
+    }
+
+    .div-cards-cursos{
+        width: 86.45%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         margin-top: 4.6%;
     }
     .cards{
@@ -512,9 +558,9 @@ hr {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
-        height: 128px;
-        border-radius: 13.5011px;
+        width: 24%;
+        height: 390px;
+        border-radius: 18px;
         background-color: #4E5BA6;
         margin-bottom: 15px;
     }
@@ -524,13 +570,34 @@ hr {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 110%;
-        height: 160px;
-        border-radius: 13.5011px;
+        width: 26%;
+        height: 410px;
+        border-radius: 18px;
         background-color: #4E5BA6;
         margin-bottom: 15px;
     }
     
+    .cards-timeline{
+        transition: 0.5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 500px;
+        background-color: #4E5BA6;
+        margin-bottom: 15px;
+    }
+    
+    .cards-timeline:hover{
+        transition: 0.5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 550px;
+        background-color: #4E5BA6;
+        margin-bottom: 15px;
+    }
+
     .titles {
         font-style: normal;
         font-weight: 700;
@@ -572,6 +639,15 @@ hr {
         font-style: normal;
         font-weight: 700;
         font-size: 22px;
+        line-height: 26px;
+        color: #C02425;
+    }
+
+    .style-titles-main {
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
         line-height: 26px;
         color: #C02425;
     }
