@@ -16,7 +16,7 @@ $userData = $userDao->verifyToken(true);
         <div class="form-group">
             <label for="image">Foto:</label>
             <input type="file" name="image">
-            <div class="profile-img" style="width: 100px; height: 100px; background-image: url('<?= $CURRENT_URL ?>/img/users/<?= $image ?>')" alt="Foto de Perfil"></div>
+            <div class="profile-img" style="width: 100px; height: 100px; background-image: url('<?=$CURRENT_URL?>/img/avatars/<?=$image?>')" alt="Foto de Perfil"></div>
         </div>
         <div class="form-group">
             <label for="bio">Altere sua bio:</label>

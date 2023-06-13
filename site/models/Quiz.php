@@ -1,11 +1,12 @@
 <?php
     class Quiz {
         private $quiz_id;
+        private $quiz_token; //Hash pra usar de url
         private $quiz_name;
         private $question_weight;
         private $emblem;
         private $icon;
-        private $avatars;
+        private $avatars; //Imagem e nome
         private $tries;
         private $quiz_status;
 
@@ -14,6 +15,12 @@
         }
         public function setQuizId($quiz_id) {
             $this->quiz_id = $quiz_id;
+        }
+        public function getQuizToken() {
+            return $this->quiz_token;
+        }
+        public function setQuizToken($quiz_token) {
+            $this->quiz_token = $quiz_token;
         }
         public function getQuestionWeight($question_weight) {
             return $this->$question_weight;
@@ -30,7 +37,7 @@
         public function getAvatars($avatars) {
             return $this->$avatars;
         }
-        public function setAvatars($avatars) {
+        public function setAvatars($avatars) { 
             $this->avatars = $avatars;
         }
         public function getTries($tries) {
@@ -45,6 +52,11 @@
         public function setQuizStatus($quiz_status) {
             $this->quiz_status = $quiz_status;
         }
+        //FUNÇÕES QUE NÃO VÃO INTERAGIR COM O BANCO
+        public function generateImageName() {
+            return bin2hex(random_bytes(60)) . ".png";
+        }
+
     }
     interface QuizDAOInterface {
         public function buildQuiz();

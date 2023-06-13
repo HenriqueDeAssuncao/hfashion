@@ -10,7 +10,12 @@ if ((!empty($_POST)) && (!empty($_FILES))) {
     //Criar quiz
 
     $quiz_name = ucwords(trim($_POST['quiz-name']));
+    $quiz_description = $_POST['quiz-description'];
     $question_weight = $_POST['question-weight'];
+    $avatarsNamesArray = $_POST['avatars-names'];
+    if ($avatarsNamesArray[0] && $avatarsNamesArray[1]) {
+        $avatarsNames = $avatarsNamesArray;
+    }
 
     //Upload das imagens:
     //Emblema:
@@ -29,7 +34,7 @@ if ((!empty($_POST)) && (!empty($_FILES))) {
         }
     }
 
-    if ($quiz_name && $question_weight && $emblem && $quiz_icon && $avatars) {
+    if ($quiz_name && $quiz_description && $question_weight && $emblem && $quiz_icon && $avatars && $avatarsNames) {
         //Faço o cadastro
         $message->setMessage("Quiz criado!", "success", "manage_questions.php");
     } else {

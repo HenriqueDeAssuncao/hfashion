@@ -7,6 +7,8 @@
         private $image;
         private $bio;
         private $token;
+        private $emblems;
+        private $unlockedAvatars; //Aqui eu quero armazenar um array com arrays contendo o nome da imagem e o nome do avatar
 
         //SETTERS E GETTERS
         public function getId() {

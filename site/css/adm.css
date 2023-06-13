@@ -4,7 +4,7 @@
 }
 
 #avatars input {
-    width: 100%;
+    display: block;
 }
 
 /* Smartphone landscape (ATÉ 768px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/

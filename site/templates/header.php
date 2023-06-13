@@ -52,7 +52,7 @@
             </div>
             <div id="nav-1" class="Flex">
                 <ul id="links-nav-1">
-                    <li class="links"><a href="<?=$CURRENT_URL?>/" id="logo" class="Hidden"><img src="img/logo.svg" alt="Hfashion" style="width: 100px"></a></li>
+                    <li class="links"><a href="<?=$CURRENT_URL?>/" id="logo" class="Hidden"><img src="img/header/logo.svg" alt="Hfashion" style="width: 100px"></a></li>
                     <?php if(!empty($userData)):?>
                         <li class="links"><a href="<?=$CURRENT_URL?>/dashboard.php">Dashboard</a></li>
                     <?php endif;?>
@@ -65,11 +65,11 @@
                 </ul>
             </div>
 
-            <a href="<?=$CURRENT_URL?>"><img src="<?=$CURRENT_URL?>/img/logo-mobile.png" alt="Hfashion" id="logo-mobile" style="width: 40px"></a>
+            <a href="<?=$CURRENT_URL?>"><img src="<?=$CURRENT_URL?>/img/header/logo-mobile.png" alt="Hfashion" id="logo-mobile" style="width: 40px"></a>
 
             <div id="nav-2">
                 <button id="btn-dropdown" class="Button">
-                    <div id="profile-pic-header" class="profile-img" style="background-image: url(<?=$CURRENT_URL?>/img/users/<?=$image?>)" alt="Foto de Perfil"></div>
+                    <div id="profile-pic-header" class="profile-img" style="background-image: url(<?=$CURRENT_URL?>/img/avatars/<?=$image?>)" alt="Foto de Perfil"></div>
                 </button>
                 <div id="dropdown-rect" class="Hidden">
                     <div id="dropdown-tri">

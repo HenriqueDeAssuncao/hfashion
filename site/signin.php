@@ -32,7 +32,7 @@
             </div>
             </div>
     </form>
-    <div class="visual" style="background-image:url(<?= $CURRENT_URL ?>/img/log1.png);"></div>
+    <div class="visual" style="background-image:url(<?=$CURRENT_URL?>/img/login/log1.png);"></div>
 </div>
 
 <link rel="stylesheet" href="<?=$CURRENT_URL?>/css/login.css">
