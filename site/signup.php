@@ -18,6 +18,10 @@
     }
 ?>
 
+<?php 
+require_once("templates/message.php");
+?>
+
 <div id="register-container">
     <form action="<?=$CURRENT_URL?>/process/auth_process.php" method="POST">
         <input type="hidden" name="type" value="register">
@@ -47,7 +51,4 @@
     </form>
 </div>
 
-<link rel="stylesheet" href="<?=$CURRENT_URL?>/css/login.css">
-<?php
-    require_once("templates/footer.php");
-?>
+<script src="<?= $CURRENT_URL ?>/script/message.js"></script>

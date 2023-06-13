@@ -75,10 +75,10 @@
                 if ($user) {
                     return $user;
                 } else if ($protected) {
-                    $this->message->setMessage("Faça a autenticação para acessar esta página!", "error", "index.php"); 
+                    $this->message->setMessage("Faça autenticação para acessar esta página!", "error", "kick"); 
                 }
             } else if ($protected) {
-                $this->message->setMessage("Faça a autenticação para acessar esta página!", "error", "index.php");
+                $this->message->setMessage("Faça autenticação para acessar esta página!", "error", "kick");
             }
         }
         public function setTokenToSession($token, $redirect = true) {

@@ -14,6 +14,10 @@ require_once "templates/header.php";
   </div>
 </div>
 
+<?php 
+require_once("templates/message.php");
+?>
+
 <!-- SOBRE NOS -->
   <div id="container-aboutus">
     <div id="info-aboutus">

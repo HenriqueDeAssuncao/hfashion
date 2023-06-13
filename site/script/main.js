@@ -25,7 +25,7 @@ const dropdownRect = document.querySelector('.dropdown-rect');
 btnDropdown.addEventListener("click", () => {
     dropdownRect.classList.toggle('Hidden');
 });
-document.addEventListener("click", ({target}) => {
+document.addEventListener("click", ({ target }) => {
     if (target !== btnDropdown && !dropdownRect.contains(target)) {
         dropdownRect.classList.add("Hidden");
     }

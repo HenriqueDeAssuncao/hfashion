@@ -13,21 +13,6 @@
 
 /* Smartphone Portrait (ATÉ 576px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
-.msg-success,
-.msg-error {
-    width: 500px;
-    height: 100px;
-    margin: 0 auto;
-}
-
-.msg-error {
-    background-color: rgb(234, 76, 76);
-}
-
-.msg-success {
-    background-color: #5ee570;
-}
-
 #register-container {
     display: grid;
 
@@ -71,8 +56,6 @@ p {
     margin: 0 auto;
     margin-bottom: 10px;
 }
-
-
 
 
 /* Smartphone landscape (ATÉ 768px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/

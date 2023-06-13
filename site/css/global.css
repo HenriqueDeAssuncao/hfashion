@@ -159,21 +159,6 @@ nav.nav {
     padding: 10px;
 }
 
-.msg-success,
-.msg-error {
-    width: 500px;
-    height: 100px;
-    margin: 0 auto;
-}
-
-.msg-error {
-    background-color: rgb(234, 76, 76);
-}
-
-.msg-success {
-    background-color: #5ee570;
-}
-
 /* Smartphone landscape (ATÉ 768px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 576px) {
     .Container {

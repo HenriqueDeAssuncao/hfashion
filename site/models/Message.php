@@ -8,11 +8,15 @@
             $_SESSION["msg"] = $msg;
             $_SESSION["type"] = $type;
 
-            if ($redirect != "back") {
-                header("Location: $this->url/../" . $redirect);
+            if ($redirect == "kick") {
+                header("Location: $this->url/" . "index.php");
             } else {
-                header("Location: ". $_SERVER["HTTP_REFERER"]);
-            }
+                if ($redirect != "back") {
+                    header("Location: $this->url/../" . $redirect);
+                } else {
+                    header("Location: ". $_SERVER["HTTP_REFERER"]);
+                }
+            }  
         }
 	public function getMessage() {
             if (!empty($_SESSION["msg"])) {

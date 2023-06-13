@@ -34,7 +34,8 @@ if (empty($userData)) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HFashion</title>
-    <link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/global.css">
+    <link rel="stylesheet" href="<?=$CURRENT_URL?>/css/global.css">
+    <link rel="stylesheet" href="<?=$CURRENT_URL?>/css/message.css">
     <!--FONTE DE ÍCONES-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -105,12 +106,6 @@ if (empty($userData)) {
     </header>
 
     <main>
-        <div class="Container">
-            <?php if (!empty($flashMessage)): ?>
-                <div class="msg-<?= $flashMessage["type"]; ?> Flex">
-                    <div id="msgIcon"><i class="<?= $flashMessage["icon"] ?>"></i></div>
-                    <p>
-                        <?= $flashMessage["msg"]; ?>
-                    </p>
-                </div>
-            <?php endif; ?>
+
+
+      
