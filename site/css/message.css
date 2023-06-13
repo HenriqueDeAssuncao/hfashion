@@ -17,8 +17,8 @@
 }
 
 .msg-content > p {
+    text-indent: 6px;
     font-size: 14px;
-    margin-left: 10px;
     display: block;
     margin: 0 auto;
     margin-bottom: 0px;
