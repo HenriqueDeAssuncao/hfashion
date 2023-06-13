@@ -1,5 +1,5 @@
 <?php
-    require_once("templates/header.php");
+    require_once("templates/header_log.php");
     
     if (!empty($_SESSION["fill_form"])) {
         $data_fill_form = $_SESSION["fill_form"];

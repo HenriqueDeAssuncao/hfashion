@@ -38,40 +38,39 @@
 
 /* Smartphone Portrait (ATÉ 576px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
-header#header {
-    z-index: 1;
+header.header {
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
     color: #333333;
     position: sticky;
     top: 0;
-    background-color: white;
+    background-color: #fff;
 }
 
-nav#nav {
+nav.nav {
     justify-content: space-between;
     padding: 15px 10px 15px 10px;
 }
 
-nav#nav {
+nav.nav {
     justify-content: space-between;
     padding: 15px 10px 15px 10px;
 }
 
-#nav-icons {
+.nav-icons {
     width: 20px;
 }
 
-#nav-icons button {
+.nav-icons button {
     font-size: 25px;
 }
 
-#nav-icons #btn-close {
+.nav-icons .btn-close {
     color: rgba(192, 36, 37, 1);
 }
 
-#nav-1 {
+.nav-1 {
     position: absolute;
     left: -100%;
     top: 0;
@@ -82,7 +81,7 @@ nav#nav {
     box-shadow: 5px 0 5px -5px rgba(205, 205, 205, 0.38);
 }
 
-#links-nav-1 {
+.links-nav-1 {
     list-style: inside;
     display: inline-block;
     width: fit-content;
@@ -91,23 +90,23 @@ nav#nav {
     margin-bottom: 10px;
 }
 
-#links-nav-1 a {
+.links-nav-1 a {
     text-decoration: none;
     color: #333333;
 }
 
-#links-nav-1>.links {
+.links-nav-1>.links {
     margin-bottom: 10px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.644);
     padding: 10px;
 }
 
-#nav-2 {
+.nav-2 {
     position: relative;
     display: block;
 }
 
-#profile-pic-header {
+.profile-pic-header {
     width: 40px;
     height: 40px;
 }   
@@ -118,7 +117,7 @@ nav#nav {
     background-position: center;
 }
 
-#dropdown-rect {
+.dropdown-rect {
     position: absolute;
     margin-top: 10px;
     right: 0px;
@@ -128,7 +127,7 @@ nav#nav {
     background-color: black;
 }
 
-#dropdown-tri {
+.dropdown-tri {
     position: absolute;
     rotate: -45deg;
     width: 10px;
@@ -139,40 +138,23 @@ nav#nav {
     background-color: black;
 }
 
-#links-nav-2 {
+.links-nav-2 {
     list-style: inside;
     width: fit-content;
     list-style-type: none;
 }
 
-#links-nav-2 li { 
+.links-nav-2 li { 
     transform-origin: top center;
     animation: translateX 300ms
 }
 
-@keyframes translateX {
-0% {
-    opacity: 0;
-    transform: translateX(60px);
-}
-
-80% {
-    transform: translateX(-5px);
-}
-
-100% {
-    opacity: 1;
-    transform: translateX(0px);
-}
-}
-
-
-#links-nav-2 a {
+.links-nav-2 a {
     text-decoration: none;
     color: white;
 }
 
-#links-nav-2 .links {
+.links-nav-2 .links {
     margin-bottom: 10px;
     padding: 10px;
 }
@@ -212,15 +194,15 @@ nav#nav {
         width: 960px;
     }
 
-    nav#nav {
+    nav.nav {
         padding: 15px 0px 15px 0px;
     }
 
-    #nav-icons {
+    .nav-icons {
         display: none;
     }
 
-    #nav-1 {
+    .nav-1 {
         position: static;
         display: inline-block;
         margin-top: 0px;
@@ -229,14 +211,14 @@ nav#nav {
         box-shadow: none;
     }
 
-    #links-nav-1 {
+    .links-nav-1 {
         padding: 0px;
         margin-bottom: 0px;
         display: flex;
         align-items: center;
     }
 
-    #links-nav-1>.links {
+    .links-nav-1>.links {
         margin-bottom: 0px;
         border-bottom: none;
         float: left;
@@ -244,19 +226,19 @@ nav#nav {
         padding: 0px;
     }
 
-    #nav-2-desktop {
+    .nav-2-desktop {
         display: block;
     }
 
-    #nav-2 {
+    .nav-2 {
         margin: 0 17px 0 17px;
     }
 
-    #logo-mobile {
+    .logo-mobile {
         display: none;
     }
 
-    #logo {
+    .logo {
         display: inline-block;
     }
 }

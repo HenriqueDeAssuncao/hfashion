@@ -1,0 +1,28 @@
+.Color-white {
+    color: #fff;
+}
+
+/* Smartphone Portrait (ATÉ 576px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+header.header {
+    width: 100%;
+    position: fixed;
+    background-color: transparent;
+}
+
+.nav-1 {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.links-nav-1 a {
+    color: white;
+}
+
+/* Tablet Landscape (ATÉ 992px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 992px) {
+    .nav-1 {
+        background-color: transparent;
+    }
+}
+

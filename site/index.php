@@ -3,7 +3,7 @@ require_once "templates/header.php";
 ?>
 <!-- FOTO DE FUNDO -->
 </div>
-<div id="container-banner"
+<div id="container-banner" class = "js-container-banner"
   style="background-image: url(<?= $CURRENT_URL ?>/img/index/banner.svg); width: 100%;; height:100%;">
   <div id="container-logo">
     <p id="txt_logo_high">CONHEÇA A MODA DE</p>
@@ -201,6 +201,9 @@ require_once "templates/header.php";
   </div>
 
 <link rel="stylesheet" href="<?=$CURRENT_URL?>/css/index.css">
+<link rel="stylesheet" href="<?=$CURRENT_URL?>/css/index_header.css">
+<script src="<?=$CURRENT_URL?>/script/index.js"></script>
+
 <?php
 require_once "templates/footer.php";
 ?>

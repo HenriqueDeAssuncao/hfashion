@@ -1,7 +1,7 @@
 //NAVBAR
-const btnHamburguer = document.getElementById('btn-hamburguer');
-const btnClose = document.getElementById('btn-close');
-const nav = document.getElementById('nav-1');
+const btnHamburguer = document.querySelector('.btn-hamburguer');
+const btnClose = document.querySelector('.btn-close');
+const nav = document.querySelector('.nav-1');
 
 btnHamburguer.addEventListener("click", slide);
 function slide() {
@@ -19,8 +19,8 @@ function hide() {
 }
 
 //DROPDOWN BAR
-const btnDropdown = document.getElementById('profile-pic-header');
-const dropdownRect = document.getElementById('dropdown-rect');
+const btnDropdown = document.querySelector('.profile-pic-header');
+const dropdownRect = document.querySelector('.dropdown-rect');
 
 btnDropdown.addEventListener("click", () => {
     dropdownRect.classList.toggle('Hidden');
