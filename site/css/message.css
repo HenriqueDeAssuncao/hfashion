@@ -1,29 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-/* LAYOUT */
-.Container {
-    margin: 0 auto;
-}
-
-.Flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.Hidden {
-    display: none;
-}
-
-.Button {
-    background-color: transparent;
-    border: none;
-}
-
-.Auto {
-    margin: 0 auto;
-}
-
 .msg {
     justify-content: space-between;
     height: fit-content;

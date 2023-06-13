@@ -7,6 +7,30 @@
     overflow: hidden;
 }
 
+/* LAYOUT */
+.Container {
+    margin: 0 auto;
+}
+
+.Flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Hidden {
+    display: none;
+}
+
+.Button {
+    background-color: transparent;
+    border: none;
+}
+
+.Auto {
+    margin: 0 auto;
+}
+
 /* FONTES */
 /* Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@200;300;400;500;600&display=swap');
