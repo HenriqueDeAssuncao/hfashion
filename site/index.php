@@ -14,9 +14,11 @@ require_once "templates/header.php";
   </div>
 </div>
 
-<?php 
-require_once("templates/message.php");
-?>
+<div class="Container Flex">
+  <?php 
+  require_once("templates/message.php");
+  ?>
+</div>
 
 <!-- SOBRE NOS -->
   <div id="container-aboutus">
