@@ -139,7 +139,7 @@ require_once "templates/header.php";
     <div class="div-space">
 <!-- TITULO E SUBTITULO -->
       <div class="div-text-cursos">
-        <p class="style-titles" id="align-aboutus">
+        <p class="style-titles-main" id="align-aboutus">
         Moda.
         </p>
         <p class="style-regulartext">
@@ -148,9 +148,10 @@ require_once "templates/header.php";
       </div>
 
 <!-- DIV CARDS -->
-      <div class="div-cards-cursos">
 
-        <a href="" class="cards">
+      <div id="div-cards-cursos-timeline">
+
+        <a href="" class="cards-timeline">
         <p>StreetWear</p>
         </a>
 
@@ -163,7 +164,7 @@ require_once "templates/header.php";
     <div class="div-space">
 <!-- TITULO E SUBTITULO -->
       <div class="div-text-cursos">
-        <p class="style-titles" id="align-aboutus">
+        <p class="style-titles-main" id="align-aboutus">
         Estética.
         </p>
         <p class="style-regulartext">
