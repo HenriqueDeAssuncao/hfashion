@@ -3,8 +3,7 @@ const btnCloseMsg = document.querySelector('.btn-close-msg');
 const msg = document.querySelector('.msg');
 
 function closeMessage() {
-    msg.classList.add('Hidden');
-    msg.style.top = '-100%';
+    msg.classList.add('Hidden');;
 }
 
 btnCloseMsg.addEventListener('click', closeMessage);

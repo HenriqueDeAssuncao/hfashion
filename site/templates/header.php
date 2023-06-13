@@ -106,6 +106,4 @@ if (empty($userData)) {
     </header>
 
     <main>
-
-
-      
+        <div class="Container">

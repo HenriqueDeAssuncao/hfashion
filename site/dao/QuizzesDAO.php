@@ -9,4 +9,7 @@
         public function getQuizzesInfo() {
             
         }
+        public function getGlobalRanking() {
+            
+        }
     }
