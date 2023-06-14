@@ -45,7 +45,7 @@ if (empty($userData)) {
 
 <body>
 
-    <header class="header White js-header">
+    <header class="header">
         <div class="Container">
             <nav class="nav Flex">
                 <div class="nav-icons">
