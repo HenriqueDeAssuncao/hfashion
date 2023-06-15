@@ -5,7 +5,9 @@ const header = document.querySelector('header');
 //URL ATUAL
 let url = window.location.href;
 //MEDIA QUERY
-let isMobile = window.matchMedia('(max-width: 992px)');
+function isDesktop() {
+    return window.matchMedia('(min-width: 992px)').matches;
+}
 
 //NAVBAR
 const btnHamburguer = document.querySelector('.btn-hamburguer');
@@ -32,6 +34,7 @@ document.addEventListener("click", ({ target }) => {
     }
 });
 
+//HEADER NO INDEX  
 if (url.endsWith('index.php') || url.endsWith('/')) {
     const banner = document.querySelector('.js-container-banner');
 
@@ -51,6 +54,7 @@ if (url.endsWith('index.php') || url.endsWith('/')) {
             links.forEach((link) => {
                 link.classList.replace('White', 'Black');
             })
+
         } else {
             logo.setAttribute('src', `img/header/logo.svg`);
             header.classList.remove('Bg-white');
@@ -64,13 +68,14 @@ if (url.endsWith('index.php') || url.endsWith('/')) {
 
     window.addEventListener('scroll', verifyScroll);
 
+    window.addEventListener('resize', isDesktop);
+
     btnHamburguer.addEventListener("click", () => {
         slideNav();
     });
 
     btnClose.addEventListener("click", () => {
         slideNav();
-        
     });
 
 } else {
