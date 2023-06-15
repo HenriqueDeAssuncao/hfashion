@@ -205,7 +205,11 @@ nav.nav {
         opacity: 1;
         transform: translateX(0px);
     }
-    }
+}
+
+.scroll-effect {
+    animation: show .5s forwards;
+}
 
 .links-nav-2 a {
     text-decoration: none;

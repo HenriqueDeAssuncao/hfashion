@@ -36,7 +36,7 @@ document.addEventListener("click", ({ target }) => {
 
 //HEADER NO INDEX  
 if (url.endsWith('index.php') || url.endsWith('/')) {
-    const banner = document.querySelector('.js-container-banner');
+    const banner = document.querySelector('#container-banner');
 
     logo.setAttribute('src', `img/header/logo.svg`);
     btnHamburguer.classList.replace('Transparent', 'White');
