@@ -10,6 +10,7 @@
     border-style: solid;
     border-width: 1px;
     border-radius: 6px;
+    animation: translateX 300ms;
 }
 
 .msg-content {
@@ -40,4 +41,20 @@
 .msg-success {
     background-color: #6fdd8b;
     border-color: #25d73d;
+}
+
+@keyframes translateX {
+    0% {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    
+    80% {
+        transform: translateX(-5px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }

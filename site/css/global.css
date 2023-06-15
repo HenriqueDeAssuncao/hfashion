@@ -93,8 +93,8 @@ nav.nav {
     top: 0;
     margin-top: 55px;
     height: 90vh;
-    background-color: #ED5227;
-    /* background-image: linear-gradient(to bottom, #ED5227,#9A2828); */
+    /* background-color: #ED5227; */
+    background-image: linear-gradient(to bottom, #ED5227,#9A2828);
     border-radius: 15px;
     -webkit-box-shadow: 0px 1px 14px -2px rgba(41, 41, 41, 0.214);
     -moz-box-shadow: 0px 1px 14px -2px rgba(41, 41, 41, 0.214);
@@ -118,8 +118,7 @@ nav.nav {
     display: inline-block;
     width: fit-content;
     list-style-type: none;
-    padding: 20px;
-    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .links-nav-1 a {
@@ -132,10 +131,8 @@ nav.nav {
 
 
 .links-nav-1>.links {
-    margin-bottom: 10px;
     padding: 10px;
-    border: .5px solid white;
-    border-radius: 10px;
+    border-bottom: .5px solid white;
 }
 
 .logo {
@@ -162,14 +159,14 @@ nav.nav {
     position: absolute;
     margin-top: 10px;
     right: 0px;
-
     border-radius: 10px;
     width: 200px;
-    height: fit-content;
-    background-color: #ED5227;
+    /* background-color: #ED5227; */
+    background-image: linear-gradient(to bottom, #ED5227,#9A2828);
 }
 
 .dropdown-tri {
+    z-index: -1;
     position: absolute;
     rotate: -45deg;
     width: 10px;
@@ -186,7 +183,11 @@ nav.nav {
     list-style-type: none;
 }
 
-.links-nav-2 li {
+ul.links-nav-2 li {
+    padding: 10px;
+}
+
+.links-nav-2 .links {
     transform-origin: top center;
     animation: translateX 300ms;
 }
@@ -213,12 +214,12 @@ nav.nav {
 
 .links-nav-2 a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 .links-nav-2 i {
     margin-right: 10px;
-    color: black;
+    color: white;
 }
 
 .links-nav-2 .links {

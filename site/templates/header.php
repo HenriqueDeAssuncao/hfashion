@@ -65,13 +65,13 @@ if (empty($userData)) {
                             </a>
                         </li>
                         
-                        <li class="links"><a class="Transparent" href="<?=$CURRENT_URL?>/dashboard.php"><i class="fa-solid fa-chart-simple"></i>Dashboard</a></li>
+                        <li class="links"><a class="White" href="<?=$CURRENT_URL?>/dashboard.php"><i class="fa-solid fa-chart-simple"></i>Dashboard</a></li>
 
-                        <li class="links"><a class="Transparent" href="<?=$CURRENT_URL?>/quizzes.php"><i class="fa-solid fa-lightbulb"></i>Quizzes</a></li>
+                        <li class="links"><a class="White" href="<?=$CURRENT_URL?>/quizzes.php"><i class="fa-solid fa-lightbulb"></i>Quizzes</a></li>
 
                         <?php if ($userData): ?>
                             <?php if ($adm->isAdm($userDao, false)): ?>
-                                <li class="links"><a class="Transparent" href="<?=$CURRENT_URL?>/adm.php"><i class="fa-solid fa-gear"></i>Admin</a>
+                                <li class="links"><a class="White" href="<?=$CURRENT_URL?>/adm.php"><i class="fa-solid fa-gear"></i>Admin</a>
                                 </li>
                             <?php endif; ?>
                         <?php endif; ?>
@@ -93,12 +93,12 @@ if (empty($userData)) {
                         </div>
                         <ul class="links-nav-2">
                             <?php if (!empty($userData)): ?>
-                                <li class="links"><i class="fa-sharp fa-solid fa-user-pen"></i><a href="<?=$CURRENT_URL?>/edit_profile.php">Editar Perfil</a></li>
-                                <li class="links"><i class="fa-solid fa-right-from-bracket"></i><a href="<?=$CURRENT_URL?>/process/logout_process.php">Sair</a></li>
+                                <li><i class="fa-sharp fa-solid fa-user-pen"></i><a class="links" href="<?=$CURRENT_URL?>/edit_profile.php">Editar Perfil</a></li>
+                                <li><i class="fa-solid fa-right-from-bracket"></i><a class="links" href="<?=$CURRENT_URL?>/process/logout_process.php">Sair</a></li>
                             <?php endif; ?>
                             <?php if (empty($userData)): ?>
-                                <li class="links"><a href="<?=$CURRENT_URL?>/signin.php">Entrar</a></li>
-                                <li class="links"><a href="<?=$CURRENT_URL?>/signup.php">Cadastrar</a></li>
+                                <li><a class="links" href="<?=$CURRENT_URL?>/signin.php">Entrar</a></li>
+                                <li><a class="links" href="<?=$CURRENT_URL?>/signup.php">Cadastrar</a></li>
                             <?php endif; ?>
                         </ul>
                     </div>
