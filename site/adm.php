@@ -13,43 +13,45 @@ $adm->isAdm($userDao, true);
 require_once("templates/message.php");
 ?>
 
-<h1>Criar quiz</h1>
-<form action="process/quiz_process.php" method="POST" enctype="multipart/form-data">
-    <div class="form-group">
-        <label for="quiz-name">Nome:</label>
-        <input type="text" name="quiz-name" placeholder="Digite o nome do quiz">
-    </div>
-    <div class="form-group">
-        <label for="quiz-description">Descrição</label>
-        <input type="text" name="quiz-description" placeholder="Crie uma descrção para o quiz">
-    </div>
-    <div class="form-group">
-        <label for="question-weight">Peso das questões:</label>
-        <input type="number" name="question-weight">
-    </div>
-    <div class="form-group">
-        <label for="emblem">Emblema:</label>
-        <input type="file" name="emblem">
-    </div>
-    <div class="form-group">
-        <label for="quiz-icon">ícone:</label>
-        <input type="file" name="quiz-icon">
-    </div>
-
-    <div id="avatars" class="form-group">
-        <div class="form-section">
-            <label for="avatars">Insira os avatares:</label>
-            <input type="file" name="avatars[]">
-            <input type="file" name="avatars[]">
+<div class="Container">
+    <h1>Criar quiz</h1>
+    <form action="process/quiz_process.php" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="quiz-name">Nome:</label>
+            <input type="text" name="quiz-name" placeholder="Digite o nome do quiz">
         </div>
-        <div class="form-section">
-            <label for="avatars-names">Nomes:</label>
-            <input type="text" name="avatars-names[]">
-            <input type="text" name="avatars-names[]">
+        <div class="form-group">
+            <label for="quiz-description">Descrição</label>
+            <input type="text" name="quiz-description" placeholder="Crie uma descrção para o quiz">
         </div>
-    </div>
-    <input type="submit" class="Button" value="Criar Quiz!">
-</form>
+        <div class="form-group">
+            <label for="question-weight">Peso das questões:</label>
+            <input type="number" name="question-weight">
+        </div>
+        <div class="form-group">
+            <label for="emblem">Emblema:</label>
+            <input type="file" name="emblem">
+        </div>
+        <div class="form-group">
+            <label for="quiz-icon">ícone:</label>
+            <input type="file" name="quiz-icon">
+        </div>
+    
+        <div id="avatars" class="form-group">
+            <div class="form-section">
+                <label for="avatars">Insira os avatares:</label>
+                <input type="file" name="avatars[]">
+                <input type="file" name="avatars[]">
+            </div>
+            <div class="form-section">
+                <label for="avatars-names">Nomes:</label>
+                <input type="text" name="avatars-names[]">
+                <input type="text" name="avatars-names[]">
+            </div>
+        </div>
+        <input type="submit" class="Button" value="Criar Quiz!">
+    </form>
+</div>
 
 <link rel="stylesheet" href="css/adm.css">
 <script src="<?= $CURRENT_URL ?>/script/quiz.js"></script>

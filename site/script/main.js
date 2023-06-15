@@ -34,6 +34,13 @@ document.addEventListener("click", ({ target }) => {
     }
 });
 
+btnHamburguer.addEventListener("click", () => {
+    slideNav();
+});
+btnClose.addEventListener("click", () => {
+    slideNav();
+});
+
 //HEADER NO INDEX  
 if (url.endsWith('index.php') || url.endsWith('/')) {
     const banner = document.querySelector('#container-banner');
@@ -42,7 +49,7 @@ if (url.endsWith('index.php') || url.endsWith('/')) {
     btnHamburguer.classList.replace('Transparent', 'White');
 
     links.forEach((link) => {
-        link.classList.add('White');
+        link.classList.replace('Transparent', 'White');
     })
 
     function verifyScroll() {
@@ -70,28 +77,14 @@ if (url.endsWith('index.php') || url.endsWith('/')) {
 
     window.addEventListener('resize', isDesktop);
 
-    btnHamburguer.addEventListener("click", () => {
-        slideNav();
-    });
-
-    btnClose.addEventListener("click", () => {
-        slideNav();
-    });
-
 } else {
     logo.setAttribute('src', `img/header/logo-black.svg`);
     header.classList.add('Box-shadow');
     btnHamburguer.classList.replace('Transparent', 'Black');
     links.forEach((link) => {
-        link.classList.add('Black');
+        btnHamburguer.classList.replace('Transparent', 'Black');
     })
     header.classList.add('Bg-white');
     nav.classList.add('Bg-white');
 
-    btnHamburguer.addEventListener("click", () => {
-        slideNav();
-    });
-    btnClose.addEventListener("click", () => {
-        slideNav();
-    });
 }

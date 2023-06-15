@@ -65,13 +65,13 @@ if (empty($userData)) {
                             </a>
                         </li>
                         
-                        <li class="links"><a href="<?=$CURRENT_URL?>/dashboard.php"><i class="fa-solid fa-chart-simple"></i>Dashboard</a></li>
+                        <li class="links"><a class="Transparent" href="<?=$CURRENT_URL?>/dashboard.php"><i class="fa-solid fa-chart-simple"></i>Dashboard</a></li>
 
-                        <li class="links"><a href="<?=$CURRENT_URL?>/quizzes.php"><i class="fa-solid fa-lightbulb"></i>Quizzes</a></li>
+                        <li class="links"><a class="Transparent" href="<?=$CURRENT_URL?>/quizzes.php"><i class="fa-solid fa-lightbulb"></i>Quizzes</a></li>
 
                         <?php if ($userData): ?>
                             <?php if ($adm->isAdm($userDao, false)): ?>
-                                <li class="links"><a href="<?=$CURRENT_URL?>/adm.php"><i class="fa-solid fa-gear"></i>Admin</a>
+                                <li class="links"><a class="Transparent" href="<?=$CURRENT_URL?>/adm.php"><i class="fa-solid fa-gear"></i>Admin</a>
                                 </li>
                             <?php endif; ?>
                         <?php endif; ?>
