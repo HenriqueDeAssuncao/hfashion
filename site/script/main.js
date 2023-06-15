@@ -2,6 +2,10 @@
 const logo = document.querySelector('.logo-desktop');
 const links = document.querySelectorAll('.links-nav-1 a');
 const header = document.querySelector('header');
+//URL ATUAL
+let url = window.location.href;
+//MEDIA QUERY
+let isMobile = window.matchMedia('(max-width: 992px)');
 
 //NAVBAR
 const btnHamburguer = document.querySelector('.btn-hamburguer');
@@ -28,11 +32,12 @@ document.addEventListener("click", ({ target }) => {
     }
 });
 
-if (window.location.href === 'http://localhost/hfashion/site/') {
+if (url.endsWith('index.php') || url.endsWith('/')) {
     const banner = document.querySelector('.js-container-banner');
 
     logo.setAttribute('src', `img/header/logo.svg`);
     btnHamburguer.classList.replace('Transparent', 'White');
+
     links.forEach((link) => {
         link.classList.add('White');
     })
@@ -41,6 +46,7 @@ if (window.location.href === 'http://localhost/hfashion/site/') {
         if (window.pageYOffset >= banner.clientHeight) {
             logo.setAttribute('src', `img/header/logo-black.svg`);
             header.classList.add('Bg-white');
+            header.classList.add('Box-shadow');
             btnHamburguer.classList.replace('White', 'Black');
             links.forEach((link) => {
                 link.classList.replace('White', 'Black');
@@ -48,6 +54,7 @@ if (window.location.href === 'http://localhost/hfashion/site/') {
         } else {
             logo.setAttribute('src', `img/header/logo.svg`);
             header.classList.remove('Bg-white');
+            header.classList.remove('Box-shadow');
             btnHamburguer.classList.replace('Black', 'White');
             links.forEach((link) => {
                 link.classList.replace('Black', 'White');
@@ -68,6 +75,7 @@ if (window.location.href === 'http://localhost/hfashion/site/') {
 
 } else {
     logo.setAttribute('src', `img/header/logo-black.svg`);
+    header.classList.add('Box-shadow');
     btnHamburguer.classList.replace('Transparent', 'Black');
     links.forEach((link) => {
         link.classList.add('Black');
