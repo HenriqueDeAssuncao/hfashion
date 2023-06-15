@@ -93,11 +93,24 @@ nav.nav {
     top: 0;
     margin-top: 55px;
     height: 90vh;
-    background-color: #9A2828;
+    background-color: #ED5227;
+    /* background-image: linear-gradient(to bottom, #ED5227,#9A2828); */
     border-radius: 15px;
     -webkit-box-shadow: 0px 1px 14px -2px rgba(41, 41, 41, 0.214);
     -moz-box-shadow: 0px 1px 14px -2px rgba(41, 41, 41, 0.214);
     box-shadow: 0px 1px 14px -2px rgba(41, 41, 41, 0.214);
+    animation: translateX .5s forwards;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        transform: translate3d(30px, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
 }
 
 .links-nav-1 {
@@ -121,7 +134,7 @@ nav.nav {
 .links-nav-1>.links {
     margin-bottom: 10px;
     padding: 10px;
-    border: .5px solid black;
+    border: .5px solid white;
     border-radius: 10px;
 }
 
@@ -150,9 +163,10 @@ nav.nav {
     margin-top: 10px;
     right: 0px;
 
+    border-radius: 10px;
     width: 200px;
     height: fit-content;
-    background-color: black;
+    background-color: #ED5227;
 }
 
 .dropdown-tri {
@@ -163,7 +177,7 @@ nav.nav {
     margin: 15px 5px 0px 0px;
     right: 0%;
     border-left: 60px solid transparent;
-    background-color: black;
+    background-color: #ED5227;
 }
 
 .links-nav-2 {
@@ -174,11 +188,33 @@ nav.nav {
 
 .links-nav-2 li {
     transform-origin: top center;
-    animation: translateX 300ms
+    animation: translateX 300ms;
 }
+
+@keyframes translateX {
+    0% {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    
+    80% {
+        transform: translateX(-5px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    }
 
 .links-nav-2 a {
     text-decoration: none;
+    color: black;
+}
+
+.links-nav-2 i {
+    margin-right: 10px;
+    color: black;
 }
 
 .links-nav-2 .links {
@@ -219,6 +255,7 @@ nav.nav {
         display: inline-block;
         margin-top: 0px;
         left: 0;
+        background-image: none;
         background-color: transparent;
         height: fit-content;
         border-radius: 0px;

@@ -93,8 +93,8 @@ if (empty($userData)) {
                         </div>
                         <ul class="links-nav-2">
                             <?php if (!empty($userData)): ?>
-                                <li class="links"><a href="<?=$CURRENT_URL?>/edit_profile.php">Editar Perfil</a></li>
-                                <li class="links"><a href="<?=$CURRENT_URL?>/process/logout_process.php">Sair</a></li>
+                                <li class="links"><i class="fa-sharp fa-solid fa-user-pen"></i><a href="<?=$CURRENT_URL?>/edit_profile.php">Editar Perfil</a></li>
+                                <li class="links"><i class="fa-solid fa-right-from-bracket"></i><a href="<?=$CURRENT_URL?>/process/logout_process.php">Sair</a></li>
                             <?php endif; ?>
                             <?php if (empty($userData)): ?>
                                 <li class="links"><a href="<?=$CURRENT_URL?>/signin.php">Entrar</a></li>
