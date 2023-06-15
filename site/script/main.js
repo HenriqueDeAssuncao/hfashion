@@ -1,24 +1,18 @@
+//ELEMENTOS:
+const logo = document.querySelector('.logo-desktop');
+const links = document.querySelectorAll('.links-nav-1 a');
+const header = document.querySelector('header');
+
 //NAVBAR
 const btnHamburguer = document.querySelector('.btn-hamburguer');
 const btnClose = document.querySelector('.btn-close');
 const nav = document.querySelector('.nav-1');
 
-function slide() {
-    btnHamburguer.style.display = "none";
-    btnClose.style.display = "block";
-    nav.style.display = "block";
-    nav.style.left = "0%";
+function slideNav() {
+    btnHamburguer.classList.toggle('Hidden');
+    btnClose.classList.toggle('Hidden');
+    nav.classList.toggle('Hidden');
 }
-
-function hide() {
-    btnHamburguer.style.display = "block";
-    btnClose.style.display = "none";
-    nav.style.left = "-100%";
-}
-
-btnHamburguer.addEventListener("click", slide);
-btnClose.addEventListener("click", hide);
-
 
 //DROPDOWN BAR
 const btnDropdown = document.querySelector('.profile-pic-header');
@@ -33,3 +27,58 @@ document.addEventListener("click", ({ target }) => {
         dropdownRect.classList.add("Hidden");
     }
 });
+
+if (window.location.href === 'http://localhost/hfashion/site/') {
+    const banner = document.querySelector('.js-container-banner');
+
+    logo.setAttribute('src', `img/header/logo.svg`);
+    btnHamburguer.classList.replace('Transparent', 'White');
+    links.forEach((link) => {
+        link.classList.add('White');
+    })
+
+    function verifyScroll() {
+        if (window.pageYOffset >= banner.clientHeight) {
+            logo.setAttribute('src', `img/header/logo-black.svg`);
+            header.classList.add('Bg-white');
+            btnHamburguer.classList.replace('White', 'Black');
+            links.forEach((link) => {
+                link.classList.replace('White', 'Black');
+            })
+        } else {
+            logo.setAttribute('src', `img/header/logo.svg`);
+            header.classList.remove('Bg-white');
+            btnHamburguer.classList.replace('Black', 'White');
+            links.forEach((link) => {
+                link.classList.replace('Black', 'White');
+            })
+        }
+    }
+
+    window.addEventListener('scroll', verifyScroll);
+
+    btnHamburguer.addEventListener("click", () => {
+        slideNav();
+    });
+
+    btnClose.addEventListener("click", () => {
+        slideNav();
+        
+    });
+
+} else {
+    logo.setAttribute('src', `img/header/logo-black.svg`);
+    btnHamburguer.classList.replace('Transparent', 'Black');
+    links.forEach((link) => {
+        link.classList.add('Black');
+    })
+    header.classList.add('Bg-white');
+    nav.classList.add('Bg-white');
+
+    btnHamburguer.addEventListener("click", () => {
+        slideNav();
+    });
+    btnClose.addEventListener("click", () => {
+        slideNav();
+    });
+}

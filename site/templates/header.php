@@ -45,32 +45,33 @@ if (empty($userData)) {
 
 <body>
 
-    <header class="header White js-header">
+    <header class="js-header">
         <div class="Container">
             <nav class="nav Flex">
                 <div class="nav-icons">
-                    <button class="btn-hamburguer Color-white Button">
+                    <button class="btn-hamburguer Transparent Button">
                         <i class="fa-solid fa-bars"></i>
                     </button>
-                    <button class="btn-close Hidden Button">
+                    <button class="btn-close Button Hidden">
                         <i class="fa-solid fa-xmark"></i>
                     </button>
                 </div>
-                <div id="nav-1" class="nav-1 Flex">
+
+                <div class="nav-1 Hidden">
                     <ul class="links-nav-1">
-                        <li class="links">
-                            <a href="<?= $CURRENT_URL ?>/" class="logo Hidden">
-                                <img class="logo-desktop" src="img/header/logo-black.svg" alt="Hfashion" style="width: 100px">
+                        <li class="links logo">
+                            <a href="<?=$CURRENT_URL?>/">
+                                <img class="logo-desktop" src="<?=$CURRENT_URL?>/img/" alt="Hfashion" style="width: 100px">
                             </a>
                         </li>
                         
-                        <li class="links"><a href="<?= $CURRENT_URL ?>/dashboard.php">Dashboard</a></li>
+                        <li class="links"><a href="<?=$CURRENT_URL?>/dashboard.php"><i class="fa-solid fa-chart-simple"></i>Dashboard</a></li>
 
-                        <li class="links"><a href="<?= $CURRENT_URL ?>/quizzes.php">Quizzes</a></li>
+                        <li class="links"><a href="<?=$CURRENT_URL?>/quizzes.php"><i class="fa-solid fa-lightbulb"></i>Quizzes</a></li>
 
                         <?php if ($userData): ?>
                             <?php if ($adm->isAdm($userDao, false)): ?>
-                                <li class="links"><a href="<?= $CURRENT_URL ?>/adm.php"><i class="fa-solid fa-gear"></i></a>
+                                <li class="links"><a href="<?=$CURRENT_URL?>/adm.php"><i class="fa-solid fa-gear"></i>Admin</a>
                                 </li>
                             <?php endif; ?>
                         <?php endif; ?>
@@ -78,12 +79,12 @@ if (empty($userData)) {
                     </ul>
                 </div>
 
-                <a href="<?= $CURRENT_URL ?>"><img src="<?= $CURRENT_URL ?>/img/header/logo-mobile.png" alt="Hfashion" class="logo-mobile" style="width: 40px"></a>
+                <a href="<?=$CURRENT_URL?>"><img src="<?=$CURRENT_URL?>/img/header/logo-mobile.png" alt="Hfashion" class="logo-mobile" style="width: 40px"></a>
 
                 <div class="nav-2">
                     <button class="btn-dropdown Button">
                         <div class="profile-pic-header profile-img"
-                            style="background-image: url(<?= $CURRENT_URL ?>/img/avatars/<?= $image ?>)"
+                            style="background-image: url(<?=$CURRENT_URL?>/img/avatars/<?= $image ?>)"
                             alt="Foto de Perfil"></div>
                     </button>
                     <div class="dropdown-rect Hidden">
@@ -92,12 +93,12 @@ if (empty($userData)) {
                         </div>
                         <ul class="links-nav-2">
                             <?php if (!empty($userData)): ?>
-                                <li class="links"><a href="<?= $CURRENT_URL ?>/edit_profile.php">Editar Perfil</a></li>
-                                <li class="links"><a href="<?= $CURRENT_URL ?>/process/logout_process.php">Sair</a></li>
+                                <li class="links"><a href="<?=$CURRENT_URL?>/edit_profile.php">Editar Perfil</a></li>
+                                <li class="links"><a href="<?=$CURRENT_URL?>/process/logout_process.php">Sair</a></li>
                             <?php endif; ?>
                             <?php if (empty($userData)): ?>
-                                <li class="links"><a href="<?= $CURRENT_URL ?>/signin.php">Entrar</a></li>
-                                <li class="links"><a href="<?= $CURRENT_URL ?>/signup.php">Cadastrar</a></li>
+                                <li class="links"><a href="<?=$CURRENT_URL?>/signin.php">Entrar</a></li>
+                                <li class="links"><a href="<?=$CURRENT_URL?>/signup.php">Cadastrar</a></li>
                             <?php endif; ?>
                         </ul>
                     </div>

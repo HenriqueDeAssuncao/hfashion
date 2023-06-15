@@ -1,0 +1,132 @@
+/* CONFIGURAÇÃO */
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    border: 1px solid black;
+}
+
+/* FONTES */
+/* Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@200;300;400;500;600&display=swap');
+
+
+/* LAYOUT */
+.Container {
+    margin: 0 auto;
+}
+
+.Flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Hidden {
+    display: none;
+}
+
+.Button {
+    background-color: transparent;
+    border: none;
+}
+
+.Auto {
+    margin: 0 auto;
+}
+
+/* Smartphone Portrait (ATÉ 576px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+header {
+    position: sticky;
+    top: 0;
+    height: 50px;
+}
+
+nav.nav {
+    justify-content: space-between;
+}
+
+.nav-1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 50px;
+}
+
+.logo {
+    display: none;
+}
+
+
+/* Smartphone landscape (ATÉ 768px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 576px) {
+    .Container {
+        width: 540px;
+    }
+}
+
+/* Tablet Portrait (ATÉ 992px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 768px) {
+    .Container {
+        width: 720px;
+    }
+}
+
+/* Tablet Landscape (ATÉ 1200px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 992px) {
+    .Container {
+        width: 960px;
+    }
+    nav.nav {
+        padding: 15px 0px 15px 0px;
+    }
+
+    .nav-icons {
+        display: none;
+    }
+
+    .nav-1 {
+        position: static;
+        display: inline-block;
+        margin-top: 0px;
+        left: 0;
+        height: fit-content;
+        box-shadow: none;
+    }
+
+    .links-nav-1 {
+        padding: 0px;
+        margin-bottom: 0px;
+        display: flex;
+        align-items: center;
+    }
+
+    .links-nav-1>.links {
+        margin-bottom: 0px;
+        border-bottom: none;
+        float: left;
+        margin: 0 17px 0 17px;
+        padding: 0px;
+    }
+
+    .nav-2 {
+        margin: 0 17px 0 17px;
+    }
+
+    .logo-mobile {
+        display: none;
+    }
+
+    .logo {
+        display: inline-block;
+    }
+}
+
+/* PC (>= 1200px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 1200px) {
+    .Container {
+        width: 100%;
+    }
+}

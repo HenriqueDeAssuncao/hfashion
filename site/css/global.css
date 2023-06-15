@@ -36,21 +36,31 @@
     margin: 0 auto;
 }
 
+.Transparent {
+    color: transparent;
+}
+
+.Bg-white {
+    background-color: white;
+}
+
+.White {
+    color: white;
+}
+
+.Black {
+    color: black;
+}
+
 /* Smartphone Portrait (ATÉ 576px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
-header.header {
+header {
+    position: sticky;
+    top: 0;
+    height: fit-content;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
-    color: #333333;
-    position: sticky;
-    top: 0;
-    background-color: #fff;
-}
-
-nav.nav {
-    justify-content: space-between;
-    padding: 15px 10px 15px 10px;
 }
 
 nav.nav {
@@ -59,7 +69,7 @@ nav.nav {
 }
 
 .nav-icons {
-    width: 20px;
+    width: 40px;
 }
 
 .nav-icons button {
@@ -67,18 +77,20 @@ nav.nav {
 }
 
 .nav-icons .btn-close {
-    color: rgba(192, 36, 37, 1);
+    color: rgb(210, 22, 22);
 }
 
 .nav-1 {
     position: absolute;
-    left: -100%;
+    left: 5;
     top: 0;
-    margin-top: 50px;
-    transition: 0.5s;
-    height: 100vh;
+    margin-top: 55px;
+    height: 90vh;
     background-color: white;
-    box-shadow: 5px 0 5px -5px rgba(205, 205, 205, 0.38);
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 1px 14px -2px rgba(0, 0, 0, 0.400);
+    -moz-box-shadow: 0px 1px 14px -2px rgba(0, 0, 0, 0.400);
+    box-shadow: 0px 1px 14px -2px rgba(0, 0, 0, 0.400);
 }
 
 .links-nav-1 {
@@ -92,13 +104,22 @@ nav.nav {
 
 .links-nav-1 a {
     text-decoration: none;
-    color: #333333;
 }
+
+.links-nav-1 i {
+    margin-right: 10px;
+}
+
 
 .links-nav-1>.links {
     margin-bottom: 10px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.644);
     padding: 10px;
+    border: .5px solid black;
+    border-radius: 10px;
+}
+
+.logo {
+    display: none;
 }
 
 .nav-2 {
@@ -109,7 +130,7 @@ nav.nav {
 .profile-pic-header {
     width: 40px;
     height: 40px;
-}   
+}
 
 .profile-img {
     border-radius: 100%;
@@ -144,14 +165,13 @@ nav.nav {
     list-style-type: none;
 }
 
-.links-nav-2 li { 
+.links-nav-2 li {
     transform-origin: top center;
     animation: translateX 300ms
 }
 
 .links-nav-2 a {
     text-decoration: none;
-    color: white;
 }
 
 .links-nav-2 .links {
@@ -192,7 +212,10 @@ nav.nav {
         display: inline-block;
         margin-top: 0px;
         left: 0;
+        background-color: transparent;
         height: fit-content;
+        box-shadow: none;
+        border-radius: 0px;
         box-shadow: none;
     }
 
@@ -204,15 +227,12 @@ nav.nav {
     }
 
     .links-nav-1>.links {
+        border: none;
         margin-bottom: 0px;
         border-bottom: none;
         float: left;
         margin: 0 17px 0 17px;
         padding: 0px;
-    }
-
-    .nav-2-desktop {
-        display: block;
     }
 
     .nav-2 {
