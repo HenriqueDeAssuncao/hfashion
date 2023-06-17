@@ -36,7 +36,7 @@ function getQuestionTemplate() {
 }
 
 function setInputs(inputs) {
-    inputsArray = Array.from(inputs);
+    inputsArray = inputs;
 }
 
 function updateInputs() {
@@ -69,19 +69,22 @@ function deleteTemplateQuestion(e) {
 }
 
 function submitForm(e) {
+    let condition = true;
     if (questionsTemplatesCounter >= 5) {
-        //Aqui eu verifico se todos os campos foram preenchidos
-        for (let i = 0; i <= inputsArray.length; i++) {
-            if (inputsArray[i].value === '' || inputsArray[i].value === 0) {
+        inputsArray.forEach((input) => {
+            if (input.value === "" || input.value === 0) {
+                condition = false;
                 e.preventDefault();
-                alert('Todos os campos são obrigatórios!');
-                break;
             }
+        });
+        if (condition) {
+            form.setAttribute('action', `${href}./../process/questions_process.php?questionsNumber=${questionsTemplatesCounter}`);
+        } else {
+            alert('Todos os campos são obrigatórios');
         }
-        form.setAttribute('action', `${href}./../process/questions_process.php?questionsNumber=${questionsTemplatesCounter}`);
     } else {
-        alert('O quiz deve ter no mínimo 5 perguntas!');
         e.preventDefault();
+        alert('O quiz deve ter no mínimo 5 perguntas!');
     }
 }
 
