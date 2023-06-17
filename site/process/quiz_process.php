@@ -36,7 +36,7 @@ if ((!empty($_POST)) && (!empty($_FILES))) {
 
     if ($quiz_name && $quiz_description && $question_weight && $emblem && $quiz_icon && $avatars && $avatarsNames) {
         //Faço o cadastro
-        $message->setMessage("Quiz criado!", "success", "manage_questions.php");
+        $message->setMessage("Quiz criado!", "success", "adm_questions.php");
     } else {
         $message->setMessage("Todos os campos são obrigatórios!", "error", "back");
     }

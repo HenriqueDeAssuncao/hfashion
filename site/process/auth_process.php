@@ -64,7 +64,7 @@
         $password = $_POST["password"];
 
         $data_fill_form = [$nickname_email, $password];
-        $_SESSION["fill_form"] = $data_fill_form;
+        $_SESSION["fill_auth_form"] = $data_fill_form;
 
         //Antenticar usuário
         if ($userDao->authenticateUser($nickname_email, $password)) {
