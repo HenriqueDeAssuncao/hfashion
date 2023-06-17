@@ -1,5 +1,11 @@
 <?php
+    require_once __DIR__ . ("/../helpers/url.php");
+    require_once __DIR__ . ("/../helpers/db.php");
+    require_once __DIR__ . ("/../dao/UserDAO.php");
+    require_once __DIR__ . ("/../models/User.php");
+    require_once __DIR__ . ("/../models/Message.php");
+
     if ($_GET['questionsNumber']) {
-        $n = $_GET['questionsNumber'];
-        echo "$n";
+        $num_questions = $_GET['questionsNumber'];
+        
     }

@@ -26,7 +26,11 @@ require_once("templates/message.php");
         </div>
         <div class="form-group">
             <label for="question-weight">Peso das questões:</label>
-            <input type="number" name="question-weight">
+            <select name="question-weight">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
         </div>
         <div class="form-group">
             <label for="emblem">Emblema:</label>

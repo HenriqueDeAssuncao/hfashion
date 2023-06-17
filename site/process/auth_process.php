@@ -18,10 +18,6 @@
         $email = $_POST["email"];
         $password = $_POST["password"];
         $confirmpassword = $_POST["confirmpassword"];
-
-        //Colocando na sessão pra preencher o formulário com os dados que o usuário já colocou pq se der erro eles não vão sumir ao recarregar
-        $data_fill_form = [$nickname, $email, $password, $confirmpassword];
-        $_SESSION["fill_form"] = $data_fill_form;
         
         //Verificando os dados
 

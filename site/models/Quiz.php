@@ -3,10 +3,9 @@
         private $quiz_id;
         private $quiz_token; //Hash pra usar de url
         private $quiz_name;
+        private $quiz_description;
         private $question_weight;
-        private $emblem;
         private $icon;
-        private $avatars; //Imagem e nome
 
         public function getQuizId() {
             return $this->quiz_id;
@@ -20,28 +19,29 @@
         public function setQuizToken($quiz_token) {
             $this->quiz_token = $quiz_token;
         }
+        public function setQuizName($quiz_name) {
+            $this->quiz_name = $quiz_name;
+        }
+        public function getQuizName() {
+            return $this->quiz_name;
+        }
+        public function setQuizDescription($quiz_description) {
+            $this->quiz_description = $quiz_description;
+        }
+        public function getQuizDescription() {
+            return $this->quiz_description;
+        }
         public function getQuestionWeight($question_weight) {
             return $this->$question_weight;
         }
         public function setQuestionWeight($question_weight) {
             $this->question_weight = $question_weight;
         }
-        public function getEmblem($emblem) {
-            return $this->$emblem;
+        public function getIcon($icon) {
+            return $this->$icon;
         }
-        public function setEmblem($emblem) {
-            $this->emblem = $emblem;
-        }
-        public function getAvatars($avatars) {
-            return $this->$avatars;
-        }
-        public function setAvatars($avatars) { 
-            $this->avatars = $avatars;
-        }
-        
-        //FUNÇÕES QUE NÃO VÃO INTERAGIR COM O BANCO
-        public function generateImageName() {
-            return bin2hex(random_bytes(60)) . ".png";
+        public function setIcon($icon) {
+            $this->icon = $icon;
         }
 
     }

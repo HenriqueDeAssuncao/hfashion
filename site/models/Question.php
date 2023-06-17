@@ -1,13 +1,12 @@
 <?php
     class Question {
         private $question_id;
-        private $fk_quiz_token;
-        private $question_token; //Hash pra usar de url
+        private $quiz_id;
         private $question;
         private $options;
         private $answer;
-        public function __construct($fk_quiz_token) {
-            $this->fk_quiz_token = $fk_quiz_token;
+        public function __construct($quiz_id) {
+            $this->quiz_id = $quiz_id;
         }
 
         public function getQuestionId() {
@@ -15,12 +14,6 @@
         }
         public function setQuestionId($question_id) {
             $this->question_id = $question_id;
-        }
-        public function getQuestionToken() {
-            return $this->question_token;
-        }
-        public function setQuestionToken($question_token) {
-            $this->question_token = $question_token;
         }
         public function getQuestion() {
             return $this->question;
