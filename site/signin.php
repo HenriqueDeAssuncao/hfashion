@@ -1,18 +1,5 @@
 <?php
     require_once("templates/header_log.php");
-
-    if (!empty($data_fill_form)) {
-        $_SESSION["fill_auth_form"] = "";
-    }
-    
-    if (!empty($_SESSION["fill_auth_form"])) {
-        $data_fill_form = $_SESSION["fill_auth_form"];
-        $nickname_email = $data_fill_form[0];
-        $password = $data_fill_form[1];
-    } else {
-        $nickname_email = "";
-        $password = "";
-    }
 ?>
 
 <?php 
@@ -24,11 +11,11 @@ require_once("templates/message.php");
         <input type="hidden" name="type" value="login">
         <div class="form-group">
             <label class="email" for="nickname_email">E-mail ou Apelido:</label>
-            <input type="text" class="form-input" id="nickname_email" name="nickname_email" value ="<?=$nickname_email?>">
+            <input type="text" class="form-input" id="nickname_email" name="nickname_email">
         </div>
         <div class="form-group">
             <label for="password">Senha:</label>
-            <input type="password" class="form-input" id="password" name="password" value ="<?=$password?>">
+            <input type="password" class="form-input" id="password" name="password">
         </div>
         <div class="form-container">
             <input type="submit" class="btn-con" value="Conectar">

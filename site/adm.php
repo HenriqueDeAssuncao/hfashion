@@ -33,19 +33,25 @@ require_once("templates/message.php");
             </select>
         </div>
         <div class="form-group">
-            <label for="emblem">Emblema:</label>
-            <input type="file" name="emblem">
+            <div class="form-section">
+                <label for="emblem">Emblema:</label>
+                <input type="file" name="emblem">
+            </div>
+            <div class="form-section">
+                <label for="emblem-name">Nome:</label>
+                <input type="text" name="emblem-name">
+            </div>
         </div>
         <div class="form-group">
             <label for="quiz-icon">ícone:</label>
-            <input type="file" name="quiz-icon">
+            <input type="file" name="icon">
         </div>
     
         <div id="avatars" class="form-group">
             <div class="form-section">
                 <label for="avatars">Insira os avatares:</label>
-                <input type="file" name="avatars[]">
-                <input type="file" name="avatars[]">
+                <input type="file" name="first-avatar">
+                <input type="file" name="second-avatar">
             </div>
             <div class="form-section">
                 <label for="avatars-names">Nomes:</label>

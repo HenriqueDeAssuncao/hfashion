@@ -1,26 +1,44 @@
 <?php
     class Emblem {
-        private $emblem_id;
-        private $emblem_name;
-        private $emblem_img;
-        public function getEmblemId($emblem_id) {
-            return $this->$emblem_id;
+        private $emblemId;
+        private $quizId;
+        private $quizToken;
+        private $emblemName;
+        private $emblemPath;
+        public function getEmblemId() {
+            return $this->emblemId;
         }
-        public function setEmblemId($emblem_id) {
-            $this->emblem_id = $emblem_id;
+        public function setEmblemId($emblemId) {
+            $this->emblemId = $emblemId;
         }
-        public function getEmblemName($emblem_name) {
-            return $this->$emblem_name;
+        public function getQuizId() {
+            return $this->quizId;
         }
-        public function setEmblemName($emblem_name) {
-            $this->emblem_name = $emblem_name;
+        public function setQuizId($quizId) {
+            $this->quizId = $quizId;
         }
-        public function getEmblemImg($emblem_img) {
-            return $this->$emblem_img;
+        public function getQuizToken() {
+            return $this->quizToken;
         }
-        public function setEmblemImg($emblem_img) {
-            $this->emblem_img = $emblem_img;
+        public function setQuizToken($quizToken) {
+            $this->quizToken = $quizToken;
         }
+        public function getEmblemName() {
+            return $this->emblemName;
+        }
+        public function setEmblemName($emblemName) {
+            $this->emblemName = $emblemName;
+        }
+        public function getEmblemPath() {
+            return $this->emblemPath;
+        }
+        public function setEmblemPath($emblemPath) {
+            $this->emblemPath = $emblemPath;
+        }
+    }
+
+    interface EmblemDAOInterface {
+        public function createEmblem(Emblem $emblem);
     }
 
     

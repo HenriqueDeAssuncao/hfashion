@@ -2,30 +2,94 @@
 require_once __DIR__ . "/../helpers/url.php";
 require_once __DIR__ . "/../models/Message.php";
 require_once __DIR__ . "/../models/Quiz.php";
+require_once __DIR__ . "/../models/Emblem.php";
+require_once __DIR__ . "/../models/Avatar.php";
 require_once __DIR__ . "/../dao/QuizDAO.php";
+require_once __DIR__ . "/../dao/EmblemDAO.php";
+require_once __DIR__ . "/../dao/AvatarDAO.php";
 
 $message = new Message($CURRENT_URL);
-$quiz = new Quiz;
-$quizDao = new QuizDAO;
+$quiz = new Quiz($message);
+$quizDao = new QuizDAO($conn, $CURRENT_URL);
 
 if ((!empty($_POST)) && (!empty($_FILES))) {
 
-    $quiz_name = ucwords(trim($_POST['quiz-name']));
-    $quiz_description = $_POST['quiz-description'];
-    $question_weight = $_POST['question-weight'];
-    $avatarsNamesArray = $_POST['avatars-names'];
-    if ($avatarsNamesArray[0] && $avatarsNamesArray[1]) {
-        $avatarsNames = $avatarsNamesArray;
+    $quizName = ucwords(trim($_POST['quiz-name']));
+    $quizDescription = $_POST['quiz-description'];
+    $questionWeight = $_POST['question-weight'];
+    $emblem = $_FILES['emblem'];
+    $emblemName = $_POST['emblem-name'];
+    $icon = $_FILES['icon'];
+    $firstAvatar = $_FILES['first-avatar'];
+    $secondAvatar = $_FILES['second-avatar'];
+    $avatarsArray = $_POST['avatars-names'];
+    if ($avatarsArray[0] && $avatarsArray[1]) {
+        $avatarsNames = $avatarsArray;
     }
 
-    //Upload das imagens:
-    $emblem = $_FILES["emblem"];
-    $quiz_icon = $_FILES["quiz-icon"];
-    $avatarsArray = $_FILES["avatars"]; //Essa variável é só pra eu contar os índices. Não é a que vou usar
+    //Verifico se todos os campos foram preenchidos
+    if ($quizName && $quizDescription && $questionWeight && $emblem && $emblemName && $icon && $firstAvatar && $secondAvatar) {
+        //Verifico se todas as imagens são válidas e recebo como retorno o caminho para guardá-las
+        $emblemPath = $quiz->verifyImg($emblem, "emblems");
+        $iconPath = $quiz->verifyImg($icon, "icons");
+        $firstAvatarPath = $quiz->verifyImg($firstAvatar, "avatars");
+        $secondAvatarPath = $quiz->verifyImg($secondAvatar, "avatars");
 
-    if ($avatarsArray["name"][0] && $avatarsArray["name"][1]) {
-        $avatars = $avatarsArray;
+        if ($emblemPath && $iconPath && $firstAvatarPath && $secondAvatar) {
+            $moveEmblem = $quiz->uploadImg($emblem, $emblemPath);
+            $moveIcon = $quiz->uploadImg($icon, $iconPath);
+            $moveFirstAvatar = $quiz->uploadImg($firstAvatar, $firstAvatarPath);
+            $moveSecondAvatar = $quiz->uploadImg($secondAvatar, $secondAvatarPath);
+
+            //Se foi feito o upload de todas as imagens eu cadastro o quiz
+            //Cadastro o quiz
+            $quizToken = $quiz->generateToken();
+
+            $quiz->setQuizName($quizName);
+            $quiz->setQuizDescription($quizDescription);
+            $quiz->setQuestionWeight($questionWeight);
+            $quiz->setQuizToken($quizToken);
+            $quiz->setIconPath($iconPath);
+
+            $quizDao->createQuiz($quiz);
+            $quizId = $quizDao->findQuizIdByToken($quizToken);
+
+            //Cadastro as imagens nas suas tabelas
+            $emblem  = new Emblem;
+            $emblemDao = new EmblemDAO($conn, $CURRENT_URL);
+            $firstAvatar = new Avatar;
+            $secondAvatar = new Avatar;
+            $firstAvatarDao = new AvatarDAO($conn, $CURRENT_URL);
+            $secondAvatarDao = new AvatarDAO($conn, $CURRENT_URL);
+
+            if ($quizId) {
+                $emblem->setEmblemName($emblemName);
+                $emblem->setEmblemPath($emblemPath);
+                $emblem->setQuizId($quizId);
+                $emblemDao->createEmblem($emblem);
+
+
+                $firstAvatar->setAvatarName($avatarsNames[0]);
+                $firstAvatar->setAvatarPath($firstAvatarPath);
+                $firstAvatar->setQuizId($quizId);
+                $firstAvatarDao->createAvatar($firstAvatar);
+
+                $secondAvatar->setAvatarName($avatarsNames[1]);
+                $secondAvatar->setAvatarPath($secondAvatarPath);
+                $secondAvatar->setQuizId($quizId);
+                $secondAvatarDao->createAvatar($secondAvatar);
+            } else {
+                $message->setMessage("Não existe o quiz id", "error", "back");
+            }
+            
+        } else {
+            $message->setMessage("Não foi possível fazer o upload das imagens inseridas!", "error", "back");
+        }
+
     } else {
         $message->setMessage("Todos os campos são obrigatórios!", "error", "back");
     }
+
+} else {
+    $message->setMessage("Todos os campos são obrigatórios!", "error", "back");
 }
