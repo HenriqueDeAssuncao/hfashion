@@ -1,11 +1,7 @@
 <?php
-require_once("templates/header.php");
 
-$user = new User();
-$userDao = new UserDAO($conn, $CURRENT_URL);
-$userData = $userDao->verifyToken(true);
-$adm = new Adm($CURRENT_URL);
-$adm->isAdm($userDao, true);
+require_once("templates/header.php");
+require_once("helpers/verify_adm.php");
 
 ?>
 

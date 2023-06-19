@@ -86,6 +86,8 @@ if ((!empty($_POST)) && (!empty($_FILES))) {
                 $secondAvatar->setQuizId($quizId);
                 $secondAvatarDao->createAvatar($secondAvatar);
 
+                $quizDao->setQuizTokenToSession($quizToken);
+
                 $message->setMessage("Quiz criado com sucesso!", "success", "adm_questions.php");
 
             } else {

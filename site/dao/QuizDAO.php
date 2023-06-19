@@ -25,9 +25,9 @@
             $quizToken = $quiz->getQuizToken();
 
             $stmt = $this->conn->prepare("INSERT INTO quizzes (
-                user_id, quiz_name, quiz_description, question_weight, icon, quiz_token
+                user_id, quiz_name, quiz_description, question_weight, icon, quiz_token, status
                 ) VALUES (
-                    :user_id, :quiz_name, :quiz_description, :question_weight, :icon, :quiz_token
+                    :user_id, :quiz_name, :quiz_description, :question_weight, :icon, :quiz_token, 0
                 )");
             $stmt->bindParam(":user_id", $userId);
             $stmt->bindParam(":quiz_name", $quizName);
@@ -53,8 +53,13 @@
             $stmt = $this->conn->prepare("SELECT status FROM quizzes WHERE quiz_token = :quiz_token");
             $stmt->bindParam(":quiz_token", $quizToken);
             $stmt->execute();
-            $statusArr = $stmt->fetch(PDO::FETCH_ASSOC);
-            $status = $statusArr["status"];
+            $status = $stmt->fetch(PDO::FETCH_ASSOC);
+            if ($status == 0) {
+                $status = false;
+            }
+            else {
+                $status = true;
+            }
             return $status;
         }
         public function getQuestionsByQuizId() {
