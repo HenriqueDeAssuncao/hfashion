@@ -18,6 +18,10 @@
         $email = $_POST["email"];
         $password = $_POST["password"];
         $confirmpassword = $_POST["confirmpassword"];
+
+        //Colocando na sessão pra preencher o formulário com os dados que o usuário já colocou pq se der erro eles não vão sumir ao recarregar
+        $data_fill_form = [$nickname, $email, $password, $confirmpassword];
+        $_SESSION["fill_form"] = $data_fill_form;
         
         //Verificando os dados
 
@@ -60,7 +64,7 @@
         $password = $_POST["password"];
 
         $data_fill_form = [$nickname_email, $password];
-        $_SESSION["fill_auth_form"] = $data_fill_form;
+        $_SESSION["fill_form"] = $data_fill_form;
 
         //Antenticar usuário
         if ($userDao->authenticateUser($nickname_email, $password)) {
