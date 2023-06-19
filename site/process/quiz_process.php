@@ -62,7 +62,7 @@ if ((!empty($_POST)) && (!empty($_FILES))) {
 
             //Cadastro as imagens nas suas tabelas
 
-            //ARRUMAR ESSA GAMBIARRA DPS KKK
+            //ARRUMAR ESSA GAMBIARRA 
             $emblem  = new Emblem;
             $emblemDao = new EmblemDAO($conn, $CURRENT_URL);
             $firstAvatar = new Avatar;
