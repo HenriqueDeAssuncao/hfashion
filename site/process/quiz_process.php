@@ -2,15 +2,18 @@
 require_once __DIR__ . "/../helpers/url.php";
 require_once __DIR__ . "/../models/Message.php";
 require_once __DIR__ . "/../models/Quiz.php";
-require_once __DIR__ . "/../models/Emblem.php";
-require_once __DIR__ . "/../models/Avatar.php";
 require_once __DIR__ . "/../dao/QuizDAO.php";
+require_once __DIR__ . "/../models/Emblem.php";
 require_once __DIR__ . "/../dao/EmblemDAO.php";
+require_once __DIR__ . "/../models/Avatar.php";
 require_once __DIR__ . "/../dao/AvatarDAO.php";
+require_once __DIR__ . "/../dao/UserDAO.php";
 
 $message = new Message($CURRENT_URL);
 $quiz = new Quiz($message);
 $quizDao = new QuizDAO($conn, $CURRENT_URL);
+$userDao = new UserDAO($conn, $CURRENT_URL);
+$userData = $userDao->verifyToken(true);
 
 if ((!empty($_POST)) && (!empty($_FILES))) {
 
@@ -41,10 +44,13 @@ if ((!empty($_POST)) && (!empty($_FILES))) {
             $moveFirstAvatar = $quiz->uploadImg($firstAvatar, $firstAvatarPath);
             $moveSecondAvatar = $quiz->uploadImg($secondAvatar, $secondAvatarPath);
 
+            //Pego o id do usuário
+            $userId = $userData->getId();
             //Se foi feito o upload de todas as imagens eu cadastro o quiz
             //Cadastro o quiz
             $quizToken = $quiz->generateToken();
 
+            $quiz->setUserId($userId);
             $quiz->setQuizName($quizName);
             $quiz->setQuizDescription($quizDescription);
             $quiz->setQuestionWeight($questionWeight);
@@ -55,6 +61,8 @@ if ((!empty($_POST)) && (!empty($_FILES))) {
             $quizId = $quizDao->findQuizIdByToken($quizToken);
 
             //Cadastro as imagens nas suas tabelas
+
+            //ARRUMAR ESSA GAMBIARRA DPS KKK
             $emblem  = new Emblem;
             $emblemDao = new EmblemDAO($conn, $CURRENT_URL);
             $firstAvatar = new Avatar;
@@ -68,7 +76,6 @@ if ((!empty($_POST)) && (!empty($_FILES))) {
                 $emblem->setQuizId($quizId);
                 $emblemDao->createEmblem($emblem);
 
-
                 $firstAvatar->setAvatarName($avatarsNames[0]);
                 $firstAvatar->setAvatarPath($firstAvatarPath);
                 $firstAvatar->setQuizId($quizId);
@@ -78,8 +85,11 @@ if ((!empty($_POST)) && (!empty($_FILES))) {
                 $secondAvatar->setAvatarPath($secondAvatarPath);
                 $secondAvatar->setQuizId($quizId);
                 $secondAvatarDao->createAvatar($secondAvatar);
+
+                $message->setMessage("Quiz criado com sucesso!", "success", "adm_questions.php");
+
             } else {
-                $message->setMessage("Não existe o quiz id", "error", "back");
+                $message->setMessage("Não foi possível registrar o quiz.", "error", "back");
             }
             
         } else {

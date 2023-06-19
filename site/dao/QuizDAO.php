@@ -17,6 +17,7 @@
 
         }
         public function createQuiz(Quiz $quiz) {
+            $userId = $quiz->getUserId();
             $quizName = $quiz->getQuizName();
             $quizDescription = $quiz->getQuizDescription();
             $questionWeight = $quiz->getQuestionWeight();
@@ -24,16 +25,18 @@
             $quizToken = $quiz->getQuizToken();
 
             $stmt = $this->conn->prepare("INSERT INTO quizzes (
-                quiz_name, quiz_description, question_weight, icon, quiz_token
+                user_id, quiz_name, quiz_description, question_weight, icon, quiz_token
                 ) VALUES (
-                    :quiz_name, :quiz_description, :question_weight, :icon, :quiz_token
+                    :user_id, :quiz_name, :quiz_description, :question_weight, :icon, :quiz_token
                 )");
+            $stmt->bindParam(":user_id", $userId);
             $stmt->bindParam(":quiz_name", $quizName);
             $stmt->bindParam(":quiz_description", $quizDescription);
             $stmt->bindParam(":question_weight", $questionWeight);
             $stmt->bindParam(":icon", $iconPath);
             $stmt->bindParam(":quiz_token", $quizToken);
             $stmt->execute();
+
         }
         public function findQuizIdByToken($quizToken) {
             $stmt = $this->conn->prepare("SELECT quiz_id FROM quizzes WHERE quiz_token = :quiz_token");
@@ -42,6 +45,17 @@
             $quizIdArr = $stmt->fetch(PDO::FETCH_ASSOC);
             $quizId = $quizIdArr["quiz_id"];
             return $quizId;
+        }
+        public function setQuizTokenToSession($quizToken) {
+            
+        }
+        public function getQuizStatusByToken($quizToken) {
+            $stmt = $this->conn->prepare("SELECT status FROM quizzes WHERE quiz_token = :quiz_token");
+            $stmt->bindParam(":quiz_token", $quizToken);
+            $stmt->execute();
+            $statusArr = $stmt->fetch(PDO::FETCH_ASSOC);
+            $status = $statusArr["status"];
+            return $status;
         }
         public function getQuestionsByQuizId() {
 

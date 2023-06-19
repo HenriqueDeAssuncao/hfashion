@@ -1,26 +1,36 @@
 <?php
     class Quiz {
         private $message;
-        private $quiz_id;
-        private $quiz_token; //Hash pra usar de url
+        private $quizId;
+        private $userId;
+        private $emblemId;
+        private $firstAvatarId;
+        private $secondAvatarId;
+        private $quizToken; //Hash pra usar de url
         private $quizName;
-        private $quiz_description;
-        private $question_weight;
+        private $quizDescription;
+        private $questionWeight;
         private $iconPath;
         public function __construct(Message $message) {
             $this->message = $message;
         }
         public function getQuizId() {
-            return $this->quiz_id;
+            return $this->quizId;
         }
-        public function setQuizId($quiz_id) {
-            $this->quiz_id = $quiz_id;
+        public function setQuizId($quizId) {
+            $this->quizId = $quizId;
+        }
+        public function getUserId() {
+            return $this->userId;
+        }
+        public function setUserId($userId) {
+            $this->userId = $userId;
         }
         public function getQuizToken() {
-            return $this->quiz_token;
+            return $this->quizToken;
         }
-        public function setQuizToken($quiz_token) {
-            $this->quiz_token = $quiz_token;
+        public function setQuizToken($quizToken) {
+            $this->quizToken = $quizToken;
         }
         public function getQuizName() {
             return $this->quizName;
@@ -29,16 +39,16 @@
             $this->quizName = $quizName;
         }
         public function getQuizDescription() {
-            return $this->quiz_description;
+            return $this->quizDescription;
         }
-        public function setQuizDescription($quiz_description) {
-            $this->quiz_description = $quiz_description;
+        public function setQuizDescription($quizDescription) {
+            $this->quizDescription = $quizDescription;
         }
         public function getQuestionWeight() {
-            return $this->question_weight;
+            return $this->questionWeight;
         }
-        public function setQuestionWeight($question_weight) {
-            $this->question_weight = $question_weight;
+        public function setQuestionWeight($questionWeight) {
+            $this->questionWeight = $questionWeight;
         }
         public function getIconPath() {
             return $this->iconPath;
@@ -83,6 +93,8 @@
         public function buildQuiz();
         public function createQuiz(Quiz $quiz);
         public function findQuizIdByToken($quizToken);
+        public function setQuizTokenToSession($quizToken);
+        public function getQuizStatusByToken($quizToken);
         public function getQuestionsByQuizId(); //Retorna um array com os objetos questions
         public function getQuizRanking();
     }
