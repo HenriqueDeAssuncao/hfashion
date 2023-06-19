@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 /*hr{
     position: absolute;
     width: 455px;
@@ -40,6 +42,75 @@ hr {
     border: 2.3547px solid #CDCDCD;
     border-radius: 5.86487px;
 }
+
+#container_profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 625px;
+    width: 100%;
+}
+
+#info_profile{
+    height: 250px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#div_img_profile{
+    width: 190px;
+    margin-bottom: 22px;
+}
+
+#img_profile{
+    border-radius: 3600px;
+    width: 100%;
+}
+
+.titles {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+}
+
+.style-maintext {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    color: #3C3C3C;
+}
+
+.style-regulartext {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #3C3C3C;
+}
+
+.style-titles {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    color: #C02425;
+}
+.style-titles-main {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    color: #C02425;
+}
+
 
 
 /* Smartphone landscape (ATÉ 768px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/

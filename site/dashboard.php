@@ -19,11 +19,31 @@
 
 <!-------------------- PERFIL -------------------->
 
+
+<div id="container_profile">
+
+    <div id="info_profile">
+        
+        <div id="div_img_profile">
+            <img src="img/dashboard/kelsi.png" alt="" id="img_profile">
+        </div>
+
+        <p class="style-maintext"> Ana Carolina </p>
+        
+    </div>
+
+</div>
+
+
+
+
+
+
 <section>
     <div>
     
         <!-- colocar input pro usuario alterar a foto -->
-<br>
+
         <img src="#" alt="profile">
         <img src="#" alt="alterar foto">
 <br>
