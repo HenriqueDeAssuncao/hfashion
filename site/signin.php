@@ -17,6 +17,7 @@
 require_once("templates/message.php");
 ?>
 
+<div class="flex">
 <div id="register-container">
     <form action="<?=$CURRENT_URL?>/process/auth_process.php" method="POST">
         <input type="hidden" name="type" value="login">
@@ -36,9 +37,10 @@ require_once("templates/message.php");
             </div>
             </div>
     </form>
-    <div class="visual">
-    <span class="logo" style="background-image:url(<?=$CURRENT_URL?>/img/login/logo.svg);"></span>
-    <span class="foto" style="background-image:url(<?=$CURRENT_URL?>/img/login/log1.png);"></span></div>
+</div>
+<div class="visual">
+    <div class="logo" style="background-image:url(<?=$CURRENT_URL?>/img/login/logo.svg);"></div>
+    <div class="foto" style="background-image:url(<?=$CURRENT_URL?>/img/login/log1.png);"></div>
 </div>
 
 <script src="<?= $CURRENT_URL ?>/script/message.js"></script>

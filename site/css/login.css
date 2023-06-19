@@ -5,7 +5,6 @@
     margin: 0;
     font-family: Poppins, sans-serif;
     overflow: hidden;
-    border: 1px solid black;
 }
 
 /* LAYOUT */
@@ -38,58 +37,18 @@
 
 /* Smartphone Portrait (ATÉ 576px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
-#register-container {
-    display: grid;
-    height: 100vh;
-
-}
-
-.form-group {
-    display: grid;
-    margin: 0 45px;
-    grid-template-rows: 1fr, 1fr;
-    margin-bottom: 30px;
-    font-weight: 600;
-}
-
-.email {
-    display: grid;
-    grid-row: 1fr;
-}
-
-input {
-    margin-top: 5px;
-    border-radius: 4px;
-    height: 40px;
-    border: none;
-    background-color: gray;
-}
-
-.btn-con {
-    display: grid;
-    color: white;
-    background-color: linear-gradient(#C02425, #7b0b0a);
-    filter: drop-shadow(0 0 0 0.75rem #c02425);
-    font-weight: 600;
-    margin: 0 auto;
-    width: 145px;
-    height: 40px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-}
-
-p {
-    display: grid;
-    margin: 0 auto;
-    margin-bottom: 10px;
-}
-
-
 /* Smartphone landscape (ATÉ 768px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 576px) {
     .Container {
         width: 540px;
     }
+}
+
+input{
+    border-radius: 6px;
+    width: 40px;
+    height: auto;
+
 }
 
 /* Tablet Portrait (ATÉ 992px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
@@ -102,82 +61,41 @@ p {
 /* Tablet Landscape (ATÉ 992px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 992px) {
 
-    #register-container {
-        display: grid;
-        grid-template-columns: 1.40fr 1fr;
-    }
-
-    .form-container , .form-group {
-        display: grid;
-        grid-column: 1;
-    }
-
-    form{
-        padding:25%;
-    }
-    input{
-         border: none;
-         height: 175%;
-         height: 40px;
-         background-color: #E7E7E7;
-        }
-         
-
-    .btn-con{
-        grid-column: 1;
-        width: 25%;
-        text-align: center;
-        width: 120px;
-        height: 40px;
-        align-self: start;
-    }
-
-    .form-container{
-        display:flex;
-        margin-top: 55px;
-        gap: 3.75%;
-        
-    }
-
-    .form-container a{
-     font-size: 13px;
-     color: red;
-     text-decoration: none;
-
-    }
-
-    .form-container p{
-        font-size: 13px;
+   .flex{
+       display: flex;
+       justify-content: space-between;
+   }
    
-       }
+    .form-group{
+        width: 55%;
 
-    .visual{
-        grid-template-rows: 2fr 1fr 2fr;
-        display: grid;
-        background-color: red;
-        background-repeat: no-repeat;
-        grid-template-rows: 0.25fr, 1fr, 0.25fr;
-    }
-
-    label{
-        margin-top: 12px;
     }
 }
 
-.logo, .foto{
-    background-repeat: no-repeat;
-}
-
-.logo{
-    grid-row: 1;
-    grid-column: 1/3;
-    margin-left: 30%;
-    margin-right: 30%;
+.visual{
+    width: 45%;
+    height: 100vh;
+    background-color: #7b0b0a;
+    display: flex;
+    justify-content: space-between;
+    align-self: space-between;
+    
 }
 
 .foto{
-    grid-row: 3;
- 
+align-content: center;
+ width: 100%;
+ height: 100%;
+ background-repeat: no-repeat;
+}
+
+.logo{
+    align-content: center;
+ width: 100%;
+ height: 100%;
+ background-repeat: no-repeat;
+
+
 }
 /* PC (>= 1200px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 1200px) {
