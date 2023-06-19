@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    overflow: hidden;
+    border: 1px solid black;
+}
+
+/* LAYOUT */
+.Container {
+    margin: 0 auto;
+}
+
+.Flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Hidden {
+    display: none;
+}
+
+.Button {
+    background-color: transparent;
+    border: none;
+}
+
+.Auto {
+    margin: 0 auto;
+}
+
+/* FONTES */
+/* Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@200;300;400;500;600&display=swap');
+
+
+#register-container {
+    display: grid;
+    grid-template-columns: 1.40fr 1fr;
+}
+
+.form-container , .form-group {
+    display: grid;
+    grid-column: 2;
+}
+

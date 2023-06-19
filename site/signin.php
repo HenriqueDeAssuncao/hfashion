@@ -36,7 +36,9 @@ require_once("templates/message.php");
             </div>
             </div>
     </form>
-    <div class="visual" style="background-image:url(<?=$CURRENT_URL?>/img/login/log1.png);"></div>
+    <div class="visual">
+    <span class="logo" style="background-image:url(<?=$CURRENT_URL?>/img/login/logo.svg);"></span>
+    <span class="foto" style="background-image:url(<?=$CURRENT_URL?>/img/login/log1.png);"></span></div>
 </div>
 
 <script src="<?= $CURRENT_URL ?>/script/message.js"></script>
