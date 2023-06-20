@@ -39,6 +39,8 @@
             $i++;
         }
 
+        $quizDao->setQuizStatusToActive($quizId);
+
     } else {
 
     }

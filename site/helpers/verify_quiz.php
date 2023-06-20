@@ -12,10 +12,10 @@ if (!empty($_SESSION["quizToken"])) {
     $status = $quizDao->getQuizStatusByToken($quizToken);
 
     if ($status) {
-        $message->setMessage("Quiz já foi publicado.", "error", "back");
+        $message->setMessage("O quiz já foi publicado.", "error", "back");
     }
 } else {
-    $message->setMessage("Não encontramos o quiz.", "error", "kick");
+    $message->setMessage("Não encontramos o quiz.", "error", "back");
 }
 
 ?>

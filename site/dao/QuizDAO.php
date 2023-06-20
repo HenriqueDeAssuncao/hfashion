@@ -64,6 +64,13 @@
 
             return $status;
         }
+        public function setQuizStatusToActive($quizId) {
+            $stmt = $this->conn->prepare("UPDATE quizzes SET status = 1 WHERE quiz_id = :quiz_id");
+            $stmt->bindParam(":quiz_id", $quizId);
+            $stmt->execute();
+
+            $_SESSION["quizToken"] = "";
+        }
         public function getQuestionsByQuizId() {
 
         }
