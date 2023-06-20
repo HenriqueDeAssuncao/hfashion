@@ -29,7 +29,6 @@
           create table quizzes (
           quiz_id int auto_increment primary key, 
           user_id int not null,
-          emblem_id int not null,
           quiz_name varchar(100) not null,
           quiz_description varchar(200),
           quiz_token varchar(100) not null,
@@ -63,6 +62,7 @@
           
           create table emblems (
           emblem_id int auto_increment primary key,
+          quiz_id int not null,
           emblem_name varchar(45),
           emblem_path varchar(100)
           );
@@ -83,6 +83,8 @@
           alter table users_answer_questions add CONSTRAINT fk_quiz FOREIGN KEY (quiz_id) references quizzes(quiz_id);
           
           alter table questions add CONSTRAINT fk_quiz_question FOREIGN KEY (quiz_id) references quizzes(quiz_id);
+
+          alter table emblems add CONSTRAINT fk_quiz_emblem FOREIGN KEY (quiz_id) references quizzes(quiz_id);
           
           alter table users_avatars add CONSTRAINT fk_user_user_avatar FOREIGN KEY (user_id) references users(id);
           alter table users_avatars add CONSTRAINT fk_avatar_user_avatar FOREIGN KEY (avatar_id) references avatars(avatar_id);
@@ -91,7 +93,6 @@
           alter table users_emblems add CONSTRAINT fk_emblem_user_emblem FOREIGN KEY (emblem_id) references emblems(emblem_id);
           
           alter table quizzes add CONSTRAINT fk_user_quiz FOREIGN KEY (user_id) references users(id);
-          alter table quizzes add CONSTRAINT fk_emblem_quiz FOREIGN KEY (emblem_id) references emblems(emblem_id);
           
           alter table quizzes_avatars add CONSTRAINT fk_quiz_quiz_avatar FOREIGN KEY (quiz_id) references quizzes(quiz_id);
           alter table quizzes_avatars add CONSTRAINT fk_avatar_quiz_avatar FOREIGN KEY (avatar_id) references avatars(avatar_id);
