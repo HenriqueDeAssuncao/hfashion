@@ -5,6 +5,7 @@
         private $url;
         private $message; 
         private $admins = [
+            "teste@teste",
             "capivara@gorda"
         ];
 

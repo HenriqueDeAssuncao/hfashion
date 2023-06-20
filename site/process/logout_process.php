@@ -3,6 +3,11 @@
 
     if($userDao && $userData) {
         $userDao->destroyToken();
+
+        if (!empty($_SESSION["quizToken"])) {
+            $_SESSION["quizToken"] = "";
+        }
+
     } else {
         $message->setMessage("Usuário não está logado.", "error");
     }

@@ -72,7 +72,7 @@ if (url.endsWith('index.php') || url.endsWith('/')) {
     })
 
     function verifyScroll() {
-        if (window.pageYOffset >= banner.clientHeight) {
+        if (window.pageYOffset >= banner.clientHeight-10) {
             logo.setAttribute('src', `img/header/logo-black.svg`);
             header.classList.add('Bg-white');
             header.classList.add('Box-shadow');

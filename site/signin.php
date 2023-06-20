@@ -1,16 +1,5 @@
 <?php
     require_once("templates/header_log.php");
-    if (!empty($_SESSION["fill_form"])) {
-        $data_fill_form = $_SESSION["fill_form"];
-        $nickname_email = $data_fill_form[0];
-        $password = $data_fill_form[1];
-    } else {
-        $nickname_email = "";
-        $password = "";
-    }
-    if (!empty($data_fill_form)) {
-        $_SESSION["fill_form"] = "";
-    }
 ?>
 
 <?php 

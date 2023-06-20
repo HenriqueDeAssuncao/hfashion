@@ -1,11 +1,7 @@
 <?php
-require_once("templates/header.php");
 
-$user = new User();
-$userDao = new UserDAO($conn, $CURRENT_URL);
-$userData = $userDao->verifyToken(true);
-$adm = new Adm($CURRENT_URL);
-$adm->isAdm($userDao, true);
+require_once("templates/header.php");
+require_once("helpers/verify_adm.php");
 
 ?>
 
@@ -26,22 +22,32 @@ require_once("templates/message.php");
         </div>
         <div class="form-group">
             <label for="question-weight">Peso das questões:</label>
-            <input type="number" name="question-weight">
+            <select name="question-weight">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
         </div>
         <div class="form-group">
-            <label for="emblem">Emblema:</label>
-            <input type="file" name="emblem">
+            <div class="form-section">
+                <label for="emblem">Emblema:</label>
+                <input type="file" name="emblem">
+            </div>
+            <div class="form-section">
+                <label for="emblem-name">Nome:</label>
+                <input type="text" name="emblem-name">
+            </div>
         </div>
         <div class="form-group">
             <label for="quiz-icon">ícone:</label>
-            <input type="file" name="quiz-icon">
+            <input type="file" name="icon">
         </div>
     
         <div id="avatars" class="form-group">
             <div class="form-section">
                 <label for="avatars">Insira os avatares:</label>
-                <input type="file" name="avatars[]">
-                <input type="file" name="avatars[]">
+                <input type="file" name="first-avatar">
+                <input type="file" name="second-avatar">
             </div>
             <div class="form-section">
                 <label for="avatars-names">Nomes:</label>

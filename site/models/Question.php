@@ -1,26 +1,22 @@
 <?php
     class Question {
-        private $question_id;
-        private $fk_quiz_token;
-        private $question_token; //Hash pra usar de url
+        private $questionId;
+        private $quizId;
         private $question;
         private $options;
         private $answer;
-        public function __construct($fk_quiz_token) {
-            $this->fk_quiz_token = $fk_quiz_token;
+        public function __construct($quizId) {
+            $this->quizId = $quizId;
         }
 
+        public function getQuizId() {
+            return $this->quizId;
+        }
         public function getQuestionId() {
-            return $this->question_id;
+            return $this->questionId;
         }
-        public function setQuestionId($question_id) {
-            $this->question_id = $question_id;
-        }
-        public function getQuestionToken() {
-            return $this->question_token;
-        }
-        public function setQuestionToken($question_token) {
-            $this->question_token = $question_token;
+        public function setQuestionId($questionId) {
+            $this->questionId = $questionId;
         }
         public function getQuestion() {
             return $this->question;
@@ -29,10 +25,12 @@
             $this->question = $question;
         }
         public function getOptions() {
-            return $this->options;
+            $optionsArray = explode(",", $this->options);
+            return $optionsArray;
         }
         public function setOptions($options) {
-            $this->options = $options;
+            $optionsString = implode(",", $options);
+            $this->options = $optionsString;
         }
         public function getAnswer() {
             return $this->answer;
@@ -50,4 +48,8 @@
                 return false;
             }
         }
+    }
+
+    interface QuestionDAOInterface {
+        public function createQuestion(Question $question);
     }
