@@ -2,14 +2,14 @@
     <button class="btn-delete-template-question"><i class="fa-solid fa-xmark"></i></button>
 
     <div class="form-group">
-        <label for="question">Pergunta:</label>
-        <input type="text" name="question" class="js-inputs">
+        <label for="questions[]">Pergunta:</label>
+        <input type="text" name="questions[]" class="js-inputs">
     </div>
 
     <div class="form-group">
         <div>
-            <label for="answer">Selecione a alternativa correta:</label>
-            <select name="answer" class="js-inputs">
+            <label for="answers[]">Selecione a alternativa correta:</label>
+            <select name="answers[]" class="js-inputs">
                 <option value="0">A</option>
                 <option value="1">B</option>
                 <option value="2">C</option>

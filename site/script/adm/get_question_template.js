@@ -70,7 +70,7 @@ function deleteTemplateQuestion(e) {
 
 function submitForm(e) {
     let condition = true;
-    if (questionsTemplatesCounter >= 5) {
+    if (questionsTemplatesCounter >= 2) {
         inputsArray.forEach((input) => {
             if (input.value === "" || input.value === 0) {
                 condition = false;

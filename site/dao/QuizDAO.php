@@ -47,19 +47,21 @@
             return $quizId;
         }
         public function setQuizTokenToSession($quizToken) {
-            
+            $_SESSION["quizToken"] = $quizToken;
         }
         public function getQuizStatusByToken($quizToken) {
             $stmt = $this->conn->prepare("SELECT status FROM quizzes WHERE quiz_token = :quiz_token");
             $stmt->bindParam(":quiz_token", $quizToken);
             $stmt->execute();
-            $status = $stmt->fetch(PDO::FETCH_ASSOC);
-            if ($status == 0) {
+            $statusDb = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            if ($statusDb['status'] == 0) {
                 $status = false;
             }
             else {
                 $status = true;
             }
+
             return $status;
         }
         public function getQuestionsByQuizId() {

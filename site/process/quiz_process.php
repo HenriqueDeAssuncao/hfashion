@@ -25,24 +25,39 @@ if ((!empty($_POST)) && (!empty($_FILES))) {
     $icon = $_FILES['icon'];
     $firstAvatar = $_FILES['first-avatar'];
     $secondAvatar = $_FILES['second-avatar'];
-    $avatarsArray = $_POST['avatars-names'];
-    if ($avatarsArray[0] && $avatarsArray[1]) {
-        $avatarsNames = $avatarsArray;
+    $avatarsNamesArray = $_POST['avatars-names'];
+
+    if ($firstAvatar && $secondAvatar) {
+        $avatars = [$firstAvatar, $secondAvatar];
+    }
+
+    if ($avatarsNamesArray[0] && $avatarsNamesArray[1]) {
+        $avatarsNames = $avatarsNamesArray;
     }
 
     //Verifico se todos os campos foram preenchidos
-    if ($quizName && $quizDescription && $questionWeight && $emblem && $emblemName && $icon && $firstAvatar && $secondAvatar) {
+    if ($quizName && $quizDescription && $questionWeight && $emblem && $emblemName && $icon && $avatars && $avatarsNames) {
         //Verifico se todas as imagens são válidas e recebo como retorno o caminho para guardá-las
         $emblemPath = $quiz->verifyImg($emblem, "emblems");
         $iconPath = $quiz->verifyImg($icon, "icons");
-        $firstAvatarPath = $quiz->verifyImg($firstAvatar, "avatars");
-        $secondAvatarPath = $quiz->verifyImg($secondAvatar, "avatars");
 
-        if ($emblemPath && $iconPath && $firstAvatarPath && $secondAvatar) {
+        $avatarsPaths = [];
+        foreach($avatars as $avatar) {
+            $avatarPath = $quiz->verifyImg($avatar, "avatars");
+            $avatarsPaths[] = $avatarPath;
+        }
+
+        if ($emblemPath && $iconPath && $avatarsPaths) {
             $moveEmblem = $quiz->uploadImg($emblem, $emblemPath);
             $moveIcon = $quiz->uploadImg($icon, $iconPath);
-            $moveFirstAvatar = $quiz->uploadImg($firstAvatar, $firstAvatarPath);
-            $moveSecondAvatar = $quiz->uploadImg($secondAvatar, $secondAvatarPath);
+            
+            $i = 0;
+            $moveAvatars = [];
+            foreach ($avatarsPaths as $avatarPath) {
+                $moveAvatar = $quiz->uploadImg($avatars[$i], $avatarPath);
+                $moveAvatars[] = $moveAvatar;
+                $i++;
+            }
 
             //Pego o id do usuário
             $userId = $userData->getId();
@@ -62,13 +77,10 @@ if ((!empty($_POST)) && (!empty($_FILES))) {
 
             //Cadastro as imagens nas suas tabelas
 
-            //ARRUMAR ESSA GAMBIARRA 
             $emblem  = new Emblem;
             $emblemDao = new EmblemDAO($conn, $CURRENT_URL);
-            $firstAvatar = new Avatar;
-            $secondAvatar = new Avatar;
-            $firstAvatarDao = new AvatarDAO($conn, $CURRENT_URL);
-            $secondAvatarDao = new AvatarDAO($conn, $CURRENT_URL);
+            $avatar = new Avatar;
+            $avatarDao = new AvatarDAO($conn, $CURRENT_URL);
 
             if ($quizId) {
                 $emblem->setEmblemName($emblemName);
@@ -76,15 +88,14 @@ if ((!empty($_POST)) && (!empty($_FILES))) {
                 $emblem->setQuizId($quizId);
                 $emblemDao->createEmblem($emblem);
 
-                $firstAvatar->setAvatarName($avatarsNames[0]);
-                $firstAvatar->setAvatarPath($firstAvatarPath);
-                $firstAvatar->setQuizId($quizId);
-                $firstAvatarDao->createAvatar($firstAvatar);
-
-                $secondAvatar->setAvatarName($avatarsNames[1]);
-                $secondAvatar->setAvatarPath($secondAvatarPath);
-                $secondAvatar->setQuizId($quizId);
-                $secondAvatarDao->createAvatar($secondAvatar);
+                $i = 0;
+                foreach ($avatars as $item) {
+                    $avatar->setAvatarName($avatarsNames[$i]);
+                    $avatar->setAvatarPath($avatarsPaths[$i]);
+                    $avatar->setQuizId($quizId);
+                    $avatarDao->createAvatar($avatar);
+                    $i++;
+                }
 
                 $quizDao->setQuizTokenToSession($quizToken);
 

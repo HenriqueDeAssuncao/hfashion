@@ -1,19 +1,22 @@
 <?php
     class Question {
-        private $question_id;
-        private $quiz_id;
+        private $questionId;
+        private $quizId;
         private $question;
         private $options;
         private $answer;
-        public function __construct($quiz_id) {
-            $this->quiz_id = $quiz_id;
+        public function __construct($quizId) {
+            $this->quizId = $quizId;
         }
 
-        public function getQuestionId() {
-            return $this->question_id;
+        public function getQuizId() {
+            return $this->quizId;
         }
-        public function setQuestionId($question_id) {
-            $this->question_id = $question_id;
+        public function getQuestionId() {
+            return $this->questionId;
+        }
+        public function setQuestionId($questionId) {
+            $this->questionId = $questionId;
         }
         public function getQuestion() {
             return $this->question;
@@ -22,10 +25,12 @@
             $this->question = $question;
         }
         public function getOptions() {
-            return $this->options;
+            $optionsArray = explode(",", $this->options);
+            return $optionsArray;
         }
         public function setOptions($options) {
-            $this->options = $options;
+            $optionsString = implode(",", $options);
+            $this->options = $optionsString;
         }
         public function getAnswer() {
             return $this->answer;
@@ -43,4 +48,8 @@
                 return false;
             }
         }
+    }
+
+    interface QuestionDAOInterface {
+        public function createQuestion(Question $question);
     }

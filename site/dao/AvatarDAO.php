@@ -15,16 +15,14 @@
         }
         public function createAvatar(Avatar $avatar) {
             $avatarName = $avatar->getAvatarName();
-            $quizId = $avatar->getQuizId();
             $avatarPath = $avatar->getAvatarPath();
             $stmt = $this->conn->prepare("INSERT INTO avatars (
-                avatar_name, avatar_path, quiz_id
+                avatar_name, avatar_path
                 ) VALUES (
-                    :avatar_name, :avatar_path, :quiz_id
+                    :avatar_name, :avatar_path
                 )");
             $stmt->bindParam(":avatar_name", $avatarName);
             $stmt->bindParam(":avatar_path", $avatarPath);
-            $stmt->bindParam(":quiz_id", $quizId);
             $stmt->execute();
         }
     }
