@@ -32,5 +32,4 @@
     }
     interface AvatarDAOInterface {
         public function createAvatar(Avatar $avatar);
-        public function findAvatarIdByQuizId($quizId);
     }

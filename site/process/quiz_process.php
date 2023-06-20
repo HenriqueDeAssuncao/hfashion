@@ -7,8 +7,6 @@ require_once __DIR__ . "/../models/Emblem.php";
 require_once __DIR__ . "/../dao/EmblemDAO.php";
 require_once __DIR__ . "/../models/Avatar.php";
 require_once __DIR__ . "/../dao/AvatarDAO.php";
-require_once __DIR__ . "/../models/QuizAvatar.php";
-require_once __DIR__ . "/../dao/QuizAvatarDAO.php";
 
 require_once __DIR__ . "/../dao/UserDAO.php";
 
@@ -84,8 +82,6 @@ if ((!empty($_POST)) && (!empty($_FILES))) {
             $emblemDao = new EmblemDAO($conn, $CURRENT_URL);
             $avatar = new Avatar;
             $avatarDao = new AvatarDAO($conn, $CURRENT_URL);
-            $quizAvatar = new quizAvatar;
-            $quizAvatarDao = new QuizAvatarDAO($conn, $CURRENT_URL);
 
             if ($quizId) {
                 $emblem->setEmblemName($emblemName);
@@ -95,16 +91,10 @@ if ((!empty($_POST)) && (!empty($_FILES))) {
 
                 $i = 0;
                 foreach ($avatars as $item) {
+                    $avatar->setQuizId($quizId);
                     $avatar->setAvatarName($avatarsNames[$i]);
                     $avatar->setAvatarPath($avatarsPaths[$i]);
-                    $avatar->setQuizId($quizId);
                     $avatarDao->createAvatar($avatar);
-
-                    $avatarId = $avatarDao->findAvatarIdByQuizId($quizId);
-
-                    $quizAvatar->setQuizId($quizId);
-                    $quizAvatar->setAvatarId($avatarId);
-                    $quizAvatarDao->createQuizAvatar($quizAvatar);
 
                     $i++;
                 }
