@@ -14,33 +14,52 @@ hr {
     align-items: center;
     width: 100%;
 }
-#titulo-ysk{
-    position: absolute;
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 63px;
-    line-height: 94px;
-    text-transform: uppercase;
-    top: 100px;
-    left: 100px;
-    width: 200px;
-    height: 200px;
-    display: flex;
+#titulo{
+    flex: 1;
+}
+
+#titulo-y2k{
+    /*position: absolute;*/
     justify-content: center;
     align-items: center;
-    /*color: #FFFFFF;*/
-
+    display: flex;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 4.7vw;
+    line-height: 60%;
+    text-transform: uppercase;
+    letter-spacing: 0.2vw;
+    /*top: 23%;
+    left: 45%;*/
+    width: 8.75%;
+    
+    height: 2.9320987654320985%;
+    color: #FFFFFF;
 }
-#titulo-aboutus{
-position: absolute;
-width: 168px;
-height: 95px;
-left: 715px;
-top: 63px;
-}
 
-
+#container-primeiro-pag {
+    display: flex;
+  }
+  
+#div-primeiro-pag {
+    flex: 1;
+  }
+  
+#primeiro-pag {
+    font-family: 'Poppins';
+    font-style: normal;
+    text-align: justify;
+    font-weight: 300;
+    font-size: 1.0vw;
+    line-height: 1.5vw;
+    color: #333333;
+  }
+  
+#img-pag {
+    width: 28.125%;
+    height: 12.5%;
+  }
 
 
 
