@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <link rel="stylesheet" type="text/css" href="css/dashboard.css">
 
-    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css">
     
 <?php
     require_once("templates/header.php");
@@ -14,45 +7,53 @@
     $userData = $userDao->verifyToken(true);
 ?>
 
-</head>
-<body>
 
 <!-------------------- PERFIL -------------------->
 
-<section>
-    <div>
-    
-        <!-- colocar input pro usuario alterar a foto -->
-<br>
-        <img src="#" alt="profile">
-        <img src="#" alt="alterar foto">
-<br>
-        <!-- colocar pra exibir de acordo com oq o user cadastrou -->
-<br>
-        <h1>Ana Carolina</h1>
-        <p>ana.gmail@</p>
 
-        <p>A vida é engual uma montanha russa, um dia <Br>
-        a gente estamos em cima e no outro embaixo</p>
+<div id="container_profile">
+
+    <div id="info_profile">
+
+        <div id="div_img_profile">
+            <img src="img/dashboard/cadastro.png" alt="" id="img_profile">
+        </div>
+
+        <p class="style-maintext"> Ana Carolina </p>
+        <p class="style-regulartext"> anacarolina@gmail.com </p>
+        <a href="http://localhost/hfashion/site/edit_profile.php" id="link_edit_profile">
+            editar perfil
+        </a>
+        
+
+        <div id="div_bio_profile">
+            <p class="style-regulartext"> 
+             A vida é engual uma montanha russa, um dia 
+             a gente estamos emcima e no outro embaixo 
+            </p>
+        </div>
+
+        <div id="align_div_emblemas">
+            <img src="img/dashboard/emblema1.png" class="img_emblema">
+            <img src="img/dashboard/emblema2.png" class="img_emblema">
+            <img src="img/dashboard/emblema3.png" class="img_emblema">
+            <img src="img/dashboard/emblema3.png" class="img_emblema">
+        </div>
+
+<!--
+        <div id="div_btn-roll">
+            <a href="http://localhost/hfashion/site/edit_profile.php" id="btn-roll">
+            <img src="img/dashboard/camera.png" id="img_camera">
+            EDITAR PERFIL
+            </a>
+        </div>
+-->
     </div>
 
-    <div>
-        <!-- onde exibe os emblemas -->
-        <br>
-        <img src="" alt="emblema 1">
-        <img src="" alt="emblema 2">
+</div>
 
-        <button> Editar Perfil </button>
-    </div>
-</section>
 
-<Br>
-<br>
-
-<hr>
-
-<Br>
-<br>
+<!-- INSERIR HR PRA SEPARAR -->
 
 
 <!-------------------- Quizzes -------------------->
@@ -134,8 +135,6 @@
 </section>
     
 
-</body>
-</html>
 
 <?php
     require_once("templates/footer.php");

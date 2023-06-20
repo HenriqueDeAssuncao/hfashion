@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 /*hr{
     position: absolute;
     width: 455px;
@@ -13,33 +15,141 @@
 
 /* Smartphone Portrait (ATÉ 576px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
-hr {
-    box-sizing: border-box;
-    margin: 0 auto;
-    width: 1065px;
-    border: 1px solid #E5E5E5;
-}
 
-#img_topo {
 
+/* INFORMAÇÕES PERFIL */
+
+/*copiar o media max min do jho*/
+
+#container_profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 655px;
     width: 100%;
-    height: 175px;
-    left: 88px;
-    top: 234px;
-    background: #FFFFFF;
-    border-radius: 18px;
 }
 
-#borda{
-    box-sizing: border-box;
-
-    position: relative;
-    width: 310.84px;
-    height: 106.74px;
-    
-    border: 2.3547px solid #CDCDCD;
-    border-radius: 5.86487px;
+#info_profile{
+    height: fit-content;
+    width: 69%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+#div_img_profile{
+    width: 75.6%;
+    margin-bottom: 41px;
+}
+
+
+/*IMAGEM DE PERFIL*/
+#img_profile{
+    border-radius: 3600px;
+    width: 100%;
+}
+
+/*BIOGRAFIA*/
+#div_bio_profile{
+    margin-top: 20px; /*distancia entre (tava descendo o conteiner todo)*/
+    width: 252px; 
+    text-align: center; 
+}
+
+#link_edit_profile{
+    color: #C02425;
+    font-weight: 500;
+    text-decoration: none;
+} 
+
+/*EMBLEMAS*/
+
+#align_div_emblemas{
+    margin-top: 20px;
+}
+
+.img_emblema{
+    width: 70px;
+}
+
+
+/* BOTÃO */
+
+#img_camera{
+    height: 20px;
+    width: 25px;
+    margin-right: 14px; 
+    margin-bottom: -4px; 
+}
+
+#div_btn-roll{
+    margin-top: 34px;
+}
+
+#btn-roll {
+    padding: 14px 22px;
+    text-decoration: none;
+    color: #424245;
+    font-weight: 900;
+    font-size: 14px;
+    background: #ffffff;
+    border: 2px solid #5f5e5e;
+    border-radius: 4.42px;
+}
+
+#btn-roll:hover{
+    padding: 14px 22px;
+    text-decoration: none;
+    color: #424245;
+    font-weight: 900;
+    font-size: 14px;
+    background: #dbdbdb;
+    border: 2px solid #5f5e5e;
+    border-radius: 4.42px;
+}
+
+.titles {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+}
+
+.style-maintext {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    color: #3C3C3C;
+}
+
+.style-regulartext {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #5f5e5e;
+}
+
+.style-titles {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    color: #C02425;
+}
+.style-titles-main {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    color: #C02425;
+}
+
 
 
 /* Smartphone landscape (ATÉ 768px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
