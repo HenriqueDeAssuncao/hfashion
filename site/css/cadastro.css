@@ -36,14 +36,66 @@
 /* Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@200;300;400;500;600&display=swap');
 
+@media (min-width: 992px) {
 
-#register-container {
-    display: grid;
-    grid-template-columns: 1.40fr 1fr;
+.flex{
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
 }
 
-.form-container , .form-group {
-    display: grid;
-    grid-column: 2;
+ .form-group{
+     width: 55%;
+
+ }
+
+.visual{
+ width: 45%;
+ background: linear-gradient(180deg, #C02425 45.91%, #7B0B0A 100%);
+border: 1px solid #000000;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
+.visual-content {
+ flex-direction: column;
+}
+
+.foto{
+display: block;
+margin-bottom: 0px;
+}
+
+.logo{
+display: block;
+margin-top: 75px;
+}
+
+.visual p{
+color: white;
+font-weight: 600;
+font-size: 22px;
+line-height: 33px;
+width: 348px;
+margin: 0 auto;
+margin-top: 32px;
+margin-bottom: 42px;
+}
+
+.form-group{
+    display: flex;
+}
+
+input{
+    height: 40;
+    width: 163px;
+}
+}
+
+/* PC (>= 1200px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 1200px) {
+ .Container {
+     width: 100%;
+ }
+}
+
 
