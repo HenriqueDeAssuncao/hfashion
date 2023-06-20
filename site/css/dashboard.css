@@ -19,19 +19,19 @@
 
 /* INFORMAÇÕES PERFIL */
 
+/*copiar o media max min do jho*/
 
 #container_profile {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 625px;
+    height: 655px;
     width: 100%;
-   margin-top: -10px; /*provavelmente vou tirar isso*/
 }
 
 #info_profile{
-    height: 250px;
-    width: 100%;
+    height: fit-content;
+    width: 69%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,9 +39,10 @@
 }
 
 #div_img_profile{
-    width: 190px;
-    margin-bottom: 22px;
+    width: 75.6%;
+    margin-bottom: 41px;
 }
+
 
 /*IMAGEM DE PERFIL*/
 #img_profile{
@@ -56,10 +57,11 @@
     text-align: center; 
 }
 
-/*
 #link_edit_profile{
     color: #C02425;
-} */
+    font-weight: 500;
+    text-decoration: none;
+} 
 
 /*EMBLEMAS*/
 
@@ -67,14 +69,19 @@
     margin-top: 20px;
 }
 
+.img_emblema{
+    width: 70px;
+}
+
+
+/* BOTÃO */
+
 #img_camera{
     height: 20px;
     width: 25px;
     margin-right: 14px; 
     margin-bottom: -4px; 
 }
-
-/* BOTÃO */
 
 #div_btn-roll{
     margin-top: 34px;

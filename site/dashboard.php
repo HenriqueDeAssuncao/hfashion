@@ -21,6 +21,10 @@
 
         <p class="style-maintext"> Ana Carolina </p>
         <p class="style-regulartext"> anacarolina@gmail.com </p>
+        <a href="http://localhost/hfashion/site/edit_profile.php" id="link_edit_profile">
+            editar perfil
+        </a>
+        
 
         <div id="div_bio_profile">
             <p class="style-regulartext"> 
@@ -30,19 +34,20 @@
         </div>
 
         <div id="align_div_emblemas">
-            <img src="img/dashboard/emblema1.png">
-            <img src="img/dashboard/emblema2.png">
-            <img src="img/dashboard/emblema3.png">
-            <img src="img/dashboard/emblema3.png">
+            <img src="img/dashboard/emblema1.png" class="img_emblema">
+            <img src="img/dashboard/emblema2.png" class="img_emblema">
+            <img src="img/dashboard/emblema3.png" class="img_emblema">
+            <img src="img/dashboard/emblema3.png" class="img_emblema">
         </div>
 
+<!--
         <div id="div_btn-roll">
             <a href="http://localhost/hfashion/site/edit_profile.php" id="btn-roll">
             <img src="img/dashboard/camera.png" id="img_camera">
             EDITAR PERFIL
             </a>
         </div>
-        
+-->
     </div>
 
 </div>
