@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . "/../models/Quiz.php";
+require_once __DIR__ . "/../models/Question.php";
 
     class QuizzesDAO  {
         private $conn;

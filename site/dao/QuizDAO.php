@@ -1,12 +1,14 @@
 <?php
     require_once __DIR__ . "/../helpers/db.php";
     require_once __DIR__ . "/../models/Quiz.php";
+    require_once __DIR__ . "/../models/Question.php";
     require_once __DIR__ . "/../models/Message.php";
 
     class QuizDAO implements QuizDAOInterface {
         private $conn;
         private $url;
         private $message;
+        private $quiz;
 
         public function __construct(PDO $conn, $url) {
             $this->conn = $conn;
@@ -71,8 +73,20 @@
 
             $_SESSION["quizToken"] = "";
         }
-        public function getQuestionsByQuizId() {
-
+        public function getQuestionsByQuizId($quizId) {
+            $stmt = $this->conn->prepare("SELECT * FROM questions WHERE quiz_id = $quizId");
+            $stmt->execute();
+            $questionsArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $questions = [];
+            foreach ($questionsArray as $item) {
+                $question = new Question($this->message);
+                $question->setAnswer($item["answer"]);
+                $question->setOptions($item["options"]);
+                $question->setQuestion($item["question"]);
+                $question->setQuestionId($item["question_id"]);
+                $questions[] = $question;
+            }   
+            return $questions;
         }
         public function getQuizRanking() {
 

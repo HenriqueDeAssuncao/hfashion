@@ -5,7 +5,7 @@
     require_once "models/Message.php";
 
     require_once "models/Quiz.php";
-    require_once "dao/QuizDAO.php";
+
     require_once "models/Question.php";
     require_once "dao/QuestionDAO.php";
 

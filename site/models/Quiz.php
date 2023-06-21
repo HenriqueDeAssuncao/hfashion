@@ -96,6 +96,6 @@
         public function setQuizTokenToSession($quizToken);
         public function getQuizStatusByToken($quizToken);
         public function setQuizStatusToActive($quizId);
-        public function getQuestionsByQuizId(); //Retorna um array com os objetos questions
+        public function getQuestionsByQuizId($quizId); //Retorna um array com os objetos questions
         public function getQuizRanking();
     }
