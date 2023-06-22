@@ -41,6 +41,8 @@
 
         $quizDao->setQuizStatusToActive($quizId);
 
+        $message->setMessage("O quiz está disponível aos usuários!", "success", "index.php");
+
     } else {
 
     }

@@ -25,6 +25,7 @@ require_once __DIR__ . "/../models/Question.php";
             $stmt = $this->conn->prepare("SELECT * FROM quizzes WHERE status = 1");
             $stmt->execute();
             $quizzesArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $stmt = "";
             $quizzes = [];
             foreach($quizzesArray as $item) {
                 $quiz = new Quiz($this->message);
