@@ -5,7 +5,7 @@
     margin: 0;
     font-family: Poppins, sans-serif;
     overflow: hidden;
-    border: 1px solid black;
+    background-color: aqua;
 }
 
 /* LAYOUT */
@@ -89,6 +89,28 @@ input{
     height: 40;
     width: 163px;
 }
+
+.Button {
+
+    background: linear-gradient(180deg, #C02425 53.65%, #7B0B0A 100%);
+
+    color: white;
+
+    font-weight: 600;
+
+    width: 145px;
+
+    height: 40px;
+
+    margin-bottom: 20px;
+
+    border-radius: 10px;
+
+    margin-right: 10%;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 }
 
 /* PC (>= 1200px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
