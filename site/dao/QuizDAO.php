@@ -71,8 +71,27 @@
 
             $_SESSION["quizToken"] = "";
         }
+<<<<<<< Updated upstream
         public function getQuestionsByQuizId() {
 
+=======
+        public function getQuestions($quizToken) {
+            $quizId = $this->findQuizIdByToken($quizToken);
+
+            $stmt = $this->conn->prepare("SELECT * FROM questions WHERE quiz_id = $quizId");
+            $stmt->execute();
+            $questionsArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $questions = [];
+            foreach ($questionsArray as $item) {
+                $question = new Question($this->message);
+                $question->setAnswer($item["answer"]);
+                $question->setOptions($item["options"]);
+                $question->setQuestion($item["question"]);
+                $question->setQuestionId($item["question_id"]);
+                $questions[] = $question;
+            }   
+            return $questions;
+>>>>>>> Stashed changes
         }
         public function getQuizRanking() {
 
