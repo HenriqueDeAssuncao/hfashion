@@ -1,6 +1,7 @@
 <?php
     require_once __DIR__ . "/../helpers/db.php";
     require_once __DIR__ . "/../models/Quiz.php";
+    require_once __DIR__ . "/../models/Question.php";
     require_once __DIR__ . "/../models/Message.php";
 
     class QuizDAO implements QuizDAOInterface {
@@ -71,10 +72,6 @@
 
             $_SESSION["quizToken"] = "";
         }
-<<<<<<< Updated upstream
-        public function getQuestionsByQuizId() {
-
-=======
         public function getQuestions($quizToken) {
             $quizId = $this->findQuizIdByToken($quizToken);
 
@@ -91,7 +88,7 @@
                 $questions[] = $question;
             }   
             return $questions;
->>>>>>> Stashed changes
+
         }
         public function getQuizRanking() {
 

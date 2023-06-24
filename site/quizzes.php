@@ -35,11 +35,11 @@
     <?php endif;?>
 
     <?php if(count($quizzes) == 0):?>
-        <p>Não há quizzes para mostrar!</p>
+        <p>Não há quizzes para mostrar</p>
     <?php endif;?>
     
+
 <?php
     require_once "templates/footer.php";
 ?>
-
 

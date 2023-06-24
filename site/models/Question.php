@@ -25,12 +25,10 @@
             $this->question = $question;
         }
         public function getOptions() {
-            $optionsArray = explode(",", $this->options);
-            return $optionsArray;
+            return $this->options;
         }
         public function setOptions($options) {
-            $optionsString = implode(",", $options);
-            $this->options = $optionsString;
+            $this->options = $options;
         }
         public function getAnswer() {
             return $this->answer;
