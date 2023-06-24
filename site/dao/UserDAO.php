@@ -171,7 +171,7 @@
         }
         public function destroyToken() {
             $_SESSION['token'] = "";
-            $this->message->setMessage("Você fez logout com sucesso.", "success");
+            $this->message->setMessage("Você fez logout com sucesso.", "success", "signin.php");
         }
         public function changePassword($user) {
             if ($user) {

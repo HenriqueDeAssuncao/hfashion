@@ -1,34 +1,31 @@
 <?php
-    require_once "templates/header.php";
-    require_once "models/message.php";
-    require_once "dao/QuizDAO.php";
-    require_once "helpers/db.php";
-    require_once "helpers/url.php";
+require_once "templates/header.php";
+require_once "dao/QuizDAO.php";
+require_once "helpers/db.php";
+require_once "helpers/url.php";
 
-    $message = new Message($CURRENT_URL);
+
+if (!empty($_GET["token"])) {
+    $quizToken = $_GET["token"];
     $quizDao = new QuizDAO($conn, $CURRENT_URL);
 
-    if (!empty($_GET["token"])) {
-        $quizToken = $_GET["token"];
-        $quizId = $quizDao->findQuizIdByToken($quizToken);
+    $questions = $quizDao->getQuestions($quizToken);
 
-        if ($quizId) {
-            $questions = $quizDao->getQuestionsByQuizId($quizId);
-            $questionsNumber = count($questions);
-        }     
-    } else {
-        $message->setMessage("Página não encontrada", "error", "back");
-    }
-
+    $_SESSION["questions"] = $questions;
+} else {
+    $message->setMessage("Página não encontrada", "error", "back");
+}
 ?>
-    
-<div class="container-question">
-    <?php
-        require_once "templates/question.php";
-    ?>
+
+<div class="container-quiz">
+    <div class="container-question">
+        <?php include_once("templates/question.php") ?>
+    </div>
+    <button class="btn-continue">Continuar</button>
 </div>
-    
-<script src="<?=$CURRENT_URL?>/script/adm/questions.js"></script>
+
+<script src="<?= $CURRENT_URL ?>/script/adm/questions.js"></script>
+
 <?php
-    require_once "templates/footer.php";
+require_once "templates/footer.php";
 ?>

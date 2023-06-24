@@ -1,9 +1,9 @@
 const containerQuestion = document.querySelector(".container-question");
-const options = document.querySelectorAll(".btn-options");
-const where = document.location.href;
+const btnContinue = document.querySelector(".btn-continue");
 let index = 0;
 
-function handleNextQuestion() {
+function handleNextQuestion(e) {
+    e.preventDefault();
     index++;
     goNextQuestion();
 }
@@ -20,6 +20,4 @@ function goNextQuestion() {
         })
 }
 
-options.forEach((option) => {
-    option.addEventListener("click", handleNextQuestion);
-})
+btnContinue.addEventListener("click", handleNextQuestion);

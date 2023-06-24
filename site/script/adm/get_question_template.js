@@ -32,7 +32,7 @@ function getQuestionTemplate() {
             updateInputs();
             updateDeleteButtons();
             questionsTemplatesCounter++;
-        })
+        });
 }
 
 function setInputs(inputs) {

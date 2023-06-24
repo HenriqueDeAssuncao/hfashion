@@ -1,12 +1,16 @@
 <?php
-    if (empty($_GET["index"])) {
-        $index = 0;
-    } else {
-        $indexStr = $_GET["index"];
-        $index = intval($indexStr);
-    }
-    $stringOptions = $questions[$index]->getOptions();
-    $options = explode(",", $stringOptions);
+require_once __DIR__ . "/../dao/QuizDAO.php";
+require_once __DIR__ . "/../helpers/db.php";
+require_once __DIR__ . "/../helpers/url.php";
+
+if (isset($_GET["index"])) {
+    $index = $_GET["index"];
+} else {
+    $index = 0;
+}
+
+$questions = $_SESSION["questions"];
+$options = $questions[$index]->getOptionsArray();
 
 ?>
 
@@ -22,13 +26,15 @@
 </div>
 
 <div class="question">
-
-    <p><?=$questions[$index]->getQuestion()?></p>
+    <p>
+        <?= $questions[$index]->getQuestion() ?>
+    </p>
 
     <div class="options">
-        <?php foreach($options as $option):?>
-            <button class="btn-options"><?=$option?></button>
-        <?php endforeach;?>
+        <?php foreach ($options as $option): ?>
+            <button class="btn-options">
+                <?= $option ?>
+            </button>
+        <?php endforeach; ?>
     </div>
-    
 </div>
