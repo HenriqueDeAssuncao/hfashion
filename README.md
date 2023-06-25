@@ -26,7 +26,7 @@
           quiz_name varchar(100) not null,
           quiz_description varchar(200),
           quiz_token varchar(100) not null,
-          questions_number,
+          questions_number int,
           question_weight int (1),
           icon varchar(100),
           status int(1)
