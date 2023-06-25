@@ -14,16 +14,9 @@ require_once("templates/message.php");
 ?>
 
 
-
-
 <div class="flex">
-
-
-
-
+    <a href=""><img class="back" src="<?= $CURRENT_URL ?>/img/login/Back.svg" style="height:30px" alt=""></a>
     <div id="register-container">
-
-        <img src="<?= $CURRENT_URL ?>/img/login/logo2.svg" style="width: 90px" alt="">
 
         <p class="title">Conecte-se ao <br> HiFashion</p>
 
@@ -43,7 +36,7 @@ require_once("templates/message.php");
 
                 <label for="password">Senha:</label>
 
-                <input type="password" class="form-input" id="password" name="password">
+                <input type="password" placeholder="8+ caracteres" class="form-input" id="password" name="password">
 
             </div>
 
@@ -63,14 +56,14 @@ require_once("templates/message.php");
 
         </form>
 
-    </div>
+</div>
 
 
 
 
-    <div class="visual Flex">
+    <span style="inline-block" class="visual Flex">
 
-        <div class="visual-content Flex">
+        <span class="visual-content Flex">
 
             <img src="<?= $CURRENT_URL ?>/img/login/logo.svg" style="width: 280px" alt="">
 
@@ -78,9 +71,9 @@ require_once("templates/message.php");
 
             <img src="<?= $CURRENT_URL ?>/img/login/log1.png" alt="">
 
-        </div>
+        </span>
 
-    </div>
+</span>
 
 
 

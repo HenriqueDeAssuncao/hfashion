@@ -1,94 +1,222 @@
 @charset "UTF-8";
 
+
+
+
 * {
+
     padding: 0;
+
     margin: 0;
+
     font-family: Poppins, sans-serif;
+
     overflow: hidden;
-    background-color: aqua;
 }
+
+
+
 
 /* LAYOUT */
+
 .Container {
+
     margin: 0 auto;
+
 }
 
+
+
+
 .Flex {
+
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
+
+
+
 
 .Hidden {
+
     display: none;
+
 }
+
+
+
 
 .Button {
+
     background-color: transparent;
+
     border: none;
+
 }
+
+
+
 
 .Auto {
+
     margin: 0 auto;
+
 }
+
+
+
 
 /* FONTES */
+
 /* Poppins */
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@200;300;400;500;600&display=swap');
 
-@media (min-width: 992px) {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
 
-.flex{
+/* Smartphone Portrait (ATÉ 576px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+::placeholder{
+
+    margin-left: 3%;
+    font-size: 13px;
+
+}
+
+
+/* Smartphone landscape (ATÉ 768px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+@media (min-width: 576px) {
+
+    .Container {
+
+        width: 540px;
+
+    }
+
+}
+
+
+
+
+input {
+
+    margin-top: 5px;
+
+    border-radius: 4px;
+
+    height: 40px;
+
+    border: none;
+
+    background-color: #E7E7E7;
+
+    width: 354px;
+
+}
+
+
+
+
+.form-group {
+
+    align-content: stretch;
+
     display: flex;
-    justify-content: space-between;
-    height: 100vh;
+
+    flex-direction: column;
+
 }
 
- .form-group{
-     width: 55%;
 
- }
 
-.visual{
- width: 45%;
- background: linear-gradient(180deg, #C02425 45.91%, #7B0B0A 100%);
-border: 1px solid #000000;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
 
-.visual-content {
- flex-direction: column;
-}
+.form-container {
 
-.foto{
-display: block;
-margin-bottom: 0px;
-}
-
-.logo{
-display: block;
-margin-top: 75px;
-}
-
-.visual p{
-color: white;
-font-weight: 600;
-font-size: 22px;
-line-height: 33px;
-width: 348px;
-margin: 0 auto;
-margin-top: 32px;
-margin-bottom: 42px;
-}
-
-.form-group{
     display: flex;
+
+    width: 350px;
+
+    margin-top: 8%;
+
+
+
 }
 
-input{
-    height: 40;
-    width: 163px;
+
+
+
+.form-container p,
+a {
+
+    font-family: 'Poppins';
+
+    font-style: normal;
+
+    font-weight: 500;
+
+    font-size: 13px;
+
+    line-height: 20px;
+
+    text-align: right;
+
+
+
+
 }
+
+
+
+
+.form-container a {
+
+    color: #CE3C3C;
+
+    text-decoration: none;
+
+}
+
+
+
+
+.title {
+
+    font-family: 'Roboto', sans-serif;
+
+    font-weight: bolder;
+
+    font-size: 22px;
+
+    margin-bottom: 6%;
+
+    margin-top: 4%;
+
+}
+
+
+
+
+label {
+
+    font-family: 'Poppins';
+
+    font-style: normal;
+
+    font-weight: 600;
+
+    font-size: 16px;
+
+    line-height: 24px;
+
+    margin-top: 6%;
+
+}
+
+
+
 
 .Button {
 
@@ -106,18 +234,190 @@ input{
 
     border-radius: 10px;
 
-    margin-right: 10%;
+    margin-right: 21.84%;
 
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+    border: none;
+
+
+
+
 }
 
+::-webkit-input-placeholder { 
+    color: #333333;
+    padding: 19px;
+  }
+  
+  :-ms-input-placeholder { 
+    color: #333333;
+    padding: 19px;
+  }
+  
+  ::placeholder {
+    color: #333333;
+    padding: 19px;
+  }
+
+
+/* Tablet Portrait (ATÉ 992px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+@media (min-width: 768px) {
+
+    .Container {
+
+        width: 720px;
+
+    }
+
+}
+
+
+
+
+/* Tablet Landscape (ATÉ 992px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+@media (min-width: 992px) {
+
+
+
+
+    .flex {
+
+        display: flex;
+
+        justify-content: space-between;
+
+        height: 100vh;
+
+    }
+
+
+
+    .form-group {
+
+        display: flex;
+
+    }
+
+
+
+#register-container {
+
+    margin: auto;
+
+}
+
+
+
+
+.visual {
+
+    width: 45%;
+
+    background: linear-gradient(180deg, #C02425 45.91%, #7B0B0A 100%);
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    margin-right: 30px;
+
+}
+
+
+
+
+.visual-content {
+
+    flex-direction: column;
+
+}
+
+
+
+
+.foto {
+
+    display: block;
+
+    margin-bottom: 0px;
+
+}
+
+
+
+
+.logo {
+
+    display: block;
+
+    margin-top: 75px;
+
+}
+
+
+
+
+.visual p {
+
+    color: white;
+
+    font-weight: 600;
+
+    font-size: 22px;
+
+    line-height: 33px;
+
+    width: 348px;
+
+    margin: 0 auto;
+
+    margin-top: 32px;
+
+    margin-bottom: 42px;
+
+}
+
+
+
+
+.Button {
+
+    background: linear-gradient(180deg, #C02425 53.65%, #7B0B0A 100%);
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    border-radius: 10px;
+
+    width: 145px;
+
+    height: 40px;
+}
+
+.flex-1{
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-1 input{
+    width: 163px;
+}
+
+.back{
+    margin-top: 38px;
+    margin-left: 3px;
+}
 }
 
 /* PC (>= 1200px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
 @media (min-width: 1200px) {
- .Container {
-     width: 100%;
- }
+
+    .Container {
+
+        width: 90%;
+
+    }
+
 }
-
-
