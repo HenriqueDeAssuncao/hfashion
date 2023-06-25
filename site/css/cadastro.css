@@ -358,7 +358,7 @@ label {
 
 
 
-.visual p {
+.visual-content p {
 
     color: white;
 
@@ -375,6 +375,10 @@ label {
     margin-top: 32px;
 
     margin-bottom: 42px;
+    
+    text-align: center;
+
+    text-justify: center;
 
 }
 
