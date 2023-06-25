@@ -1,8 +1,6 @@
 <?php
     require_once "templates/header.php";
     require_once "dao/QuizDAO.php";
-    require_once "helpers/url.php";
-    require_once "models/Message.php";
 
     require_once "models/Quiz.php";
 

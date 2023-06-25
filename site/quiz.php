@@ -1,8 +1,6 @@
 <?php
 require_once "templates/header.php";
 require_once "dao/QuizDAO.php";
-require_once "helpers/db.php";
-require_once "helpers/url.php";
 
 if (!empty($_GET["token"])) {
     $quizToken = $_GET["token"];
@@ -10,6 +8,7 @@ if (!empty($_GET["token"])) {
 
     $questions = $quizDao->getQuestions($quizToken);
     $_SESSION["questions"] = $questions;
+    $_SESSION["quizToken"] = $quizToken;
 } else {
     $message->setMessage("Página não encontrada", "error", "back");
 }

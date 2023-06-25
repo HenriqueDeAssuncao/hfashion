@@ -14,6 +14,7 @@ if (!empty($flashMessage)) {
 
 $userDao = new UserDAO($conn, $CURRENT_URL);
 $userData = $userDao->verifyToken(false);
+
 $adm = new Adm($CURRENT_URL);
 
 if (empty($userData)) {
