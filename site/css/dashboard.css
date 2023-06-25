@@ -17,18 +17,22 @@
 
 
 
+
+
+@media (max-width: 768px) { /*mobile*/
+
+
+
+
 /* INFORMAÇÕES PERFIL */
-
-/*copiar o media max min do jho*/
-
 #container_profile {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 655px;
     width: 100%;
+    background-color: #3C3C3C;
 }
-
 #info_profile{
     height: fit-content;
     width: 69%;
@@ -38,43 +42,41 @@
     align-items: center;
 }
 
-#div_img_profile{
-    width: 75.6%;
-    margin-bottom: 41px;
-}
+
+    /*IMAGEM DE PERFIL*/
+    #div_img_profile{
+        width: 75.6%;
+        margin-bottom: 41px;
+    }
+    #img_profile{
+        border-radius: 3600px;
+        width: 100%;
+    }
 
 
-/*IMAGEM DE PERFIL*/
-#img_profile{
-    border-radius: 3600px;
-    width: 100%;
-}
-
-/*BIOGRAFIA*/
-#div_bio_profile{
-    margin-top: 20px; /*distancia entre (tava descendo o conteiner todo)*/
-    width: 252px; 
-    text-align: center; 
-}
-
-#link_edit_profile{
-    color: #C02425;
-    font-weight: 500;
-    text-decoration: none;
-} 
-
-/*EMBLEMAS*/
-
-#align_div_emblemas{
-    margin-top: 20px;
-}
-
-.img_emblema{
-    width: 70px;
-}
+    /*BIOGRAFIA*/
+    #div_bio_profile{
+        margin-top: 20px;
+        width: 252px; 
+        text-align: center; 
+    }
+    #link_edit_profile{
+        color: #C02425;
+        font-weight: 500;
+        text-decoration: none;
+    } 
 
 
-/* BOTÃO */
+    /*EMBLEMAS*/
+    #align_div_emblemas{
+        margin-top: 20px;
+    }
+    .img_emblema{
+        width: 70px;
+    }
+
+
+/* BOTÃO 
 
 #img_camera{
     height: 20px;
@@ -107,75 +109,215 @@
     background: #dbdbdb;
     border: 2px solid #5f5e5e;
     border-radius: 4.42px;
-}
+} */
 
-.titles {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 60px;
-}
 
-.style-maintext {
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 26px;
-    color: #3C3C3C;
+/*INFORMAÇÕES QUIZ*/
+#container_quiz{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    width: 100%;
+    background-color: green;
 }
-
-.style-regulartext {
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    color: #5f5e5e;
-}
-
-.style-titles {
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 26px;
-    color: #C02425;
-}
-.style-titles-main {
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 26px;
-    color: #C02425;
+#info_quiz{
+    height: fit-content;
+    width: 300px; /*alterar para porcentagem*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -420px;
+    background-color: greenyellow;
 }
 
 
-
-/* Smartphone landscape (ATÉ 768px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-@media (min-width: 576px) {
-    .Container {
-        width: 540px;
+    /*TITULO*/
+    #align_title_quiz{
+        margin-top: 480px;
     }
+
+
+    /*BOTÕES QUIZZES*/ 
+    .div_btn_quizzes{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 52px;
+    }
+    #img_relogio_quiz{
+        margin-left: -25px;
+    }
+    .btn_quizzes{
+        transition: 0.5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 128px;
+        margin-bottom: 32px;
+        text-decoration: none;
+        font-weight: 600;
+        color: #424245;
+        border-radius: 5px;
+        border: 2.007px solid #CDCDCD;
+    }
+    .btn_quizzes:hover{
+        transition: 0.5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 110%;
+        height: 160px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: 2.007px solid #CDCDCD;
+    }
+    
+    .btn_quizzes-timeline{
+        transition: 0.5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 128px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: 2.007px solid #CDCDCD;
+    }
+    
+    .btn_quizzes-timeline:hover{
+        transition: 0.5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 110%;
+        height: 160px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: 2.007px solid #CDCDCD;
+    }
+
+
+/*INFORMAÇÕES CONQUISTAS*/
+#container_conquistas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    width: 100%;
+    background-color: #C02425;
+}
+#info_conquistas{
+    height: fit-content;
+    width: 300px; /*alterar para porcentagem*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    margin-top: -60px;
 }
 
-/* Tablet Portrait (ATÉ 992px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+    /*DIV QUE TA SEGURANDO GERAL*/
+    #div_geral{
+        height: 480px;
+        width: 100%;
+        margin-top: 45px;
+    }
+
+
+    /*IMAGENS CONQUISTAS*/
+    #div_img_conquistas{
+        height: 480px;
+        width: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 33px;
+        background-color: aqua;
+    }
+    .background{
+        display: flex;
+        width: 65px;
+        height: 65px;
+        padding: 18px 17px 17px 18px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        background: #FFB862;
+    } 
+
+
+    /*PROGRESSO*/
+    #div_progresso_conquistas{
+        width: 66.7%;
+        height: 480px;
+        margin-left: 100px;
+        margin-top: -480px;
+        background-color: blue;
+    }
+    .div_titleBar_conquistas{
+        width: 88.3%;
+        height: 93px;
+        margin-left: 24px;
+        margin-bottom: 36px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        background-color: yellowgreen;
+    }
+
+
+
+/*FONTES*/
+    .titles {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 60px;
+    }
+    .style-maintext {
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 26px;
+        color: #3C3C3C;
+    }
+    .style-regulartext {
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #5f5e5e;
+    }
+    .style-titles {
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 26px;
+        color: #C02425;
+    }
+    .style-titles-main {
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 26px;
+        color: #C02425;
+    }
+
+}
+
+
 @media (min-width: 768px) {
-    .Container {
-        width: 720px;
-    }
-}
 
-/* Tablet Landscape (ATÉ 992px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-@media (min-width: 992px) {
-    .Container {
-        width: 960px;
-    }
-}
 
-/* PC (>= 1200px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-@media (min-width: 1200px) {
-    .Container {
-        width: 90%;
-    }
+
 }

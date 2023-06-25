@@ -12,7 +12,6 @@
 
 
 <div id="container_profile">
-
     <div id="info_profile">
 
         <div id="div_img_profile">
@@ -49,91 +48,108 @@
         </div>
 -->
     </div>
-
 </div>
 
-
-<!-- INSERIR HR PRA SEPARAR -->
 
 
 <!-------------------- Quizzes -------------------->
 
 
-<section>
 
-    <div>
-        <h1>Quizzes</h1>
-<Br>
+<div id="container_quiz">
+    <div id="info_quiz">
 
-        <!-- quiz historia -->
-        <div>
-            <!-- botão precisa redirecionar para a pagina quiz-->
-            <button>
-                <img src="" alt="relogio">
-                <h3>Historia da Moda</h1>
-                <p>Veja suas respostas</p>
-            </button>
+       <div id="align_title_quiz">
+            <p class="style-maintext"> Quizzes </p>
+       </div>
+
+    <div id="div_btn">
+
+      <!-- DIV BOTÃO QUIZZES -->
+      <div class="div_btn_quizzes js-scroll">
+
+        <a href="" class="btn_quizzes">
+          <img src="img/dashboard/relogio.png" id="img_relogio_quiz">
+          <p>Uniforme Escolar</p>
+        </a>
+
+        <a href="" class="btn_quizzes">
+          <img src="img/dashboard/ampulheta.png" id="img_relogio_quiz">
+          <p>Mcbling</p>
+        </a>
+
+        <a href="" class="btn_quizzes">
+          <img src="img/dashboard/trofeu.png" id="img_relogio_quiz">  
+          <p>Y2K</p>
+        </a>
+
+        <a href="" class="btn_quizzes">
+          <img src="img/dashboard/pessoas.png" id="img_relogio_quiz">
+          <p>StreetWear</p>
+        </a>
+
+      </div>
+
         </div>
 
-
-        <!-- quiz influencias -->
-        <div>
-            <!-- botão precisa redirecionar para a pagina quiz-->
-            <button>
-                <img src="" alt="ampulheta">
-                <h3>Influências</h1>
-                <p>Veja suas respostas</p>
-            </button>
-        </div>
+    </div>
+</div>
 
 
-        <!-- quiz estilistas -->
-        <div>
-            <!-- botão precisa redirecionar para a pagina quiz-->
-            <button>
-                <img src="" alt="pessoas">
-                <h3>Estilitas</h1>
-                <p>Veja suas respostas</p>
-            </button>
-        </div>
+
+<!-------------------- Conquistas -------------------->
 
 
-        <!-- quiz estetica -->
-        <div>
-            <!-- botão precisa redirecionar para a pagina quiz-->
-            <button>
-                <img src="" alt="trofeu">
-                <h3>Estética</h1>
-                <p>Veja suas respostas</p>
-            </button>
+<div id="container_conquistas">
+    <div id="info_conquistas">
+
+       <div>
+          <p class="style-maintext"> Conquistas </p>
+       </div>
+
+    <div id="div_geral">
+
+       <!-- DIV DAS IMAGENS -->
+       <div id="div_img_conquistas">
+          <div class="background">
+            <img src="img/dashboard/ringbox.png">
+          </div>
+          <div class="background">
+            <img src="img/dashboard/cap.png">
+          </div>
+          <div class="background">
+            <img src="img/dashboard/seaker.png">
+          </div>
+          <div class="background">
+            <img src="img/dashboard/purse.png">
+          </div>
+       </div>
+
+       <!-- DIV DA BARRINHA DE PROGRESSO -->
+        <div id="div_progresso_conquistas">
+            <div class="div_titleBar_conquistas">
+                <p> Y2K </p>
+            </div>
+            <div class="div_titleBar_conquistas">
+                <p> Y2K </p>
+            </div>
+            <div class="div_titleBar_conquistas">
+                <p> Y2K </p>
+            </div>
+            <div class="div_titleBar_conquistas">
+                <p> Y2K </p>
+            </div>
         </div>
 
     </div>
 
-</section>
 
-
-<!-------------------- Emblemas -------------------->
-
-
-<section>
-
-<br> 
-<br>
-
-    <div>
-         <h1>Emblemas</h1>
-    </div>    
-    
-<br>
-<br>
-
-    <div id='borda'>
-        <div></div>
     </div>
+</div>
 
-</section>
-    
+
+
+
 
 
 <?php
