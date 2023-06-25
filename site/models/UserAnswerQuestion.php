@@ -1,32 +1,38 @@
 <?php
     class UserAnswerQuestion { 
-        private $question_weight;
-        private $user_answer_question_id;
-        private $quiz_status; //Se o usuário desbloqueou ou não o quiz
+        private $userAnswerQuestionId;
+        private $questionWeight;
+        private $quizStatus; //Se o usuário desbloqueou ou não o quiz
         private $score;
         private $tries;
         private $emblems;
         private $unlockedAvatars; //Aqui eu quero guardar os nomes das imagens desbloqueadas
-        public function __construct($question_weight) {
-            $this->question_weight = $question_weight;
+        public function __construct($questionWeight) {
+            $this->questionWeight = $questionWeight;
         }
-        public function getTries($tries) {
-            return $this->$tries;
+        public function getScore() {
+            return $this->score;
+        }
+        public function setScore($score) {
+            $this->score = $score;
+        }
+        public function getTries() {
+            return $this->tries;
         }
         public function setTries($tries) {
             $this->tries = $tries;
         }
-        public function getQuizStatus($quiz_status) {
-            return $this->$quiz_status;
+        public function getQuizStatus() {
+            return $this->quizStatus;
         }
-        public function setQuizStatus($quiz_status) {
-            $this->quiz_status = $quiz_status;
+        public function setQuizStatus($quizStatus) {
+            $this->quizStatus = $quizStatus;
         }
         public function increaseScore() {
-            $this->score += $this->question_weight;
+            $this->score += $this->questionWeight;
         }
     }
 
     interface UserAnswerQuestionDAOInterface {
-
+        public function setStatusToAvailable($quizId);
     }

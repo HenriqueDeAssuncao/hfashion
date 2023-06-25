@@ -11,7 +11,7 @@ require_once("templates/message.php");
 
 <div class="Container">
     <h1>Criar quiz</h1>
-    <form action="process/quiz_process.php" method="POST" enctype="multipart/form-data">
+    <form action="process/adm_quiz_process.php" method="POST" enctype="multipart/form-data">
         <div class="form-group">
             <label for="quiz-name">Nome:</label>
             <input type="text" name="quiz-name" placeholder="Digite o nome do quiz">

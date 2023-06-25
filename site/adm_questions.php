@@ -23,7 +23,7 @@ require_once("templates/message.php");
     </div>
 </form>
 
-<link rel="stylesheet" href="css/question_form.css">
+<link rel="stylesheet" href="css/adm_question_form.css">
 <script src="<?= $CURRENT_URL ?>/script/adm/get_question_template.js"></script>
 
 <?php

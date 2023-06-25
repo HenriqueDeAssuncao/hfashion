@@ -1,6 +1,6 @@
 <?php
     require_once "templates/header.php";
-    require_once "dao/QuizzesDAO.php";
+    require_once "dao/QuizDAO.php";
     require_once "helpers/url.php";
     require_once "models/Message.php";
 
@@ -10,8 +10,8 @@
     require_once "dao/QuestionDAO.php";
 
     $message = new Message($CURRENT_URL);
-    $quizzesDao = new QuizzesDAO($conn, $CURRENT_URL, $message);
-    $quizzes = $quizzesDao->getQuizzes();
+    $quizDao = new QuizDAO($conn, $CURRENT_URL);
+    $quizzes = $quizDao->getQuizzes();
 ?>
     <style>
         img {
@@ -24,7 +24,7 @@
     <?php if(count($quizzes) > 0):?>
         <?php foreach ($quizzes as $quiz):?>
             <button class="btn-quiz-box">
-                <a href="<?=$CURRENT_URL?>/quiz.php?token=<?=$quiz->getQuizToken()?>">
+                <a href="<?=$CURRENT_URL?>/quiz.php?token=<?=$quiz->getQuizToken()?>&n=<?=$quiz->getQuestionsNumber()?>&w=<?=$quiz->getQuestionWeight()?>">
                     <div class="quiz-box">
                         <p><?=$quiz->getQuizName()?></p>
                         <img src="<?=$CURRENT_URL?>/<?=$quiz->getIconPath()?>" alt="">
@@ -37,7 +37,6 @@
     <?php if(count($quizzes) == 0):?>
         <p>Não há quizzes para mostrar</p>
     <?php endif;?>
-    
 
 <?php
     require_once "templates/footer.php";

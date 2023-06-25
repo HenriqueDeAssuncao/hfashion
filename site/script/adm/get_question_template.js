@@ -78,7 +78,7 @@ function submitForm(e) {
             }
         });
         if (condition) {
-            form.setAttribute('action', `${href}./../process/questions_process.php?questionsNumber=${questionsTemplatesCounter}`);
+            form.setAttribute('action', `${href}./../process/adm_questions_process.php?questionsNumber=${questionsTemplatesCounter}`);
         } else {
             alert('Todos os campos são obrigatórios');
         }

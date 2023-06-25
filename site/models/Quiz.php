@@ -4,11 +4,11 @@
         private $quizId;
         private $userId;
         private $emblemId;
-        private $firstAvatarId;
-        private $secondAvatarId;
         private $quizToken; //Hash pra usar de url
         private $quizName;
         private $quizDescription;
+        private $status;
+        private $questionsNumber;
         private $questionWeight;
         private $iconPath;
         public function __construct(Message $message) {
@@ -43,6 +43,18 @@
         }
         public function setQuizDescription($quizDescription) {
             $this->quizDescription = $quizDescription;
+        }
+        public function getStatus() {
+            return $this->status;
+        }
+        public function setStatus($status) {
+            $this->status = $status;
+        }
+        public function getQuestionsNumber() {
+            return $this->questionsNumber;
+        }
+        public function setQuestionsNumber($questionsNumber) {
+            $this->questionsNumber = $questionsNumber;
         }
         public function getQuestionWeight() {
             return $this->questionWeight;
@@ -96,6 +108,9 @@
         public function setQuizTokenToSession($quizToken);
         public function getQuizStatusByToken($quizToken);
         public function setQuizStatusToActive($quizId);
+        public function getQuestionsNumber($quizId);
+        public function update($quiz_id);
+        public function getQuizzes();
         public function getQuestions($quizToken); //Retorna um array com os objetos questions
         public function getQuizRanking();
     }

@@ -11,7 +11,6 @@ if (isset($_GET["index"])) {
 
 $questions = $_SESSION["questions"];
 $options = $questions[$index]->getOptionsArray();
-
 ?>
 
 <div class="question-header">
@@ -26,15 +25,19 @@ $options = $questions[$index]->getOptionsArray();
 </div>
 
 <div class="question">
-    <p>
+    <p class="p-question">
         <?= $questions[$index]->getQuestion() ?>
     </p>
 
     <div class="options">
-        <?php foreach ($options as $option): ?>
-            <button class="btn-options">
-                <?= $option ?>
-            </button>
-        <?php endforeach; ?>
+        <?php for($i=0; $i<=count($options)-1; $i++):?>
+            <div>
+                <div class="container-option">
+                    <label for="option" class="inputs-options"></label>
+                    <input name="option" class="inputs-options" value="<?=$i?>" type="radio">
+                </div>
+                <p class="p-option"><?=$options[$i]?></p>
+            </div>
+        <?php endfor;?>
     </div>
 </div>

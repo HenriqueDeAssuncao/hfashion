@@ -70,7 +70,43 @@
             $stmt->bindParam(":quiz_id", $quizId);
             $stmt->execute();
 
+            $this->update($quizId);
+
             $_SESSION["quizToken"] = "";
+        }
+        public function getQuestionsNumber($quizId) {
+            $stmt = $this->conn->prepare("SELECT COUNT(*) FROM questions WHERE quiz_id = :quiz_id");
+            $stmt->bindParam(":quiz_id", $quizId);
+            $stmt->execute();
+            $questionsNumber = $stmt->fetchColumn();
+            return $questionsNumber;
+        }
+        public function update($quizId) {
+            $questionsNumber = $this->getQuestionsNumber($quizId);
+            $stmt = $this->conn->prepare("UPDATE quizzes SET questions_number = :questions_number WHERE quiz_id = :quiz_id");
+            $stmt->bindParam(":questions_number", $questionsNumber);
+            $stmt->bindParam(":quiz_id", $quizId);
+            $stmt->execute();
+        }
+        public function getQuizzes() {
+            $stmt = $this->conn->prepare("SELECT * FROM quizzes WHERE status = 1");
+            $stmt->execute();
+            $quizzesArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $stmt = "";
+            $quizzes = [];
+            foreach($quizzesArray as $item) {
+                $quiz = new Quiz($this->message);
+                $quiz->setQuizId($item["quiz_id"]);
+                $quiz->setQuizName($item["quiz_name"]);
+                $quiz->setQuizDescription($item["quiz_description"]);
+                $quiz->setQuestionsNumber($item["questions_number"]);
+                $quiz->setQuestionWeight($item["question_weight"]);
+                $quiz->setStatus($item["status"]);
+                $quiz->setQuizToken($item["quiz_token"]);
+                $quiz->setIconPath($item["icon"]);
+                $quizzes[] = $quiz;
+            }
+            return $quizzes;
         }
         public function getQuestions($quizToken) {
             $quizId = $this->findQuizIdByToken($quizToken);
