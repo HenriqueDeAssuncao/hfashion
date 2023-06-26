@@ -26,7 +26,7 @@
           quiz_name varchar(100) not null,
           quiz_description varchar(200),
           quiz_token varchar(100) not null,
-          questions_number,
+          questions_number int,
           question_weight int (1),
           icon varchar(100),
           status int(1)
@@ -38,7 +38,8 @@
           quiz_id int not null,
           quiz_status int (1),
           score int(11),
-          tries int(1)
+          tries int(1),
+          portion int(1)
           );
           
           create table questions (
