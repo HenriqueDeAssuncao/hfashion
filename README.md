@@ -39,7 +39,7 @@
           quiz_status int (1),
           score int(11),
           tries varchar(7),
-          portion int(1)
+          score_portion int(1)
           );
           
           create table questions (
