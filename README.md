@@ -38,8 +38,8 @@
           quiz_id int not null,
           quiz_status int (1),
           score int(11),
-          tries varchar(7),
-          score_portion int(1)
+          tries int(1),
+          score_portion varchar(7)
           );
           
           create table questions (
