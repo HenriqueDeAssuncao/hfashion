@@ -223,7 +223,7 @@
 
 
     /*DIV QUE TA SEGURANDO GERAL*/
-    #div_geral{
+    #div_geral_progresso{
         height: 480px;
         width: 100%;
         margin-top: 45px;
@@ -271,13 +271,21 @@
         align-items: flex-start;
         background-color: yellowgreen;
     }
+    .img_barra_progresso{
+        margin-top: 15px; 
+    }
 
+
+    /*BOTÃO CONSULTAR RAKING*/
+    #div_btn_consulRanking{
+        background-color: purple;
+    }
 
 
 /*FONTES*/
     .titles {
         font-style: normal;
-        font-weight: 700;
+        font-weight: 600;
         font-size: 60px;
     }
     .style-maintext {
@@ -296,22 +304,7 @@
         line-height: 24px;
         color: #5f5e5e;
     }
-    .style-titles {
-        font-family: 'Poppins', sans-serif;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 22px;
-        line-height: 26px;
-        color: #C02425;
-    }
-    .style-titles-main {
-        font-family: 'Poppins', sans-serif;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 22px;
-        line-height: 26px;
-        color: #C02425;
-    }
+
 
 }
 
