@@ -38,7 +38,7 @@
           quiz_id int not null,
           quiz_status int (1),
           score int(11),
-          tries int(1),
+          tries varchar(7),
           portion int(1)
           );
           
