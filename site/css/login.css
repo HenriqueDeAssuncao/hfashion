@@ -82,8 +82,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
 
 /* Smartphone Portrait (ATÉ 576px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media (max-width: 576px){
+    }
+    
+.visual, .back{
+    display: none;
+}
+
+input {
+
+    display: flex;
+
+    align-self: center;
+
+    margin-top: 5px;
+
+    border-radius: 4px;
+
+    height: 40px;
+
+    border: none;
+
+    background-color: #E7E7E7;
+
+}
+
+.form-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.btn-con{
+    grid-column: 1;
+}
+
+.form-container p, .form-container a{
+    grid-column: 2;
+}
 
 
+.btn-con{
+    width: 266px;
+}
 
 
 /* Smartphone landscape (ATÉ 768px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
@@ -258,11 +298,7 @@ label {
   }
 
 
-
-
-/* Tablet Portrait (ATÉ 992px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-
-@media (min-width: 768px) {
+  @media (min-width: 768px) {
 
     .Container {
 
@@ -317,6 +353,8 @@ label {
 .visual {
 
     width: 45%;
+
+    max-height: 100;
 
     background: linear-gradient(180deg, #C02425 45.91%, #7B0B0A 100%);
 
@@ -400,7 +438,81 @@ label {
 
     margin-left: 30px;
     margin-top: 30px;
+}   
+
+.msg {
+    justify-content: space-between;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px 19px;
+    margin: 0 auto;
+    margin-bottom: 8px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 6px;
+    animation: translateX 300ms;
+    display: inline-flexbox;
+    position: absolute;
 }
+
+.msg-content {
+    margin-right: 20px;
+}
+
+.msg-content > p {
+    text-indent: 6px;
+    font-size: 14px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    font-family: Poppins, sans-serif;
+}
+
+.btn-close-msg {
+    border: 1px solid black;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.msg-error {
+    background-color: rgb(255, 129, 129);
+    border-color: rgb(210, 22, 22);
+    justify-content: center;
+    align-items: center;
+}
+
+.msg-success {
+    background-color: #6fdd8b;
+    border-color: #25d73d;
+}
+
+@keyframes translateX {
+    0% {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    
+    80% {
+        transform: translateX(-5px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    
+}
+
+.Container {
+
+    max-width: fit-content;
+
+}
+
+
+/* Tablet Portrait (ATÉ 992px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
 
 
 /* PC (>= 1200px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/

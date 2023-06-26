@@ -7,8 +7,8 @@ require_once("templates/message.php");
 ?>
 
 <div class="flex">
-<span style="inline-block" class="visual Flex">
-        <span class="visual-content Flex">
+<span style="display:inline-flexbox" class="visual Flex">
+        <span style="display:inline-flexbox" class="visual-content Flex">
             <img src="<?=$CURRENT_URL?>/img/login/logo.svg" style="width: 280px" alt="">
             <p>Viva a moda como nos tempos de High School Musical com HiFashion!</p>
             <img src="<?=$CURRENT_URL?>/img/login/fotocaad.png" alt="">
