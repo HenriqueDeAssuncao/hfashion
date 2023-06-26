@@ -14,9 +14,6 @@ hr {
     align-items: center;
     width: 100%;
 }
-#titulo{
-    flex: 1;
-}
 
 #titulo-y2k{
     position: absolute;
@@ -31,49 +28,68 @@ hr {
     letter-spacing: 0.2vw;
     top: 15%;
     left: 45%;
-    color: #FFFFFF;
+    color: white;
+    margin-top: 93px;
 }
 
-#container-primeiro-pag {
+.container-primeiro-pag {
     display: flex;
     justify-content: center;
+    margin-top: 60px;
+    margin-left: 90px;
+    margin-right: 90px;
   }
+
+  #img-primeiro-pag{
+
+}
+
+.container-banner{
+    margin-top: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
   
 #div-primeiro-pag {
     display: flex;
     width: 70.864583333333336%;
     height: 2.993827160493827%;
-    float: right;
+    background-color: green;
+    margin-top: 70px;
+    margin-left: 30px;
 } 
-#primeiro-pag {
+
+#div-segundo-pag{
+    display: flex;
+    margin-top: 200px;
+    width: 70.864583333333336%;
+    height: 2.993827160493827%;
+    float: left;
+   
+}
+
+.txt-pag {
     font-family: 'Poppins';
     font-style: normal;
     text-align: justify;
     font-weight: 600;
-    font-size: 1.0vw;
+    font-size: 1.2vw;
     line-height: 105%;
     color: #333333;
-    float: right;
     
   }
 
- #segundo-pag {
-    font-family: 'Poppins';
-    font-style: normal;
-    text-align: justify;
-    font-weight: 600;
-    font-size: 1.0vw;
-    line-height: 105%;
-    color: #333333;
-    float: right;
-    top: 60px;
-    
+  #img-pag{
+    height: 90%;
+    width: 75%;
+    margin-top: 50px;
   }
+
   
-#img-pag {
-    width: 27.125%;
-    height: 12.5%;
-  }
+
+
 
 
 
