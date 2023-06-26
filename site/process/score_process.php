@@ -19,7 +19,7 @@ $quizDao = new QuizDAO($conn, $CURRENT_URL);
 if ($userData) {
     if (!empty($_GET["n"]) && !empty($_GET["a"]) && !empty($_GET["w"])) {
         //Pego os parâmetros da url:
-        $questionNumber = $_GET["n"];
+        $questionsNumber = $_GET["n"];
         $stringUserAnswers = $_GET["a"];
         $userAnswers = explode(",", $stringUserAnswers);
         $questionWeight = $_GET["w"];
@@ -56,11 +56,17 @@ if ($userData) {
             //Registro no banco:
             $userAnswerQuestionDao->updateScore($userAnswerQuestion);
 
+            //Recompensas do usuário:
+            if ($questionNumber === $rightAnswers) {
+                $_SESSION["rewards"] = "avatars";
+            } else {
+                $_SESSION["rewards"] = "emblem";
+            }
             $_SESSION["questions"] = "";
             $_SESSION["quizToken"] = "";
-            $_SESSION["rewards"] = true;
 
-            //Recompensas do usuário:
+            $score = $userAnswerQuestion->getScore();
+            header("Location: " . $CURRENT_URL . "/../rewards.php?r=$rightAnswers&n=$questionsNumber&s=$score");
             
         } else {
             $message->setMessage("Página não encontrada.", "error");

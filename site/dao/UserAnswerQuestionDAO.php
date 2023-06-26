@@ -36,7 +36,7 @@
             $stmt->execute();
             $triesArray = $stmt->fetch(PDO::FETCH_ASSOC);
             $tries = $triesArray["tries"];
-            if ($tries == 2) {
+            if ($tries == 10) {
                 return false;
             } else {
                 return true;
@@ -67,7 +67,7 @@
             $stmt->bindParam(":user_id", $userId);
             $stmt->bindParam(":quiz_id", $quizId);
             $stmt->execute();
-
+   
             $triesArray = $stmt->fetch(PDO::FETCH_ASSOC);
             $tries = $triesArray["tries"];
         

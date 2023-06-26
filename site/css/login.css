@@ -13,8 +13,6 @@
 
     overflow: hidden;
 
-    /*border: 1px solid black;*/
-
 }
 
 
@@ -85,12 +83,12 @@
 @media (max-width: 576px){
     }
     
-.visual, .back{
+/*.visual, .back{
     display: none;
 }
 
 input {
-
+    
     display: flex;
 
     align-self: center;
@@ -125,6 +123,7 @@ input {
     width: 266px;
 }
 
+*/
 
 /* Smartphone landscape (ATÉ 768px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
@@ -300,24 +299,6 @@ label {
 
   @media (min-width: 768px) {
 
-    .Container {
-
-        width: 720px;
-
-    }
-
-}
-
-
-
-
-/* Tablet Landscape (ATÉ 992px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-
-@media (min-width: 992px) {
-
-
-
-
     .flex {
 
         display: flex;
@@ -336,8 +317,6 @@ label {
         display: flex;
 
     }
-
-}
 
 
 
@@ -420,7 +399,7 @@ label {
 
 
 
-.Button {
+.btn-cad {
 
     background: linear-gradient(180deg, #C02425 53.65%, #7B0B0A 100%);
 
@@ -440,73 +419,28 @@ label {
     margin-top: 30px;
 }   
 
-.msg {
-    justify-content: space-between;
-    height: fit-content;
-    width: fit-content;
-    padding: 10px 19px;
-    margin: 0 auto;
-    margin-bottom: 8px;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 6px;
-    animation: translateX 300ms;
-    display: inline-flexbox;
-    position: absolute;
-}
-
-.msg-content {
-    margin-right: 20px;
-}
-
-.msg-content > p {
-    text-indent: 6px;
-    font-size: 14px;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 0px;
-    font-family: Poppins, sans-serif;
-}
-
-.btn-close-msg {
-    border: 1px solid black;
-    border-radius: 6px;
-    cursor: pointer;
-    padding: 10px;
-}
-
-.msg-error {
-    background-color: rgb(255, 129, 129);
-    border-color: rgb(210, 22, 22);
-    justify-content: center;
-    align-items: center;
-}
-
-.msg-success {
-    background-color: #6fdd8b;
-    border-color: #25d73d;
-}
-
-@keyframes translateX {
-    0% {
-        opacity: 0;
-        transform: translateX(60px);
-    }
-    
-    80% {
-        transform: translateX(-5px);
-    }
-    
-    100% {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-    
-}
-
 .Container {
 
     max-width: fit-content;
+
+}
+    .Container {
+
+        width: 720px;
+
+    }
+
+}
+
+
+
+
+
+/* Tablet Landscape (ATÉ 992px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+@media (min-width: 992px) {
+
+
 
 }
 
