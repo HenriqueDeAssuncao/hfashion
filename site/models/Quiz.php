@@ -11,6 +11,10 @@
         private $questionsNumber;
         private $questionWeight;
         private $iconPath;
+        //Propriedades do UserAnswerQuestion
+        private $quizStatus;
+        private $scorePortion;
+        private $tries;
         public function __construct(Message $message) {
             $this->message = $message;
         }
@@ -67,6 +71,25 @@
         }
         public function setIconPath($iconPath) {
             $this->iconPath = $iconPath;
+        }
+        //Funções do UserAnswerQuestion
+        public function getQuizStatus() {
+            return $this->quizStatus;
+        }
+        public function setQuizStatus($quizStatus) {
+            $this->quizStatus = $quizStatus;
+        }
+        public function getTries() {
+            return $this->tries;
+        }
+        public function setTries($tries) {
+            $this->tries = $tries;
+        }
+        public function getScorePortion() {
+            return $this->scorePortion;
+        }
+        public function setScorePortion($scorePortion) {
+            $this->scorePortion = $scorePortion;
         }
 
         //Funções que não vão interagir com o banco

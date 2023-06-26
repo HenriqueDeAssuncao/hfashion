@@ -19,6 +19,7 @@ $quizDao = new QuizDAO($conn, $CURRENT_URL);
 if ($userData) {
     if (!empty($_GET["n"]) && !empty($_GET["a"]) && !empty($_GET["w"])) {
         //Pego os parâmetros da url:
+        $questionNumber = $_GET["n"];
         $stringUserAnswers = $_GET["a"];
         $userAnswers = explode(",", $stringUserAnswers);
         $questionWeight = $_GET["w"];
@@ -32,23 +33,26 @@ if ($userData) {
             $questions = $_SESSION["questions"];
             $quizToken = $_SESSION["quizToken"];
 
+            $rightAnswers = 0;
             $i = 0;
             foreach ($questions as $question) {
                 $isCorrect = $question->isAnswerCorrect($userAnswers[$i]);
                 if ($isCorrect) {
+                    $rightAnswers++;
                     $userAnswerQuestion->increaseScore($questionWeight);
                 }
                 $i++;
             }
+            $scorePortion = "$rightAnswers/$i";
 
             $quizId = $quizDao->findQuizIdByToken($quizToken);
             $userId = $userData->getId();
 
-            //Preencho o objeto userAnswerQuestion:
+            //Preenchendo o objeto userAnswerQuestion:
+            $userAnswerQuestion->setScorePortion($scorePortion);
             $userAnswerQuestion->setQuizId($quizId);
             $userAnswerQuestion->setUserId($userId);
 
-            $userAnswerQuestion->updateTries();
             //Registro no banco:
             $userAnswerQuestionDao->updateScore($userAnswerQuestion);
 
@@ -58,7 +62,6 @@ if ($userData) {
 
             //Recompensas do usuário:
             
-
         } else {
             $message->setMessage("Página não encontrada.", "error");
         }

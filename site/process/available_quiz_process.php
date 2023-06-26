@@ -21,6 +21,5 @@ $userAnswerQuestionDao = new UserAnswerQuestionDAO($conn, $CURRENT_URL);
 
 $userAnswerQuestion->setUserId($userId);
 $userAnswerQuestion->setQuizId($quizId);
-$userAnswerQuestion->setQuizStatus(1);
 
 $userAnswerQuestionDao->setStatusToAvailable($userAnswerQuestion);

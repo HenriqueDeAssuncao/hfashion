@@ -6,6 +6,7 @@
         private $quizStatus; //Se o usuário desbloqueou ou não o quiz
         private $score;
         private $tries;
+        private $scorePortion;
         public function getUserId() {
             return $this->userId;
         }
@@ -17,6 +18,12 @@
         }
         public function setQuizId($quizId) {
             $this->quizId = $quizId;
+        }
+        public function getQuizStatus() {
+            return $this->quizStatus;
+        }
+        public function setQuizStatus($quizStatus) {
+            $this->quizStatus = $quizStatus;
         }
         public function getScore() {
             return $this->score;
@@ -30,11 +37,11 @@
         public function setTries($tries) {
             $this->tries = $tries;
         }
-        public function getQuizStatus() {
-            return $this->quizStatus;
+        public function getScorePortion() {
+            return $this->scorePortion;
         }
-        public function setQuizStatus($quizStatus) {
-            $this->quizStatus = $quizStatus;
+        public function setScorePortion($scorePortion) {
+            $this->scorePortion = $scorePortion;
         }
         //Funções que não vão interagir com o banco
         public function increaseScore($questionWeight) {
@@ -50,5 +57,9 @@
     }
     interface UserAnswerQuestionDAOInterface {
         public function setStatusToAvailable(UserAnswerQuestion $userAnswerQuestion);
+        public function verifyTries($userId, $quiz_id);
+        public function isQuizAvailable($userId, $quizId);
+        public function getTries($userId, $quiz_id);
         public function updateScore(UserAnswerQuestion $userAnswerQuestion);
+        public function getUserQuizzesData($userId);
     }

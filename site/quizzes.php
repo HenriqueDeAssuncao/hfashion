@@ -1,13 +1,11 @@
 <?php
     require_once "templates/header.php";
-    require_once "dao/QuizDAO.php";
-
     require_once "models/Quiz.php";
+    require_once "dao/QuizDAO.php";
 
     require_once "models/Question.php";
     require_once "dao/QuestionDAO.php";
 
-    $message = new Message($CURRENT_URL);
     $quizDao = new QuizDAO($conn, $CURRENT_URL);
     $quizzes = $quizDao->getQuizzes();
 ?>
@@ -18,6 +16,10 @@
     </style>
 
     <!-- Corpo da página -->
+
+    <?php 
+        require_once("templates/message.php");
+    ?>
 
     <?php if(count($quizzes) > 0):?>
         <?php foreach ($quizzes as $quiz):?>
@@ -39,4 +41,3 @@
 <?php
     require_once "templates/footer.php";
 ?>
-
