@@ -31,7 +31,6 @@
     align-items: center;
     height: 655px;
     width: 100%;
-    background-color: #3C3C3C;
 }
 #info_profile{
     height: fit-content;
@@ -60,11 +59,11 @@
         width: 252px; 
         text-align: center; 
     }
-    #link_edit_profile{
+    /* #link_edit_profile{
         color: #C02425;
         font-weight: 500;
         text-decoration: none;
-    } 
+    } */
 
 
     /*EMBLEMAS*/
@@ -119,7 +118,6 @@
     align-items: center;
     height: 800px;
     width: 100%;
-    background-color: green;
 }
 #info_quiz{
     height: fit-content;
@@ -129,13 +127,12 @@
     justify-content: center;
     align-items: center;
     margin-top: -420px;
-    background-color: greenyellow;
 }
 
 
-    /*TITULO*/
+    /*TITULO QUIZZES*/
     #align_title_quiz{
-        margin-top: 480px;
+        margin-top: 465px;
     }
 
 
@@ -147,8 +144,13 @@
         align-items: center;
         margin-top: 52px;
     }
-    #img_relogio_quiz{
-        margin-left: -25px;
+    .img_icones_quiz{
+        margin-left: -21px;
+    }
+    b{
+        font-size: 12px; 
+        color: #808080; 
+        font-weight: 600;
     }
     .btn_quizzes{
         transition: 0.5s;
@@ -208,7 +210,6 @@
     align-items: center;
     height: 800px;
     width: 100%;
-    background-color: #C02425;
 }
 #info_conquistas{
     height: fit-content;
@@ -217,16 +218,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: black;
     margin-top: -60px;
 }
+
+
+    /*TITULO CONQUISTAS*/
+    #align_title_conquistas{
+        margin-top: 30px;
+    }
 
 
     /*DIV QUE TA SEGURANDO GERAL*/
     #div_geral_progresso{
         height: 480px;
         width: 100%;
-        margin-top: 45px;
+        margin-top: 80px;
     }
 
 
@@ -238,7 +244,6 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 33px;
-        background-color: aqua;
     }
     .background{
         display: flex;
@@ -258,7 +263,6 @@
         height: 480px;
         margin-left: 100px;
         margin-top: -480px;
-        background-color: blue;
     }
     .div_titleBar_conquistas{
         width: 88.3%;
@@ -269,16 +273,29 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
-        background-color: yellowgreen;
     }
     .img_barra_progresso{
         margin-top: 15px; 
     }
 
 
-    /*BOTÃO CONSULTAR RAKING*/
-    #div_btn_consulRanking{
-        background-color: purple;
+    /*BOTÃO CONSULTAR RANKING*/
+    #btn_consulRanking{
+        margin-top: 57px;
+        display: inline-flex;
+        padding: 8.644px 38.61px;
+        align-items: flex-start;
+        gap: 5.763px;
+        border-radius: 9.446px;
+        text-decoration: none;
+        background: var(--botes, linear-gradient(180deg, #C02425 53.65%, #7B0B0A 100%));
+    }
+    #txt_consulRanking{
+        color: #FFF;
+        text-align: center;
+        font-size: 13.378px;
+        font-family: Poppins;
+        font-weight: 600;
     }
 
 

@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="css/dashboard.css">
+<link rel="stylesheet" type="text/css" href="css/dashboard_n.css">
 
 <?php
 require_once("templates/header.php");
@@ -19,9 +19,10 @@ $userData = $userDao->verifyToken(true);
 
     <p class="style-maintext"> Ana Carolina </p>
     <p class="style-regulartext"> anacarolina@gmail.com </p>
-    <a href="http://localhost/hfashion/site/edit_profile.php" id="link_edit_profile">
+   <!--
+     <a href="http://localhost/hfashion/site/edit_profile.php" id="link_edit_profile">
       editar perfil
-    </a>
+    </a> -->
 
 
     <div id="div_bio_profile">
@@ -50,16 +51,14 @@ $userData = $userDao->verifyToken(true);
 </div>
 
 
-
 <!-------------------- Quizzes -------------------->
-
 
 
 <div id="container_quiz">
   <div id="info_quiz">
 
     <div id="align_title_quiz">
-      <p> Quizzes </p>
+      <p class="style-maintext"> Quizzes </p>
     </div>
 
     <div id="div_btn">
@@ -68,32 +67,39 @@ $userData = $userDao->verifyToken(true);
       <div class="div_btn_quizzes js-scroll">
 
         <a href="" class="btn_quizzes">
-          <img src="img/dashboard/relogio.png" id="img_relogio_quiz">
-          <p>Uniforme Escolar</p>
+          <img src="img/dashboard/relogio.png" class="img_icones_quiz">
+          <p>Uniforme Escolar <br>
+            <b>veja suas respostas</b>
+          </p>
         </a>
 
         <a href="" class="btn_quizzes">
-          <img src="img/dashboard/ampulheta.png" id="img_relogio_quiz">
-          <p>Mcbling</p>
+          <img src="img/dashboard/ampulheta.png" class="img_icones_quiz">
+          <p>Mcbling <br>
+            <b>veja suas respostas</b>
+          </p>
         </a>
 
         <a href="" class="btn_quizzes">
-          <img src="img/dashboard/trofeu.png" id="img_relogio_quiz">
-          <p>Y2K</p>
+          <img src="img/dashboard/trofeu.png" class="img_icones_quiz">
+          <p>Y2K <br>
+            <b>veja suas respostas</b>
+          </p>
         </a>
 
         <a href="" class="btn_quizzes">
-          <img src="img/dashboard/pessoas.png" id="img_relogio_quiz">
-          <p>StreetWear</p>
+          <img src="img/dashboard/pessoas.png" class="img_icones_quiz">
+          <p>StreetWear <Br>
+            <b>veja suas respostas</b>
+          </p>
         </a>
 
-      </div>
+      </div> <!-- FECHA DIV_BTN_QUIZZES -->
 
-    </div>
+    </div> <!-- FECHA DIV_BTN -->
 
-  </div>
-</div>
-
+  </div> <!-- FECHA INFO_QUIZ -->
+</div> <!-- FECHA CONTAINER_QUIZ -->
 
 
 <!-------------------- Conquistas -------------------->
@@ -102,7 +108,7 @@ $userData = $userDao->verifyToken(true);
 <div id="container_conquistas">
   <div id="info_conquistas">
 
-    <div>
+    <div id="align_title_conquistas">
       <p class="style-maintext"> Conquistas </p>
     </div>
 
@@ -156,17 +162,18 @@ $userData = $userDao->verifyToken(true);
         </div>
       </div>
 
-    </div>  <!-- FECHA DIV_GERAL_PROGRESSO -->
 
-    <!-- BOTÃO CONSULTAR RANKING -->
+    </div> <!-- FECHA DIV_GERAL_PROGRESSO -->
+
+        <!-- BOTÃO CONSULTAR RANKING -->
     <div id="div_btn_consulRanking">
-        
+       <a href="" id="btn_consulRanking"> 
+        <p id="txt_consulRanking"> Consultar Ranking </p> 
+      </a>
     </div>
 
-
   </div> <!-- FECHA INFO_CONQUISTAS -->
-</div>  <!-- FECHA CONTAINER_CONQUISTAS -->
-
+</div> <!-- FECHA CONTAINER_CONQUISTAS -->
 
 
 
