@@ -35,17 +35,14 @@ hr {
 .container-primeiro-pag {
     display: flex;
     justify-content: center;
-    margin-top: 60px;
+    margin-top: 40px;
     margin-left: 90px;
     margin-right: 90px;
   }
 
-  #img-primeiro-pag{
-
-}
 
 .container-banner{
-    margin-top: 75px;
+    margin-top: 70px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -56,7 +53,6 @@ hr {
     display: flex;
     width: 70.864583333333336%;
     height: 2.993827160493827%;
-    background-color: green;
     margin-top: 70px;
     margin-left: 30px;
 } 
@@ -80,11 +76,15 @@ hr {
     color: #333333;
     
   }
-
-  #img-pag{
-    height: 90%;
+  .img-pag{
+    height: 80%;
     width: 75%;
     margin-top: 50px;
+  }
+  .container-segundo-pag{
+    margin-top: -150px;
+    margin-left: 90px;
+    margin-right: 90px;
   }
 
   
