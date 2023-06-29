@@ -4,9 +4,6 @@ require_once("templates/header_log.php");
 
 ?>
 
-
-
-
 <?php
 
 require_once("templates/message.php");
