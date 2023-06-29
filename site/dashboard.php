@@ -1,10 +1,9 @@
+<link rel="stylesheet" type="text/css" href="css/dashboard_n.css">
 
-    <link rel="stylesheet" type="text/css" href="css/dashboard.css">
-    
 <?php
-    require_once("templates/header.php");
-    require_once("models/User.php");
-    $userData = $userDao->verifyToken(true);
+require_once("templates/header.php");
+require_once("models/User.php");
+$userData = $userDao->verifyToken(true);
 ?>
 
 
@@ -12,35 +11,35 @@
 
 
 <div id="container_profile">
+  <div id="info_profile">
 
-    <div id="info_profile">
+    <div id="div_img_profile">
+      <img src="img/dashboard/cadastro.png" alt="" id="img_profile">
+    </div>
 
-        <div id="div_img_profile">
-            <img src="img/dashboard/cadastro.png" alt="" id="img_profile">
-        </div>
+    <p class="style-maintext"> Ana Carolina </p>
+    <p class="style-regulartext"> anacarolina@gmail.com </p>
+   <!--
+     <a href="http://localhost/hfashion/site/edit_profile.php" id="link_edit_profile">
+      editar perfil
+    </a> -->
 
-        <p class="style-maintext"> Ana Carolina </p>
-        <p class="style-regulartext"> anacarolina@gmail.com </p>
-        <a href="http://localhost/hfashion/site/edit_profile.php" id="link_edit_profile">
-            editar perfil
-        </a>
-        
 
-        <div id="div_bio_profile">
-            <p class="style-regulartext"> 
-             A vida é engual uma montanha russa, um dia 
-             a gente estamos emcima e no outro embaixo 
-            </p>
-        </div>
+    <div id="div_bio_profile">
+      <p class="style-regulartext">
+        A vida é engual uma montanha russa, um dia
+        a gente estamos emcima e no outro embaixo
+      </p>
+    </div>
 
-        <div id="align_div_emblemas">
-            <img src="img/dashboard/emblema1.png" class="img_emblema">
-            <img src="img/dashboard/emblema2.png" class="img_emblema">
-            <img src="img/dashboard/emblema3.png" class="img_emblema">
-            <img src="img/dashboard/emblema3.png" class="img_emblema">
-        </div>
+    <div id="align_div_emblemas">
+      <img src="img/dashboard/emblema1.png" class="img_emblema">
+      <img src="img/dashboard/emblema2.png" class="img_emblema">
+      <img src="img/dashboard/emblema3.png" class="img_emblema">
+      <img src="img/dashboard/emblema3.png" class="img_emblema">
+    </div>
 
-<!--
+    <!--
         <div id="div_btn-roll">
             <a href="http://localhost/hfashion/site/edit_profile.php" id="btn-roll">
             <img src="img/dashboard/camera.png" id="img_camera">
@@ -48,94 +47,137 @@
             </a>
         </div>
 -->
-    </div>
-
+  </div>
 </div>
-
-
-<!-- INSERIR HR PRA SEPARAR -->
 
 
 <!-------------------- Quizzes -------------------->
 
 
-<section>
+<div id="container_quiz">
+  <div id="info_quiz">
 
-    <div>
-        <h1>Quizzes</h1>
-<Br>
-
-        <!-- quiz historia -->
-        <div>
-            <!-- botão precisa redirecionar para a pagina quiz-->
-            <button>
-                <img src="" alt="relogio">
-                <h3>Historia da Moda</h1>
-                <p>Veja suas respostas</p>
-            </button>
-        </div>
-
-
-        <!-- quiz influencias -->
-        <div>
-            <!-- botão precisa redirecionar para a pagina quiz-->
-            <button>
-                <img src="" alt="ampulheta">
-                <h3>Influências</h1>
-                <p>Veja suas respostas</p>
-            </button>
-        </div>
-
-
-        <!-- quiz estilistas -->
-        <div>
-            <!-- botão precisa redirecionar para a pagina quiz-->
-            <button>
-                <img src="" alt="pessoas">
-                <h3>Estilitas</h1>
-                <p>Veja suas respostas</p>
-            </button>
-        </div>
-
-
-        <!-- quiz estetica -->
-        <div>
-            <!-- botão precisa redirecionar para a pagina quiz-->
-            <button>
-                <img src="" alt="trofeu">
-                <h3>Estética</h1>
-                <p>Veja suas respostas</p>
-            </button>
-        </div>
-
+    <div id="align_title_quiz">
+      <p class="style-maintext"> Quizzes </p>
     </div>
 
-</section>
+    <div id="div_btn">
+
+      <!-- DIV BOTÃO QUIZZES -->
+      <div class="div_btn_quizzes js-scroll">
+
+        <a href="" class="btn_quizzes">
+          <img src="img/dashboard/relogio.png" class="img_icones_quiz">
+          <p>Uniforme Escolar <br>
+            <b>veja suas respostas</b>
+          </p>
+        </a>
+
+        <a href="" class="btn_quizzes">
+          <img src="img/dashboard/ampulheta.png" class="img_icones_quiz">
+          <p>Mcbling <br>
+            <b>veja suas respostas</b>
+          </p>
+        </a>
+
+        <a href="" class="btn_quizzes">
+          <img src="img/dashboard/trofeu.png" class="img_icones_quiz">
+          <p>Y2K <br>
+            <b>veja suas respostas</b>
+          </p>
+        </a>
+
+        <a href="" class="btn_quizzes">
+          <img src="img/dashboard/pessoas.png" class="img_icones_quiz">
+          <p>StreetWear <Br>
+            <b>veja suas respostas</b>
+          </p>
+        </a>
+
+      </div> <!-- FECHA DIV_BTN_QUIZZES -->
+
+    </div> <!-- FECHA DIV_BTN -->
+
+  </div> <!-- FECHA INFO_QUIZ -->
+</div> <!-- FECHA CONTAINER_QUIZ -->
 
 
-<!-------------------- Emblemas -------------------->
+<!-------------------- Conquistas -------------------->
 
 
-<section>
+<div id="container_conquistas">
+  <div id="info_conquistas">
 
-<br> 
-<br>
-
-    <div>
-         <h1>Emblemas</h1>
-    </div>    
-    
-<br>
-<br>
-
-    <div id='borda'>
-        <div></div>
+    <div id="align_title_conquistas">
+      <p class="style-maintext"> Conquistas </p>
     </div>
 
-</section>
-    
+    <div id="div_geral_progresso">
+
+      <!-- DIV DAS IMAGENS -->
+      <div id="div_img_conquistas">
+        <div class="background">
+          <img src="img/dashboard/ringbox.png">
+        </div>
+        <div class="background">
+          <img src="img/dashboard/cap.png">
+        </div>
+        <div class="background">
+          <img src="img/dashboard/seaker.png">
+        </div>
+        <div class="background">
+          <img src="img/dashboard/purse.png">
+        </div>
+      </div>
+
+      <!-- DIV DA BARRINHA DE PROGRESSO -->
+      <div id="div_progresso_conquistas">
+        <div class="div_titleBar_conquistas">
+          <!-- deu problema no css ent tive que estilizar
+              dentro da propria tag <p> (isso é temporario)
+              -->
+          <p style="font-weight: 600; color: #424245;">
+            Y2K <br>
+            <img src="img/dashboard/barra.png" class="img_barra_progresso">
+          </p>
+        </div>
+        <div class="div_titleBar_conquistas">
+          <p style="font-weight: 600; color: #424245;">
+            STREETWEAR
+            <img src="img/dashboard/barra.png" class="img_barra_progresso">
+          </p>
+        </div>
+        <div class="div_titleBar_conquistas">
+          <p style="font-weight: 600; color: #424245;">
+            UNIFORME ESCOLAR
+            <img src="img/dashboard/barra.png" class="img_barra_progresso">
+          </p>
+        </div>
+        <div class="div_titleBar_conquistas">
+          <p style="font-weight: 600; color: #424245;">
+            MCBLING
+            <img src="img/dashboard/barra.png" class="img_barra_progresso">
+          </p>
+
+        </div>
+      </div>
+
+
+    </div> <!-- FECHA DIV_GERAL_PROGRESSO -->
+
+        <!-- BOTÃO CONSULTAR RANKING -->
+    <div id="div_btn_consulRanking">
+       <a href="" id="btn_consulRanking"> 
+        <p id="txt_consulRanking"> Consultar Ranking </p> 
+      </a>
+    </div>
+
+  </div> <!-- FECHA INFO_CONQUISTAS -->
+</div> <!-- FECHA CONTAINER_CONQUISTAS -->
+
+
 
 
 <?php
-    require_once("templates/footer.php");
+require_once("templates/footer.php");
 ?>
