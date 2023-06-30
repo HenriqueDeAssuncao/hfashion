@@ -3,12 +3,14 @@ require_once __DIR__ . "/../models/Question.php";
 require_once __DIR__ . "/../helpers/db.php";
 require_once __DIR__ . "/../helpers/url.php";
 require_once __DIR__ . "/../models/message.php";
-require_once __DIR__ . "/../models/Quiz.php";
+require_once __DIR__ . "/../dao/UserDAO.php";
 require_once __DIR__ . "/../dao/QuizDAO.php";
 require_once __DIR__ . "/../models/UserAnswerQuestion.php";
 require_once __DIR__ . "/../dao/UserAnswerQuestionDAO.php";
-require_once __DIR__ . "/../models/User.php";
-require_once __DIR__ . "/../dao/UserDAO.php";
+require_once __DIR__ . "/../dao/AvatarDAO.php";
+require_once __DIR__ . "/../dao/EmblemDAO.php";
+require_once __DIR__ . "/../dao/UserEmblemDAO.php";
+require_once __DIR__ . "/../dao/UserAvatarDAO.php";
 
 $message = new Message($CURRENT_URL);
 
@@ -57,16 +59,45 @@ if ($userData) {
             $userAnswerQuestionDao->updateScore($userAnswerQuestion);
 
             //Recompensas do usuário:
-            if ($questionNumber === $rightAnswers) {
-                $_SESSION["rewards"] = "avatars";
+            if ($questionsNumber == $rightAnswers) {
+                $AvatarDao = new AvatarDAO($conn, $CURRENT_URL);
+                $quizAvatars = $AvatarDao->findAvatars($quizId);
+                $UserAvatarDao = new UserAvatarDAO($conn, $CURRENT_URL);
+                //Coloco no array $avatars somente os avatares que o usuário não desbloqueou
+                $avatars = [];
+                foreach ($quizAvatars as $avatar) {
+                    if ($UserAvatarDao->isAvatarUnlocked($userId, $avatar["avatar_id"]) === false) {
+                        $avatars[] = $avatar;
+                    }
+                }
+                
+                $rewards = [
+                    "auth" => "true",
+                    "type" => "avatars",
+                    "avatars" => $avatars
+                ];
+                $_SESSION["rewards"] = $rewards;
             } else {
-                $_SESSION["rewards"] = "emblem";
+                $_SESSION["rewards"]["type"] = "emblem";
             }
+       
+            $EmblemDao = new EmblemDAO($conn, $CURRENT_URL);
+            $UserEmblemDao = new UserEmblemDAO($conn, $CURRENT_URL);
+
+            $quizEmblem = $EmblemDao->findEmblem($quizId);
+            if ($UserEmblemDao->isEmblemUnlocked($userId, $quizEmblem["emblem_id"]) === false) {
+                $emblem = $quizEmblem;
+            }
+            
+            $UserEmblemDao->registerEmblem($userId, $quizId);
+
+            $_SESSION["rewards"]["emblem"] = $emblem;
+
             $_SESSION["questions"] = "";
             $_SESSION["quizToken"] = "";
 
             $score = $userAnswerQuestion->getScore();
-            header("Location: " . $CURRENT_URL . "/../rewards.php?r=$rightAnswers&n=$questionsNumber&s=$score");
+            header("Location: " . $CURRENT_URL . "/../rewards.php?correct=$rightAnswers&questions=$questionsNumber&score=$score");
             
         } else {
             $message->setMessage("Página não encontrada.", "error");

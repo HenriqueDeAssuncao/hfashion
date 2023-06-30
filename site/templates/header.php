@@ -15,7 +15,7 @@ if (!empty($flashMessage)) {
 $userDao = new UserDAO($conn, $CURRENT_URL);
 $userData = $userDao->verifyToken(false);
 
-$adm = new Adm($CURRENT_URL);
+$Adm = new Adm($CURRENT_URL);
 
 if (empty($userData)) {
     $image = "user.svg";
@@ -70,8 +70,10 @@ if (empty($userData)) {
 
                         <li class="links"><a class="White" href="<?=$CURRENT_URL?>/quizzes.php"><i class="fa-solid fa-lightbulb"></i>Quizzes</a></li>
 
+                        <li class="links"><a class="White" href="<?=$CURRENT_URL?>/dashboard_teste.php"><i class="fa-solid fa-chart-simple"></i>Dashboard Teste</a></li>
+
                         <?php if ($userData): ?>
-                            <?php if ($adm->isAdm($userDao, false)): ?>
+                            <?php if ($Adm->isAdm($userDao, false)): ?>
                                 <li class="links"><a class="White" href="<?=$CURRENT_URL?>/adm.php"><i class="fa-solid fa-gear"></i>Admin</a>
                                 </li>
                             <?php endif; ?>

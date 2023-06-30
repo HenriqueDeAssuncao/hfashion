@@ -36,7 +36,7 @@
             $stmt->execute();
             $triesArray = $stmt->fetch(PDO::FETCH_ASSOC);
             $tries = $triesArray["tries"];
-            if ($tries == 10) {
+            if ($tries == 20) {
                 return false;
             } else {
                 return true;

@@ -22,3 +22,8 @@
             $this->avatar_id = $avatar_id;
         }
     }
+
+    interface UserAvatarDAOInterface {
+        public function isAvatarUnlocked($userId, $avatarId);
+        public function registerAvatar($userId, $avatarId);
+    }

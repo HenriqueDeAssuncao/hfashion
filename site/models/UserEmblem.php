@@ -1,5 +1,5 @@
 <?php
-    class UserAvatar {
+    class UserEmblem {
         private $user_emblem_id;
         private $user_id;
         private $emblem_id;
@@ -21,4 +21,8 @@
         public function setEmblemId($emblem_id) { 
             $this->emblem_id = $emblem_id;
         }
+    }
+    interface UserEmblemDAOInterface {
+        public function isEmblemUnlocked($userId, $emblemId);
+        public function registerEmblem($userId, $emblemId);
     }

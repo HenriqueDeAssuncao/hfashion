@@ -15,7 +15,7 @@ if (!empty($_SESSION["quizToken"])) {
         $message->setMessage("O quiz já foi publicado.", "error", "back");
     }
 } else {
-    $message->setMessage("Não encontramos o quiz.", "error", "back");
+    $message->setMessage("Não encontramos o quiz.", "error", "kick");
 }
 
 ?>

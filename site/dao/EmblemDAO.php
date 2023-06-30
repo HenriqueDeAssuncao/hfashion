@@ -28,5 +28,12 @@
             $stmt->bindParam(":quiz_id", $quizId);
             $stmt->execute();
         }
+        public function findEmblem($quizId) {
+            $stmt = $this->conn->prepare("SELECT * FROM emblems WHERE quiz_id = :quiz_id");
+            $stmt->bindParam(":quiz_id", $quizId);
+            $stmt->execute();
+            $emblem = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $emblem;
+        }
     }
 

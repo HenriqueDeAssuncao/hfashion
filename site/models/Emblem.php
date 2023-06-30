@@ -39,6 +39,7 @@
 
     interface EmblemDAOInterface {
         public function createEmblem(Emblem $emblem);
+        public function findEmblem($quizId);
     }
 
     

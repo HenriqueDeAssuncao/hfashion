@@ -19,46 +19,50 @@
 
 
 
-@media (max-width: 768px) { /*mobile*/
+@media (max-width: 768px) {
+    /*mobile*/
 
 
 
 
-/* INFORMAÇÕES PERFIL */
-#container_profile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 655px;
-    width: 100%;
-}
-#info_profile{
-    height: fit-content;
-    width: 69%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+    /* INFORMAÇÕES PERFIL */
+    #container_profile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 655px;
+        width: 100%;
+    }
+
+    #info_profile {
+        height: fit-content;
+        width: 69%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
 
     /*IMAGEM DE PERFIL*/
-    #div_img_profile{
+    #div_img_profile {
         width: 75.6%;
         margin-bottom: 41px;
     }
-    #img_profile{
+
+    #img_profile {
         border-radius: 3600px;
         width: 100%;
     }
 
 
     /*BIOGRAFIA*/
-    #div_bio_profile{
+    #div_bio_profile {
         margin-top: 20px;
-        width: 252px; 
-        text-align: center; 
+        width: 252px;
+        text-align: center;
     }
+
     /* #link_edit_profile{
         color: #C02425;
         font-weight: 500;
@@ -67,15 +71,16 @@
 
 
     /*EMBLEMAS*/
-    #align_div_emblemas{
+    #align_div_emblemas {
         margin-top: 20px;
     }
-    .img_emblema{
+
+    .img_emblema {
         width: 70px;
     }
 
 
-/* BOTÃO 
+    /* BOTÃO 
 
 #img_camera{
     height: 20px;
@@ -111,48 +116,53 @@
 } */
 
 
-/*INFORMAÇÕES QUIZ*/
-#container_quiz{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 800px;
-    width: 100%;
-}
-#info_quiz{
-    height: fit-content;
-    width: 300px; /*alterar para porcentagem*/
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: -420px;
-}
+    /*INFORMAÇÕES QUIZ*/
+    #container_quiz {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 800px;
+        width: 100%;
+    }
+
+    #info_quiz {
+        height: fit-content;
+        width: 300px;
+        /*alterar para porcentagem*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: -420px;
+    }
 
 
     /*TITULO QUIZZES*/
-    #align_title_quiz{
+    #align_title_quiz {
         margin-top: 465px;
     }
 
 
-    /*BOTÕES QUIZZES*/ 
-    .div_btn_quizzes{
+    /*BOTÕES QUIZZES*/
+    .div_btn_quizzes {
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-top: 52px;
     }
-    .img_icones_quiz{
+
+    .img_icones_quiz {
         margin-left: -21px;
     }
-    b{
-        font-size: 12px; 
-        color: #808080; 
+
+    b {
+        font-size: 12px;
+        color: #808080;
         font-weight: 600;
     }
-    .btn_quizzes{
+
+    .btn_quizzes {
         transition: 0.5s;
         display: flex;
         justify-content: center;
@@ -166,7 +176,8 @@
         border-radius: 5px;
         border: 2.007px solid #CDCDCD;
     }
-    .btn_quizzes:hover{
+
+    .btn_quizzes:hover {
         transition: 0.5s;
         display: flex;
         justify-content: center;
@@ -177,8 +188,8 @@
         border-radius: 5px;
         border: 2.007px solid #CDCDCD;
     }
-    
-    .btn_quizzes-timeline{
+
+    .btn_quizzes-timeline {
         transition: 0.5s;
         display: flex;
         justify-content: center;
@@ -189,8 +200,8 @@
         border-radius: 5px;
         border: 2.007px solid #CDCDCD;
     }
-    
-    .btn_quizzes-timeline:hover{
+
+    .btn_quizzes-timeline:hover {
         transition: 0.5s;
         display: flex;
         justify-content: center;
@@ -203,33 +214,35 @@
     }
 
 
-/*INFORMAÇÕES CONQUISTAS*/
-#container_conquistas{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 800px;
-    width: 100%;
-}
-#info_conquistas{
-    height: fit-content;
-    width: 300px; /*alterar para porcentagem*/
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: -60px;
-}
+    /*INFORMAÇÕES CONQUISTAS*/
+    #container_conquistas {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 800px;
+        width: 100%;
+    }
+
+    #info_conquistas {
+        height: fit-content;
+        width: 300px;
+        /*alterar para porcentagem*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: -60px;
+    }
 
 
     /*TITULO CONQUISTAS*/
-    #align_title_conquistas{
+    #align_title_conquistas {
         margin-top: 30px;
     }
 
 
     /*DIV QUE TA SEGURANDO GERAL*/
-    #div_geral_progresso{
+    #div_geral_progresso {
         height: 480px;
         width: 100%;
         margin-top: 80px;
@@ -237,7 +250,7 @@
 
 
     /*IMAGENS CONQUISTAS*/
-    #div_img_conquistas{
+    #div_img_conquistas {
         height: 480px;
         width: 100px;
         display: flex;
@@ -245,7 +258,8 @@
         align-items: flex-start;
         gap: 33px;
     }
-    .background{
+
+    .background {
         display: flex;
         width: 65px;
         height: 65px;
@@ -254,17 +268,18 @@
         align-items: center;
         border-radius: 15px;
         background: #FFB862;
-    } 
+    }
 
 
     /*PROGRESSO*/
-    #div_progresso_conquistas{
+    #div_progresso_conquistas {
         width: 66.7%;
         height: 480px;
         margin-left: 100px;
         margin-top: -480px;
     }
-    .div_titleBar_conquistas{
+
+    .div_titleBar_conquistas {
         width: 88.3%;
         height: 93px;
         margin-left: 24px;
@@ -274,13 +289,14 @@
         justify-content: space-between;
         align-items: flex-start;
     }
-    .img_barra_progresso{
-        margin-top: 15px; 
+
+    .img_barra_progresso {
+        margin-top: 15px;
     }
 
 
     /*BOTÃO CONSULTAR RANKING*/
-    #btn_consulRanking{
+    #btn_consulRanking {
         margin-top: 57px;
         display: inline-flex;
         padding: 8.644px 38.61px;
@@ -290,7 +306,8 @@
         text-decoration: none;
         background: var(--botes, linear-gradient(180deg, #C02425 53.65%, #7B0B0A 100%));
     }
-    #txt_consulRanking{
+
+    #txt_consulRanking {
         color: #FFF;
         text-align: center;
         font-size: 13.378px;
@@ -299,12 +316,13 @@
     }
 
 
-/*FONTES*/
+    /*FONTES*/
     .titles {
         font-style: normal;
         font-weight: 600;
         font-size: 60px;
     }
+
     .style-maintext {
         font-family: 'Poppins', sans-serif;
         font-style: normal;
@@ -313,6 +331,7 @@
         line-height: 26px;
         color: #3C3C3C;
     }
+
     .style-regulartext {
         font-family: 'Poppins', sans-serif;
         font-style: normal;
@@ -327,7 +346,5 @@
 
 
 @media (min-width: 768px) {
-
-
-
+    
 }

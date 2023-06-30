@@ -27,6 +27,11 @@
             $stmt->bindParam(":avatar_path", $avatarPath);
             $stmt->execute();
         }
-
+        public function findAvatars($quizId) {
+            $stmt = $this->conn->prepare("SELECT * FROM avatars WHERE quiz_id = :quiz_id");
+            $stmt->bindParam(":quiz_id", $quizId);
+            $stmt->execute();
+            $avatars = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            return $avatars;
+        }
     }
-
