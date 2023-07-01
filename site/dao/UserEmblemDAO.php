@@ -40,4 +40,17 @@
                 return false;
             }
         }
+        public function findEmblems($userId, EmblemDAO $EmblemDao) {
+            $stmt = $this->conn->prepare("SELECT * FROM users_emblems WHERE user_id = :user_id");
+            $stmt->bindParam(":user_id", $userId);
+            $stmt->execute();
+            $userEmblems = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $emblems = [];
+            foreach ($userEmblems as $item) {
+                $emblemId = $item["emblem_id"];
+                $emblem = $EmblemDao->findEmblem($emblemId);
+                $emblems[] = $emblem;
+            }
+            return $emblems;
+        }
     }

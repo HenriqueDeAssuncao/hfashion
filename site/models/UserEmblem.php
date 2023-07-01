@@ -1,28 +1,29 @@
 <?php
     class UserEmblem {
-        private $user_emblem_id;
-        private $user_id;
-        private $emblem_id;
-        public function getUserEmblemId($user_emblem_id) {
-            return $this->$user_emblem_id;
+        private $userEmblemId;
+        private $userId;
+        private $emblemId;
+        public function getUserEmblemId($userEmblemId) {
+            return $this->$userEmblemId;
         }
-        public function setUserEmblemId($user_emblem_id) { 
-            $this->user_emblem_id = $user_emblem_id;
+        public function setUserEmblemId($userEmblemId) { 
+            $this->userEmblemId = $userEmblemId;
         }
-        public function getUserId($user_id) {
-            return $this->$user_id;
+        public function getUserId($userId) {
+            return $this->$userId;
         }
-        public function setUserId($user_id) { 
-            $this->user_id = $user_id;
+        public function setUserId($userId) { 
+            $this->userId = $userId;
         }
-        public function getEmblemId($emblem_id) {
-            return $this->$emblem_id;
+        public function getEmblemId($emblemId) {
+            return $this->$emblemId;
         }
-        public function setEmblemId($emblem_id) { 
-            $this->emblem_id = $emblem_id;
+        public function setEmblemId($emblemId) { 
+            $this->emblemId = $emblemId;
         }
     }
     interface UserEmblemDAOInterface {
         public function isEmblemUnlocked($userId, $emblemId);
         public function registerEmblem($userId, $emblemId);
+        public function findEmblems($userId, EmblemDAO $EmblemDao);
     }

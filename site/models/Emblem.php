@@ -40,6 +40,9 @@
     interface EmblemDAOInterface {
         public function createEmblem(Emblem $emblem);
         public function findEmblem($quizId);
+        public function findUserEmblem($emblemId);
+        public function findQuizTokenByQuizId($quizId);
+        public function findAllEmblemsPaths();
     }
 
     
