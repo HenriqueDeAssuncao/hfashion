@@ -62,4 +62,5 @@
         public function getTries($userId, $quiz_id);
         public function updateScore(UserAnswerQuestion $userAnswerQuestion);
         public function getUserQuizzesData($userId);
+        public function findQuizRanking($quizId);
     }

@@ -34,7 +34,7 @@
 <div class="container-rankings">
     <div class="buttons-emblems">
         <?php foreach($emblems as $emblem):?>
-            <button class="btn-emblems" value="<?=$emblem->getQuizToken()?>">
+            <button class="btn-emblems" value="<?=$emblem->getQuizId()?>">
                 <img src="<?=$CURRENT_URL?>/<?=$emblem->getEmblemPath()?>" alt="<?=$emblem->getEmblemName()?>">
             </button>
         <?php endforeach;?>

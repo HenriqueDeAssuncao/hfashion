@@ -1,9 +1,18 @@
 const buttons = document.querySelectorAll('.btn-emblems');
+const containerRanking = document.querySelector('.container-ranking');
 
-function teste(e) {
-    console.log(e.currentTarget.value);
+function getQuizRanking(e) {
+    const quizId = e.currentTarget.value;
+    const ranking = fetch(`./process/ranking_process.php?quizId=${quizId}`);
+    ranking
+        .then((r) => {
+            return r.text();
+        })
+        .then((body) => {
+            containerRanking.innerHTML = body;
+        });
 }
 
 buttons.forEach((button) => {
-    button.addEventListener("click", teste);
+    button.addEventListener("click", getQuizRanking);
 })

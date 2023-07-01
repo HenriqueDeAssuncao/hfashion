@@ -105,7 +105,8 @@
             $stmt->execute();
         }
         public function getUserQuizzesData($userId) {
-            $stmt = $this->conn->prepare("SELECT * FROM users_answer_questions WHERE user_id = $userId");
+            $stmt = $this->conn->prepare("SELECT * FROM users_answer_questions WHERE user_id = :user_id");
+            $stmt->bindParam(":user_id", $userId);
             $stmt->execute();
             $userQuizzesDataArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
             $userQuizzesData = [];
@@ -121,5 +122,23 @@
                 $userQuizzesData[] = $userQuizData;
             }   
             return $userQuizzesData;
+        }
+        public function findQuizRanking($quizId) {
+            $stmt = $this->conn->prepare("SELECT * FROM users_answer_questions WHERE quiz_id = :quiz_id");
+            $stmt->bindParam(":quiz_id", $quizId);
+            $stmt->execute();
+            $quizRankingArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $quizRanking = [];
+            foreach ($quizRankingArray as $item) {
+                $UserAnswerQuestion = new UserAnswerQuestion;
+                $UserAnswerQuestion->setQuizId($item["quiz_id"]);
+                $UserAnswerQuestion->setUserId($item["user_id"]);
+                $UserAnswerQuestion->setScore($item["score"]);
+                $UserAnswerQuestion->setScorePortion($item["score_portion"]);
+                $UserAnswerQuestion->setTries($item["tries"]);
+                $UserAnswerQuestion->setQuizStatus($item["quiz_status"]);
+                $quizRanking[] = $UserAnswerQuestion;
+            };
+            return $quizRanking;
         }
     }
