@@ -9,7 +9,7 @@
     $message = new Message($CURRENT_URL);
     $userDao = new UserDao($conn, $CURRENT_URL);
 	$userData = $userDao->verifyToken(true);
-	$user = new User();
+	$User = new User();
  
 	$type = $_POST["type"];
 	if((!empty($type)) && $type == "update") {
@@ -27,24 +27,9 @@
 
 		//UPLOAD DA IMAGEM
 
-		if (isset($_FILES["image"]) && !empty($_FILES["image"]["tmp_name"])) {
-			$image = $_FILES["image"];
-			$imageTypes = ["image/jpeg", "image/jpg", "image/png"];
-            $jpgArray = ["image/jpeg", "image/jpg"];
-
-			//CHECANDO O TIPO DA IMAGEM
-			if (in_array($image["type"], $imageTypes)) {
-				if (in_array($image["type"], $jpgArray)) {
-					$imageFile = imagecreatefromjpeg($image["tmp_name"]);
-				} else {
-					$imageFile = imagecreatefrompng($image["tmp_name"]);
-				}
-				$imageName = $user->imageGenerateName();
-				imagejpeg($imageFile, "./img/users/" . $imageName, 100);
-				$userData->setImage($imageName);
-			} else {
-				$message->setMessage("Tipo inválido de imagem, insira png ou jpg!", "error", "back");
-			}
+		if (isset($_POST["avatar-path"]) && !empty($_POST["avatar-path"])) {
+			$avatar = $_POST["avatar-path"];
+			$userData->setImage($avatar);
 		}
 			
 		$userDao->update($userData);
@@ -53,7 +38,7 @@
 		$password = $_POST["password"];
 		$confirmpassword = $_POST["confirmpassword"];
 		if ($password == $confirmpassword) {
-			$finalpassword = $user->generatePassword($password);
+			$finalpassword = $User->generatePassword($password);
 			$userData->setPassword($finalpassword);
 			$userDao->changePassword($userData);
 		} else {

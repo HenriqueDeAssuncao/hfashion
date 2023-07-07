@@ -72,7 +72,6 @@ if ($userData) {
                 }
                 
                 $rewards = [
-                    "auth" => "true",
                     "type" => "avatars",
                     "avatars" => $avatars
                 ];
@@ -80,6 +79,9 @@ if ($userData) {
             } else {
                 $_SESSION["rewards"]["type"] = "emblem";
             }
+
+            //Permito que o usuário acesse a página de recompensas
+            $_SESSION["rewards"]["auth"] = "true";
        
             $EmblemDao = new EmblemDAO($conn, $CURRENT_URL);
             $UserEmblemDao = new UserEmblemDAO($conn, $CURRENT_URL);

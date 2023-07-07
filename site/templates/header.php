@@ -18,11 +18,11 @@ $userData = $userDao->verifyToken(false);
 $Adm = new Adm($CURRENT_URL);
 
 if (empty($userData)) {
-    $image = "user.svg";
+    $image = "img/system/avatars/user.svg";
 } else {
     $image = $userData->getImage();
     if ($userData->getImage() == "") {
-        $image = "user.svg";
+        $image = "img/system/avatars/user.svg";
     }
 }
 ?>
@@ -87,7 +87,7 @@ if (empty($userData)) {
                 <div class="nav-2">
                     <button class="btn-dropdown Button">
                         <div class="profile-pic-header profile-img"
-                            style="background-image: url(<?=$CURRENT_URL?>/img/avatars/<?= $image ?>)"
+                            style="background-image: url(<?=$CURRENT_URL?>/<?= $image ?>)"
                             alt="Foto de Perfil"></div>
                     </button>
                     <div class="dropdown-rect Hidden">

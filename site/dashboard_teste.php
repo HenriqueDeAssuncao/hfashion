@@ -19,10 +19,11 @@
 </style>
 
 <div class="container-user">
-    <img src="<?=$CURRENT_URL?>/img/avatars/user.svg" alt="">
+    <img src="<?=$CURRENT_URL?>/<?=$userData->getImage()?>" alt="Foto de perfil">
     <p><?=$userData->getNickname()?></p>
     <p><?=$userData->getBio()?></p>
     <div class="emblems">
+        <p>Emblemas do usuário:</p>
         <?php if(count($userEmblems)):?>
             <?php foreach($userEmblems as $emblem):?>
                 <img src="<?=$CURRENT_URL?>/<?=$emblem["emblem_path"]?>" alt="Emblema <?=$emblem["emblem_name"]?>">
@@ -33,6 +34,7 @@
 
 <div class="container-rankings">
     <div class="buttons-emblems">
+        <p>Emblemas do site:</p>
         <?php foreach($emblems as $emblem):?>
             <button class="btn-emblems" value="<?=$emblem->getQuizId()?>">
                 <img src="<?=$CURRENT_URL?>/<?=$emblem->getEmblemPath()?>" alt="<?=$emblem->getEmblemName()?>">

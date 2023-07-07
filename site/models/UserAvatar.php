@@ -26,4 +26,6 @@
     interface UserAvatarDAOInterface {
         public function isAvatarUnlocked($userId, $avatarId);
         public function registerAvatar($userId, $avatarId);
+        public function findAvatarsIds($userId);
+        public function findAvatars($userId);
     }

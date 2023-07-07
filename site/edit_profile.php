@@ -2,21 +2,43 @@
 require_once("templates/header.php");
 require_once("models/User.php");
 require_once("dao/UserDAO.php");
+require_once("dao/UserAvatarDAO.php");
 
 $user = new User();
 $userDao = new UserDAO($conn, $CURRENT_URL);
 $userData = $userDao->verifyToken(true);
+
+$UserAvatarDao = new UserAvatarDAO($conn, $CURRENT_URL);
+$userAvatars = $UserAvatarDao->findAvatars($userData->getId());
 ?>
+
+<style>
+    .user-avatar img {
+        width: 100px;
+    }
+</style>
 
 <div id="edit-container">
     <form action="<?= $CURRENT_URL ?>/process/user_process.php" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="type" value="update">
-        <h2>Altere seus dados no formulário abaixo jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj:</h2>
+        <h2>Altere seus dados no formulário abaixo:</h2>
         <h2>Perfil:</h2>
         <div class="form-group">
-            <label for="image">Foto:</label>
-            <input type="file" name="image">
-            <div class="profile-img" style="width: 100px; height: 100px; background-image: url('<?=$CURRENT_URL?>/img/avatars/<?=$image?>')" alt="Foto de Perfil"></div>
+            <label>Foto:</label>
+            <div class="profile-img" style="width: 100px; height: 100px; background-image: url('<?=$CURRENT_URL?>/<?=$image?>')" alt="Foto de Perfil"></div>
+            <?php if(count($userAvatars)):?>
+                <div class="user-avatars">
+                <?php foreach($userAvatars as $UserAvatar):?>
+                    <div class="user-avatar"> 
+                        <label for="avatar-path">
+                            <img src="<?=$CURRENT_URL?>/<?=$UserAvatar->getAvatarPath()?>" alt="Imagem avatar">
+                        </label>
+                        <input type="radio" name="avatar-path" value="<?=$UserAvatar->getAvatarPath()?>">
+                    </div>
+                <?php endforeach;?>
+            </div>
+            <?php endif;?>
+            <input type="submit" value="Salvar Imagem">
         </div>
         <div class="form-group">
             <label for="bio">Altere sua bio:</label>
