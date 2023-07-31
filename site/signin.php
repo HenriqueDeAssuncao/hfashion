@@ -7,7 +7,7 @@ require_once("templates/message.php");
 ?>
 
 
-<div style="display:inline-flexbox" class="flex">
+<div style="display:inline-flexbox" class="Flex">
     <a href=""><img class="back" src="<?= $CURRENT_URL ?>/img/login/Back.svg" style="height:30px" alt=""></a>
     <div style="display:inline-flexbox" id="register-container">
 
