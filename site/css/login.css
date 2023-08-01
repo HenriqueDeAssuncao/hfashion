@@ -36,7 +36,7 @@
     align-items: center;
 
     justify-content: center;
-    
+
     height: 100vh;
 
 }
@@ -82,8 +82,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
 
 /* Smartphone Portrait (ATÉ 576px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-    
-.visual, .back{
+
+.visual,
+.back {
     display: none;
 }
 
@@ -100,12 +101,12 @@ input {
 
 }
 
-.form-group{
+.form-group {
     display: flex;
     flex-direction: column;
 }
 
-.form-container{
+.form-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -175,20 +176,20 @@ label {
 }
 
 
-::-webkit-input-placeholder { 
+::-webkit-input-placeholder {
     color: #333333;
     padding: 19px;
-  }
-  
-  :-ms-input-placeholder { 
+}
+
+:-ms-input-placeholder {
     color: #333333;
     padding: 19px;
-  }
-  
-  ::placeholder {
+}
+
+::placeholder {
     color: #333333;
     padding: 19px;
-  }
+}
 
 
 /* Smartphone landscape (ATÉ 768px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
@@ -203,16 +204,17 @@ label {
 
 }
 
-.Container {
+/*.Container {
 
     max-width: fit-content;
 
 }
-    .Container {
 
-        width: 720px;
+.Container {
 
-    }
+    width: 720px;
+
+}*/
 
 
 
@@ -220,178 +222,177 @@ label {
 
 /* Tablet Landscape (ATÉ 992px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
+@media (min-width: 992px) {}
+
+
+/* Tablet Portrait (ATÉ 992px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 992px) {
 
     input {
 
         margin-top: 5px;
-    
+
         border-radius: 4px;
-    
+
         height: 40px;
-    
+
         border: none;
-    
+
         background-color: #E7E7E7;
-    
+
         width: 320px;
-    
+
     }
-    
-    
-    
-    
+
+
+
+
     .form-group {
-    
-        align-content: stretch;
-    
+
+        /*align-content: stretch;*/
+
         display: flex;
-    
+
         flex-direction: column;
-    
+
     }
-    
-    
-    
-    
+
+
+
+
     .form-container {
-    
+
         display: flex;
-    
+        flex-direction: row;
         width: 350px;
-    
-        margin-top: 8%;
-    
+        gap: 12%;
+        margin-top: 0;
+
     }
-    
-        .flex {
-    
-            display: flex;
-    
-            justify-content: space-between;
-    
-            height: 100vh;
-    
-    
-        }
-    
-    
-    
-        .form-group {
-    
-            display: flex;
-    
-        }
-    
-    
-    
-    
+
+    .flex {
+
+        display: flex;
+
+        justify-content: space-between;
+
+        height: 100vh;
+    }
+
+
+
+    .form-group {
+
+        display: flex;
+
+    }
+
+
+
+
     #register-container {
-    
+
         margin: auto;
+        /*margin-top: 20px;*/
     }
-    
-    
-    
-    
+
+
+
+
     .visual {
-    
+
         width: 45%;
-    
+
         max-height: 100;
-    
+
         background: linear-gradient(180deg, #C02425 45.91%, #7B0B0A 100%);
-    
-    
+
+
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    
+
     }
-    
-    
-    
-    
-    .visual-content {
-    
+
+
+
+
+    .visual {
+        display: block;
         flex-direction: column;
-    
     }
-    
-    
-    
-    
+
+    .visual-content {
+        display: block;
+        flex-direction: column;
+
+    }
+
+
     .foto {
-    
         display: block;
-    
-        margin-bottom: 0px;
-    
+        align-self: center;
+        justify-self: center;
     }
-    
-    
-    
-    
-    .logo {
-    
+
+
+
+
+    .Logo {
+
         display: block;
-    
-        margin-top: 75px;
-    
+        margin-top: 0;
+        margin-bottom: 0;
+        align-self: center;
+
     }
-    
-    
-    
-    
+
+
+
+
     .visual p {
-    
+
         color: white;
-    
+
         font-weight: 600;
-    
+
         font-size: 22px;
-    
+
         line-height: 33px;
-    
+
         width: 348px;
-    
+
         margin: 0 auto;
-    
-        margin-top: 32px;
-    
+
         margin-bottom: 42px;
-    
+
     }
-    
-    
-    
-    
-    .btn-cad {
-    
+
+
+
+
+    .btn-con {
+
         background: linear-gradient(180deg, #C02425 53.65%, #7B0B0A 100%);
-    
+
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    
+
         border-radius: 10px;
-    
+
         width: 145px;
-    
+
         height: 40px;
-    
+
     }
-    
-    .back{
-    
+
+    .back {
+        display: block;
         margin-left: 30px;
-        margin-top: 30px;
-    }   
-    
+        margin-top: 0;
+    }
 
-      }
-
-
-
-
-/* Tablet Portrait (ATÉ 992px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-
+    .title{
+        margin-bottom: 7%;
+    }
+}
 
 
 /* PC (>= 1200px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
