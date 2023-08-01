@@ -55,19 +55,19 @@ require_once("templates/message.php");
 
 
 
-    <span style="inline-block" class="visual Flex">
+    <div style="inline-block" class="visual Flex">
 
-        <span class="visual-content Flex">
+        <div class="visual-content Flex">
 
-            <img src="<?= $CURRENT_URL ?>/img/login/logo.svg" style="width: 280px" alt="">
+            <img class="Logo" src="<?= $CURRENT_URL ?>/img/login/logo.svg" style="width: 280px" alt="">
 
             <p>Leve o espírito de High School Musical para o seu guarda-roupa com HiFashion</p>
 
-            <img src="<?= $CURRENT_URL ?>/img/login/log1.png" alt="">
+            <img class="foto" src="<?= $CURRENT_URL ?>/img/login/log1.png" alt="">
 
-        </span>
+</div>
 
-</span>
+</div>
 
 
 
