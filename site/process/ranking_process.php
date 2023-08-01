@@ -13,9 +13,13 @@
 
 <?php foreach($quizRanking as $UserAnswerQuestion):?>
     <?php
+        echo "<br>";
         $user = $UserAnswerQuestionDao->findUser($UserAnswerQuestion->getUserId());
     ?>
     <p><?=$UserAnswerQuestion->getScore()?></p>
     <p><?=$user->getNickname()?></p>
+    <span>
+        <img src="<?=$user->getImage()?>" alt="" style="width='40px'">
+    </span>
     
 <?php endforeach;?>
