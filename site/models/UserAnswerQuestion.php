@@ -63,4 +63,5 @@
         public function updateScore(UserAnswerQuestion $userAnswerQuestion);
         public function getUserQuizzesData($userId);
         public function findQuizRanking($quizId);
+        public function findUser($userId);
     }

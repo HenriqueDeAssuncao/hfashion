@@ -2,6 +2,7 @@
     require_once __DIR__ . "/../helpers/db.php";
     require_once __DIR__ . "/../models/Message.php";
     require_once __DIR__ . "/../models/UserAnswerQuestion.php";
+    require_once __DIR__ . "/../models/User.php";
     
     class UserAnswerQuestionDAO implements UserAnswerQuestionDAOInterface {
         private $conn;
@@ -140,5 +141,23 @@
                 $quizRanking[] = $UserAnswerQuestion;
             };
             return $quizRanking;
+        }
+        public function findUser($userId) {
+            $stmt = $this->conn->prepare("SELECT * FROM users WHERE id = :id");
+            $stmt->bindParam(":id", $userId);
+            $stmt->execute();
+            $data = $stmt->fetch();
+
+            $user = new User();
+
+            $user->setId($data["id"]);
+            $user->setNickname($data["nickname"]);
+            $user->setEmail($data["email"]);
+            $user->setPassword($data["password"]);
+            $user->setImage($data["image"]);
+            $user->setBio($data["bio"]);
+            $user->setToken($data["token"]);
+
+            return $user;
         }
     }

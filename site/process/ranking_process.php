@@ -8,10 +8,14 @@
 
         $UserAnswerQuestionDao = new UserAnswerQuestionDAO($conn, $CURRENT_URL);
         $quizRanking = $UserAnswerQuestionDao->findQuizRanking($quizId);
-
-        foreach ($quizRanking as $UserAnswerQuestion) {
-
-        }
-
     }
 ?>
+
+<?php foreach($quizRanking as $UserAnswerQuestion):?>
+    <?php
+        $user = $UserAnswerQuestionDao->findUser($UserAnswerQuestion->getUserId());
+    ?>
+    <p><?=$UserAnswerQuestion->getScore()?></p>
+    <p><?=$user->getNickname()?></p>
+    
+<?php endforeach;?>

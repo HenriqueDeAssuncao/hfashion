@@ -8,6 +8,7 @@
 
     $quizDao = new QuizDAO($conn, $CURRENT_URL);
     $quizzes = $quizDao->getQuizzes();
+
 ?>
     <style>
         img {
