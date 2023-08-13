@@ -11,15 +11,9 @@
     }
 ?>
 
-<?php foreach($quizRanking as $UserAnswerQuestion):?>
-    <?php
-        echo "<br>";
-        $user = $UserAnswerQuestionDao->findUser($UserAnswerQuestion->getUserId());
-    ?>
-    <p><?=$UserAnswerQuestion->getScore()?></p>
-    <p><?=$user->getNickname()?></p>
-    <span>
-        <img src="<?=$user->getImage()?>" alt="" style="width='40px'">
-    </span>
-    
+<?php foreach($quizRanking as $userAnswerQuestion):?>
+    <div class="user-row">
+        <img src="" alt="" style="width: 50px">
+        <p><?=$userAnswerQuestion->getScore()?></p>
+    </div>
 <?php endforeach;?>

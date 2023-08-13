@@ -19,7 +19,7 @@ const form = document.querySelector('.js-form');
 let questionsTemplatesCounter = 1;
 
 function getQuestionTemplate() {
-    const questionTemplate = fetch(`${href}../../templates/template_question.php?questions=`);
+    const questionTemplate = fetch(`${href}../../templates/question_form_group.php?questions=`);
 
     questionTemplate
         .then((r) => {

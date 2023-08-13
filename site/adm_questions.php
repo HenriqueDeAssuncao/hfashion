@@ -15,7 +15,7 @@ require_once("templates/message.php");
 <h1>Criar Perguntas:</h1>
 <form class="js-form" action="" method="POST">
     <div class="questions-container">
-        <?php include_once("templates/template_question.php") ?>
+        <?php include_once("templates/question_form_group.php") ?>
     </div>
     <div class="form-group">
         <button class="btn-get-question-template">Próxima Pergunta</button>
