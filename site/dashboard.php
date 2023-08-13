@@ -17,9 +17,9 @@ $userData = $userDao->verifyToken(true);
       <img src="img/dashboard/cadastro.png" alt="" id="img_profile">
     </div>
 
-    <p class="style-maintext"> Ana Carolina </p>
-    <p class="style-regulartext"> anacarolina@gmail.com </p>
-   <!--
+    <p class="style-maintext"><?= $userData->getNickname() ?></p>
+    <p class="style-regulartext"><?= $userData->getEmail() ?></p>
+    <!--
      <a href="http://localhost/hfashion/site/edit_profile.php" id="link_edit_profile">
       editar perfil
     </a> -->
@@ -27,8 +27,7 @@ $userData = $userDao->verifyToken(true);
 
     <div id="div_bio_profile">
       <p class="style-regulartext">
-        A vida é engual uma montanha russa, um dia
-        a gente estamos emcima e no outro embaixo
+        <?= $userData->getBio() ?>
       </p>
     </div>
 
@@ -165,10 +164,10 @@ $userData = $userDao->verifyToken(true);
 
     </div> <!-- FECHA DIV_GERAL_PROGRESSO -->
 
-        <!-- BOTÃO CONSULTAR RANKING -->
+    <!-- BOTÃO CONSULTAR RANKING -->
     <div id="div_btn_consulRanking">
-       <a href="" id="btn_consulRanking"> 
-        <p id="txt_consulRanking"> Consultar Ranking </p> 
+      <a href="" id="btn_consulRanking">
+        <p id="txt_consulRanking"> Consultar Ranking </p>
       </a>
     </div>
 

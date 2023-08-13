@@ -1,3 +1,4 @@
+
 //Primeiramente eu removo o botão de fechar do primeiro template_question:
 let firstButtonDelete = document.querySelector('.btn-delete-template-question');
 firstButtonDelete.classList.add('Hidden');

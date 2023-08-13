@@ -1,14 +1,14 @@
 <?php
-require_once __DIR__ . "/../helpers/url.php";
-require_once __DIR__ . "/../models/Message.php";
-require_once __DIR__ . "/../models/Quiz.php";
-require_once __DIR__ . "/../dao/QuizDAO.php";
-require_once __DIR__ . "/../models/Emblem.php";
-require_once __DIR__ . "/../dao/EmblemDAO.php";
-require_once __DIR__ . "/../models/Avatar.php";
-require_once __DIR__ . "/../dao/AvatarDAO.php";
+require_once __DIR__ . "/../../helpers/url.php";
+require_once __DIR__ . "/../../models/Message.php";
+require_once __DIR__ . "/../../models/Quiz.php";
+require_once __DIR__ . "/../../dao/QuizDAO.php";
+require_once __DIR__ . "/../../models/Emblem.php";
+require_once __DIR__ . "/../../dao/EmblemDAO.php";
+require_once __DIR__ . "/../../models/Avatar.php";
+require_once __DIR__ . "/../../dao/AvatarDAO.php";
 
-require_once __DIR__ . "/../dao/UserDAO.php";
+require_once __DIR__ . "/../../dao/UserDAO.php";
 
 $message = new Message($CURRENT_URL);
 $quiz = new Quiz($message);
@@ -43,7 +43,7 @@ if ((!empty($_POST)) && (!empty($_FILES))) {
         $iconPath = $quiz->verifyImg($icon, "icons");
 
         $avatarsPaths = [];
-        foreach($avatars as $avatar) {
+        foreach ($avatars as $avatar) {
             $avatarPath = $quiz->verifyImg($avatar, "avatars");
             $avatarsPaths[] = $avatarPath;
         }
@@ -51,7 +51,7 @@ if ((!empty($_POST)) && (!empty($_FILES))) {
         if ($emblemPath && $iconPath && $avatarsPaths) {
             $moveEmblem = $quiz->uploadImg($emblem, $emblemPath);
             $moveIcon = $quiz->uploadImg($icon, $iconPath);
-            
+
             $i = 0;
             $moveAvatars = [];
             foreach ($avatarsPaths as $avatarPath) {
@@ -78,7 +78,7 @@ if ((!empty($_POST)) && (!empty($_FILES))) {
 
             //Cadastro as imagens nas suas tabelas
 
-            $emblem  = new Emblem;
+            $emblem = new Emblem;
             $emblemDao = new EmblemDAO($conn, $CURRENT_URL);
             $avatar = new Avatar;
             $avatarDao = new AvatarDAO($conn, $CURRENT_URL);
@@ -101,12 +101,12 @@ if ((!empty($_POST)) && (!empty($_FILES))) {
 
                 $quizDao->setQuizTokenToSession($quizToken);
 
-                $message->setMessage("Quiz criado com sucesso!", "success", "adm_questions.php");
+                $message->setMessage("Quiz criado com sucesso!", "success", "questions.php");
 
             } else {
                 $message->setMessage("Não foi possível registrar o quiz.", "error", "back");
             }
-            
+
         } else {
             $message->setMessage("Não foi possível fazer o upload das imagens inseridas!", "error", "back");
         }

@@ -1,12 +1,13 @@
 <?php
 
-require_once("templates/header.php");
-require_once("helpers/verify_adm.php");
+require_once __DIR__ . "/../templates/header.php";
+
+require_once __DIR__ . "/../helpers/verify_adm.php";
 
 ?>
 
 <?php
-require_once("templates/message.php");
+require_once __DIR__ . "/../templates/message.php";
 ?>
 
 <div class="Container">
@@ -42,7 +43,7 @@ require_once("templates/message.php");
             <label for="quiz-icon">ícone:</label>
             <input type="file" name="icon">
         </div>
-    
+
         <div id="avatars" class="form-group">
             <div class="form-section">
                 <label for="avatars">Insira os avatares:</label>
@@ -59,8 +60,11 @@ require_once("templates/message.php");
     </form>
 </div>
 
-<link rel="stylesheet" href="css/adm.css">
-<script src="<?= $CURRENT_URL ?>/script/quiz.js"></script>
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="<?= $CURRENT_URL ?>/../css/global.css">
+<link rel="stylesheet" href="<?= $CURRENT_URL ?>/../css/message.css">
+<script src="<?= $CURRENT_URL ?>/../script/message.js"></script>
+
 <?php
-require_once("templates/footer.php");
+require_once __DIR__ . "/../templates/footer.php";
 ?>
