@@ -6,9 +6,8 @@ require_once("templates/header_log.php");
 require_once("templates/message.php");
 ?>
 
-
+<a class="back" href=""><img src="<?= $CURRENT_URL ?>/img/login/Back.svg" style="height:30px" alt=""></a>
 <div style="display:inline-flexbox" class="Flex">
-    <a href=""><img class="back" src="<?= $CURRENT_URL ?>/img/login/Back.svg" style="height:30px" alt=""></a>
     <div style="display:inline-flexbox" id="register-container">
 
     <img src="<?= $CURRENT_URL ?>/img/login/titulo.svg" style="height:15px" alt="">
@@ -59,11 +58,11 @@ require_once("templates/message.php");
 
         <div class="visual-content Flex">
 
-            <img class="Logo" src="<?= $CURRENT_URL ?>/img/login/logo.svg" style="width: 280px" alt="">
+            <img class="Logo" src="<?= $CURRENT_URL ?>/img/login/logo.svg" style="width: 240px" alt="">
 
-            <p>Leve o espírito de High School Musical para o seu guarda-roupa com HiFashion</p>
+            <img class="txt" src="<?= $CURRENT_URL ?>/img/login/texto.png"  style="width: 328px" alt="">
 
-            <img class="foto" src="<?= $CURRENT_URL ?>/img/login/log1.png" alt="">
+            <img class="foto" src="<?= $CURRENT_URL ?>/img/login/log1.png" style="width: 400px; height: 350px;" alt="">
 
 </div>
 

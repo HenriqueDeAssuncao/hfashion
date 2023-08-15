@@ -39,6 +39,7 @@
 
     height: 100vh;
 
+
 }
 
 
@@ -261,7 +262,6 @@ label {
 
 
     .form-container {
-
         display: flex;
         flex-direction: row;
         width: 350px;
@@ -270,12 +270,9 @@ label {
 
     }
 
-    .flex {
-
+    .Flex {
         display: flex;
-
         justify-content: space-between;
-
         height: 100vh;
     }
 
@@ -321,51 +318,10 @@ label {
     }
 
     .visual-content {
-        display: block;
+        display: flex;
         flex-direction: column;
 
     }
-
-
-    .foto {
-        display: block;
-        align-self: center;
-        justify-self: center;
-    }
-
-
-
-
-    .Logo {
-
-        display: block;
-        margin-top: 0;
-        margin-bottom: 0;
-        align-self: center;
-
-    }
-
-
-
-
-    .visual p {
-
-        color: white;
-
-        font-weight: 600;
-
-        font-size: 22px;
-
-        line-height: 33px;
-
-        width: 348px;
-
-        margin: 0 auto;
-
-        margin-bottom: 42px;
-
-    }
-
 
 
 
@@ -383,17 +339,21 @@ label {
 
     }
 
-    .back {
-        display: block;
-        margin-left: 30px;
-        margin-top: 0;
-    }
-
     .title{
         margin-bottom: 7%;
     }
 }
 
+.back{
+    position: absolute;
+    display: flex;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.foto{
+    margin-bottom: 10px;
+}
 
 /* PC (>= 1200px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
