@@ -118,7 +118,7 @@
         }
 
         function uploadImg($image, $path) {
-            $pathString = "../" . $path;
+            $pathString = "../../" . $path;
             $moveFile = move_uploaded_file($image["tmp_name"], $pathString);
             return $moveFile;
         }

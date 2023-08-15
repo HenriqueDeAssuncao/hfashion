@@ -15,5 +15,6 @@
     <div class="user-row">
         <img src="" alt="" style="width: 50px">
         <p><?=$userAnswerQuestion->getScore()?></p>
+        <p><?=$userAnswerQuestion->getNickname()?></p>
     </div>
 <?php endforeach;?>

@@ -46,11 +46,6 @@
                 return false;
             }
         }
-        public function getOptionsArray() {
-            $stringOptions = $this->getOptions();
-            $options = explode(",", $stringOptions);
-            return $options;
-        }
     }
 
     interface QuestionDAOInterface {
