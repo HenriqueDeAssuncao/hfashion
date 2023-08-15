@@ -6,7 +6,7 @@ require_once "templates/header.php";
 <div id="container-banner" style="background-image: url(<?= $CURRENT_URL ?>/img/index/banner.svg); width: 100%;; height:100%;">
   <div id="container-logo">
     <p id="txt_logo_high">CONHEÇA A MODA DE</p>
-    <img src="img/index/logo_high.svg" id="img_logo_high">
+    <img src="img/index/logo_high.svg">
     <div id="div-btn-roll">
       <a href="#container-aboutus" id="btn-roll"> CONHEÇA O HIFASHION </a>
     </div>
@@ -83,14 +83,7 @@ require_once "templates/header.php";
             </p>
           </div>
         </div>
-
-
       </div>
-
-
-      <!-- FUTURA ILUSTRAÇÃO DA SHARPAY -->
-
-      <div id="div-ilustracaosharpay" class="Hidden"></div>
 
       <!-- COLUNA DIREITA -->
       <div class="div-coluna">
@@ -133,38 +126,34 @@ require_once "templates/header.php";
 <!-- SEPARAR A PÁGINA -->
 <hr class="hidden">
 
-<!-- ABRE CONTAINER -->
-<div id="container-cursos">
-  <!-- ABRE DIV DE LIMITAÇÃO -->
-  <div id="div-info-cursos">
+<!-- LINHA DO TEMPO -->
 
-    <!-- LINHA DO TEMPO -->
-    <div class="div-space js-scroll">
+<!-- ABRE DIV DE LIMITAÇÃO -->
+  <div id="div-info-timeline">
       <!-- TITULO E SUBTITULO -->
-      <div class="div-text-cursos js-croll">
         <p class="style-titles-main" id="align-aboutus">
           Moda.
         </p>
         <p class="style-regulartext">
           Veja os principais acontecimentos na história da moda.
         </p>
+
+      <!-- DIV LINK TIMELINE -->
+      <div id="div-timeline" style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/teatro.svg); background-repeat: no-repeat;">
+          <div id="div-text-timeline">
+            <p class="style-minimal" style="color: #FFF">1/4</p><br>
+            <div id="timeline-text-limitacion">
+             <p id="style-timeline" >Linha do tempo</p>
+            </div>
+            <br>
+            <p class="style-minimal" style="color: #FFF">textotextotexto</p>
+          </div>
       </div>
 
-      <!-- DIV CARDS -->
-
-      <div id="div-cards-cursos-timeline">
-
-        <a href="" class="cards-timeline">
-          <p>StreetWear</p>
-        </a>
-
-      </div>
-
-      <!-- FECHA SPACE -->
-    </div>
+  </div>
 
     <!-- ESTETICAS -->
-    <div class="div-space js-scroll">
+    <div class= "container-cursos">
       <!-- TITULO E SUBTITULO -->
       <div class="div-text-cursos">
         <p class="style-titles-main" id="align-aboutus">
@@ -177,32 +166,90 @@ require_once "templates/header.php";
 
       <!-- DIV CARDS -->
       <div class="div-cards-cursos js-scroll">
+        <div class="card">
+          <div class="div-img-card" style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/street.svg); background-repeat: no-repeat;"></div>
+          <div class="div-text-card">
+            <p class="style-minimal">1/4</p>
+            <p class="style-regulartext">StreetWear</p>
+            <p class="style-minimal">textotextotexto</p>
+          </div>
+        </div>
 
-        <a href="" class="cards">
-          <p>StreetWear</p>
-        </a>
+        <div class="card">
+          <div class="div-img-card" style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/y2k.svg); background-repeat: no-repeat;"></div>
+          <div class="div-text-card">
+            <p class="style-minimal">2/4</p>
+            <p class="style-regulartext">Y2K</p>
+            <p class="style-minimal">textotextotexto</p>
+          </div>
+        </div>
 
-        <a href="" class="cards">
-          <p>StreetWear</p>
-        </a>
+        <div class="card">
+          <div class="div-img-card" style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/mc.svg); background-repeat: no-repeat;"></div>
+          <div class="div-text-card">
+            <p class="style-minimal">3/4</p>
+            <p class="style-regulartext">McBling</p>
+            <p class="style-minimal">textotextotexto</p>
+          </div>
+        </div>
 
-        <a href="" class="cards">
-          <p>StreetWear</p>
-        </a>
-
-        <a href="" class="cards">
-          <p>StreetWear</p>
-        </a>
+        <div class="card">
+          <div class="div-img-card" style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/uni.svg); background-repeat: no-repeat;"></div>
+          <div class="div-text-card">
+            <p class="style-minimal">4/4</p>
+            <p class="style-regulartext">Uniforme Escolar</p>
+            <p class="style-minimal">textotextotexto</p>
+          </div>
+        </div>
 
       </div>
 
-      <!-- FECHA SPACE -->
     </div>
 
+    <!-- INFLUENCIA -->
+    <div class= "container-cursos">
+      <!-- TITULO E SUBTITULO -->
+      <div class="div-text-cursos">
+        <p class="style-titles-main" id="align-aboutus">
+          Influência.
+        </p>
+        <p class="style-regulartext">
+          Veja as principais influências de High School.
+        </p>
+      </div>
 
-    <!-- FECHA CONTAINER INFO -->
-  </div>
-</div>
+      <!-- DIV CARDS -->
+      <div class="div-cards-cursos-influ js-scroll">
+        <div class="card">
+          <div class="div-img-card" style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/musica.svg); background-repeat: no-repeat;"></div>
+          <div class="div-text-card">
+            <p class="style-minimal">1/3</p>
+            <p class="style-regulartext">Música</p>
+            <p class="style-minimal">textotextotexto</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="div-img-card" style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/esporte.svg); background-repeat: no-repeat;"></div>
+          <div class="div-text-card">
+            <p class="style-minimal">2/3</p>
+            <p class="style-regulartext">Esporte</p>
+            <p class="style-minimal">textotextotexto</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="div-img-card" style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/cinema.svg); background-repeat: no-repeat;"></div>
+          <div class="div-text-card">
+            <p class="style-minimal">3/3</p>
+            <p class="style-regulartext">Cinema</p>
+            <p class="style-minimal">textotextotexto</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
 
 <link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/index.css">
 <link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/index_header.css">
