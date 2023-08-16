@@ -1,4 +1,5 @@
 <?php
+
 require_once __DIR__ . ("/../helpers/url.php");
 require_once __DIR__ . ("/../helpers/db.php");
 require_once __DIR__ . ("/../dao/UserDAO.php");
@@ -72,9 +73,6 @@ if (empty($userData)) {
 
                         <li class="links"><a class="White" href="<?= $CURRENT_URL ?>/quizzes.php"><i
                                     class="fa-solid fa-lightbulb"></i>Quizzes</a></li>
-
-                        <li class="links"><a class="White" href="<?= $CURRENT_URL ?>/dashboard_teste.php"><i
-                                    class="fa-solid fa-chart-simple"></i>Dashboard Teste</a></li>
 
                         <?php if ($userData): ?>
                             <?php if ($Adm->isAdm($userDao, false)): ?>

@@ -1,9 +1,10 @@
 <?php
-    require_once "Quiz.php";
-    class UserQuiz extends Quiz {
-        
-    }
 
+require_once "traits/QuizTrait.php";
+require_once "traits/UserAnswerQuestionTrait.php";
 
-
-
+class UserQuiz 
+{
+  use UserAnswerQuestionTrait;
+  use QuizTrait;
+}
