@@ -4,11 +4,11 @@
 
 *COPIAR E COLAR NO PHPMYADMIN PARA CRIAR O BANCO DE DADOS:*
 
-          create database hfashion;
+          create database hifashion;
           
           commit;
           
-          use hfashion;
+          use hifashion;
           
           create table users (
           id int auto_increment primary key,
