@@ -1,10 +1,10 @@
 <?php
 
-require_once __DIR__ . ("/../helpers/url.php");
-require_once __DIR__ . ("/../helpers/db.php");
-require_once __DIR__ . ("/../dao/UserDAO.php");
-require_once __DIR__ . ("/../models/User.php");
-require_once __DIR__ . ("/../models/Adm.php");
+require_once __DIR__ . "/../helpers/url.php";
+require_once __DIR__ . "/../helpers/db.php";
+require_once __DIR__ . "/../dao/UserDAO.php";
+require_once __DIR__ . "/../models/User.php";
+require_once __DIR__ . "/../models/Adm.php";
 
 $message = new Message($CURRENT_URL);
 $flashMessage = $message->getMessage();
@@ -13,11 +13,20 @@ if (!empty($flashMessage)) {
     $message->clearMessage();
 }
 
+//Carregando informações do usuário
 $userDao = new UserDAO($conn, $CURRENT_URL);
 $userData = $userDao->verifyToken(false);
 
 $Adm = new Adm($CURRENT_URL);
 
+//Resgatando o userId
+if ($userData) {
+    $userId = $userData->getId();
+} else {
+    $userId = 0;
+}
+
+//Imagem
 if (empty($userData)) {
     $image = "img/system/avatars/user.svg";
 } else {
@@ -26,6 +35,7 @@ if (empty($userData)) {
         $image = "img/system/avatars/user.svg";
     }
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -85,7 +95,7 @@ if (empty($userData)) {
                     </ul>
                 </div>
 
-                <a href="<?= $CURRENT_URL ?>"><img src="<?= $CURRENT_URL ?>/img/header/logo-mobile.png" alt="Hfashion"
+                <a href="<?= $CURRENT_URL ?>"><img src="<?= $CURRENT_URL ?>/img/header/logo-mobile.png" alt="Hifashion"
                         class="logo-mobile" style="width: 40px"></a>
 
                 <div class="nav-2">

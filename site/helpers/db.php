@@ -1,12 +1,12 @@
 <?php
-    $db_name = "dbhfashion";
-    $db_host = "localhost";
-    $db_user = "root";
-    $db_password = "";
-    
-    $conn = new PDO("mysql:dbname=$db_name;host=$db_host", $db_user, $db_password);
+$db_name = "hifashion";
+$db_host = "localhost";
+$db_user = "root";
+$db_password = "";
 
-    //HABILITAR ERROS PDO
+$conn = new PDO("mysql:dbname=$db_name;host=$db_host", $db_user, $db_password);
 
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $conn->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+//HABILITAR ERROS PDO
+
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$conn->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);

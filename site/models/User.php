@@ -9,7 +9,7 @@ class User
     //FUNÇÕES QUE NÃO VÃO INTERAGIR COM O BANCO
     public function generateToken()
     {
-        return bin2hex(random_bytes(50)); //Aqui estou criando a hash
+        return bin2hex(random_bytes(25)); //Aqui estou criando a hash
     }
     public function generatePassword($password)
     {

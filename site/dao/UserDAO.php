@@ -56,7 +56,7 @@ class UserDAO implements UserDAOinterface
     {
         $nickname = $user->getNickname();
         $email = $user->getEmail();
-        $password = $user->getPassword();
+        $image = $user->getImage();
         $token = $user->getToken();
         $bio = $user->getBio();
         $id = $user->getId();

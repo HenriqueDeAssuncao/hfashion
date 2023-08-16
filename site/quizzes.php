@@ -8,7 +8,10 @@ require_once "models/UserQuiz.php";
 require_once "dao/QuestionDAO.php";
 
 $quizDao = new QuizDAO($conn, $CURRENT_URL);
-$quizzes = $quizDao->getQuizzes($userData->getId());
+$UserQuiz = new UserQuiz($message);
+
+$quizzes = $quizDao->getQuizzes($userId);
+
 ?>
 <style>
     img {
@@ -29,10 +32,21 @@ require_once("templates/message.php");
                 href="<?= $CURRENT_URL ?>/quiz.php?token=<?= $quiz->getQuizToken() ?>&n=<?= $quiz->getQuestionsNumber() ?>&w=<?= $quiz->getQuestionWeight() ?>">
                 <div class="quiz-box">
                     <p>
-                        <?= $quiz->getQuizName() ?> //
-                        <?= $quiz->getScore() ?>
+                        <?= $quiz->getQuizName() ?>
                     </p>
                     <img src="<?= $CURRENT_URL ?>/<?= $quiz->getIconPath() ?>" alt="">
+                    <p>
+                        Pontuação:
+                        <?= $quiz->getScore() ?>
+                    </p>
+                    <p>
+                        Acertos:
+                        <?= $quiz->getScorePortion() ?>
+                    </p>
+                    <p>
+                        Tentativas:
+                        <?= $quiz->getTries() ?>
+                    </p>
                 </div>
             </a>
         </button>

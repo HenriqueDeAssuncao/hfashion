@@ -33,7 +33,7 @@ if (!empty($userData)) {
     <button class="btn-continue">Continuar</button>
 </div>
 
-<script src="<?= $CURRENT_URL ?>/script/adm/questions.js"></script>
+<script src="<?= $CURRENT_URL ?>/script/questions.js"></script>
 
 <?php
 require_once "templates/footer.php";

@@ -144,6 +144,10 @@ nav.nav {
     display: block;
 }
 
+.btn-dropdown {
+    cursor: pointer;
+}
+
 .profile-pic-header {
     width: 40px;
     height: 40px;

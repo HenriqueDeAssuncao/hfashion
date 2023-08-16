@@ -40,7 +40,7 @@ class UserAnswerQuestionDAO implements UserAnswerQuestionDAOInterface
         $stmt->execute();
         $triesArray = $stmt->fetch(PDO::FETCH_ASSOC);
         $tries = $triesArray["tries"];
-        if ($tries == 20) {
+        if ($tries >= 9) {
             return false;
         } else {
             return true;
@@ -159,10 +159,19 @@ class UserAnswerQuestionDAO implements UserAnswerQuestionDAOInterface
             $quizRanking[] = $UserAnswerQuestion;
         }
 
-        return $quizRanking;
+        $sortedQuizRanking = $this->sortQuizRanking($quizRanking);
+
+        return $sortedQuizRanking;
     }
-    public function getUserQuizData($userId)
+    public function sortQuizRanking($quizRanking)
     {
+        function compareByScore($a, $b) {
+            return $b->getScore()- $a->getScore();
+        }
         
+        // Ordenar o array de objetos com base na pontuação
+        usort($quizRanking, "compareByScore");
+
+        return $quizRanking;
     }
 }

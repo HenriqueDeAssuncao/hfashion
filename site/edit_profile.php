@@ -26,7 +26,7 @@ $userAvatars = $UserAvatarDao->findAvatars($userData->getId());
         <div class="form-group">
             <label>Foto:</label>
             <div class="profile-img" style="width: 100px; height: 100px; background-image: url('<?=$CURRENT_URL?>/<?=$image?>')" alt="Foto de Perfil"></div>
-            <?php if(count($userAvatars)):?>
+            <?php if(!empty($userAvatars) && count($userAvatars)):?>
                 <div class="user-avatars">
                 <?php foreach($userAvatars as $UserAvatar):?>
                     <div class="user-avatar"> 

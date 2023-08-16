@@ -31,5 +31,5 @@ interface UserAnswerQuestionDAOInterface
     public function updateScore(UserAnswerQuestion $userAnswerQuestion);
     public function findUser($userId);
     public function findQuizRanking($quizId);
-    public function getUserQuizData($userId);
+    public function sortQuizRanking($quizRanking);
 }

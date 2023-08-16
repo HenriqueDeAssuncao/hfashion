@@ -39,7 +39,7 @@ class Quiz
 
     public function generateToken()
     {
-        return bin2hex(random_bytes(50)); //Aqui estou criando a hash
+        return bin2hex(random_bytes(25)); //Aqui estou criando a hash
     }
     public function verifyImg($image, $folder)
     {
@@ -80,7 +80,7 @@ interface QuizDAOInterface
     public function setQuizStatusToActive($quizId);
     public function getQuestionsNumber($quizId);
     public function update($quiz_id);
-    public function findUserQuizData($UserQuiz, $userId);
+    public function findUserQuizData($quizId, $userId);
     public function getQuizzes($userId);
     public function getQuestions($quizToken); //Retorna um array com os objetos questions
 }

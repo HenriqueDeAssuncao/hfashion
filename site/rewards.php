@@ -28,6 +28,10 @@
     }
 ?>
 
+<?php
+    require_once "templates/message.php";
+?>
+
 <div class="container-awards">
     <div class="container-avatars">
         <?php if($type === "avatars"):?>

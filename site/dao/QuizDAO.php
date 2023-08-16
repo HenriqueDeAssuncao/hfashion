@@ -98,10 +98,8 @@ class QuizDAO implements QuizDAOInterface
         $stmt->bindParam(":quiz_id", $quizId);
         $stmt->execute();
     }
-    public function findUserQuizData($UserQuiz, $userId)
+    public function findUserQuizData($quizId, $userId)
     {
-        $quizId = $UserQuiz->getQuizId();
-
         $stmt = $this->conn->prepare("SELECT * FROM users_answer_questions WHERE 
             quiz_status = 1 and quiz_id = :quiz_id and user_id = :user_id"
         );
@@ -110,11 +108,14 @@ class QuizDAO implements QuizDAOInterface
         $stmt->execute();
         if ($stmt->rowCount() > 0) {
             $userAnswerQuestion = $stmt->fetch(PDO::FETCH_ASSOC);
-            $UserQuiz->setQuizStatus($userAnswerQuestion["quiz_status"]);
-            $UserQuiz->setScore($userAnswerQuestion["score"]);
-            $UserQuiz->setScorePortion($userAnswerQuestion["score_portion"]);
+            $userQuizData = [];
+            $userQuizData["quiz_status"] = $userAnswerQuestion["quiz_status"];
+            $userQuizData["score"] = $userAnswerQuestion["score"];
+            $userQuizData["score_portion"] = $userAnswerQuestion["score_portion"];
+            $userQuizData["tries"] = $userAnswerQuestion["tries"];
+
+            return $userQuizData;
         }
-        return $UserQuiz;
     }
     public function getQuizzes($userId)
     {
@@ -125,6 +126,8 @@ class QuizDAO implements QuizDAOInterface
         $UserQuizzes = [];
         foreach ($quizzesArray as $quiz) {
             $UserQuiz = new UserQuiz($this->message);
+            $quizId = $quiz["quiz_id"];
+            $UserQuiz->setQuizId($quiz["quiz_id"]);
             $UserQuiz->setQuizName($quiz["quiz_name"]);
             $UserQuiz->setQuizDescription($quiz["quiz_description"]);
             $UserQuiz->setQuestionsNumber($quiz["questions_number"]);
@@ -132,10 +135,21 @@ class QuizDAO implements QuizDAOInterface
             $UserQuiz->setQuizToken($quiz["quiz_token"]);
             $UserQuiz->setIconPath($quiz["icon"]);
 
-            $UserQuiz = $this->findUserQuizData($UserQuiz, $userId);
+            if ($userId) {
+                $userQuizData = $this->findUserQuizData($quizId, $userId);
+
+                if (isset($userQuizData)) {
+                    $UserQuiz->setScorePortion($userQuizData["quiz_status"]);
+                    $UserQuiz->setScore($userQuizData["score"]);
+                    $UserQuiz->setScorePortion($userQuizData["score_portion"]);
+                    $UserQuiz->setTries($userQuizData["tries"]);
+                }
+
+            }
 
             $UserQuizzes[] = $UserQuiz;
         }
+
         return $UserQuizzes;
     }
     public function getQuestions($quizToken)
