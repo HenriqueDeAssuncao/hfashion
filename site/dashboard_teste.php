@@ -4,7 +4,6 @@
     require_once("dao/EmblemDAO.php");
     require_once("models/UserEmblem.php");
     require_once("dao/UserEmblemDAO.php");
-    $userId = $userData->getId();
     $Emblem = new Emblem;
     $EmblemDao = new EmblemDAO($conn, $CURRENT_URL);
     $UserEmblemDao = new UserEmblemDAO($conn, $CURRENT_URL);
