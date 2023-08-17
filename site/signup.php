@@ -2,17 +2,19 @@
 require_once("templates/header_cad.php");
 ?>
 
-<div class="flex">
-    <span style="display:inline-flexbox" class="visual Flex">
-        <span style="display:inline-flexbox" class="visual-content Flex">
-            <img src="<?= $CURRENT_URL ?>/img/login/logo.svg" style="width: 280px" alt="">
-            <p>Viva a moda como nos tempos de High School Musical com HiFashion!</p>
-            <img src="<?= $CURRENT_URL ?>/img/login/fotocaad.png" alt="">
-        </span>
-    </span>
-    <a href=""><img class="back" src="<?= $CURRENT_URL ?>/img/login/Back.svg" style="height:30px display:inline-block"
+<div class="Flex">
+    <div style="display:inline-flexbox" class="visual Flex">
+        <div style="display:inline-flexbox" class="visual-content Flex">
+            <img class="logo" src="<?= $CURRENT_URL ?>/img/login/logo.svg" style="width: 220px" alt="">
+            <img class="txt" src="<?= $CURRENT_URL ?>/img/login/texto_cad.svg"   style="width: 280px" alt="">
+            <img class="foto" src="<?= $CURRENT_URL ?>/img/login/foto_cad.svg" style="width: 375px;" alt="">
+        </div>
+    </div>
+    <a href=""><img class="back" src="<?= $CURRENT_URL ?>/img/login/Back.svg" style="height:30px"
             alt=""></a>
     <div id="register-container">
+    <img src="<?= $CURRENT_URL ?>/img/login/titulo.svg" style="height:15px" alt="">
+        <p class="title">Conecte-se ao <br> HiFashion</p>
     <?php 
         require_once("templates/message.php");
     ?>

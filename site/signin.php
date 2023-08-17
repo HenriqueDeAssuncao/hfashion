@@ -39,9 +39,9 @@ require_once("templates/header_log.php");
 
     <div style="inline-block" class="visual Flex">
         <div class="visual-content Flex">
-            <img class="Logo" src="<?= $CURRENT_URL ?>/img/login/logo.svg" style="width: 240px" alt="">
-            <img class="txt" src="<?= $CURRENT_URL ?>/img/login/texto.png" style="width: 328px" alt="">
-            <img class="foto" src="<?= $CURRENT_URL ?>/img/login/log1.png" style="width: 400px; height: 350px;" alt="">
+            <img class="logo" src="<?= $CURRENT_URL ?>/img/login/logo.svg" style="width: 200px" alt="">
+            <img class="txt" src="<?= $CURRENT_URL ?>/img/login/texto.png" style="width: 290px" alt="">
+            <img class="foto" src="<?= $CURRENT_URL ?>/img/login/log1.png" style="width: 375px;" alt="">
         </div>
     </div>
 
