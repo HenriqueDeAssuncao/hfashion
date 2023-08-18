@@ -50,9 +50,9 @@
 input {
     display: flex;
     margin-top: 5px;
-    border-radius: 4px;
+    border-radius: 6px;
     height: 40px;
-    width: 266px;
+    width: 260px;
     border: none;
     background-color: #E7E7E7;
     margin-top: 2%;
@@ -66,7 +66,13 @@ input {
 .form-container {
     display: flex;
     flex-direction: column;
+    margin-top: 12%;
+    justify-items: center;
     align-items: center;
+}
+
+.flex-2{
+    margin-bottom: 8%;
 }
 
 .form-container p,
@@ -88,7 +94,7 @@ a {
     font-family: 'Roboto', sans-serif;
     font-weight: bolder;
     font-size: 22px;
-    margin-bottom: 15%;
+    margin-bottom: 10%;
     margin-top: 4%;
 }
 
@@ -111,7 +117,6 @@ label {
     border-radius: 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     justify-content: center;
-    margin-top: 15%;
     margin-bottom: 12%;
 }
 
@@ -182,6 +187,7 @@ input {
         width: 350px;
         gap: 12%;
         margin-top: 0;
+        margin-top: 8%;
     }
     .Flex {
         display: flex;
@@ -215,6 +221,8 @@ input {
         border-radius: 10px;
         width: 145px;
         height: 40px;
+        margin-bottom: 0;
+       
     }
     .title{
         margin-bottom: 7%;

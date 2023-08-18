@@ -2,7 +2,7 @@
 require_once("templates/header_log.php");
 ?>
 
-<a class="back" href=""><img src="<?= $CURRENT_URL ?>/img/login/Back.svg" style="height:30px" alt=""></a>
+<a class="back" href="<?= $CURRENT_URL ?>/index.php"><img src="<?= $CURRENT_URL ?>/img/login/Back.svg" style="height:30px" alt=""></a>
 
 <div style="display:inline-flexbox" class="Flex">
 
@@ -22,7 +22,7 @@ require_once("templates/header_log.php");
                 <input type="text" class="form-input" id="nickname_email" name="nickname_email">
             </div>
 
-            <div class="form-group">
+            <div class="form-group flex-2">
                 <label for="password">Senha:</label>
                 <input type="password" placeholder="8+ caracteres" class="form-input" id="password" name="password">
             </div>
