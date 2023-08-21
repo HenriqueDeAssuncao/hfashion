@@ -31,20 +31,20 @@ require_once("templates/header_auth.php");
             <div class="flex-1">
                 <div class="form-group">
                     <label for="nickname">Apelido:</label>
-                    <input type="text" class="form-input" id="nickname" name="nickname">
+                    <input type="text" class="form-input" id="nickname" name="nickname" value="<?= $nickname ?>">
                 </div>
                 <div class="form-group">
                     <label for="email">E-mail:</label>
-                    <input type="email" class="form-input" id="email" name="email">
+                    <input type="email" class="form-input" id="email" name="email" value="<?= $email ?>">
                 </div>
             </div>
             <div class="form-group">
                 <label for="password">Senha:</label>
-                <input type="password" placeholder="8+ caracteres" class="form-input" id="password" name="password">
+                <input type="password" placeholder="8+ caracteres" class="form-input" id="password" name="password" value="<?= $password ?>">
             </div>
             <div class="form-group">
                 <label for="password">Confirmar Senha:</label>
-                <input type="password" class="form-input" id="confirmpassword" name="confirmpassword">
+                <input type="password" class="form-input" id="confirmpassword" name="confirmpassword" value="<?= $finalPassword ?>">
             </div>
             <div class="form-container">
                 <input type="submit" class="btn-cad" value="Criar Conta">

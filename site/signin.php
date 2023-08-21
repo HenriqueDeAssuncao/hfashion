@@ -24,12 +24,12 @@ require_once("templates/header_auth.php");
             <input type="hidden" name="type" value="login">
             <div class="form-group">
                 <label class="email" for="nickname_email">E-mail ou Apelido:</label>
-                <input type="text" class="form-input" id="nickname_email" name="nickname_email">
+                <input type="text" class="form-input" id="nickname_email" name="nickname_email" value="<?= $nickname_email ?>">
             </div>
 
             <div class="form-group flex-2">
                 <label for="password">Senha:</label>
-                <input type="password" placeholder="8+ caracteres" class="form-input" id="password" name="password">
+                <input type="password" placeholder="8+ caracteres" class="form-input" id="password" name="password" value="<?= $password ?>">
             </div>
 
             <div class="form-container">

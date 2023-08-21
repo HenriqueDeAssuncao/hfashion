@@ -11,6 +11,31 @@ $flashMessage = $message->getMessage();
 if (!empty($flashMessage)) {
     $message->clearMessage();
 }
+
+//Pegando os valores dos inputs
+
+if (!empty($_SESSION["userForm"])) {
+    $userForm = $_SESSION["userForm"];
+
+    if ($userForm["type"] == "signin") {
+        $nickname_email = $userForm["nickname_email"];
+        $password = $userForm["password"];
+    } else if ($userForm["type"] == "signup") {
+        $nickname= $userForm["nickname"];
+        $email = $userForm["email"];
+        $password = $userForm["password"];
+        $finalPassword = $userForm["finalPassword"];
+    }
+
+    $_SESSION["userForm"] = "";
+    
+} else {
+    $nickname_email = "";
+    $nickname= "";
+    $email = "";
+    $password = "";
+    $finalPassword = "";
+}
 ?>
 
 <!DOCTYPE html>
