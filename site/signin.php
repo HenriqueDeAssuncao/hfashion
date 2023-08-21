@@ -2,6 +2,8 @@
 require_once("templates/header_auth.php");
 ?>
 
+<link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/login.css">
+
 <a class="back" href="<?= $CURRENT_URL ?>/index.php"><img src="<?= $CURRENT_URL ?>/img/login/Back.svg" style="height:30px" alt=""></a>
 
 <div style="display:inline-flexbox" class="Flex">
@@ -47,5 +49,4 @@ require_once("templates/header_auth.php");
 
 </div>
 
-<link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/login.css">
 <script src="<?= $CURRENT_URL ?>/script/message.js"></script>

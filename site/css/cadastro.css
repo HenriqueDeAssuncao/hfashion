@@ -8,25 +8,12 @@
 }
 
 /* LAYOUT */
-.Container {
-    margin: 0 auto;
-}
-
 .Flex {
     height: 100vh;
 }
 
 .Hidden {
     display: none;
-}
-
-.Button {
-    background-color: transparent;
-    border: none;
-}
-
-.Auto {
-    margin: 0 auto;
 }
 
 /* FONTES */
@@ -57,6 +44,7 @@ input {
     display: flex;
     /*flex-direction: column;*/
 }
+
 .flex-1 {
     display: inline-flex;
     flex-direction: row;
@@ -75,7 +63,7 @@ input {
     margin-top: 8%;
 }
 
-.flex-2{
+.flex-2 {
     width: 354px;
 }
 
@@ -154,11 +142,11 @@ input {
     -moz-transition: all 0.30s ease-in-out;
     -ms-transition: all 0.30s ease-in-out;
     -o-transition: all 0.30s ease-in-out;
-  }
-  
-  input:focus {
-   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) ;
-  }
+}
+
+input:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 
 /* Smartphone landscape (ATÉ 768px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
@@ -205,10 +193,12 @@ input {
         background: linear-gradient(180deg, #C02425 45.91%, #7B0B0A 100%);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
+
     .visual {
         display: block;
         flex-direction: column;
     }
+
     .visual-content {
         display: flex;
         flex-direction: column;
@@ -226,15 +216,16 @@ input {
         margin-top: 75px;
     }
 
-.form-container{
-    flex-direction: row;
-    margin-top:10%;
-}
+    .form-container {
+        flex-direction: row;
+        margin-top: 10%;
+    }
 
-.form-container p,a{
-    margin-top: 0;
-    text-align: right;
-}
+    .form-container p,
+    a {
+        margin-top: 0;
+        text-align: right;
+    }
 
     .btn-cad {
         background: linear-gradient(180deg, #C02425 53.65%, #7B0B0A 100%);
@@ -245,6 +236,7 @@ input {
         margin-right: 22.71%;
         margin-top: 0;
         margin-bottom: 0;
+        cursor: pointer;
     }
 
     .flex-1 {
@@ -255,7 +247,7 @@ input {
         flex-direction: row;
     }
 
-    input{
+    input {
         border-radius: 6px;
     }
 
@@ -266,19 +258,19 @@ input {
         margin-left: 35px;
     }
 
-.foto{
-    margin-bottom: 40px;
-    margin-top: 30px;
-}
+    .foto {
+        margin-bottom: 40px;
+        margin-top: 30px;
+    }
 
-.logo{
-    margin-bottom: 30px;
-    margin-top: 10px;
-}
+    .logo {
+        margin-bottom: 30px;
+        margin-top: 10px;
+    }
 
-.txt{
-    margin-bottom: 40px;
-}
+    .txt {
+        margin-bottom: 40px;
+    }
 
 }
 
