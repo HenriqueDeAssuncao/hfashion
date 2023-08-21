@@ -8,12 +8,13 @@
 }
 
 /* LAYOUT */
-.Flex {
+.Full-height {
     height: 100vh;
 }
 
-.Hidden {
-    display: none;
+.container-msg {
+    position: absolute;
+    top: 80px;
 }
 
 /* FONTES */

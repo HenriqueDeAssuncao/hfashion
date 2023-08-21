@@ -5,23 +5,27 @@ require_once("templates/header_auth.php");
 <link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/cadastro.css">
 
 <div class="Flex">
-    <div style="display:inline-flexbox" class="visual Flex">
-        <div style="display:inline-flexbox" class="visual-content Flex">
+    <div style="display:inline-flexbox" class="visual Flex Full-height">
+        <div style="display:inline-flexbox" class="visual-content Flex Full-height">
             <img class="logo" src="<?= $CURRENT_URL ?>/img/login/logo.svg" style="width: 220px" alt="">
-            <img class="txt" src="<?= $CURRENT_URL ?>/img/login/texto_cad.svg"   style="width: 280px" alt="">
+            <img class="txt" src="<?= $CURRENT_URL ?>/img/login/texto_cad.svg" style="width: 280px" alt="">
             <img class="foto" src="<?= $CURRENT_URL ?>/img/login/foto_cad.svg" style="width: 375px;" alt="">
         </div>
     </div>
-    <a href="<?= $CURRENT_URL ?>/index.php"><img class="back" src="<?= $CURRENT_URL ?>/img/login/Back.svg" style="height:30px"
-            alt=""></a>
+
+    <a href="<?= $CURRENT_URL ?>/index.php"><img class="back" src="<?= $CURRENT_URL ?>/img/login/Back.svg"
+            style="height:30px" alt=""></a>
     <div id="register-container">
-    <img src="<?= $CURRENT_URL ?>/img/login/titulo.svg" style="height:15px" alt="">
+
+        <div class="container-msg">
+            <?php
+            require_once("templates/message.php");
+            ?>
+        </div>
+
+        <img src="<?= $CURRENT_URL ?>/img/login/titulo.svg" style="height:15px" alt="">
         <p class="title">Cadastre-se ao <br> HiFashion</p>
 
-        <?php 
-        require_once("templates/message.php");
-        ?>
-        
         <form action="<?= $CURRENT_URL ?>/process/auth_process.php" method="POST">
             <input type="hidden" name="type" value="register">
             <div class="flex-1">

@@ -11,19 +11,6 @@ $flashMessage = $message->getMessage();
 if (!empty($flashMessage)) {
     $message->clearMessage();
 }
-
-$userDao = new UserDAO($conn, $CURRENT_URL);
-$userData = $userDao->verifyToken(false);
-$adm = new Adm($CURRENT_URL);
-
-if (empty($userData)) {
-    $image = "user.svg";
-} else {
-    $image = $userData->getImage();
-    if ($userData->getImage() == "") {
-        $image = "user.svg";
-    }
-}
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +20,7 @@ if (empty($userData)) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HFashion</title>
+    <title>HiFashion</title>
     <!--FONTE DE ÍCONES-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -44,3 +31,5 @@ if (empty($userData)) {
 </head>
 
 <body>
+
+<div>

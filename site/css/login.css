@@ -1,5 +1,14 @@
 /* Smartphone Portrait (ATÉ 576px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
+.Full-height {
+    height: 100vh;
+}
+
+.container-msg {
+    position: absolute;
+    top: 80px;
+}
+
 .visual,
 .back {
     display: none;
@@ -146,11 +155,6 @@ input {
         gap: 12%;
         margin-top: 0;
         margin-top: 8%;
-    }
-    .Flex {
-        display: flex;
-        justify-content: space-between;
-        height: 100vh;
     }
     .form-group {
         display: flex;

@@ -5,7 +5,7 @@ if (document.querySelector('.msg')) {
     const msg = document.querySelector('.msg');
 
     function closeMessage() {
-        msg.classList.add('Hidden');;
+        msg.classList.add('Hidden');
     }
 
     btnCloseMsg.addEventListener('click', closeMessage);

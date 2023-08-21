@@ -4,15 +4,18 @@ require_once("templates/header_auth.php");
 
 <link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/login.css">
 
-<a class="back" href="<?= $CURRENT_URL ?>/index.php"><img src="<?= $CURRENT_URL ?>/img/login/Back.svg" style="height:30px" alt=""></a>
+<a class="back" href="<?= $CURRENT_URL ?>/index.php"><img src="<?= $CURRENT_URL ?>/img/login/Back.svg"
+        style="height:30px" alt=""></a>
 
-<div style="display:inline-flexbox" class="Flex">
+<div style="display:inline-flexbox" class="Flex Full-height">
 
     <div style="display:inline-flexbox" id="register-container">
 
-        <?php
-        require_once("templates/message.php");
-        ?>
+        <div class="container-msg">
+            <?php
+            require_once("templates/message.php");
+            ?>
+        </div>
 
         <img src="<?= $CURRENT_URL ?>/img/login/titulo.svg" style="height:15px" alt="">
         <p class="title">Conecte-se ao <br> HiFashion</p>
@@ -39,8 +42,8 @@ require_once("templates/header_auth.php");
         </form>
     </div>
 
-    <div style="inline-block" class="visual Flex">
-        <div class="visual-content Flex">
+    <div style="inline-block" class="visual Flex Full-height">
+        <div class="visual-content Flex Full-height ">
             <img class="logo" src="<?= $CURRENT_URL ?>/img/login/logo.svg" style="width: 200px" alt="">
             <img class="txt" src="<?= $CURRENT_URL ?>/img/login/texto.png" style="width: 290px" alt="">
             <img class="foto" src="<?= $CURRENT_URL ?>/img/login/log1.png" style="width: 375px;" alt="">
