@@ -6,7 +6,7 @@ require_once "templates/header.php";
 <div id="container-banner" style="background-image: url(<?= $CURRENT_URL ?>/img/index/banner.svg); width: 100%;; height:100%;">
   <div id="container-logo">
     <p id="txt_logo_high">CONHEÇA A MODA DE</p>
-    <img src="img/index/logo_high.svg">
+    <img src="img/index/logo_high.svg" id="img_logo_high">
     <div id="div-btn-roll">
       <a href="#container-aboutus" id="btn-roll"> CONHEÇA O HIFASHION </a>
     </div>
@@ -47,7 +47,7 @@ require_once "templates/header.php";
   <div id="info-oqvcvera" class="js-scroll">
 
     <div id="div-title">
-      <p class="style-titles">O que você vai aprender?</p>
+      <p class="style-titles-main">O que você vai aprender?</p>
     </div>
 
 
@@ -129,7 +129,7 @@ require_once "templates/header.php";
 <!-- LINHA DO TEMPO -->
 
 <!-- ABRE DIV DE LIMITAÇÃO -->
-  <div id="div-info-timeline">
+  <div id="div-info-timeline" class="hidden">
       <!-- TITULO E SUBTITULO -->
         <p class="style-titles-main" id="align-aboutus">
           Moda.
@@ -152,8 +152,36 @@ require_once "templates/header.php";
 
   </div>
 
+  <div class= "container-cursos" id="hiddenpc">
+    <div class="div-info-cursos">
+      <!-- TITULO E SUBTITULO -->
+      <div class="div-text-cursos">
+        <p class="style-titles-main" id="align-aboutus">
+          História da Moda.
+        </p>
+        <p class="style-regulartext">
+          Veja a evolução da moda ao longo dos anos.
+        </p>
+      </div>
+
+      <!-- DIV CARDS -->
+      <div class="div-cards-cursos-influ js-scroll">
+        <div class="card">
+          <div class="div-img-card" style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/teat.svg); background-repeat: no-repeat;"></div>
+          <div class="div-text-card">
+            <p class="style-minimal">1/1</p>
+            <p class="style-regulartext">Linha do Tempo</p>
+            <p class="style-minimal">textotextotexto</p>
+          </div>
+        </div>
+
+      </div>
+      </div>
+    </div>
+
     <!-- ESTETICAS -->
     <div class= "container-cursos">
+    <div class="div-info-cursos">
       <!-- TITULO E SUBTITULO -->
       <div class="div-text-cursos">
         <p class="style-titles-main" id="align-aboutus">
@@ -203,11 +231,12 @@ require_once "templates/header.php";
         </div>
 
       </div>
-
+    </div>
     </div>
 
     <!-- INFLUENCIA -->
     <div class= "container-cursos">
+    <div class="div-info-cursos">
       <!-- TITULO E SUBTITULO -->
       <div class="div-text-cursos">
         <p class="style-titles-main" id="align-aboutus">
@@ -248,7 +277,7 @@ require_once "templates/header.php";
         </div>
 
       </div>
-
+      </div>
     </div>
 
 <link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/index.css">

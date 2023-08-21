@@ -143,6 +143,7 @@ hr {
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-bottom: 100px;
 }
 
 #info-oqvcvera {
@@ -187,21 +188,27 @@ hr {
     margin-bottom: 4%;
 }
 
-#container-cursos{
+.container-cursos{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-bottom: 50px;
 }
 
-#div-info-cursos{
+.div-info-cursos{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 78%;
+    width: 82.5%;
 }
 
-
+.div-text-cursos{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 13%;
+}
 
 .div-cards-cursos{
     width: 100%;
@@ -348,6 +355,9 @@ hr {
         border: 2px solid #E5E5E5;
     }
     
+    #hiddenpc {
+        display: none;
+    }
     
     #btn-roll {
         transition: 0.5s;
@@ -563,6 +573,15 @@ hr {
     }
 
     .container-cursos{
+        width: 100%;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .div-info-cursos{
         width: 100%;
         height: 600px;
         display: flex;
