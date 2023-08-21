@@ -1,5 +1,5 @@
 <?php
-require_once("templates/header_cad.php");
+require_once("templates/header_auth.php");
 ?>
 
 <div class="Flex">
@@ -48,4 +48,6 @@ require_once("templates/header_cad.php");
         </form>
     </div>
 </div>
+
+<link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/cadastro.css">
 <script src="<?= $CURRENT_URL ?>/script/message.js"></script>
