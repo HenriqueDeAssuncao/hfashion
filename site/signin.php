@@ -1,5 +1,5 @@
 <?php
-require_once("templates/header_log.php");
+require_once("templates/header_auth.php");
 ?>
 
 <a class="back" href="<?= $CURRENT_URL ?>/index.php"><img src="<?= $CURRENT_URL ?>/img/login/Back.svg" style="height:30px" alt=""></a>
@@ -47,4 +47,5 @@ require_once("templates/header_log.php");
 
 </div>
 
+<link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/login.css">
 <script src="<?= $CURRENT_URL ?>/script/message.js"></script>
