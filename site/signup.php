@@ -4,7 +4,7 @@ require_once("templates/header_auth.php");
 
 <link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/cadastro.css">
 
-<div class="Flex">
+<div class="Flex Full-height">
     <div style="display:inline-flexbox" class="visual Flex Full-height">
         <div style="display:inline-flexbox" class="visual-content Flex Full-height">
             <img class="logo" src="<?= $CURRENT_URL ?>/img/login/logo.svg" style="width: 220px" alt="">
@@ -17,14 +17,15 @@ require_once("templates/header_auth.php");
             style="height:30px" alt=""></a>
     <div id="register-container">
 
+        <img src="<?= $CURRENT_URL ?>/img/login/titulo.svg" style="height:15px" alt="">
+        <p class="title">Cadastre-se ao <br> HiFashion</p>
+
         <div class="container-msg">
             <?php
             require_once("templates/message.php");
             ?>
         </div>
 
-        <img src="<?= $CURRENT_URL ?>/img/login/titulo.svg" style="height:15px" alt="">
-        <p class="title">Cadastre-se ao <br> HiFashion</p>
 
         <form action="<?= $CURRENT_URL ?>/process/auth_process.php" method="POST">
             <input type="hidden" name="type" value="register">

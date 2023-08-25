@@ -4,14 +4,15 @@
     height: 100vh;
 }
 
-.container-msg {
-    position: absolute;
-    top: 80px;
-}
-
 .visual,
 .back {
     display: none;
+}
+
+.container-msg {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 input {

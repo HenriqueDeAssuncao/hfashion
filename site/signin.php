@@ -11,14 +11,15 @@ require_once("templates/header_auth.php");
 
     <div style="display:inline-flexbox" id="register-container">
 
+        <img src="<?= $CURRENT_URL ?>/img/login/titulo.svg" style="height:15px" alt="">
+        <p class="title">Conecte-se ao <br> HiFashion</p>
+
         <div class="container-msg">
             <?php
             require_once("templates/message.php");
             ?>
         </div>
 
-        <img src="<?= $CURRENT_URL ?>/img/login/titulo.svg" style="height:15px" alt="">
-        <p class="title">Conecte-se ao <br> HiFashion</p>
 
         <form action="<?= $CURRENT_URL ?>/process/auth_process.php" method="POST">
             <input type="hidden" name="type" value="login">
