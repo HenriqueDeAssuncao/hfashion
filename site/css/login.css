@@ -4,9 +4,13 @@
     height: 100vh;
 }
 
-.visual,
+.visual {
+    display: none;
+}
+
 .back {
     display: none;
+    height: 30px;
 }
 
 .container-msg {
@@ -16,11 +20,12 @@
 }
 
 input {
+    position: relative;
     display: flex;
     margin-top: 5px;
     border-radius: 6px;
     height: 40px;
-    width: 260px;
+    width: 100%;
     border: none;
     background-color: #E7E7E7;
     margin-top: 2%;
@@ -117,6 +122,11 @@ input {
    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) ;
   }
 
+  #register-container{
+    width: 335px;
+
+  }
+
 /* Smartphone landscape (ATÉ 768px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
 @media (min-width: 576px) {
@@ -136,13 +146,19 @@ input {
 
 /* Tablet Portrait (ATÉ 992px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 992px) {
+    .back{
+        position: absolute;
+        display: block;
+        margin-top: 30px;
+        margin-left: 30px;
+    }
+    
     input {
         margin-top: 5px;
         border-radius: 4px;
         height: 40px;
         border: none;
         background-color: #E7E7E7;
-        width: 320px;
     }
     .form-group {
         /*align-content: stretch;*/
@@ -190,13 +206,6 @@ input {
     .title{
         margin-bottom: 7%;
     }
-}
-
-.back{
-    position: absolute;
-    display: block;
-    margin-top: 30px;
-    margin-left: 30px;
 }
 
 .foto{
