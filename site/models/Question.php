@@ -4,6 +4,7 @@ class Question
     private $questionId;
     private $quizId;
     private $question;
+    private $image;
     private $options;
     private $answer;
     public function __construct($quizId)
@@ -30,6 +31,14 @@ class Question
     public function setQuestion($question)
     {
         $this->question = $question;
+    }
+    public function getImage() 
+    {
+        return $this->image;
+    }
+    public function setImage($image)
+    {
+        $this->image = $image;
     }
     public function getOptions()
     {

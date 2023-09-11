@@ -1,11 +1,6 @@
 <?php
-
-require_once __DIR__ . "/../templates/header.php";
-
+require_once "templates/header.php";
 require_once __DIR__ . "/../helpers/verify_adm.php";
-
-require_once __DIR__ . "/../helpers/verify_quiz.php";
-
 ?>
 
 <?php
@@ -13,7 +8,7 @@ require_once __DIR__ . "/../templates/message.php";
 ?>
 
 <h1>Criar Perguntas:</h1>
-<form class="js-form" action="" method="POST">
+<form class="js-form" action="" method="POST" enctype="multipart/form-data">
     <div class="questions-container">
         <?php include_once("templates/question_form_group.php") ?>
     </div>

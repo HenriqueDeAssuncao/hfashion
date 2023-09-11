@@ -15,16 +15,18 @@
             $options = $question->getOptions();
             $optionsString = (implode(",", $options));
             $answer = $question->getAnswer();
+            $image = $question->getImage();
 
             $stmt = $this->conn->prepare("INSERT INTO questions (
-                quiz_id, question, options, answer
+                quiz_id, question, options, answer, image
                 ) VALUES (
-                    :quiz_id, :question, :options, :answer
+                    :quiz_id, :question, :options, :answer, :image
                 )");
             $stmt->bindParam(":quiz_id", $quizId);
             $stmt->bindParam(":question", $questionContent);
             $stmt->bindParam(":options", $optionsString);
             $stmt->bindParam(":answer", $answer);
+            $stmt->bindParam(":image", $image);
 
             $stmt->execute();
 

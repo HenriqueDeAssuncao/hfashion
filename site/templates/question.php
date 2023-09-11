@@ -11,8 +11,11 @@ if (isset($_GET["index"])) {
 
 $questions = $_SESSION["questions"];
 $options = $questions[$index]->getOptionsArray();
+
 ?>
 
+
+ 
 <div class="question-header">
     <div class="quiz-progress-container">
         <div class="countdown"></div>
@@ -25,9 +28,9 @@ $options = $questions[$index]->getOptionsArray();
 </div>
 
 <div class="question">
-    <p class="p-question">
-        <?= $questions[$index]->getQuestion() ?>
-    </p>
+    <div class="question-img">
+        <img src="<?= $questions[$index]->getImage()?>" alt="" style="width: 300px">
+    </div>
 
     <div class="options">
         <?php for($i=0; $i<=count($options)-1; $i++):?>

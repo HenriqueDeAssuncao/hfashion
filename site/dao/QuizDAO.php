@@ -165,6 +165,7 @@ class QuizDAO implements QuizDAOInterface
             $question->setAnswer($item["answer"]);
             $question->setOptions($item["options"]);
             $question->setQuestion($item["question"]);
+            $question->setImage($item["image"]);
             $question->setQuestionId($item["question_id"]);
             $questions[] = $question;
         }

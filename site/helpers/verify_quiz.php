@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . "/../helpers/url.php";
 require_once __DIR__ . "/../models/Message.php";
+require_once __DIR__ . "/../models/Quiz.php";
 require_once __DIR__ . "/../dao/QuizDAO.php";
 
 $message = new Message($CURRENT_URL);
@@ -9,6 +10,7 @@ if (!empty($_SESSION["quizToken"])) {
     $quizToken = $_SESSION["quizToken"];
 
     $quizDao = new QuizDAO($conn, $CURRENT_URL);
+    $Quiz = new Quiz($message);
     $status = $quizDao->getQuizStatusByToken($quizToken);
 
     if ($status) {

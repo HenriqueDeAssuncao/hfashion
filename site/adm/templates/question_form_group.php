@@ -7,6 +7,11 @@
     </div>
 
     <div class="form-group">
+        <label for="question-image">Imagem:</label>
+        <input type="file" name="images[]" class="js-inputs">
+    </div>
+
+    <div class="form-group">
         <div>
             <label for="answers[]">Selecione a alternativa correta:</label>
             <select name="answers[]" class="js-inputs">
