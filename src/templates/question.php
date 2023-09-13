@@ -14,8 +14,6 @@ $options = $questions[$index]->getOptionsArray();
 
 ?>
 
-
- 
 <div class="question-header">
     <div class="quiz-progress-container">
         <div class="countdown"></div>
@@ -28,6 +26,9 @@ $options = $questions[$index]->getOptionsArray();
 </div>
 
 <div class="question">
+
+    <p><?=$questions[$index]->getQuestion()?></p>
+
     <div class="question-img">
         <img src="<?= $questions[$index]->getImage()?>" alt="" style="width: 300px">
     </div>

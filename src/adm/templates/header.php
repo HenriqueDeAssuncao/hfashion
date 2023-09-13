@@ -49,6 +49,7 @@ $Adm = new Adm($CURRENT_URL);
             <li><a href="<?= $CURRENT_URL ?>/editor.php">Novo artigo</a></li>
             <li><a href="#">Meus quizzes</a></li>
             <li><a href="#">Meus artigos</a></li>
+            <li><a href="#">Painel</a></li>
           </ul>
         </ul>
       </nav>
