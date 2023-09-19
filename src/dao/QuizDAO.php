@@ -101,7 +101,7 @@ class QuizDAO implements QuizDAOInterface
     public function findUserQuizData($quizId, $userId)
     {
         $stmt = $this->conn->prepare("SELECT * FROM users_answer_questions WHERE 
-            quiz_status = 1 and quiz_id = :quiz_id and user_id = :user_id"
+            quiz_id = :quiz_id and user_id = :user_id"
         );
         $stmt->bindParam(":quiz_id", $quizId);
         $stmt->bindParam(":user_id", $userId);

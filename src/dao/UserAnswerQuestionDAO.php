@@ -96,10 +96,18 @@ class UserAnswerQuestionDAO implements UserAnswerQuestionDAOInterface
         $tries = $this->getTries($userId, $quizId);
         $finalTries = $tries + 1;
 
+        if ($finalTries >= 9) {
+            $quizStatus = 0;
+        } else {
+            $quizStatus = 1;
+        }
+
         $stmt = $this->conn->prepare("UPDATE users_answer_questions SET
                 score = :score,
                 tries = :tries,
-                score_portion = :score_portion
+                score_portion = :score_portion,
+                quiz_status = :quiz_status
+
                 WHERE user_id = :user_id AND quiz_id = :quiz_id AND quiz_status = 1
             ");
 
@@ -108,6 +116,7 @@ class UserAnswerQuestionDAO implements UserAnswerQuestionDAOInterface
         $stmt->bindParam(":score_portion", $scorePortion);
         $stmt->bindParam(":user_id", $userId);
         $stmt->bindParam(":quiz_id", $quizId);
+        $stmt->bindParam(":quiz_status", $quizStatus);
 
         $stmt->execute();
     }
@@ -165,10 +174,11 @@ class UserAnswerQuestionDAO implements UserAnswerQuestionDAOInterface
     }
     public function sortQuizRanking($quizRanking)
     {
-        function compareByScore($a, $b) {
-            return $b->getScore()- $a->getScore();
+        function compareByScore($a, $b)
+        {
+            return $b->getScore() - $a->getScore();
         }
-        
+
         // Ordenar o array de objetos com base na pontuação
         usort($quizRanking, "compareByScore");
 

@@ -14,7 +14,7 @@ $quizzes = $quizDao->getQuizzes($userId);
 
 ?>
 
-<link rel="stylesheet" type="text/css" href="<?=$CURRENT_URL?>/css/quizzes.css">
+<link rel="stylesheet" type="text/css" href="<?= $CURRENT_URL ?>/css/quizzes.css">
 
 <!-- Corpo da página -->
 
@@ -29,43 +29,48 @@ $quizzes = $quizDao->getQuizzes($userId);
     </div>
 
     <?php if (count($quizzes) > 0): ?>
-        <div id="topics">   
-            <?php foreach ($quizzes as $quiz): ?>
+        <?php foreach ($quizzes as $quiz): ?>
+            <?php
+            //Componentes da URL do quiz
+            $quizToken = $quiz->getQuizToken();
+            $questionsNumber = $quiz->getQuestionsNumber();
+            $questionWeight = $quiz->getQuestionWeight();
 
-                <?php
-                    $tries = $quiz->getTries();
-                    $status = $quiz->getQuizStatus();
-                    if ($tries < 2) {
-                        //Componentes da URL do quiz
-                        $quizToken = $quiz->getQuizToken();
-                        $questionsNumber = $quiz->getQuestionsNumber();
-                        $questionWeight = $quiz->getQuestionWeight();
+            //Montando a URL do quiz
+            $quizUrl = "quiz.php?token=$quizToken&n=$questionsNumber&w=$questionWeight";
 
-                        //Montando a URL do quiz
-                        $quizUrl = "quiz.php?token=$quizToken&n=$questionsNumber&w=$questionWeight";
-                        $imgStatus = "done.png";
+            $status = $quiz->getQuizStatus();
 
-                    } else {
-                        $quizUrl = "";
-                        $imgStatus = "block.png";
-                    }
-                ?>
+            if ($status) {
+                $imgStatus = "play.png";
+            } else {
+                $tries = $quiz->getTries();
+                if ($tries >= 9) {
+                    $imgStatus = "done.png";
+                } else {
+                    $imgStatus = "block.png";
+                }
+            }
+            ?>
 
-                <?=$status?>
-
+            <div class="topics">
                 <a class="card" href="<?= $CURRENT_URL ?>/<?= $quizUrl ?>">
-                    <img id="image" src="<?= $CURRENT_URL ?>/<?= $quiz->getIconPath(); ?>">
-                    <div id="icon">
-                        <img id="status" src="<?= $CURRENT_URL ?>/img/quizzes/<?=$imgStatus?>"/>
+                    <img class="image" src="<?= $CURRENT_URL ?>/<?= $quiz->getIconPath(); ?>" alt="Ícone do quiz">
+                    <div class="icon">
+                        <img class="status" src="<?= $CURRENT_URL ?>/img/quizzes/<?= $imgStatus ?>" alt="Ícone status do quiz">
                     </div>
-                    <div id="text">
-                        <p id="title"><?= $quiz->getQuizName() ?></p>
-                        <p id="quests"><?= $quiz->getScorePortion() ?></p>
+                    <div class="text">
+                        <p class="title">
+                            <?= $quiz->getQuizName() ?>
+                        </p>
+                        <p class="quests">
+                            <?= $quiz->getScorePortion() ?>
+                        </p>
                     </div>
                 </a>
-             
-            <?php endforeach; ?>
-        </div>
+            </div>
+
+        <?php endforeach; ?>
     <?php endif; ?>
 
     <?php if (count($quizzes) == 0): ?>
