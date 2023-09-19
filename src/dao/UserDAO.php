@@ -198,7 +198,7 @@ class UserDAO implements UserDAOinterface
         $_SESSION['token'] = "";
         $this->message->setMessage("Você fez logout com sucesso.", "success", "signin.php");
     }
-    public function changePassword($user)
+    public function changePassword(User $user)
     {
         if ($user) {
             $password = $user->getPassword();

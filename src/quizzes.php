@@ -13,49 +13,65 @@ $UserQuiz = new UserQuiz($message);
 $quizzes = $quizDao->getQuizzes($userId);
 
 ?>
-<style>
-    img {
-        width: 100px;
-    }
-</style>
+
+<link rel="stylesheet" type="text/css" href="<?=$CURRENT_URL?>/css/quizzes.css">
 
 <!-- Corpo da página -->
 
-<?php
-require_once("templates/message.php");
-?>
+<div id="main">
+    <?php
+    require_once("templates/message.php");
+    ?>
 
-<?php if (count($quizzes) > 0): ?>
-    <?php foreach ($quizzes as $quiz): ?>
-        <button class="btn-quiz-box">
-            <a
-                href="<?= $CURRENT_URL ?>/quiz.php?token=<?= $quiz->getQuizToken() ?>&n=<?= $quiz->getQuestionsNumber() ?>&w=<?= $quiz->getQuestionWeight() ?>">
-                <div class="quiz-box">
-                    <p>
-                        <?= $quiz->getQuizName() ?>
-                    </p>
-                    <img src="<?= $CURRENT_URL ?>/<?= $quiz->getIconPath() ?>" alt="">
-                    <p>
-                        Pontuação:
-                        <?= $quiz->getScore() ?>
-                    </p>
-                    <p>
-                        Acertos:
-                        <?= $quiz->getScorePortion() ?>
-                    </p>
-                    <p>
-                        Tentativas:
-                        <?= $quiz->getTries() ?>
-                    </p>
-                </div>
-            </a>
-        </button>
-    <?php endforeach; ?>
-<?php endif; ?>
+    <div id="maintxt">
+        <p id="maintitle">Complete os Quizzes</p>
+        <p id="maintext">ganhe recompensas!</p>
+    </div>
 
-<?php if (count($quizzes) == 0): ?>
-    <p>Não há quizzes para mostrar</p>
-<?php endif; ?>
+    <?php if (count($quizzes) > 0): ?>
+        <div id="topics">   
+            <?php foreach ($quizzes as $quiz): ?>
+
+                <?php
+                    $tries = $quiz->getTries();
+                    $status = $quiz->getQuizStatus();
+                    if ($tries < 2) {
+                        //Componentes da URL do quiz
+                        $quizToken = $quiz->getQuizToken();
+                        $questionsNumber = $quiz->getQuestionsNumber();
+                        $questionWeight = $quiz->getQuestionWeight();
+
+                        //Montando a URL do quiz
+                        $quizUrl = "quiz.php?token=$quizToken&n=$questionsNumber&w=$questionWeight";
+                        $imgStatus = "done.png";
+
+                    } else {
+                        $quizUrl = "";
+                        $imgStatus = "block.png";
+                    }
+                ?>
+
+                <?=$status?>
+
+                <a class="card" href="<?= $CURRENT_URL ?>/<?= $quizUrl ?>">
+                    <img id="image" src="<?= $CURRENT_URL ?>/<?= $quiz->getIconPath(); ?>">
+                    <div id="icon">
+                        <img id="status" src="<?= $CURRENT_URL ?>/img/quizzes/<?=$imgStatus?>"/>
+                    </div>
+                    <div id="text">
+                        <p id="title"><?= $quiz->getQuizName() ?></p>
+                        <p id="quests"><?= $quiz->getScorePortion() ?></p>
+                    </div>
+                </a>
+             
+            <?php endforeach; ?>
+        </div>
+    <?php endif; ?>
+
+    <?php if (count($quizzes) == 0): ?>
+        <p>Não há quizzes para mostrar</p>
+    <?php endif; ?>
+</div>
 
 <?php
 require_once "templates/footer.php";

@@ -139,7 +139,7 @@ class QuizDAO implements QuizDAOInterface
                 $userQuizData = $this->findUserQuizData($quizId, $userId);
 
                 if (isset($userQuizData)) {
-                    $UserQuiz->setScorePortion($userQuizData["quiz_status"]);
+                    $UserQuiz->setQuizStatus($userQuizData["quiz_status"]);
                     $UserQuiz->setScore($userQuizData["score"]);
                     $UserQuiz->setScorePortion($userQuizData["score_portion"]);
                     $UserQuiz->setTries($userQuizData["tries"]);
