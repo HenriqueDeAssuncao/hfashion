@@ -117,6 +117,25 @@ class QuizDAO implements QuizDAOInterface
             return $userQuizData;
         }
     }
+    public function getQuiz($quizId)
+    {
+        $stmt = $this->conn->prepare("SELECT * FROM quizzes WHERE quiz_id = :quiz_id");
+        $stmt->bindParam(":quiz_id", $quizId);
+        $stmt->execute();
+        $quiz = $stmt->fetch(PDO::FETCH_ASSOC);
+        $stmt = "";
+
+        $Quiz = new Quiz($this->message);
+        
+        $Quiz->setQuizId($quiz["quiz_id"]);
+        $Quiz->setQuizName($quiz["quiz_name"]);
+        $Quiz->setQuizDescription($quiz["quiz_description"]);
+        $Quiz->setQuestionsNumber($quiz["questions_number"]);
+        $Quiz->setQuestionWeight($quiz["question_weight"]);
+        $Quiz->setQuizToken($quiz["quiz_token"]);
+        $Quiz->setIconPath($quiz["icon"]);
+        return $Quiz;
+    }
     public function getQuizzes($userId)
     {
         $stmt = $this->conn->prepare("SELECT * FROM quizzes WHERE status = 1");

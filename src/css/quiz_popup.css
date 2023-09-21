@@ -1,0 +1,114 @@
+/* For mobile phones: */
+/*fonts:*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@700&display=swap');
+
+.container-quiz-popup{
+  background: linear-gradient(180deg, #C02425 54%, #7B0B0A 100%);
+  position: fixed;
+  z-index: 1;
+  top: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 0 auto;
+}
+
+.icon-popup {
+  position: absolute;
+  left: 20px;
+  width: 298px;
+  height: 23px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin: auto;
+}
+
+.status-popup {
+  width: 30px;
+  height: 30px;
+}
+
+.mainimage-popup {
+  width: 298px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.image-popup {
+  width: 300px;
+  height: 300px;
+  left: 152px;
+  bottom: 36px;
+  margin: auto;
+  margin-top: 60px;
+}
+
+.text-popup {
+  width: 298px;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.level-popup {
+  color: white;
+  font-size: 16px;
+  font-family: Poppins;
+  font-weight: 600;
+  word-wrap: break-word;
+  margin: auto;
+}
+
+.title-popup {
+  color: white;
+  font-size: 22px;
+  font-family: Roboto;
+  font-weight: 600;
+  word-wrap: break-word;
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 25px;
+}
+
+.description-popup {
+  color: white;
+  font-size: 16px;
+  font-family: Poppins;
+  font-weight: 600;
+  word-wrap: break-word;
+  margin: auto;
+  margin-bottom: 56px;
+}
+
+.button-popup {
+  width: 298px;
+  height: 57px;
+  margin: auto;
+}
+
+.start {
+  width: 298px;
+  height: 57px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-family: Poppins;
+  font-weight: 600;
+  word-wrap: break-word;
+  color: #C02425;
+  background-color: #E7E7E7;
+  border: none;
+  border-radius: 10px;
+}
+
+.start:hover {
+  width: 299px;
+  height: 58px;
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.25)
+}

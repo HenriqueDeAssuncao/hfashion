@@ -8,7 +8,7 @@ if (!empty($userData)) {
         $quizToken = $_GET["token"];
         $quizDao = new QuizDAO($conn, $CURRENT_URL);
         $userAnswerQuestionDao = new UserAnswerQuestionDAO($conn, $CURRENT_URL);
-    
+
         $quizId = $quizDao->findQuizIdByToken($quizToken);
         if ($userAnswerQuestionDao->isQuizAvailable($userData->getId(), $quizId)) {
             $questions = $quizDao->getQuestions($quizToken);
@@ -26,11 +26,12 @@ if (!empty($userData)) {
 
 ?>
 
+<link rel="stylesheet" type="text/css" href="<?= $CURRENT_URL ?>/css/quiz.css">
+
 <div class="container-quiz">
     <div class="container-question">
         <?php include_once("templates/question.php") ?>
     </div>
-    <button class="btn-continue">Continuar</button>
 </div>
 
 <script src="<?= $CURRENT_URL ?>/script/questions.js"></script>

@@ -11,37 +11,42 @@ if (isset($_GET["index"])) {
 
 $questions = $_SESSION["questions"];
 $options = $questions[$index]->getOptionsArray();
+$questionsNumber = count($questions);
 
 ?>
 
-<div class="question-header">
-    <div class="quiz-progress-container">
-        <div class="countdown"></div>
-        <div class="quiz-progress"></div>
+<div class="main">
+
+    <div class="icon">
+        <!-- Botão para voltar -->
+        <a href="" class="status"></a>
+        <!-- Barra de progresso -->
+        <div class="timer"></div>
     </div>
 
-    <div class="container-question">
-
-    </div>
-</div>
-
-<div class="question">
-
-    <p><?=$questions[$index]->getQuestion()?></p>
-
-    <div class="question-img">
-        <img src="<?= $questions[$index]->getImage()?>" alt="" style="width: 300px">
+    <div class="mainimage">
+        <img class="image" src="<?= $questions[$index]->getImage() ?>" alt="Imagem da pergunta">
     </div>
 
-    <div class="options">
-        <?php for($i=0; $i<=count($options)-1; $i++):?>
-            <div>
-                <div class="container-option">
-                    <label for="option" class="inputs-options"></label>
-                    <input name="option" class="inputs-options" value="<?=$i?>" type="radio">
-                </div>
-                <p class="p-option"><?=$options[$i]?></p>
-            </div>
-        <?php endfor;?>
+    <div class="text">
+        <p class="level">Questão
+            <?= $index + 1 ?> de
+            <?= $questionsNumber ?>
+        </p>
+        <p class="title">
+            <?= $questions[$index]->getQuestion() ?>
+        </p>
     </div>
+
+    <div class="button">
+        <?php for ($i = 0; $i <= count($options) - 1; $i++): ?>
+            <label class="neutrobutton" for="input<?= $i ?>" class="inputs-options">
+                <p>
+                    <?= $options[$i] ?>
+                </p>
+            </label>
+            <input id="input<?= $i ?>" name="option" class="inputs-options" value="<?= $i ?>" type="radio">
+        <?php endfor; ?>
+    </div>
+
 </div>

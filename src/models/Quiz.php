@@ -81,6 +81,7 @@ interface QuizDAOInterface
     public function getQuestionsNumber($quizId);
     public function update($quiz_id);
     public function findUserQuizData($quizId, $userId);
+    public function getQuiz($quizId);
     public function getQuizzes($userId);
     public function getQuestions($quizToken); //Retorna um array com os objetos questions
 }

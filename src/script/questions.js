@@ -1,5 +1,4 @@
 const containerQuestion = document.querySelector(".container-question");
-const btnContinue = document.querySelector(".btn-continue");
 let quizUrl = document.location.href;
 let questionsNumber = new URL(quizUrl).searchParams.get('n');
 let questionWeight = new URL(quizUrl).searchParams.get('w');
@@ -23,7 +22,6 @@ function handleNextQuestion() {
     }
     index++;
     goNextQuestion();
-    console.log(userAnswers);
 }
 
 function goNextQuestion() {
@@ -36,11 +34,23 @@ function goNextQuestion() {
         })
         .then((body) => {
             containerQuestion.innerHTML = body;
+        })
+        .then(() => {
+            getInputsOptions();
         });
+        
     } else {
         stringUserAnswers = userAnswers.toString();
         window.location.href = `process/score_process.php?n=${questionsNumber}&a=${stringUserAnswers}&w=${questionWeight}`; 
     }
+    
 }
 
-btnContinue.addEventListener("click", handleNextQuestion);
+function getInputsOptions() {
+    let inputsOptions = document.querySelectorAll(".inputs-options");
+    inputsOptions.forEach((inputOption) => {
+        inputOption.addEventListener("click", handleNextQuestion);
+    })
+}
+
+getInputsOptions();

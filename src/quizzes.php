@@ -23,6 +23,10 @@ $quizzes = $quizDao->getQuizzes($userId);
     require_once("templates/message.php");
     ?>
 
+    <div class="container-quiz-popup Container Hidden">
+                
+    </div>
+    
     <div id="maintxt">
         <p id="maintitle">Complete os Quizzes</p>
         <p id="maintext">ganhe recompensas!</p>
@@ -31,13 +35,6 @@ $quizzes = $quizDao->getQuizzes($userId);
     <?php if (count($quizzes) > 0): ?>
         <?php foreach ($quizzes as $quiz): ?>
             <?php
-            //Componentes da URL do quiz
-            $quizToken = $quiz->getQuizToken();
-            $questionsNumber = $quiz->getQuestionsNumber();
-            $questionWeight = $quiz->getQuestionWeight();
-
-            //Montando a URL do quiz
-            $quizUrl = "quiz.php?token=$quizToken&n=$questionsNumber&w=$questionWeight";
 
             $status = $quiz->getQuizStatus();
 
@@ -54,7 +51,8 @@ $quizzes = $quizDao->getQuizzes($userId);
             ?>
 
             <div class="topics">
-                <a class="card" href="<?= $CURRENT_URL ?>/<?= $quizUrl ?>">
+                <a class="card" href="<?= $CURRENT_URL ?>/<?= $quizUrl ?>" data-parameter="<?= $quiz->getQuizId(); ?>">
+                    <input class="quizId" type="hidden" value="<?= $quiz->getQuizId(); ?>">
                     <img class="image" src="<?= $CURRENT_URL ?>/<?= $quiz->getIconPath(); ?>" alt="Ícone do quiz">
                     <div class="icon">
                         <img class="status" src="<?= $CURRENT_URL ?>/img/quizzes/<?= $imgStatus ?>" alt="Ícone status do quiz">
@@ -77,6 +75,8 @@ $quizzes = $quizDao->getQuizzes($userId);
         <p>Não há quizzes para mostrar</p>
     <?php endif; ?>
 </div>
+
+<script src="<?= $CURRENT_URL ?>/script/quiz_popup.js"></script>
 
 <?php
 require_once "templates/footer.php";
