@@ -81,6 +81,7 @@ nav.nav {
 
 .nav-icons button {
     font-size: 25px;
+    cursor: pointer;
 }
 
 .nav-icons .btn-close {

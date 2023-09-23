@@ -1,5 +1,5 @@
 <?php
-require_once("templates/header.php");
+require_once("templates/head.php");
 ?>
 
 <form action="<?= $CURRENT_URL ?>/process/available_quiz_process.php?user=1&quizId=4" method="post">

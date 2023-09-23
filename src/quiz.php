@@ -1,7 +1,18 @@
 <?php
-require_once "templates/header.php";
+
 require_once "dao/QuizDAO.php";
 require_once "dao/UserAnswerQuestionDAO.php";
+require_once "templates/head.php";
+
+?>
+  <!-- Os links de css estão aqui para ficarem dentro do header e carregarem mais rápido! -->
+  <link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/quiz.css">
+
+</head>
+
+<?php
+require_once "templates/header.php";
+
 
 if (!empty($userData)) {
     if (!empty($_GET["token"])) {
@@ -25,8 +36,6 @@ if (!empty($userData)) {
 }
 
 ?>
-
-<link rel="stylesheet" type="text/css" href="<?= $CURRENT_URL ?>/css/quiz.css">
 
 <div class="container-quiz">
     <div class="container-question">

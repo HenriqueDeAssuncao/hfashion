@@ -53,8 +53,3 @@ if (!empty($_SESSION["userForm"])) {
     <link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/global.css">
     <link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/message.css">
     <link rel="shortcut icon" href="<?=$CURRENT_URL?>/img/header/logo-mobile.png" type="image/x-icon">
-</head>
-
-<body>
-
-<div>

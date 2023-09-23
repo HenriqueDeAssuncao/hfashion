@@ -1,11 +1,17 @@
-<link rel="stylesheet" type="text/css" href="css/dashboard_n.css">
+<?php
+
+require_once "models/User.php";
+require_once "templates/head.php";
+
+?>
+  <!-- Os links de css estão aqui para ficarem dentro do header e carregarem mais rápido! -->
+  <link rel="stylesheet" type="text/css" href="css/dashboard_n.css">
+</head>
 
 <?php
-require_once("templates/header.php");
-require_once("models/User.php");
+require_once "templates/header.php";
 $userData = $userDao->verifyToken(true);
 ?>
-
 
 <!-------------------- PERFIL -------------------->
 
@@ -17,8 +23,12 @@ $userData = $userDao->verifyToken(true);
       <img src="img/dashboard/cadastro.png" alt="" id="img_profile">
     </div>
 
-    <p class="style-maintext"><?= $userData->getNickname() ?></p>
-    <p class="style-regulartext"><?= $userData->getEmail() ?></p>
+    <p class="style-maintext">
+      <?= $userData->getNickname() ?>
+    </p>
+    <p class="style-regulartext">
+      <?= $userData->getEmail() ?>
+    </p>
     <!--
      <a href="http://localhost/hfashion/site/edit_profile.php" id="link_edit_profile">
       editar perfil
@@ -173,8 +183,6 @@ $userData = $userDao->verifyToken(true);
 
   </div> <!-- FECHA INFO_CONQUISTAS -->
 </div> <!-- FECHA CONTAINER_CONQUISTAS -->
-
-
 
 
 <?php

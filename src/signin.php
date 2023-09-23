@@ -1,14 +1,15 @@
 <?php
 require_once("templates/header_auth.php");
 ?>
+    <link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/login.css">
+</head>
 
-<link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/login.css">
+<body>
+    <a href="<?= $CURRENT_URL ?>/index.php">
+        <img class="back" src="<?= $CURRENT_URL ?>/img/login/Back.svg" alt="">
+    </a>
 
-<a href="<?= $CURRENT_URL ?>/index.php">
-    <img class="back" src="<?= $CURRENT_URL ?>/img/login/Back.svg" alt="">
-</a>
-
-<div style="display:inline-flexbox" class="Flex Full-height">
+    <div style="display:inline-flexbox" class="Flex Full-height">
 
         <div style="display:inline-flexbox" id="register-container">
             <img src="<?= $CURRENT_URL ?>/img/login/titulo.svg" style="height:15px" alt="">
@@ -22,11 +23,13 @@ require_once("templates/header_auth.php");
                 <input type="hidden" name="type" value="login">
                 <div class="form-group">
                     <label class="email" for="nickname_email">E-mail ou Apelido:</label>
-                    <input type="text" class="form-input" id="nickname_email" name="nickname_email" value="<?= $nickname_email ?>">
+                    <input type="text" class="form-input" id="nickname_email" name="nickname_email"
+                        value="<?= $nickname_email ?>">
                 </div>
                 <div class="form-group flex-2">
                     <label for="password">Senha:</label>
-                    <input type="password" placeholder="8+ caracteres" class="form-input" id="password" name="password" value="<?= $password ?>">
+                    <input type="password" placeholder="8+ caracteres" class="form-input" id="password" name="password"
+                        value="<?= $password ?>">
                 </div>
                 <div class="form-container">
                     <input type="submit" class="btn-con" value="Conectar">
@@ -45,6 +48,6 @@ require_once("templates/header_auth.php");
             </div>
         </div>
 
-</div>
-
-<script src="<?= $CURRENT_URL ?>/script/message.js"></script>
+    </div>
+    <script src="<?= $CURRENT_URL ?>/script/message.js"></script>
+</body>

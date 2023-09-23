@@ -1,9 +1,19 @@
 <?php
+require_once "templates/head.php";
+?>
+  <!-- Os links de css estão aqui para ficarem dentro do header e carregarem mais rápido! -->
+  <link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/index.css">
+  <link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/index_header.css">
+</head>
+
+<?php
 require_once "templates/header.php";
 ?>
-<!-- FOTO DE FUNDO -->
+
 </div>
-<div id="container-banner" style="background-image: url(<?= $CURRENT_URL ?>/img/index/banner.svg); width: 100%;; height:100%;">
+
+<div id="container-banner"
+  style="background-image: url(<?= $CURRENT_URL ?>/img/index/banner.svg); width: 100%;; height:100%;">
   <div id="container-logo">
     <p id="txt_logo_high">CONHEÇA A MODA DE</p>
     <img src="img/index/logo_high.svg" id="img_logo_high">
@@ -129,159 +139,174 @@ require_once "templates/header.php";
 <!-- LINHA DO TEMPO -->
 
 <!-- ABRE DIV DE LIMITAÇÃO -->
-  <div id="div-info-timeline" class="hidden">
-      <!-- TITULO E SUBTITULO -->
-        <p class="style-titles-main" id="align-aboutus">
-          Moda.
-        </p>
-        <p class="style-regulartext">
-          Veja os principais acontecimentos na história da moda.
-        </p>
+<div id="div-info-timeline" class="hidden">
+  <!-- TITULO E SUBTITULO -->
+  <p class="style-titles-main" id="align-aboutus">
+    Moda.
+  </p>
+  <p class="style-regulartext">
+    Veja os principais acontecimentos na história da moda.
+  </p>
 
-      <!-- DIV LINK TIMELINE -->
-      <div id="div-timeline" style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/teatro.svg); background-repeat: no-repeat;">
-          <div id="div-text-timeline">
-            <p class="style-minimal" style="color: #FFF">1/4</p><br>
-            <div id="timeline-text-limitacion">
-             <p id="style-timeline" >Linha do tempo</p>
-            </div>
-            <br>
-            <p class="style-minimal" style="color: #FFF">textotextotexto</p>
-          </div>
+  <!-- DIV LINK TIMELINE -->
+  <div id="div-timeline"
+    style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/teatro.svg); background-repeat: no-repeat;">
+    <div id="div-text-timeline">
+      <p class="style-minimal" style="color: #FFF">1/4</p><br>
+      <div id="timeline-text-limitacion">
+        <p id="style-timeline">Linha do tempo</p>
       </div>
-
+      <br>
+      <p class="style-minimal" style="color: #FFF">textotextotexto</p>
+    </div>
   </div>
 
-  <div class= "container-cursos" id="hiddenpc">
-    <div class="div-info-cursos">
-      <!-- TITULO E SUBTITULO -->
-      <div class="div-text-cursos">
-        <p class="style-titles-main" id="align-aboutus">
-          História da Moda.
-        </p>
-        <p class="style-regulartext">
-          Veja a evolução da moda ao longo dos anos.
-        </p>
-      </div>
+</div>
 
-      <!-- DIV CARDS -->
-      <div class="div-cards-cursos-influ js-scroll">
-        <div class="card">
-          <div class="div-img-card" style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/teat.svg); background-repeat: no-repeat;"></div>
-          <div class="div-text-card">
-            <p class="style-minimal">1/1</p>
-            <p class="style-regulartext">Linha do Tempo</p>
-            <p class="style-minimal">textotextotexto</p>
-          </div>
-        </div>
-
-      </div>
-      </div>
+<div class="container-cursos" id="hiddenpc">
+  <div class="div-info-cursos">
+    <!-- TITULO E SUBTITULO -->
+    <div class="div-text-cursos">
+      <p class="style-titles-main" id="align-aboutus">
+        História da Moda.
+      </p>
+      <p class="style-regulartext">
+        Veja a evolução da moda ao longo dos anos.
+      </p>
     </div>
 
-    <!-- ESTETICAS -->
-    <div class= "container-cursos">
-    <div class="div-info-cursos">
-      <!-- TITULO E SUBTITULO -->
-      <div class="div-text-cursos">
-        <p class="style-titles-main" id="align-aboutus">
-          Estética.
-        </p>
-        <p class="style-regulartext">
-          Veja as principais estéticas de High School.
-        </p>
+    <!-- DIV CARDS -->
+    <div class="div-cards-cursos-influ js-scroll">
+      <div class="card">
+        <!-- <div class="div-img-card"
+          style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/teat.svg); background-repeat: no-repeat;">
+        </div> -->
+        <div class="div-text-card">
+          <p class="style-minimal">1/1</p>
+          <p class="style-regulartext">Linha do Tempo</p>
+          <p class="style-minimal">textotextotexto</p>
+        </div>
       </div>
 
-      <!-- DIV CARDS -->
-      <div class="div-cards-cursos js-scroll">
-        <div class="card">
-          <div class="div-img-card" style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/street.svg); background-repeat: no-repeat;"></div>
-          <div class="div-text-card">
-            <p class="style-minimal">1/4</p>
-            <p class="style-regulartext">StreetWear</p>
-            <p class="style-minimal">textotextotexto</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="div-img-card" style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/y2k.svg); background-repeat: no-repeat;"></div>
-          <div class="div-text-card">
-            <p class="style-minimal">2/4</p>
-            <p class="style-regulartext">Y2K</p>
-            <p class="style-minimal">textotextotexto</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="div-img-card" style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/mc.svg); background-repeat: no-repeat;"></div>
-          <div class="div-text-card">
-            <p class="style-minimal">3/4</p>
-            <p class="style-regulartext">McBling</p>
-            <p class="style-minimal">textotextotexto</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="div-img-card" style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/uni.svg); background-repeat: no-repeat;"></div>
-          <div class="div-text-card">
-            <p class="style-minimal">4/4</p>
-            <p class="style-regulartext">Uniforme Escolar</p>
-            <p class="style-minimal">textotextotexto</p>
-          </div>
-        </div>
-
-      </div>
     </div>
+  </div>
+</div>
+
+<!-- ESTETICAS -->
+<div class="container-cursos">
+  <div class="div-info-cursos">
+    <!-- TITULO E SUBTITULO -->
+    <div class="div-text-cursos">
+      <p class="style-titles-main" id="align-aboutus">
+        Estética.
+      </p>
+      <p class="style-regulartext">
+        Veja as principais estéticas de High School.
+      </p>
     </div>
 
-    <!-- INFLUENCIA -->
-    <div class= "container-cursos">
-    <div class="div-info-cursos">
-      <!-- TITULO E SUBTITULO -->
-      <div class="div-text-cursos">
-        <p class="style-titles-main" id="align-aboutus">
-          Influência.
-        </p>
-        <p class="style-regulartext">
-          Veja as principais influências de High School.
-        </p>
+    <!-- DIV CARDS -->
+    <div class="div-cards-cursos js-scroll">
+      <div class="card">
+        <!-- <div class="div-img-card"
+          style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/street.svg); background-repeat: no-repeat;">
+        </div> -->
+        <div class="div-text-card">
+          <p class="style-minimal">1/4</p>
+          <p class="style-regulartext">StreetWear</p>
+          <p class="style-minimal">textotextotexto</p>
+        </div>
       </div>
 
-      <!-- DIV CARDS -->
-      <div class="div-cards-cursos-influ js-scroll">
-        <div class="card">
-          <div class="div-img-card" style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/musica.svg); background-repeat: no-repeat;"></div>
-          <div class="div-text-card">
-            <p class="style-minimal">1/3</p>
-            <p class="style-regulartext">Música</p>
-            <p class="style-minimal">textotextotexto</p>
-          </div>
+      <div class="card">
+        <!-- <div class="div-img-card"
+          style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/y2k.svg); background-repeat: no-repeat;">
+        </div> -->
+        <div class="div-text-card">
+          <p class="style-minimal">2/4</p>
+          <p class="style-regulartext">Y2K</p>
+          <p class="style-minimal">textotextotexto</p>
         </div>
-
-        <div class="card">
-          <div class="div-img-card" style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/esporte.svg); background-repeat: no-repeat;"></div>
-          <div class="div-text-card">
-            <p class="style-minimal">2/3</p>
-            <p class="style-regulartext">Esporte</p>
-            <p class="style-minimal">textotextotexto</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="div-img-card" style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/cinema.svg); background-repeat: no-repeat;"></div>
-          <div class="div-text-card">
-            <p class="style-minimal">3/3</p>
-            <p class="style-regulartext">Cinema</p>
-            <p class="style-minimal">textotextotexto</p>
-          </div>
-        </div>
-
       </div>
+
+      <div class="card">
+        <!-- <div class="div-img-card"
+          style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/mc.svg); background-repeat: no-repeat;">
+        </div> -->
+        <div class="div-text-card">
+          <p class="style-minimal">3/4</p>
+          <p class="style-regulartext">McBling</p>
+          <p class="style-minimal">textotextotexto</p>
+        </div>
       </div>
+
+      <div class="card">
+        <!-- <div class="div-img-card"
+          style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/uni.svg); background-repeat: no-repeat;">
+        </div> -->
+        <div class="div-text-card">
+          <p class="style-minimal">4/4</p>
+          <p class="style-regulartext">Uniforme Escolar</p>
+          <p class="style-minimal">textotextotexto</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- INFLUENCIA -->
+<div class="container-cursos">
+  <div class="div-info-cursos">
+    <!-- TITULO E SUBTITULO -->
+    <div class="div-text-cursos">
+      <p class="style-titles-main" id="align-aboutus">
+        Influência.
+      </p>
+      <p class="style-regulartext">
+        Veja as principais influências de High School.
+      </p>
     </div>
 
-<link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/index.css">
-<link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/index_header.css">
+    <!-- DIV CARDS -->
+    <div class="div-cards-cursos-influ js-scroll">
+      <div class="card">
+        <!-- <div class="div-img-card"
+          style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/musica.svg); background-repeat: no-repeat;">
+        </div> -->
+        <div class="div-text-card">
+          <p class="style-minimal">1/3</p>
+          <p class="style-regulartext">Música</p>
+          <p class="style-minimal">textotextotexto</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <!-- <div class="div-img-card"
+          style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/esporte.svg); background-repeat: no-repeat;">
+        </div> -->
+        <div class="div-text-card">
+          <p class="style-minimal">2/3</p>
+          <p class="style-regulartext">Esporte</p>
+          <p class="style-minimal">textotextotexto</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <!-- <div class="div-img-card"
+          style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/cinema.svg); background-repeat: no-repeat;">
+        </div> -->
+        <div class="div-text-card">
+          <p class="style-minimal">3/3</p>
+          <p class="style-regulartext">Cinema</p>
+          <p class="style-minimal">textotextotexto</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 <script src="<?= $CURRENT_URL ?>/script/index.js"></script>
 
 <?php

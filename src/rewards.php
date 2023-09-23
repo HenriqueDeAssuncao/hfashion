@@ -1,5 +1,5 @@
 <?php
-    require_once "templates/header.php";
+    require_once "templates/head.php";
     if (!empty($userData)) {
         if (!empty($_SESSION["rewards"]) && $_SESSION["rewards"]["auth"] === "true") {
             $rewards = $_SESSION["rewards"];

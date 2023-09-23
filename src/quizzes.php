@@ -1,20 +1,25 @@
 <?php
 
-require_once "templates/header.php";
 require_once "models/Quiz.php";
 require_once "dao/QuizDAO.php";
-
 require_once "models/UserQuiz.php";
 require_once "dao/QuestionDAO.php";
 
+require_once "templates/head.php";
+
+?>
+    <!-- Os links de css estão aqui para ficarem dentro do header e carregarem mais rápido! -->
+    <link rel="stylesheet" type="text/css" href="<?= $CURRENT_URL ?>/css/quizzes.css">
+</head>
+
+<?php
+
+require_once "templates/header.php";
 $quizDao = new QuizDAO($conn, $CURRENT_URL);
 $UserQuiz = new UserQuiz($message);
-
 $quizzes = $quizDao->getQuizzes($userId);
 
 ?>
-
-<link rel="stylesheet" type="text/css" href="<?= $CURRENT_URL ?>/css/quizzes.css">
 
 <!-- Corpo da página -->
 
@@ -24,9 +29,9 @@ $quizzes = $quizDao->getQuizzes($userId);
     ?>
 
     <div class="container-quiz-popup Container Hidden">
-                
+
     </div>
-    
+
     <div id="maintxt">
         <p id="maintitle">Complete os Quizzes</p>
         <p id="maintext">ganhe recompensas!</p>
