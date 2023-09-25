@@ -1,8 +1,15 @@
 <?php
-require_once("templates/header.php");
-require_once("models/User.php");
-require_once("dao/UserDAO.php");
-require_once("dao/UserAvatarDAO.php");
+require_once "templates/head.php";
+?>
+  <!-- Os links de css estão aqui para ficarem dentro do header e carregarem mais rápido! -->
+  <link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/edit_profile.css">
+</head>
+
+<?php
+
+require_once "models/User.php";
+require_once "dao/UserDAO.php";
+require_once "dao/UserAvatarDAO.php";
 
 $user = new User();
 $userDao = new UserDAO($conn, $CURRENT_URL);
@@ -10,6 +17,8 @@ $userData = $userDao->verifyToken(true);
 
 $UserAvatarDao = new UserAvatarDAO($conn, $CURRENT_URL);
 $userAvatars = $UserAvatarDao->findAvatars($userData->getId());
+require_once "templates/header.php";
+
 ?>
 
 <style>

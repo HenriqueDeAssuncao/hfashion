@@ -14,10 +14,11 @@ require_once "templates/head.php";
 
 <?php
 
-require_once "templates/header.php";
 $quizDao = new QuizDAO($conn, $CURRENT_URL);
 $UserQuiz = new UserQuiz($message);
 $quizzes = $quizDao->getQuizzes($userId);
+
+require_once "templates/header.php";
 
 ?>
 

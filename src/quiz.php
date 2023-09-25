@@ -11,8 +11,6 @@ require_once "templates/head.php";
 </head>
 
 <?php
-require_once "templates/header.php";
-
 
 if (!empty($userData)) {
     if (!empty($_GET["token"])) {
