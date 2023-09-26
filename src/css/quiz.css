@@ -16,6 +16,13 @@ body {
   width: 100%;
 }
 
+.progress-bar {
+  border: 1px solid black;
+  height: 60px;
+  background-color: blue;
+  display: inline-block;
+  transition: .5s;
+}
 
 .icon {
   width: 298px;
