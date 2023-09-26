@@ -5,13 +5,9 @@ require_once __DIR__ . "/../helpers/url.php";
 
 if (isset($_GET["index"])) {
     $index = $_GET["index"];
-    $width = $_GET["width"];
 } else {
     $index = 0;
-    $width = "0%";
 }
-
-
 
 $questions = $_SESSION["questions"];
 $options = $questions[$index]->getOptionsArray();
@@ -22,7 +18,7 @@ $questionsNumber = count($questions);
 <div class="main">
 
     <div class="Container">
-        <div class="progress-bar" style="width: <?= $width ?>"></div>
+        <div class="progress-bar"></div>
     </div>
 
     <div class="mainimage">

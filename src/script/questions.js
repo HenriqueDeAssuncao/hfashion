@@ -7,17 +7,16 @@ let index = 0;
 let userAnswers = [];
 
 //Variável para a barra de progresso
-let progressBar = document.querySelector(".progress-bar");
 let progressBarWidth = 0;
-let increasingValue = 100/questionsNumber;
+let increasingValue = 100 / questionsNumber;
+let progressBar = document.querySelector(".progress-bar");
 
 //Função para a barra de progresso
 function increaseProgressBar() {
-    
     progressBarWidth += increasingValue;
-    let width = `${progressBarWidth}%`;
-    console.log(width);
-    return width;
+
+    // Atualizar o CSS do elemento
+    progressBar.style.width = `${progressBarWidth}%`;
 }
 
 //Funções para percorrer as perguntas
@@ -41,28 +40,30 @@ function handleNextQuestion() {
 }
 
 function goNextQuestion() {
-    let width = increaseProgressBar();
 
-    if (index <= questionsNumber-1) {
-        const questionTemplate = fetch(`./templates/question.php?index=${index}&width=${width}`);
+
+    if (index <= questionsNumber - 1) {
+        const questionTemplate = fetch(`./templates/question.php?index=${index}`);
 
         questionTemplate
-        .then((r) => {
-            return r.text();
-        })
-        .then((body) => {
-            containerQuestion.innerHTML = body;
-        })
-        .then(() => {
-            getInputsOptions();
-        })
-        
-   
+            .then(() => {
+                increaseProgressBar();
+            })
+            .then((r) => {
+                return r.text();
+            })
+            .then((body) => {
+                containerQuestion.innerHTML = body;
+            })
+            .then(() => {
+                getInputsOptions();
+            });
+
     } else {
         stringUserAnswers = userAnswers.toString();
-        window.location.href = `process/score_process.php?n=${questionsNumber}&a=${stringUserAnswers}&w=${questionWeight}`; 
+        window.location.href = `process/score_process.php?n=${questionsNumber}&a=${stringUserAnswers}&w=${questionWeight}`;
     }
-    
+
 }
 
 function getInputsOptions() {
