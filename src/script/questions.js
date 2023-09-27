@@ -6,17 +6,38 @@ let questionWeight = new URL(quizUrl).searchParams.get('w');
 let index = 0;
 let userAnswers = [];
 
-//Variável para a barra de progresso
-let progressBarWidth = 0;
-let increasingValue = 100 / questionsNumber;
+//Variáveis para a barra de progresso e countdown
+let barWidth = 0;
+let width = 100 / questionsNumber; //porcentagem do width que cada questão corresponde
 let progressBar = document.querySelector(".progress-bar");
+const countdownElement = document.querySelector(".countdown");
 
 //Função para a barra de progresso
-function increaseProgressBar() {
-    progressBarWidth += increasingValue;
+function increaseBarWidth() {
+    barWidth += width;
 
-    // Atualizar o CSS do elemento
-    progressBar.style.width = `${progressBarWidth}%`;
+    progressBar.style.width = `${barWidth}%`;
+}
+
+//Funções do timer countdown
+function resetCountdown() {
+    clearInterval(timerInterval);
+    countdownElement.textContent = 10;
+    timerInterval = setInterval(updateCountdown, 1000);
+}
+function updateCountdown() {
+    let timeLeft = parseInt(countdownElement.textContent);
+
+    if (timeLeft > 0) {
+        timeLeft--;
+        countdownElement.textContent = timeLeft;
+    } else {
+        index++;
+        userAnswers.push(-1);
+        goNextQuestion();
+        resetCountdown();
+    }
+
 }
 
 //Funções para percorrer as perguntas
@@ -36,28 +57,38 @@ function handleNextQuestion() {
         return;
     }
     index++;
+
     goNextQuestion();
 }
 
 function goNextQuestion() {
 
-
     if (index <= questionsNumber - 1) {
+
         const questionTemplate = fetch(`./templates/question.php?index=${index}`);
 
         questionTemplate
-            .then(() => {
-                increaseProgressBar();
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Erro na resposta.');
+                }
+                return response;
             })
-            .then((r) => {
-                return r.text();
+            .then((response) => {
+                return response.text();
             })
             .then((body) => {
                 containerQuestion.innerHTML = body;
+                getInputsOptions();
+                increaseBarWidth();
             })
             .then(() => {
-                getInputsOptions();
+                resetCountdown();
+            })
+            .catch((error) => {
+                console.error('Erro na requisição do documento', error);
             });
+
 
     } else {
         stringUserAnswers = userAnswers.toString();
@@ -74,3 +105,5 @@ function getInputsOptions() {
 }
 
 getInputsOptions();
+
+let timerInterval = setInterval(updateCountdown, 1000);

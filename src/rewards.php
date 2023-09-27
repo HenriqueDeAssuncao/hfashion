@@ -1,12 +1,15 @@
 <?php
     require_once "templates/head.php";
     if (!empty($userData)) {
-        if (!empty($_SESSION["rewards"]) && $_SESSION["rewards"]["auth"] === "true") {
+        if (isset($_SESSION["rewards"]) && $_SESSION["rewards"]["auth"] === "true") {
             $rewards = $_SESSION["rewards"];
             $userId = $userData->getId();
     
-            if (!empty($_GET["correct"]) && !empty($_GET["questions"]) && !empty($_GET["score"])) {
+            if (isset($_GET["correct"]) && isset($_GET["questions"]) && isset($_GET["score"])) {
                 $score = $_GET["score"];
+                if (!$score) {
+                    $score = 0;
+                }
                 $rightAnswers = $_GET["correct"];
                 $questionsNumber = $_GET["questions"];
     
@@ -57,7 +60,7 @@
     </div>
 </div>
 
-<p>Parabéns</p>
+<p>Parabéns! Você concluiu o quiz.</p>
 <p>Você acertou <?=$rightAnswers?> de <?=$questionsNumber?> questões</p>
 <p>Você marcou <?=$score?> pontos!</p>
 

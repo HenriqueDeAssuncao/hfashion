@@ -18,6 +18,7 @@ if (!empty($_POST)) {
                 $UserAvatarDao = new UserAvatarDAO($conn, $CURRENT_URL);
                 $UserAvatarDao->registerAvatar($userId, $avatarId);
                 $_SESSION["rewards"]["auth"] = "false";
+                header("Location: $CURRENT_URL/../" . "index.php");
             } else {
                 $Message->setMessage("Você não tem permissão para acessar esta página.", "error", "back");
             }

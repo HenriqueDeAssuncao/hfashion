@@ -6,6 +6,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@700&display=swap');
 
+* {
+  border: 1px solid black;
+}
+
+.Container {
+  width: 365px;
+}
+
 body {
   background: linear-gradient(180deg, #C02425 45%, #7B0B0A 100%);
   height: 826px;
@@ -16,6 +24,7 @@ body {
   width: 100%;
 }
 
+/* Classe da barra de progresso */
 .progress-bar {
   border: 1px solid black;
   height: 60px;

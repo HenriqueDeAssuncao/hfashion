@@ -19,7 +19,7 @@ $userData = $userDao->verifyToken(false);
 $quizDao = new QuizDAO($conn, $CURRENT_URL);
 
 if ($userData) {
-    if (!empty($_GET["n"]) && !empty($_GET["a"]) && !empty($_GET["w"])) {
+    if (isset($_GET["n"]) && isset($_GET["a"]) && isset($_GET["w"])) {
         //Pego os parâmetros da url:
         $questionsNumber = $_GET["n"];
         $stringUserAnswers = $_GET["a"];

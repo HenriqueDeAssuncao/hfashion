@@ -5,9 +5,8 @@ require_once "dao/UserAnswerQuestionDAO.php";
 require_once "templates/head.php";
 
 ?>
-  <!-- Os links de css estão aqui para ficarem dentro do header e carregarem mais rápido! -->
-  <link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/quiz.css">
-
+<!-- Os links de css estão aqui para ficarem dentro do header e carregarem mais rápido! -->
+<link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/quiz.css">
 </head>
 
 <?php
@@ -36,7 +35,12 @@ if (!empty($userData)) {
 ?>
 
 <div class="container-quiz">
+    <div class="Container quiz-status">
+        <div class="progress-bar"></div>
+        <div class="countdown">10</div>
+    </div>
     <div class="container-question">
+
         <?php include_once("templates/question.php") ?>
     </div>
 </div>
