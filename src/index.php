@@ -1,16 +1,12 @@
-<?php
-require_once "templates/head.php";
-?>
-  <!-- Os links de css estão aqui para ficarem dentro do header e carregarem mais rápido! -->
-  <link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/index.css">
-  <link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/index_header.css">
-</head>
 
 <?php
 require_once "templates/header.php";
 ?>
 
 </div>
+
+<link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/index.css">
+<link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/index_header.css">
 
 <div id="container-banner"
   style="background-image: url(<?= $CURRENT_URL ?>/img/index/banner.svg); width: 100%;; height:100%;">

@@ -1,15 +1,13 @@
 <?php
 
+require_once "helpers/db.php";
+require_once "helpers/url.php";
+require_once "dao/UserDAO.php";
 require_once "dao/QuizDAO.php";
 require_once "dao/UserAnswerQuestionDAO.php";
-require_once "templates/head.php";
 
-?>
-<!-- Os links de css estão aqui para ficarem dentro do header e carregarem mais rápido! -->
-<link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/quiz.css">
-</head>
-
-<?php
+$userDao = new UserDAO($conn, $CURRENT_URL);
+$userData = $userDao->verifyToken(true);
 
 if (!empty($userData)) {
     if (!empty($_GET["token"])) {
@@ -33,6 +31,8 @@ if (!empty($userData)) {
 }
 
 ?>
+
+<link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/quiz.css">
 
 <div class="container-quiz">
     <div class="Container quiz-status">

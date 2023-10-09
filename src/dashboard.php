@@ -1,20 +1,14 @@
 <?php
 
-require_once "models/User.php";
-require_once "templates/head.php";
-
-?>
-  <!-- Os links de css estão aqui para ficarem dentro do header e carregarem mais rápido! -->
-  <link rel="stylesheet" type="text/css" href="css/dashboard_n.css">
-</head>
-
-<?php
 require_once "templates/header.php";
+require_once "models/User.php";
+
 $userData = $userDao->verifyToken(true);
 ?>
 
-<!-------------------- PERFIL -------------------->
+<link rel="stylesheet" type="text/css" href="css/dashboard_n.css">
 
+<!-------------------- PERFIL -------------------->
 
 <div id="container_profile">
   <div id="info_profile">

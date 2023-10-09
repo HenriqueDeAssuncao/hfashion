@@ -6,10 +6,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@700&display=swap');
 
-* {
-  border: 1px solid black;
-}
-
 .Container {
   width: 365px;
 }

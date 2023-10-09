@@ -1,5 +1,8 @@
 <?php
-    require_once "templates/head.php";
+    require_once "dao/UserDAO.php";
+    $userDao = new UserDAO($conn, $CURRENT_URL);
+    $userData = $userDao->verifyToken(true);
+
     if (!empty($userData)) {
         if (isset($_SESSION["rewards"]) && $_SESSION["rewards"]["auth"] === "true") {
             $rewards = $_SESSION["rewards"];

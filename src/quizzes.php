@@ -1,26 +1,20 @@
 <?php
 
+require_once "templates/header.php";
+
 require_once "models/Quiz.php";
 require_once "dao/QuizDAO.php";
 require_once "models/UserQuiz.php";
 require_once "dao/QuestionDAO.php";
 
-require_once "templates/head.php";
-
-?>
-    <!-- Os links de css estão aqui para ficarem dentro do header e carregarem mais rápido! -->
-    <link rel="stylesheet" type="text/css" href="<?= $CURRENT_URL ?>/css/quizzes.css">
-</head>
-
-<?php
 
 $quizDao = new QuizDAO($conn, $CURRENT_URL);
 $UserQuiz = new UserQuiz($message);
 $quizzes = $quizDao->getQuizzes($userId);
 
-require_once "templates/header.php";
-
 ?>
+
+<link rel="stylesheet" type="text/css" href="<?= $CURRENT_URL ?>/css/quizzes.css">
 
 <!-- Corpo da página -->
 
