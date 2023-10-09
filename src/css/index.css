@@ -143,6 +143,7 @@ hr {
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: 920px;
     margin-bottom: 100px;
 }
 
@@ -151,6 +152,7 @@ hr {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 860px;
     width: 82.5%;
 }
 
@@ -161,17 +163,20 @@ hr {
 
 #div-topicos {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     width: 80%;
+    margin-bottom: 75px;
 }
 
 
 .div-coluna {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 80px;
     width: 100%;
-    height: 100%;
 }
 
 .cursos {
@@ -428,6 +433,7 @@ hr {
         align-items: center;
         background-position: center;
         background-repeat: no-repeat;
+        background-size: 100%;
         width: 100%;
         height: 940px;
     }
@@ -472,12 +478,15 @@ hr {
         margin-right: 68px;
     }
     
-    #container-oqvcvera {
-        height: 700px;
-        width: 100%;
+    
+
+     #container-oqvcvera {
+        height: 920px;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 100%;
     }
 
     #info-oqvcvera {
@@ -486,7 +495,6 @@ hr {
         justify-content: center;
         align-items: center;
         width: 915px;
-        height: 470px;
     }
 
     #div-title {
@@ -500,11 +508,11 @@ hr {
 
     #div-topicos {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: center;
+        justify-content: center;
         align-items: center;
         width: 80%;
-        margin-bottom: 75px;
+        margin-bottom: 75px;    
     }
 
 
@@ -513,12 +521,13 @@ hr {
         flex-direction: column;
         gap: 80px;
         width: 21vw;
-        height: 345px;
     }
 
     .cursos {
         display: flex;
+        justify-content: center;
         flex-direction: column;
+        align-items: center;
         width: 21vw;
     }
 
@@ -526,7 +535,10 @@ hr {
         display: flex;
         align-items: center;
         margin-bottom: 20px;
-    }
+        width: 120%;
+    } 
+
+    
 
     
     #div-info-timeline{
@@ -540,6 +552,8 @@ hr {
     }
 
     #div-timeline{
+        background-repeat: no-repeat;
+        background-size: 100%;
         transition: 0.5s;
         width: 100%;
         height: 450px;
@@ -703,13 +717,13 @@ hr {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
+        width: 130%;
     }
     
     #style-timeline{
         color: #FFF;
         font-family: 'Poppins', sans-serif;
-        font-size: 67.873px;
+        font-size: 7.290332975295382vh;
         font-style: normal;
         font-weight: 600;
         line-height: 54.863px; /* 80.831% */
@@ -732,6 +746,7 @@ hr {
         font-size: 16px;
         line-height: 24px;
         color: #3C3C3C;
+        text-align: justify;
     }
     
     .style-titles {
