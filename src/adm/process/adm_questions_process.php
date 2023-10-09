@@ -59,10 +59,8 @@ if (!empty($_GET['questionsNumber'])) {
         $i++;
     }
 
-    $quizDao->setQuizStatusToActive($quizId);
-
-    $message->setMessage("O quiz está disponível aos usuários!", "success", "../index.php");
+    $message->setMessage("As questões foram adicionadas!", "success", "back");
 
 } else {
-
+    $message->setMessage("Ocorreu algum erro.", "error", "back");
 }

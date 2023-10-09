@@ -1,0 +1,45 @@
+<?php
+require_once __DIR__ . "/../helpers/db.php";
+require_once __DIR__ . "/../models/Quiz.php";
+require_once __DIR__ . "/../models/Question.php";
+require_once __DIR__ . "/../models/UserQuiz.php";
+require_once __DIR__ . "/../models/Message.php";
+
+class AdmDAO
+{
+    private $conn;
+    private $url;
+    private $message;
+
+    public function __construct(PDO $conn, $url)
+    {
+        $this->conn = $conn;
+        $this->url = $url;
+        $this->message = new Message($url);
+    }
+    public function findQuizzes($userId)
+    {
+        $stmt = $this->conn->prepare("SELECT * FROM quizzes WHERE user_id = :user_id");
+        $stmt->bindParam(":user_id", $userId);
+        $stmt->execute();
+        $quizzesArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $stmt = "";
+        $AdmQuizzes = [];
+        foreach ($quizzesArray as $quiz) {
+            $Quiz = new Quiz($this->message);
+            $Quiz->setQuizId($quiz["quiz_id"]);
+            $Quiz->setQuizName($quiz["quiz_name"]);
+            $Quiz->setQuizDescription($quiz["quiz_description"]);
+            $Quiz->setQuestionsNumber($quiz["questions_number"]);
+            $Quiz->setQuestionWeight($quiz["question_weight"]);
+            $Quiz->setQuizToken($quiz["quiz_token"]);
+            $Quiz->setIconPath($quiz["icon"]);
+            $Quiz->setStatus($quiz["status"]);
+
+            $AdmQuizzes[] = $Quiz;
+        }
+
+        return $AdmQuizzes;
+    }
+
+}

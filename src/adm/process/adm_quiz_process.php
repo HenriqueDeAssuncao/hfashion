@@ -99,9 +99,7 @@ if ((!empty($_POST)) && (!empty($_FILES))) {
                     $i++;
                 }
 
-                $quizDao->setQuizTokenToSession($quizToken);
-
-                $message->setMessage("Quiz criado com sucesso!", "success", "questions.php");
+                $message->setMessage("O quiz foi adicionado à sua lista!", "success", "../adm/my_quizzes.php");
 
             } else {
                 $message->setMessage("Não foi possível registrar o quiz.", "error", "back");
