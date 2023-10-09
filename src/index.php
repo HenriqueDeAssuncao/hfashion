@@ -9,7 +9,7 @@ require_once "templates/header.php";
 <link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/index_header.css">
 
 <div id="container-banner"
-  style="background-image: url(<?= $CURRENT_URL ?>/img/index/banner.svg); width: 100%;; height:100%;">
+  style="background-image: url(<?= $CURRENT_URL ?>/img/index/banner.png); width: 100%;; height:100%;">
   <div id="container-logo">
     <p id="txt_logo_high">CONHEÇA A MODA DE</p>
     <img src="img/index/logo_high.svg" id="img_logo_high">
@@ -59,14 +59,26 @@ require_once "templates/header.php";
 
     <div id="div-topicos">
 
-      <!-- COLUNA ESQUERDA -->
       <div class="div-coluna">
 
         <!-- PRIMEIRO CARD -->
         <div class="cursos">
           <div class="icon-cursos">
-            <img src="img/index/estetica.png" id="img-logo-cursos">
-            <p class="style-maintext"> História da moda</p>
+            <img src="img/index/time.png" id="img-logo-cursos">
+            <p class="style-maintext"> Linha do Tempo</p>
+          </div>
+          <div class="text-cursos">
+            <p class="style-regulartext">
+              Our courses effectively and efficiently teach
+              reading, listening, and speaking skills. Check out our
+            </p>
+          </div>
+        </div>
+
+        <div class="cursos">
+          <div class="icon-cursos">
+            <img src="img/index/esteticas.png" id="img-logo-cursos">
+            <p class="style-maintext"> Estética</p>
           </div>
           <div class="text-cursos">
             <p class="style-regulartext">
@@ -79,40 +91,8 @@ require_once "templates/header.php";
 
         <div class="cursos">
           <div class="icon-cursos">
-            <img src="img/index/estetica.png" id="img-logo-cursos">
-            <p class="style-maintext"> História da moda</p>
-          </div>
-          <div class="text-cursos">
-            <p class="style-regulartext">
-              Our courses effectively and efficiently teach
-              reading, listening, and speaking skills. Check out our
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- COLUNA DIREITA -->
-      <div class="div-coluna">
-
-        <!-- PRIMEIRO CARD -->
-        <div class="cursos">
-          <div class="icon-cursos">
-            <img src="img/index/estetica.png" id="img-logo-cursos">
-            <p class="style-maintext"> História da moda</p>
-          </div>
-          <div class="text-cursos">
-            <p class="style-regulartext">
-              Our courses effectively and efficiently teach
-              reading, listening, and speaking skills. Check out our
-            </p>
-          </div>
-        </div>
-        <!-- SEGUNDO CARD -->
-
-        <div class="cursos">
-          <div class="icon-cursos">
-            <img src="img/index/estetica.png" id="img-logo-cursos">
-            <p class="style-maintext"> História da moda</p>
+            <img src="img/index/influ.png" id="img-logo-cursos">
+            <p class="style-maintext"> Influência</p>
           </div>
           <div class="text-cursos">
             <p class="style-regulartext">
@@ -123,6 +103,7 @@ require_once "templates/header.php";
         </div>
 
       </div>
+
 
       <!-- FECHA CONTAINER E INFO -->
     </div>
@@ -146,7 +127,7 @@ require_once "templates/header.php";
 
   <!-- DIV LINK TIMELINE -->
   <div id="div-timeline"
-    style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/teatro.svg); background-repeat: no-repeat;">
+    style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/teatro.png);">
     <div id="div-text-timeline">
       <p class="style-minimal" style="color: #FFF">1/4</p><br>
       <div id="timeline-text-limitacion">
@@ -174,9 +155,9 @@ require_once "templates/header.php";
     <!-- DIV CARDS -->
     <div class="div-cards-cursos-influ js-scroll">
       <div class="card">
-        <!-- <div class="div-img-card"
-          style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/teat.svg); background-repeat: no-repeat;">
-        </div> -->
+        <div class="div-img-card"
+          style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/teat.png); background-repeat: no-repeat;">
+        </div>
         <div class="div-text-card">
           <p class="style-minimal">1/1</p>
           <p class="style-regulartext">Linha do Tempo</p>
@@ -204,9 +185,9 @@ require_once "templates/header.php";
     <!-- DIV CARDS -->
     <div class="div-cards-cursos js-scroll">
       <div class="card">
-        <!-- <div class="div-img-card"
-          style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/street.svg); background-repeat: no-repeat;">
-        </div> -->
+        <div class="div-img-card"
+          style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/street.png); background-repeat: no-repeat;">
+        </div>
         <div class="div-text-card">
           <p class="style-minimal">1/4</p>
           <p class="style-regulartext">StreetWear</p>
@@ -215,9 +196,9 @@ require_once "templates/header.php";
       </div>
 
       <div class="card">
-        <!-- <div class="div-img-card"
-          style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/y2k.svg); background-repeat: no-repeat;">
-        </div> -->
+        <div class="div-img-card"
+          style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/y2k.png); background-repeat: no-repeat;">
+        </div>
         <div class="div-text-card">
           <p class="style-minimal">2/4</p>
           <p class="style-regulartext">Y2K</p>
@@ -226,9 +207,9 @@ require_once "templates/header.php";
       </div>
 
       <div class="card">
-        <!-- <div class="div-img-card"
-          style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/mc.svg); background-repeat: no-repeat;">
-        </div> -->
+        <div class="div-img-card"
+          style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/mc.png); background-repeat: no-repeat;">
+        </div>
         <div class="div-text-card">
           <p class="style-minimal">3/4</p>
           <p class="style-regulartext">McBling</p>
@@ -237,9 +218,9 @@ require_once "templates/header.php";
       </div>
 
       <div class="card">
-        <!-- <div class="div-img-card"
-          style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/uni.svg); background-repeat: no-repeat;">
-        </div> -->
+        <div class="div-img-card"
+          style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/uni.png); background-repeat: no-repeat;">
+        </div>
         <div class="div-text-card">
           <p class="style-minimal">4/4</p>
           <p class="style-regulartext">Uniforme Escolar</p>
@@ -267,10 +248,10 @@ require_once "templates/header.php";
     <!-- DIV CARDS -->
     <div class="div-cards-cursos-influ js-scroll">
       <div class="card">
-        <!-- <div class="div-img-card"
-          style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/musica.svg); background-repeat: no-repeat;">
-        </div> -->
-        <div class="div-text-card">
+        <div class="div-img-card"
+          style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/musica.png); background-repeat: no-repeat;">
+        </div>
+          <div class="div-text-card">
           <p class="style-minimal">1/3</p>
           <p class="style-regulartext">Música</p>
           <p class="style-minimal">textotextotexto</p>
@@ -278,9 +259,9 @@ require_once "templates/header.php";
       </div>
 
       <div class="card">
-        <!-- <div class="div-img-card"
-          style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/esporte.svg); background-repeat: no-repeat;">
-        </div> -->
+        <div class="div-img-card"
+          style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/esporte.png); background-repeat: no-repeat;">
+        </div>
         <div class="div-text-card">
           <p class="style-minimal">2/3</p>
           <p class="style-regulartext">Esporte</p>
@@ -289,9 +270,9 @@ require_once "templates/header.php";
       </div>
 
       <div class="card">
-        <!-- <div class="div-img-card"
-          style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/cinema.svg); background-repeat: no-repeat;">
-        </div> -->
+        <div class="div-img-card"
+          style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/cinema.png); background-repeat: no-repeat;">
+        </div> 
         <div class="div-text-card">
           <p class="style-minimal">3/3</p>
           <p class="style-regulartext">Cinema</p>
