@@ -72,12 +72,13 @@ class Quiz
 }
 interface QuizDAOInterface
 {
-    public function buildQuiz();
-    public function createQuiz(Quiz $quiz);
+    public function buildQuiz($quiz, $UserQuiz = false);
+    public function createQuiz(Quiz $Quiz);
     public function findQuizIdByToken($quizToken);
     public function setQuizTokenToSession($quizToken);
     public function getQuizStatusByToken($quizToken);
     public function setQuizStatusToActive($quizId);
+    //ESSAS DUAS FUNÇÕES "getQuestionsNumber" e "update" deveriam ser triggers!
     public function getQuestionsNumber($quizId);
     public function update($quiz_id);
     public function findUserQuizData($quizId, $userId);

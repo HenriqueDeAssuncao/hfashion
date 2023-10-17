@@ -30,6 +30,7 @@ class UserAnswerQuestionDAO implements UserAnswerQuestionDAOInterface
         $stmt->bindParam(":quiz_id", $quizId);
         $stmt->execute();
     }
+    //ISSO DEVERIA SER UM TRIGGER
     public function verifyTries($userId, $quizId)
     {
         $stmt = $this->conn->prepare("SELECT tries FROM users_answer_questions

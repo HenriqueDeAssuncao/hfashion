@@ -17,9 +17,23 @@ class QuizDAO implements QuizDAOInterface
         $this->url = $url;
         $this->message = new Message($url);
     }
-    public function buildQuiz()
+    public function buildQuiz($quiz, $UserQuiz = false)
     {
+        if (!$UserQuiz) {
+            $Quiz = new Quiz($this->message);
+        } else {
+            $Quiz = new UserQuiz($this->message);
+        }
 
+        $Quiz->setQuizId($quiz["quiz_id"]);
+        $Quiz->setQuizName($quiz["quiz_name"]);
+        $Quiz->setQuizDescription($quiz["quiz_description"]);
+        $Quiz->setQuestionsNumber($quiz["questions_number"]);
+        $Quiz->setQuestionWeight($quiz["question_weight"]);
+        $Quiz->setQuizToken($quiz["quiz_token"]);
+        $Quiz->setIconPath($quiz["icon"]);
+
+        return $Quiz;
     }
     public function createQuiz(Quiz $quiz)
     {
@@ -82,6 +96,7 @@ class QuizDAO implements QuizDAOInterface
 
         $_SESSION["quizToken"] = "";
     }
+    //ESSAS DUAS FUNÇÕES "getQuestionsNumber" e "update" deveriam ser triggers!
     public function getQuestionsNumber($quizId)
     {
         $stmt = $this->conn->prepare("SELECT COUNT(*) FROM questions WHERE quiz_id = :quiz_id");
@@ -125,15 +140,8 @@ class QuizDAO implements QuizDAOInterface
         $quiz = $stmt->fetch(PDO::FETCH_ASSOC);
         $stmt = "";
 
-        $Quiz = new Quiz($this->message);
-        
-        $Quiz->setQuizId($quiz["quiz_id"]);
-        $Quiz->setQuizName($quiz["quiz_name"]);
-        $Quiz->setQuizDescription($quiz["quiz_description"]);
-        $Quiz->setQuestionsNumber($quiz["questions_number"]);
-        $Quiz->setQuestionWeight($quiz["question_weight"]);
-        $Quiz->setQuizToken($quiz["quiz_token"]);
-        $Quiz->setIconPath($quiz["icon"]);
+        $Quiz = $this->buildQuiz($quiz);
+
         return $Quiz;
     }
     public function getQuizzes($userId)
@@ -144,15 +152,8 @@ class QuizDAO implements QuizDAOInterface
         $stmt = "";
         $UserQuizzes = [];
         foreach ($quizzesArray as $quiz) {
-            $UserQuiz = new UserQuiz($this->message);
-            $quizId = $quiz["quiz_id"];
-            $UserQuiz->setQuizId($quiz["quiz_id"]);
-            $UserQuiz->setQuizName($quiz["quiz_name"]);
-            $UserQuiz->setQuizDescription($quiz["quiz_description"]);
-            $UserQuiz->setQuestionsNumber($quiz["questions_number"]);
-            $UserQuiz->setQuestionWeight($quiz["question_weight"]);
-            $UserQuiz->setQuizToken($quiz["quiz_token"]);
-            $UserQuiz->setIconPath($quiz["icon"]);
+            $UserQuiz = $this->buildQuiz($quiz, true);
+            $quizId = $UserQuiz->getQuizId();
 
             if ($userId) {
                 $userQuizData = $this->findUserQuizData($quizId, $userId);
@@ -163,7 +164,6 @@ class QuizDAO implements QuizDAOInterface
                     $UserQuiz->setScorePortion($userQuizData["score_portion"]);
                     $UserQuiz->setTries($userQuizData["tries"]);
                 }
-
             }
 
             $UserQuizzes[] = $UserQuiz;

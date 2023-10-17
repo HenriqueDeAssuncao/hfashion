@@ -2,9 +2,12 @@
 
 require_once "helpers/db.php";
 require_once "helpers/url.php";
+require_once "models/Message.php";
 require_once "dao/UserDAO.php";
 require_once "dao/QuizDAO.php";
 require_once "dao/UserAnswerQuestionDAO.php";
+
+$Message = new Message($CURRENT_URL);
 
 $userDao = new UserDAO($conn, $CURRENT_URL);
 $userData = $userDao->verifyToken(true);
@@ -21,13 +24,13 @@ if (!empty($userData)) {
             $_SESSION["questions"] = $questions;
             $_SESSION["quizToken"] = $quizToken;
         } else {
-            $message->setMessage("Quiz não disponível", "error", "back");
+            $Message->setMessage("Quiz não disponível", "error", "back");
         }
     } else {
-        $message->setMessage("Página não encontrada", "error", "back");
+        $Message->setMessage("Página não encontrada", "error", "back");
     }
 } else {
-    $message->setMessage("Faça login para entrar na página", "error", "back");
+    $Message->setMessage("Faça login para entrar na página", "error", "back");
 }
 
 ?>

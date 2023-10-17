@@ -9,7 +9,7 @@ require_once "templates/header.php";
 <link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/index_header.css">
 
 <div id="container-banner"
-  style="background-image: url(<?= $CURRENT_URL ?>/img/index/banner.png); width: 100%;; height:100%;">
+  style="background-image: url(<?= $CURRENT_URL ?>/img/index/banner.png); width: 100%; height:100%;">
   <div id="container-logo">
     <p id="txt_logo_high">CONHEÇA A MODA DE</p>
     <img src="img/index/logo_high.svg" id="img_logo_high">
