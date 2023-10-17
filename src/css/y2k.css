@@ -42,11 +42,13 @@ hr {
 
 
 .container-banner{
+    width: 90%;
+    height: 220px;
     margin-top: 70px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: aqua;
 }
   
 #div-primeiro-pag {

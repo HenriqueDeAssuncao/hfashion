@@ -2,11 +2,7 @@
 require_once "templates/header.php";
 ?>
 
- <div class="container-banner">
-
-        <div id="div-img-banner">
-            <img  src="img/y2k/y2k.svg"  id="img-banner">
-        </div>  
+ <div class="container-banner" style="background-image: url(<?= $CURRENT_URL ?>/img/y2k/y2k.png);">
 
     <div id="titulo">
         <p id="titulo-y2k">Y2K</p>
@@ -32,7 +28,7 @@ require_once "templates/header.php";
   </div>
   </div>
 
-  <div class="container-segundo-pag">
+  <!-- <div class="container-segundo-pag">
     
 
   <div id="div-segundo-pag">
@@ -51,7 +47,7 @@ require_once "templates/header.php";
        <img src="img/y2k/y2k_artigo.png" class="img-pag">
     </div>
 
-</div>
+</div> -->
 
 
 
