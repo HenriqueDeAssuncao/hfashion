@@ -1,4 +1,6 @@
 <?php
+    require_once "helpers/url.php";
+    require_once "helpers/db.php";
     require_once "dao/UserDAO.php";
     $userDao = new UserDAO($conn, $CURRENT_URL);
     $userData = $userDao->verifyToken(true);

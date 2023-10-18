@@ -6,6 +6,7 @@ require_once "templates/header.php";
 require_once __DIR__ . "/../templates/message.php";
 ?>
 
+
 <h1>Criar Perguntas:</h1>
 <form class="js-form" action="" method="POST" enctype="multipart/form-data">
     <div class="questions-container">

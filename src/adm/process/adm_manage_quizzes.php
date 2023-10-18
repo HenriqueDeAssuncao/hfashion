@@ -13,7 +13,9 @@ $QuizDao = new QuizDAO($conn, $CURRENT_URL);
         $quizId = $_POST["quizId"];
 
         if ($type === "questions") {
-            # code...
+            $quizToken = $_POST["quizToken"];
+            $_SESSION["quizToken"] = $quizToken;
+            header("Location: " . "$CURRENT_URL/../questions.php");
         } elseif ($type === "article") {
 
         } elseif ($type === "active") {
