@@ -1,5 +1,4 @@
 /* Smartphone Portrait (ATÉ 576px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-
 .Full-height {
     height: 100vh;
 }
@@ -91,9 +90,10 @@ label {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     justify-content: center;
     margin-bottom: 12%;
+    cursor: pointer;
 }
 
-::-webkit-input-placeholder {
+/* ::-webkit-input-placeholder {
     color: #333333;
     padding: 19px;
 }
@@ -106,12 +106,13 @@ label {
 ::placeholder {
     color: #333333;
     padding: 19px;
-}
+} */
 
 input {
     border: 1px solid #DDDDDD;
     margin: 5px 1px 3px 0px;
     outline: none;
+    text-indent: 10px;
     -webkit-transition: all 0.30s ease-in-out;
     -moz-transition: all 0.30s ease-in-out;
     -ms-transition: all 0.30s ease-in-out;
@@ -194,6 +195,9 @@ input {
         display: flex;
         flex-direction: column;
     }
+    .visual-content img {
+        margin-bottom: 30px;
+    }
     .btn-con {
         background: linear-gradient(180deg, #C02425 53.65%, #7B0B0A 100%);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -201,7 +205,6 @@ input {
         width: 145px;
         height: 40px;
         margin-bottom: 0;
-        cursor: pointer;
     }
     .title{
         margin-bottom: 7%;

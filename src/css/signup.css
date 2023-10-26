@@ -106,6 +106,7 @@ label {
     justify-content: center;
     width: 354px;
     margin-bottom: 8%;
+    cursor: pointer;
 }
 
 .form-group {
@@ -115,7 +116,7 @@ label {
 }
 
 
-::-webkit-input-placeholder {
+/* ::-webkit-input-placeholder {
     color: #333333;
     padding: 19px;
 }
@@ -128,12 +129,13 @@ label {
 ::placeholder {
     color: #333333;
     padding: 19px;
-}
+} */
 
 input {
     border: 1px solid #DDDDDD;
     margin: 5px 1px 3px 0px;
     outline: none;
+    text-indent: 10px;
 }
 
 input:focus {

@@ -1,7 +1,7 @@
 <?php
 require_once "templates/header_auth.php";
 ?>
-    <link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/cadastro.css">
+    <link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/signup.css">
 </head>
 
 <body>
@@ -41,7 +41,7 @@ require_once "templates/header_auth.php";
                 </div>
                 <div class="form-group">
                     <label for="password">Senha:</label>
-                    <input type="password" placeholder="8+ caracteres" class="form-input" id="password" name="password"
+                    <input type="password" class="form-input" id="password" name="password"
                         value="<?= $password ?>">
                 </div>
                 <div class="form-group">
