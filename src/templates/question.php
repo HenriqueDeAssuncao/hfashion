@@ -15,33 +15,33 @@ $questionsNumber = count($questions);
 
 ?>
 
-<div class="main">
+<link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/quiz.css">
 
-    <div class="Container">
-        <div class="mainimage">
-            <img class="image" src="<?= $questions[$index]->getImage() ?>" alt="Imagem da pergunta">
-        </div>
-
-        <div class="text">
-            <p class="level">Questão
-                <?= $index + 1 ?> de
-                <?= $questionsNumber ?>
-            </p>
-            <p class="title">
-                <?= $questions[$index]->getQuestion() ?>
-            </p>
-        </div>
-
-        <div class="button">
-            <?php for ($i = 0; $i <= count($options) - 1; $i++): ?>
-                <label class="neutrobutton" for="input<?= $i ?>" class="inputs-options">
-                    <p>
-                        <?= $options[$i] ?>
-                    </p>
-                </label>
-                <input id="input<?= $i ?>" name="option" class="inputs-options" value="<?= $i ?>" type="radio">
-            <?php endfor; ?>
-        </div>
+<div class="container-question-header">
+    <div class="question-image">
+        <img class="image" src="<?= $questions[$index]->getImage() ?>" alt="Imagem da pergunta">
     </div>
 
+    <div class="question-header">
+        <p class="p-header">Questão
+            <?= $index + 1 ?> de
+            <?= $questionsNumber ?>
+        </p>
+        <p class="question">
+            <?= $questions[$index]->getQuestion() ?>
+        </p>
+    </div>
+</div>
+
+<div class="options-container">
+    <?php for ($i = 0; $i <= count($options) - 1; $i++): ?>
+        <div class="option-container">
+            <label class="option" for="input<?= $i ?>" class="inputs-options">
+                <p>
+                    <?= $options[$i] ?>
+                </p>
+            </label>
+            <input id="input<?= $i ?>" name="option" class="inputs-options" value="<?= $i ?>" type="radio">
+        </div>
+    <?php endfor; ?>
 </div>

@@ -35,7 +35,6 @@ $quizzes = $quizDao->getQuizzes($userId);
     <?php if (count($quizzes) > 0): ?>
         <?php foreach ($quizzes as $quiz): ?>
             <?php
-
             $status = $quiz->getQuizStatus();
 
             if ($status) {

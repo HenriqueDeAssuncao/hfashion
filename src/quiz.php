@@ -35,21 +35,37 @@ if (!empty($userData)) {
 
 ?>
 
-<link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/quiz.css">
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-<div class="container-quiz">
-    <div class="Container quiz-status">
-        <div class="progress-bar"></div>
-        <div class="countdown">10</div>
-    </div>
-    <div class="container-question">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HiFashion</title>
+    <link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/global.css">
+    <link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/quiz.css">
+</head>
 
-        <?php include_once("templates/question.php") ?>
+<body>
+    <div class="Container Flex">
+        <div class="container-quiz">
+            <div class="Container quiz-status Flex">
+                <a href="<?= $CURRENT_URL ?>/quizzes.php" class="icon-popup Flex">
+                    <img src="<?= $CURRENT_URL ?>/img/quizzes/exit.png" alt="Ícone fechar" class="status-popup">
+                </a>
+                <div class="progress-bar-container Box-shadow">
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="countdown">10</div>
+            </div>
+            <div class="container-question">
+
+                <?php include_once("templates/question.php") ?>
+            </div>
+        </div>
     </div>
-</div>
+</body>
 
 <script src="<?= $CURRENT_URL ?>/script/questions.js"></script>
 
-<?php
-require_once "templates/footer.php";
-?>
+</html>
