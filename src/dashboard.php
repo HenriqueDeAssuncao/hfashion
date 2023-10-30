@@ -6,7 +6,7 @@ require_once "models/User.php";
 $userData = $userDao->verifyToken(true);
 ?>
 
-<link rel="stylesheet" type="text/css" href="css/dashboard_n.css">
+<link rel="stylesheet" type="text/css" href="css/dashboard.css">
 
 <!-------------------- PERFIL -------------------->
 

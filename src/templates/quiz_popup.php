@@ -19,8 +19,6 @@ if (!empty($_GET)) {
 }
 ?>
 
-<link rel="stylesheet" type="text/css" href="<?= $CURRENT_URL ?>/../css/quiz_popup.css">
-
 <a href="<?= $CURRENT_URL ?>/../quizzes.php" class="icon-popup">
   <img src="<?= $CURRENT_URL ?>/../img/quizzes/exit.png" alt="Ícone fechar" class="status-popup">
 </a>

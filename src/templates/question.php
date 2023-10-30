@@ -37,9 +37,11 @@ $questionsNumber = count($questions);
     <?php for ($i = 0; $i <= count($options) - 1; $i++): ?>
         <div class="option-container">
             <label class="option" for="input<?= $i ?>" class="inputs-options">
-                <p>
-                    <?= $options[$i] ?>
-                </p>
+                <div class="p-container Flex">
+                    <p>
+                        <?= $options[$i] ?>
+                    </p>
+                </div>
             </label>
             <input id="input<?= $i ?>" name="option" class="inputs-options" value="<?= $i ?>" type="radio">
         </div>

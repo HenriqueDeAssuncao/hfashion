@@ -1,4 +1,5 @@
 let quizzesCards = document.querySelectorAll(".card");
+let QuizPopup = document.querySelector(".quiz-popup");
 let containerQuizPopup = document.querySelector(".container-quiz-popup");
 
 function getIndex(e) {
@@ -19,6 +20,7 @@ function fetchPopup(index) {
 
 function toggleHiddenClass() {
   containerQuizPopup.classList.toggle("Hidden");
+  QuizPopup.classList.toggle("Hidden");
 }
 
 
@@ -28,6 +30,7 @@ function handlePopup(e) {
   fetchPopup(index);
   toggleHiddenClass();
 }
+
 
 quizzesCards.forEach((quizCard) => {
   quizCard.addEventListener("click", handlePopup);

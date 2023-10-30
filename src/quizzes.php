@@ -16,6 +16,8 @@ $quizzes = $quizDao->getQuizzes($userId);
 
 <link rel="stylesheet" type="text/css" href="<?= $CURRENT_URL ?>/css/quizzes.css">
 
+<link rel="stylesheet" type="text/css" href="<?= $CURRENT_URL ?>/css/quiz_popup.css">
+
 <!-- Corpo da página -->
 
 <div id="main">
@@ -23,8 +25,10 @@ $quizzes = $quizDao->getQuizzes($userId);
     require_once("templates/message.php");
     ?>
 
-    <div class="container-quiz-popup Container Hidden">
+    <div class="quiz-popup Hidden">
+        <div class="container-quiz-popup Hidden">
 
+        </div>
     </div>
 
     <div id="maintxt">
