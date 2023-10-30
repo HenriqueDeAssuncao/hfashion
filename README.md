@@ -23,8 +23,8 @@
           create table quizzes (
           quiz_id int auto_increment primary key, 
           user_id int not null,
-          quiz_name varchar(100) not null,
-          quiz_description varchar(200),
+          quiz_name varchar(15) not null,
+          quiz_description varchar(54),
           quiz_token varchar(100) not null,
           questions_number int,
           question_weight int (1),
@@ -44,7 +44,7 @@
           
           create table questions (
           question_id int auto_increment primary key,
-          question text not null,
+          question varchar(40) not null,
           image varchar(100),
           options text not null,
           answer int(1) not null,
