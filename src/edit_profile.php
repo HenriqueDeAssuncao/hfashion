@@ -16,6 +16,12 @@ $userAvatars = $UserAvatarDao->findAvatars($userData->getId());
 
 <link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/edit_profile.css">
 
+<div class="Container Flex">
+  <?php
+  require_once("templates/message.php");
+  ?>
+</div>
+
 <div id="edit-container">
     <form action="<?= $CURRENT_URL ?>/process/user_process.php" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="type" value="update">

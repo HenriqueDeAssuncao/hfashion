@@ -19,6 +19,10 @@ body {
   height: 100vh;
 }
 
+.Container {
+  overflow: hidden;
+}
+
 .quiz-status {
   justify-content: space-between;
   color: white;
