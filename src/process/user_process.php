@@ -37,11 +37,17 @@ if ((!empty($type)) && $type == "update") {
 } elseif ($type == "changepassword") {
 	$password = $_POST["password"];
 	$confirmpassword = $_POST["confirmpassword"];
-	if ($password == $confirmpassword) {
-		$finalpassword = $User->generatePassword($password);
-		$userData->setPassword($finalpassword);
-		$userDao->changePassword($userData);
+
+	if ($password && $confirmpassword) {
+		if ($password == $confirmpassword) {
+			$finalpassword = $User->generatePassword($password);
+			$userData->setPassword($finalpassword);
+			$userDao->changePassword($userData);
+		} else {
+			$message->setMessage("As senhas não são iguais!", "error", "back");
+		}
 	} else {
-		$message->setMessage("As senhas não são iguais!", "error", "back");
+		$message->setMessage("Nenhuma alteração foi feita!", "error", "back");
 	}
+
 }

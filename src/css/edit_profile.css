@@ -1,3 +1,7 @@
+.msg {
+  margin-top: 20px;
+}
+
 #edit-container {
   margin: auto;
   padding: 15px;
@@ -46,6 +50,8 @@ label {
 
 .user-avatars {
   display: flex;
+  max-width: 100%;
+  overflow: auto;
 }
 
 #p-avatars {
@@ -84,5 +90,8 @@ label {
   }
   .form-group {
     flex-direction: row;
+  }
+  .user-avatars {
+    width: 577px;
   }
 }
