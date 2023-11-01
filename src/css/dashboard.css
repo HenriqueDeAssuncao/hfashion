@@ -1,16 +1,162 @@
+* {
+  border: 1px solid black;
+}
+
+.Container {
+  width: 365px;
+}
+
+/*Container-user*/
+
+.container-user {
+  margin-top: 60px;
+  height: 80vh;
+}
+
 .img-user {
-    cursor: pointer;
-    display: block;
-    width: 189px;
-    height: 189px;
-  }
+  cursor: pointer;
+  display: block;
+  margin: 0px auto 10px auto;
+  width: 189px;
+  height: 189px;
+}
 
-  .emblems {
-    margin-right: 10px;
-    width: 56px;
-  }
+.info-text > a {
+  text-decoration: none;
+  font-size: 13px;
+  color: #C02425;
+  font-weight: 500;
+}
 
-  .increasedEmblem {
-    width: 68px;
-    height: 83px;
+.a-dashboard, .p-nickname, .p-email ,.p-bio{
+  display: block;
+  width: fit-content;
+  margin: auto;
+}
+
+.p-bio, .p-email {
+  color: #424245b7;
+}
+
+.p-bio {
+  margin: 20px auto;
+  width: 253px;
+  text-align: center;
+  text-indent: 15px;
+}
+
+.info-emblems {
+  margin: auto;
+  width: 100%;
+}
+
+.emblems {
+  width: 56px;
+}
+
+/* Quizzes */
+
+h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #424245;
+  width: fit-content;
+  margin: 20px auto 30px auto;
+}
+
+.container-quizzes-conquistas {
+  width: 90%;
+  margin: auto;
+}
+
+.container-quiz {
+  display: flex;
+  border: 2.8px solid #CDCDCD;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.container-quiz > .icons {
+  margin-right: 20px;
+}
+
+.icons {
+  width: 55px;
+}
+
+.p-quiz-name {
+  font-weight: 600;
+}
+
+/* Conquistas */
+
+.container-conquista {
+  display: flex;
+  margin-bottom: 28px;
+}
+
+.conquista-icon {
+  width: 80px;
+  height: 80px;
+  background-color: #FFB862;
+  border-radius: 15px;
+  margin-right: 20px;
+}
+
+.conquista-content {
+  width: 70%;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content-text {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-text > p {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.content-bar-container, .bar {
+  height: 21px;
+  border-radius: 9px;
+}
+
+.content-bar-container {
+  background-color: #E5E5E5;
+}
+
+.bar {
+  position: relative;
+  background-color: #C02425;
+}
+
+/* Ranking */
+
+.img-user-ranking {
+  width: 36px;
+  height: 36px;
+}
+
+ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+/* Tablet Landscape (ATÉ 992px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 992px) {
+  .Container {
+      width: 960px;
   }
+}
+
+/* PC (>= 1200px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 1200px) {
+  .Container {
+      width: 90%;
+  }
+}

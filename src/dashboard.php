@@ -1,183 +1,124 @@
 <?php
 
+//Usuário
 require_once "templates/header.php";
-require_once "models/User.php";
 
+//Emblemas
+require_once "models/Emblem.php";
+require_once "dao/EmblemDAO.php";
+require_once "models/UserEmblem.php";
+require_once "dao/UserEmblemDAO.php";
+
+//Usuário + Quiz
+require_once "models/UserQuiz.php";
+require_once "dao/QuizDAO.php";
+
+//Usuário
 $userData = $userDao->verifyToken(true);
+
+//Emblemas
+$Emblem = new Emblem;
+$EmblemDao = new EmblemDAO($conn, $CURRENT_URL);
+$UserEmblemDao = new UserEmblemDAO($conn, $CURRENT_URL);
+$userEmblems = $UserEmblemDao->findEmblems($userId, $EmblemDao);
+$emblems = $EmblemDao->findAllEmblemsPaths();
+
+//Usuário + Quiz
+$quizDao = new QuizDAO($conn, $CURRENT_URL);
+$UserQuiz = new UserQuiz($message);
+$quizzes = $quizDao->getQuizzes($userId);
+
 ?>
 
 <link rel="stylesheet" type="text/css" href="css/dashboard.css">
 
-<!-------------------- PERFIL -------------------->
+<section class="container-user">
+    <div class="img-user profile-img" style="background-image: url('<?= $CURRENT_URL ?>/<?= $image ?>')" alt="Avatar do usuário"> </div>
+    <div class="user-info">
+        <div class="info-text">
+            <p class="p-nickname"><?= $userData->getNickname() ?></p>
+            <p class="p-email"><?= $userData->getEmail() ?></p>
+            <a href="<?= $CURRENT_URL ?>/edit_profile.php" class="a-dashboard">editar perfil</a> 
+            <p class="p-bio"><?= $userData->getBio() ?></p>
+        </div>
+        <div class="info-emblems Flex">
+            <?php foreach ($userEmblems as $emblem): ?>
+                <img src="<?= $CURRENT_URL ?>/<?= $emblem["emblem_path"] ?>" alt="Emblema <?= $emblem["emblem_name"] ?>" class="emblems">
+            <?php endforeach; ?>
+        </div>
+    </div>
+</secction>
 
-<div id="container_profile">
-  <div id="info_profile">
+<section class="container-quizzes-conquistas">
+    <div class="quizzes">
+        <h2>Quizzes</h2>
+        <?php foreach ($quizzes as $quiz): ?>
+            <div class="container-quiz">
 
-    <div id="div_img_profile">
-      <img src="img/dashboard/cadastro.png" alt="" id="img_profile">
+                <img src="<?= $CURRENT_URL ?>/<?= $quiz->getIconPath() ?>" alt="ícone do quiz" class="icons">
+
+                <div class="quiz-text">
+                    <p class="p-quiz-name"><?= $quiz->getQuizName() ?></p>
+                    <p>Veja suas respostas</p>
+                </div>
+
+            </div>
+        <?php endforeach; ?>
     </div>
 
-    <p class="style-maintext">
-      <?= $userData->getNickname() ?>
-    </p>
-    <p class="style-regulartext">
-      <?= $userData->getEmail() ?>
-    </p>
-    <!--
-     <a href="http://localhost/hfashion/site/edit_profile.php" id="link_edit_profile">
-      editar perfil
-    </a> -->
+    <div class="conquistas">
+        <h2>Conquistas</h2>
+        <?php foreach ($quizzes as $quiz): ?>
+            <!-- Calculo a largura da barra -->
 
+            <?php
+                $correctAnswers = intval($quiz->getScorePortion());
+                $answers = $quiz->getQuestionsNumber();
+                if ($correctAnswers && $answers) {
+                    $barWidth = ($correctAnswers/$answers) * 100;
+                } else {
+                    $barWidth = 0;
+                }
+            ?>
+        
+            <div class="container-conquista">
 
-    <div id="div_bio_profile">
-      <p class="style-regulartext">
-        <?= $userData->getBio() ?>
-      </p>
+                <div class="conquista-icon Flex">
+                    <img src="<?= $CURRENT_URL ?>/<?= $quiz->getIconPath() ?>" alt="ícone do quiz" class="icons">
+                </div>
+
+                <div class="conquista-content">
+                    <div class="content-text">
+                        <p><?= $quiz->getQuizName() ?></p>
+                        <p><?= $quiz->getScorePortion() ?></p>
+                    </div>
+                    <div class="content-bar-container">
+                        <div class="bar" style="width: <?=$barWidth?>%">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        <?php endforeach; ?>
     </div>
+</section>
 
-    <div id="align_div_emblemas">
-      <img src="img/dashboard/emblema1.png" class="img_emblema">
-      <img src="img/dashboard/emblema2.png" class="img_emblema">
-      <img src="img/dashboard/emblema3.png" class="img_emblema">
-      <img src="img/dashboard/emblema3.png" class="img_emblema">
+<section class="container-rankings">
+    <div class="buttons-emblems">
+        <?php foreach ($emblems as $emblem): ?>
+            <button class="btn-emblems Button" value="<?= $emblem->getQuizId() ?>">
+                <img src="<?= $CURRENT_URL ?>/<?= $emblem->getEmblemPath() ?>" alt="<?= $emblem->getEmblemName() ?>" class="emblems">
+            </button>
+        <?php endforeach; ?>
     </div>
+    
+    <div class="container-ranking">
 
-    <!--
-        <div id="div_btn-roll">
-            <a href="http://localhost/hfashion/site/edit_profile.php" id="btn-roll">
-            <img src="img/dashboard/camera.png" id="img_camera">
-            EDITAR PERFIL
-            </a>
-        </div>
--->
-  </div>
-</div>
-
-
-<!-------------------- Quizzes -------------------->
-
-
-<div id="container_quiz">
-  <div id="info_quiz">
-
-    <div id="align_title_quiz">
-      <p class="style-maintext"> Quizzes </p>
     </div>
+</section>
 
-    <div id="div_btn">
-
-      <!-- DIV BOTÃO QUIZZES -->
-      <div class="div_btn_quizzes js-scroll">
-
-        <a href="" class="btn_quizzes">
-          <img src="img/dashboard/relogio.png" class="img_icones_quiz">
-          <p>Uniforme Escolar <br>
-            <b>veja suas respostas</b>
-          </p>
-        </a>
-
-        <a href="" class="btn_quizzes">
-          <img src="img/dashboard/ampulheta.png" class="img_icones_quiz">
-          <p>Mcbling <br>
-            <b>veja suas respostas</b>
-          </p>
-        </a>
-
-        <a href="" class="btn_quizzes">
-          <img src="img/dashboard/trofeu.png" class="img_icones_quiz">
-          <p>Y2K <br>
-            <b>veja suas respostas</b>
-          </p>
-        </a>
-
-        <a href="" class="btn_quizzes">
-          <img src="img/dashboard/pessoas.png" class="img_icones_quiz">
-          <p>StreetWear <Br>
-            <b>veja suas respostas</b>
-          </p>
-        </a>
-
-      </div> <!-- FECHA DIV_BTN_QUIZZES -->
-
-    </div> <!-- FECHA DIV_BTN -->
-
-  </div> <!-- FECHA INFO_QUIZ -->
-</div> <!-- FECHA CONTAINER_QUIZ -->
-
-
-<!-------------------- Conquistas -------------------->
-
-
-<div id="container_conquistas">
-  <div id="info_conquistas">
-
-    <div id="align_title_conquistas">
-      <p class="style-maintext"> Conquistas </p>
-    </div>
-
-    <div id="div_geral_progresso">
-
-      <!-- DIV DAS IMAGENS -->
-      <div id="div_img_conquistas">
-        <div class="background">
-          <img src="img/dashboard/ringbox.png">
-        </div>
-        <div class="background">
-          <img src="img/dashboard/cap.png">
-        </div>
-        <div class="background">
-          <img src="img/dashboard/seaker.png">
-        </div>
-        <div class="background">
-          <img src="img/dashboard/purse.png">
-        </div>
-      </div>
-
-      <!-- DIV DA BARRINHA DE PROGRESSO -->
-      <div id="div_progresso_conquistas">
-        <div class="div_titleBar_conquistas">
-          <!-- deu problema no css ent tive que estilizar
-              dentro da propria tag <p> (isso é temporario)
-              -->
-          <p style="font-weight: 600; color: #424245;">
-            Y2K <br>
-            <img src="img/dashboard/barra.png" class="img_barra_progresso">
-          </p>
-        </div>
-        <div class="div_titleBar_conquistas">
-          <p style="font-weight: 600; color: #424245;">
-            STREETWEAR
-            <img src="img/dashboard/barra.png" class="img_barra_progresso">
-          </p>
-        </div>
-        <div class="div_titleBar_conquistas">
-          <p style="font-weight: 600; color: #424245;">
-            UNIFORME ESCOLAR
-            <img src="img/dashboard/barra.png" class="img_barra_progresso">
-          </p>
-        </div>
-        <div class="div_titleBar_conquistas">
-          <p style="font-weight: 600; color: #424245;">
-            MCBLING
-            <img src="img/dashboard/barra.png" class="img_barra_progresso">
-          </p>
-
-        </div>
-      </div>
-
-
-    </div> <!-- FECHA DIV_GERAL_PROGRESSO -->
-
-    <!-- BOTÃO CONSULTAR RANKING -->
-    <div id="div_btn_consulRanking">
-      <a href="" id="btn_consulRanking">
-        <p id="txt_consulRanking"> Consultar Ranking </p>
-      </a>
-    </div>
-
-  </div> <!-- FECHA INFO_CONQUISTAS -->
-</div> <!-- FECHA CONTAINER_CONQUISTAS -->
-
+<script src="<?= $CURRENT_URL ?>/script/show_ranking.js"></script>
 
 <?php
 require_once("templates/footer.php");

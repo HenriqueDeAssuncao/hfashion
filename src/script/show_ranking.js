@@ -3,7 +3,7 @@ const containerRanking = document.querySelector('.container-ranking');
 
 function getQuizRanking(e) {
     const quizId = e.currentTarget.value;
-    const ranking = fetch(`./process/ranking_process.php?quizId=${quizId}`);
+    const ranking = fetch(`./templates/ranking.php?quizId=${quizId}`);
     ranking
         .then((r) => {
             return r.text();
