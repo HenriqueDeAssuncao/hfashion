@@ -30,6 +30,7 @@ interface UserAnswerQuestionDAOInterface
     public function getTries($userId, $quiz_id);
     public function updateScore(UserAnswerQuestion $userAnswerQuestion);
     public function findUser($userId);
+    public function findQuizName($quizId);
     public function findQuizRanking($quizId);
     public function sortQuizRanking($quizRanking);
 }

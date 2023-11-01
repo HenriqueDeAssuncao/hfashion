@@ -140,6 +140,15 @@ class UserAnswerQuestionDAO implements UserAnswerQuestionDAOInterface
 
         return $user;
     }
+    public function findQuizName($quizId) {
+        $stmt = $this->conn->prepare("SELECT quiz_name FROM quizzes WHERE quiz_id = :quiz_id");
+        $stmt->bindParam(":quiz_id", $quizId);
+        $stmt->execute();
+
+        $quizNameArray = $stmt->fetch(PDO::FETCH_ASSOC);
+        $quizName = $quizNameArray["quiz_name"];
+        return $quizName;
+    }
     public function findQuizRanking($quizId)
     {
         $stmt = $this->conn->prepare("SELECT * FROM users_answer_questions WHERE quiz_id = :quiz_id");

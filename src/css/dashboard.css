@@ -1,5 +1,5 @@
 * {
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .Container {
@@ -89,14 +89,14 @@ h2 {
   font-weight: 600;
 }
 
-/* Conquistas */
+/* Acertos */
 
-.container-conquista {
+.container-acertos {
   display: flex;
   margin-bottom: 28px;
 }
 
-.conquista-icon {
+.acertos-icon {
   width: 80px;
   height: 80px;
   background-color: #FFB862;
@@ -104,7 +104,7 @@ h2 {
   margin-right: 20px;
 }
 
-.conquista-content {
+.acertos-content {
   width: 70%;
   align-items: center;
   flex-direction: column;
@@ -137,17 +137,108 @@ h2 {
 
 /* Ranking */
 
+.buttons-emblems {
+  margin-bottom: 20px;
+}
+
+.btn-emblems {
+  cursor: pointer;
+}
+
+.p-rankig-name {
+  width: 100%;
+  padding-bottom: 15px;
+  text-align: center;
+  margin: auto;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 20px;
+  border-bottom: 3px solid #CDCDCD;
+}
+
+.ranking {
+  width: 90%;
+}
+
+.ranking-row {
+  margin-top: 20px;
+  gap: 20px;
+  padding: 5px;
+  justify-content: space-around;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.ranking-row > span {
+  color: #CE3C3C;
+  font-size: 19px;
+  width: 40px;
+}
+
+.ranking-row > div {
+  display: flex;
+  justify-content: left;
+  width: 80%;
+}
+
+.p-ranking-nickname {
+  margin-left: 10px;
+  color: #808080;
+}
+
 .img-user-ranking {
   width: 36px;
   height: 36px;
 }
 
-ol {
-  list-style-type: decimal;
-  list-style-position: inside;
+.p-score {
+  width: 48px;
 }
 
-/* Tablet Landscape (ATÉ 992px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+.btn-ranking {
+  position: fixed;
+  cursor: pointer;
+  bottom: 5px;
+  width: 204px;
+  margin: auto;
+  height: 37px;
+  color: white;
+  background: linear-gradient(180deg, #C02425 53.65%, #7B0B0A 100%);
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+/* Classes do JS */
+
+.Mobile {
+  background-color: white;
+  position: fixed;
+  z-index: 1;
+  left: 0px;
+  top: 77px;
+  width: 100%;
+  height: 100%;
+  padding-top: 30px;
+}
+
+.js-red-background {
+  background-color: #F7DEDE;
+}
+
+@media (min-width: 576px) {
+  .Container {
+      width: 540px;
+  }
+}
+
+/* Tablet Portrait (ATÉ 992px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 768px) {
+  .Container {
+      width: 720px;
+  }
+}
+
+/* Tablet Landscape (ATÉ 1200px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 992px) {
   .Container {
       width: 960px;

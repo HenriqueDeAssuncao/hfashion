@@ -8,14 +8,31 @@ if (!empty($_GET) && !empty($_GET["quizId"])) {
 
     $UserAnswerQuestionDao = new UserAnswerQuestionDAO($conn, $CURRENT_URL);
     $quizRanking = $UserAnswerQuestionDao->findQuizRanking($quizId);
+    $quizName = $UserAnswerQuestionDao->findQuizName($quizId);
 }
+
+$counter = 1;
+
 ?>
 
-<ol>
-    <?php foreach ($quizRanking as $userAnswerQuestion): ?>
-        <li>
-            <div class="img-user-ranking profile-img" style="background-image: url('<?= $userAnswerQuestion->getImage() ?>')" alt="Avatar do usuário"> </div>
-            <p><?= $userAnswerQuestion->getNickname()?></p>
-        </li>
-    <?php endforeach; ?>
-</ol>
+<p class="p-rankig-name"> <?= $quizName ?> </p>
+
+<?php foreach ($quizRanking as $userAnswerQuestion): ?>
+    <div class="ranking Auto">
+        <button class="ranking-row Button Flex">
+            <span>
+                <?= $counter ?>
+            </span>
+            <div class="Flex">
+                <div class="img-user-ranking profile-img"
+                    style="background-image: url('<?= $userAnswerQuestion->getImage() ?>')" alt="Avatar do usuário"> </div>
+                <p class="p-ranking-nickname"><?= $userAnswerQuestion->getNickname() ?></p>
+            </div>
+            <p class="p-score"><?= $userAnswerQuestion->getScore() ?> pontos</p>
+        </button>
+    </div>
+
+    <?php
+    $counter++;
+?>
+<?php endforeach; ?>

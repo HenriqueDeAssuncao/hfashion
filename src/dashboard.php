@@ -47,7 +47,7 @@ $quizzes = $quizDao->getQuizzes($userId);
             <?php endforeach; ?>
         </div>
     </div>
-</secction>
+</section>
 
 <section class="container-quizzes-conquistas">
     <div class="quizzes">
@@ -67,7 +67,7 @@ $quizzes = $quizDao->getQuizzes($userId);
     </div>
 
     <div class="conquistas">
-        <h2>Conquistas</h2>
+        <h2>Acertos</h2>
         <?php foreach ($quizzes as $quiz): ?>
             <!-- Calculo a largura da barra -->
 
@@ -81,13 +81,13 @@ $quizzes = $quizDao->getQuizzes($userId);
                 }
             ?>
         
-            <div class="container-conquista">
+            <div class="container-acertos">
 
-                <div class="conquista-icon Flex">
+                <div class="acertos-icon Flex">
                     <img src="<?= $CURRENT_URL ?>/<?= $quiz->getIconPath() ?>" alt="ícone do quiz" class="icons">
                 </div>
 
-                <div class="conquista-content">
+                <div class="acertos-content">
                     <div class="content-text">
                         <p><?= $quiz->getQuizName() ?></p>
                         <p><?= $quiz->getScorePortion() ?></p>
@@ -104,8 +104,11 @@ $quizzes = $quizDao->getQuizzes($userId);
     </div>
 </section>
 
-<section class="container-rankings">
-    <div class="buttons-emblems">
+<section class="container-rankings Hidden Mobile">
+    <div class="buttons-emblems Flex">
+        <!-- <button class="btn-emblems Button">
+            <img src="<?= $CURRENT_URL ?>/img/dashboard/global.png" alt="Ícone global" class="emblems">
+        </button> -->
         <?php foreach ($emblems as $emblem): ?>
             <button class="btn-emblems Button" value="<?= $emblem->getQuizId() ?>">
                 <img src="<?= $CURRENT_URL ?>/<?= $emblem->getEmblemPath() ?>" alt="<?= $emblem->getEmblemName() ?>" class="emblems">
@@ -114,11 +117,20 @@ $quizzes = $quizDao->getQuizzes($userId);
     </div>
     
     <div class="container-ranking">
-
+        <div class="ranking Auto">
+            
+        </div>
+    </div>
+    <div class="container-btn-ranking Flex">
+        <button class="btn-ranking js-hide Hidden Button Box-shadow">Voltar</button>
     </div>
 </section>
 
-<script src="<?= $CURRENT_URL ?>/script/show_ranking.js"></script>
+<div class="container-btn-ranking Flex">
+    <button class="btn-ranking js-show Button Box-shadow">Consultar Ranking</button>
+</div>
+
+<script src="<?= $CURRENT_URL ?>/script/dashboard.js"></script>
 
 <?php
 require_once("templates/footer.php");

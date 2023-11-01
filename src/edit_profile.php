@@ -45,7 +45,7 @@ $userAvatars = $UserAvatarDao->findAvatars($userData->getId());
                         <?php endforeach; ?>
                     </div>
                 <?php endif; ?>
-                <p id="p-avatars">Complete os quizzes para desbloquear as fotos de perfil</p>
+                <p id="p-avatars">Alcance pontuação máxima nos quizzes para desbloquear avatares</p>
             </div>
         </div>
         <div class="form-group">
