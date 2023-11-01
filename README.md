@@ -44,7 +44,7 @@
           
           create table questions (
           question_id int auto_increment primary key,
-          question varchar(40) not null,
+          question varchar(52) not null,
           image varchar(100),
           options text not null,
           answer int(1) not null,
