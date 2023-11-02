@@ -1,6 +1,6 @@
-* {
-  /* border: 1px solid black; */
-}
+/* * {
+  border: 1px solid black;
+} */
 
 .Container {
   width: 365px;
@@ -21,20 +21,24 @@
   height: 189px;
 }
 
-.info-text > a {
+.info-text>a {
   text-decoration: none;
   font-size: 13px;
   color: #C02425;
   font-weight: 500;
 }
 
-.a-dashboard, .p-nickname, .p-email ,.p-bio{
+.a-dashboard,
+.p-nickname,
+.p-email,
+.p-bio {
   display: block;
   width: fit-content;
   margin: auto;
 }
 
-.p-bio, .p-email {
+.p-bio,
+.p-email {
   color: #424245b7;
 }
 
@@ -46,7 +50,8 @@
 }
 
 .info-emblems {
-  margin: auto;
+  display: flex;
+  justify-content: center;
   width: 100%;
 }
 
@@ -77,7 +82,7 @@ h2 {
   margin-bottom: 30px;
 }
 
-.container-quiz > .icons {
+.container-quiz>.icons {
   margin-right: 20px;
 }
 
@@ -116,12 +121,13 @@ h2 {
   justify-content: space-between;
 }
 
-.content-text > p {
+.content-text>p {
   text-transform: uppercase;
   font-weight: 600;
 }
 
-.content-bar-container, .bar {
+.content-bar-container,
+.bar {
   height: 21px;
   border-radius: 9px;
 }
@@ -169,13 +175,13 @@ h2 {
   width: 100%;
 }
 
-.ranking-row > span {
+.ranking-row>span {
   color: #CE3C3C;
   font-size: 19px;
   width: 40px;
 }
 
-.ranking-row > div {
+.ranking-row>div {
   display: flex;
   justify-content: left;
   width: 80%;
@@ -227,27 +233,104 @@ h2 {
 
 @media (min-width: 576px) {
   .Container {
-      width: 540px;
+    width: 540px;
   }
 }
 
 /* Tablet Portrait (ATÉ 992px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 768px) {
   .Container {
-      width: 720px;
+    width: 720px;
+    /* background-color: rgba(0, 0, 255, 0.39); */
   }
 }
 
 /* Tablet Landscape (ATÉ 1200px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 992px) {
   .Container {
-      width: 960px;
+    width: 960px;
+    /* background-color: rgba(255, 0, 0, 0.288); */
+  }
+
+  .container-user {
+    display: flex;
+    flex-direction: left;
+    gap: 60px;
+    width: 100%;
+    height: fit-content;
+    border-bottom: 3px solid #CDCDCD;
+  }
+
+  .img-user {
+    margin: none;
+    width: 260px;
+    height: 260px;
+  }
+
+  .a-dashboard,
+  .p-nickname,
+  .p-email,
+  .p-bio {
+    display: block;
+    width: auto;
+    margin: none;
+  }
+
+  .p-bio {
+    margin: 20px 0px;
+    width: 553px;
+    text-align: left;
+    text-indent: 15px;
+  }
+
+  .info-emblems {
+    justify-content: flex-start;
+  }
+
+  /* Quizzes */
+
+  h2 {
+    margin: 20px 0 30px 0;
+    text-indent: 10px;
+  }
+
+  .container-data {
+    display: flex;
+  }
+
+  .container-quizzes-conquistas {
+    width: 100%;
+  }
+
+  .quizzes {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+    width: fit-content;
+  }
+
+  .container-quiz {
+    display: flex;
+    width: fit-content;
+  }
+
+  .acertos {
+    border: 3px solid #CDCDCD;
+    border-radius: 7px;
+    width: 650px;
+    margin: auto;
+  }
+
+  .acertos-content {
+    margin: auto;
   }
 }
 
 /* PC (>= 1200px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 1200px) {
   .Container {
-      width: 90%;
+    width: 90%;
+    background-color: rgba(0, 128, 0, 0.329);
   }
 }
