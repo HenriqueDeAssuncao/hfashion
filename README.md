@@ -36,10 +36,16 @@
           id_user_answer_question int auto_increment primary key,
           user_id int not null,
           quiz_id int not null,
-          quiz_status int (1),
-          score int(11),
           tries int(1),
+          quiz_status int(1),
+          score int(11),
           score_portion varchar(7)
+          );
+
+          create table users_total_score (
+          user_total_score_id int auto_increment primary key,
+          user_id int not null,
+          total_score(11) int
           );
           
           create table questions (
@@ -79,6 +85,8 @@
 
           alter table users_answer_questions add CONSTRAINT fk_user FOREIGN KEY (user_id) references users(id);
           alter table users_answer_questions add CONSTRAINT fk_quiz FOREIGN KEY (quiz_id) references quizzes(quiz_id);
+
+          alter table users_total_score add CONSTRAINT fk_users_total_score_users FOREIGN KEY (user_id) references users(id);
           
           alter table questions add CONSTRAINT fk_quiz_question FOREIGN KEY (quiz_id) references quizzes(quiz_id);
 
