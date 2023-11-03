@@ -20,7 +20,7 @@ $counter = 1;
 <?php foreach ($quizRanking as $userAnswerQuestion): ?>
     <div class="ranking Auto">
         <button class="ranking-row Button Flex">
-            <span>
+            <span class="number">
                 <?= $counter ?>
             </span>
             <div class="Flex">
