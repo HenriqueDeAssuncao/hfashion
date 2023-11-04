@@ -30,60 +30,24 @@ class UserAnswerQuestionDAO implements UserAnswerQuestionDAOInterface
         $stmt->bindParam(":quiz_id", $quizId);
         $stmt->execute();
     }
-    //ISSO DEVERIA SER UM TRIGGER
-    public function verifyTries($userId, $quizId)
-    {
-        $stmt = $this->conn->prepare("SELECT tries FROM users_answer_questions
-                WHERE user_id = :user_id AND quiz_id = :quiz_id
-            ");
-        $stmt->bindParam(":user_id", $userId);
-        $stmt->bindParam(":quiz_id", $quizId);
-        $stmt->execute();
-        $triesArray = $stmt->fetch(PDO::FETCH_ASSOC);
-        $tries = $triesArray["tries"];
-        if ($tries >= 9) {
-            return false;
-        } else {
-            return true;
-        }
-    }
+
     public function isQuizAvailable($userId, $quizId)
     {
-        $stmt = $this->conn->prepare("SELECT * FROM users_answer_questions
-                WHERE user_id = :user_id AND quiz_id = :quiz_id AND quiz_status = 1
-            ");
-        $stmt->bindParam(":user_id", $userId);
-        $stmt->bindParam(":quiz_id", $quizId);
-        $stmt->execute();
-        $usersAnswerQuestionsArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        if (count($usersAnswerQuestionsArray)) {
-            if ($this->verifyTries($userId, $quizId)) {
-                return true;
-            } else {
-                return false;
-            }
-        } else {
-            return false;
-        }
-    }
-    public function getTries($userId, $quizId)
-    {
-        $stmt = $this->conn->prepare("SELECT tries FROM users_answer_questions 
+        $stmt = $this->conn->prepare("SELECT quiz_status FROM users_answer_questions
                 WHERE user_id = :user_id AND quiz_id = :quiz_id
             ");
         $stmt->bindParam(":user_id", $userId);
         $stmt->bindParam(":quiz_id", $quizId);
         $stmt->execute();
+        $statusArr = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        $triesArray = $stmt->fetch(PDO::FETCH_ASSOC);
-        $tries = $triesArray["tries"];
-
-        if ($tries) {
-            return $tries;
+        if($statusArr["quiz_status"] === 1) {
+            return true;
         } else {
-            return 0;
+            return false;
         }
     }
+
     public function updateScore(UserAnswerQuestion $userAnswerQuestion)
     {
         if ($userAnswerQuestion->getScore()) {
@@ -91,33 +55,27 @@ class UserAnswerQuestionDAO implements UserAnswerQuestionDAOInterface
         } else {
             $score = 0;
         }
+        $tries = 1;
+        $quizStatus = 0;
         $scorePortion = $userAnswerQuestion->getScorePortion();
         $userId = $userAnswerQuestion->getUserId();
         $quizId = $userAnswerQuestion->getQuizId();
-        $tries = $this->getTries($userId, $quizId);
-        $finalTries = $tries + 1;
-
-        if ($finalTries >= 9) {
-            $quizStatus = 0;
-        } else {
-            $quizStatus = 1;
-        }
 
         $stmt = $this->conn->prepare("UPDATE users_answer_questions SET
-                score = :score,
                 tries = :tries,
-                score_portion = :score_portion,
-                quiz_status = :quiz_status
+                quiz_status = :quiz_status,
+                score = :score,
+                score_portion = :score_portion
 
-                WHERE user_id = :user_id AND quiz_id = :quiz_id AND quiz_status = 1
+                WHERE user_id = :user_id AND quiz_id = :quiz_id
             ");
 
+        $stmt->bindParam(":tries", $tries);
+        $stmt->bindParam(":quiz_status", $quizStatus);
         $stmt->bindParam(":score", $score);
-        $stmt->bindParam(":tries", $finalTries);
         $stmt->bindParam(":score_portion", $scorePortion);
         $stmt->bindParam(":user_id", $userId);
         $stmt->bindParam(":quiz_id", $quizId);
-        $stmt->bindParam(":quiz_status", $quizStatus);
 
         $stmt->execute();
     }
@@ -151,7 +109,7 @@ class UserAnswerQuestionDAO implements UserAnswerQuestionDAOInterface
     }
     public function findQuizRanking($quizId)
     {
-        $stmt = $this->conn->prepare("SELECT * FROM users_answer_questions WHERE quiz_id = :quiz_id");
+        $stmt = $this->conn->prepare("SELECT * FROM users_answer_questions WHERE quiz_id = :quiz_id AND score > 0");
         $stmt->bindParam(":quiz_id", $quizId);
         $stmt->execute();
         $quizRankingArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -165,7 +123,7 @@ class UserAnswerQuestionDAO implements UserAnswerQuestionDAOInterface
             $UserAnswerQuestion->setTries($item["tries"]);
             $UserAnswerQuestion->setQuizStatus($item["quiz_status"]);
 
-            //Junto com os objetos dos usuários
+            //Juntando com os objetos dos usuários
             $User = $this->findUser($item["user_id"]);
 
             $nickname = $User->getNickname();
@@ -181,6 +139,33 @@ class UserAnswerQuestionDAO implements UserAnswerQuestionDAOInterface
         $sortedQuizRanking = $this->sortQuizRanking($quizRanking);
 
         return $sortedQuizRanking;
+    }
+    public function findGlobalRanking() {
+        $stmt = $this->conn->prepare("SELECT * FROM users_total_score WHERE total_score > 0");
+        $stmt->execute();
+        $globalRankingArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $globalRanking = [];
+        foreach ($globalRankingArray as $item) {
+            $UserAnswerQuestion = new UserAnswerQuestion;
+            $UserAnswerQuestion->setUserId($item["user_id"]);
+            $UserAnswerQuestion->setScore($item["total_score"]);
+
+            //Juntando com os objetos dos usuários
+            $User = $this->findUser($item["user_id"]);
+
+            $nickname = $User->getNickname();
+            $image = $User->getImage();
+            $email = $User->getEmail();
+
+            $UserAnswerQuestion->setNickname($nickname);
+            $UserAnswerQuestion->setImage($image);
+            $UserAnswerQuestion->setEmail($email);
+            $globalRanking[] = $UserAnswerQuestion;
+        }
+
+        $sortedGlobalRanking = $this->sortQuizRanking($globalRanking);
+
+        return $sortedGlobalRanking;
     }
     public function sortQuizRanking($quizRanking)
     {

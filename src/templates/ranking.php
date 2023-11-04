@@ -7,8 +7,15 @@ if (!empty($_GET) && !empty($_GET["quizId"])) {
     require_once __DIR__ . "/../dao/UserAnswerQuestionDAO.php";
 
     $UserAnswerQuestionDao = new UserAnswerQuestionDAO($conn, $CURRENT_URL);
-    $quizRanking = $UserAnswerQuestionDao->findQuizRanking($quizId);
-    $quizName = $UserAnswerQuestionDao->findQuizName($quizId);
+
+    if ($quizId == "global") {
+        $quizRanking = $UserAnswerQuestionDao->findGlobalRanking();
+        $quizName = "Ranking Global";
+    } else {
+        $quizRanking = $UserAnswerQuestionDao->findQuizRanking($quizId);
+        $quizName = $UserAnswerQuestionDao->findQuizName($quizId);
+    }
+    
 }
 
 $counter = 1;
@@ -18,7 +25,7 @@ $counter = 1;
 <p class="p-rankig-name"> <?= $quizName ?> </p>
 
 <?php foreach ($quizRanking as $userAnswerQuestion): ?>
-    <div class="ranking Auto">
+    <div class="ranking js-ranking Auto">
         <button class="ranking-row Button Flex">
             <span class="number">
                 <?= $counter ?>

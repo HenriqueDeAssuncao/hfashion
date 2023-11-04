@@ -16,8 +16,7 @@ const globalEmblem = emblems[0];
 let previousEmblem = globalEmblem;
 
 //Funções Ranking
-function getQuizRanking(e) {
-    const quizId = e.currentTarget.value;
+function fetchRanking(quizId) {
     const ranking = fetch(`./templates/ranking.php?quizId=${quizId}`);
     ranking
         .then((r) => {
@@ -25,7 +24,18 @@ function getQuizRanking(e) {
         })
         .then((body) => {
             containerRanking.innerHTML = body;
-        });
+        })
+        .then(() => {
+            let rankingRows = document.querySelectorAll(".number");
+            rankingRows[0].classList.add("st");
+            rankingRows[1].classList.add("nd");
+            rankingRows[2].classList.add("rd");
+        })
+}
+
+function getQuizRanking(e) {
+    const quizId = e.currentTarget.value;
+    fetchRanking(quizId);
 }
 
 buttons.forEach((button) => {
@@ -48,18 +58,19 @@ function watchResizing() {
     if (isContainerMobile.matches === false) {
         containerRankings.classList.remove("Hidden");
         containerRankings.classList.remove("Mobile");
-        btnRanking.classList.add("Hidden");    
+        btnRanking.classList.add("Hidden");
+        btnBack.classList.add("Hidden");
     } else {
         containerRankings.classList.add("Hidden");
         containerRankings.classList.add("Mobile");
-        btnRanking.classList.remove("Hidden");   
+        btnRanking.classList.remove("Hidden");
     }
 }
 
 //Funções das animações dos botões
 function removeClass(previousEmblem) {
-    if(previousEmblem !== "") {
-      previousEmblem.classList.remove("increasedWidth");
+    if (previousEmblem !== "") {
+        previousEmblem.classList.remove("increasedWidth");
     }
 }
 
@@ -68,11 +79,11 @@ function increaseEmblemWidth(e) {
     selectedEmblem = e.currentTarget;
     selectedEmblem.classList.toggle("increasedWidth");
     previousEmblem = selectedEmblem;
-  }
-  
+}
+
 
 emblems.forEach((emblem) => {
-emblem.addEventListener("click", increaseEmblemWidth);
+    emblem.addEventListener("click", increaseEmblemWidth);
 })
 
 btnRanking.addEventListener("click", toggleContainerRankings);
@@ -80,3 +91,4 @@ btnBack.addEventListener("click", toggleContainerRankings);
 window.addEventListener("resize", watchResizing);
 
 watchResizing();
+fetchRanking("global");

@@ -48,10 +48,7 @@ $Adm = new Adm($CURRENT_URL);
         <ul>
           <ul>
             <li><a href="<?= $CURRENT_URL ?>/quiz.php">Novo quiz</a></li>
-            <li><a href="<?= $CURRENT_URL ?>/editor.php">Novo artigo</a></li>
             <li><a href="<?= $CURRENT_URL ?>/my_quizzes.php">Meus quizzes</a></li>
-            <li><a href="#">Meus artigos</a></li>
-            <li><a href="#">Painel</a></li>
           </ul>
         </ul>
       </nav>

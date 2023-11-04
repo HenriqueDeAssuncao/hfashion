@@ -110,7 +110,7 @@ $quizzes = $quizDao->getQuizzes($userId);
     
         <section class="container-rankings Hidden Mobile">
             <div class="buttons-emblems Flex">
-                <button class="btn-emblems Button">
+                <button class="btn-emblems Button" value="global">
                     <img src="<?= $CURRENT_URL ?>/img/dashboard/global.png" alt="Ícone global" class="emblems js-emblems increasedWidth">
                 </button>
                 <?php foreach ($emblems as $emblem): ?>

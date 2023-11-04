@@ -45,7 +45,7 @@ $quizzes = $quizDao->getQuizzes($userId);
                 $imgStatus = "play.png";
             } else {
                 $tries = $quiz->getTries();
-                if ($tries >= 9) {
+                if ($tries === 1) {
                     $imgStatus = "done.png";
                 } else {
                     $imgStatus = "block.png";

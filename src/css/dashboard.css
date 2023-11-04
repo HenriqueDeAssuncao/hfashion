@@ -181,11 +181,7 @@ h2 {
   border-radius: 100%;
   color: #CE3C3C;
   font-size: 19px;
-  width: 40px;
-}
-
-.ranking:first-child {
-  background-color: red;
+  width: 36px;
 }
 
 .ranking-row>div {
@@ -205,7 +201,7 @@ h2 {
 }
 
 .p-score {
-  width: 48px;
+  width: 50px;
 }
 
 .btn-ranking {
@@ -241,6 +237,24 @@ h2 {
 /* JS */
 .increasedWidth {
   width: 68px;
+}
+
+.st, .nd, .rd {
+  box-shadow: 0px 2px 4px 0px rgba(41, 41, 41, 0.214);
+  border-radius: 100%;
+  color: black;
+}
+
+.st {
+  background-color: #FFC800;
+}
+
+.nd {
+  background-color: #8f7b67b6;
+}
+
+.rd {
+  background-color: #8f6d5b;
 }
 
 @media (min-width: 576px) {

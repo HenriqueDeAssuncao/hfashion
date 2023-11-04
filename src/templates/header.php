@@ -80,8 +80,7 @@ if (empty($userData)) {
 
                         <?php if ($userData): ?>
                             <?php if ($Adm->isAdm($userDao, false)): ?>
-                                <li class="links"><a class="White" href="<?= $CURRENT_URL ?>/adm/">Gerenciar</a>
-                                </li>
+                                <li class="links"><a class="White" href="<?= $CURRENT_URL ?>/adm/">Gerenciar</a></li>
                             <?php endif; ?>
                         <?php endif; ?>
 
