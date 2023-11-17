@@ -36,9 +36,8 @@ require_once "templates/header.php";
         De onde surgiu o HiFashion?
       </p>
       <p class="style-regulartext">
-        Learning with Duolingo is fun, and research shows that it works! With quick,
-        bite-sized lessons,you’ll earn points and unlock new levels while gaining real-world communication skills.
-      </p>
+      O HiFashion é uma iniciativa destinada a explorar e analisar as origens e inspirações por trás das tendências de moda apresentadas nessa icônica produção cinematográfica. "High School Musical", filme que tornou-se um fenômeno cultural, principalmente entre o público jovem, impactando não apenas a música e o entretenimento, mas também ditando estilos de moda que marcaram uma era.
+    </p>
     </div>
   </div>
 </div>
@@ -69,8 +68,7 @@ require_once "templates/header.php";
           </div>
           <div class="text-cursos">
             <p class="style-regulartext">
-              Our courses effectively and efficiently teach
-              reading, listening, and speaking skills. Check out our
+            Confira a evolução da moda, abordando estilos, movimentos culturais e influências chave.
             </p>
           </div>
         </div>
@@ -82,8 +80,7 @@ require_once "templates/header.php";
           </div>
           <div class="text-cursos">
             <p class="style-regulartext">
-              Our courses effectively and efficiently teach
-              reading, listening, and speaking skills. Check out our
+            Revele como as estéticas históricas contribuiram para construção de identidades dos personagens e para a narrativa da produção.
             </p>
           </div>
         </div>
@@ -96,8 +93,7 @@ require_once "templates/header.php";
           </div>
           <div class="text-cursos">
             <p class="style-regulartext">
-              Our courses effectively and efficiently teach
-              reading, listening, and speaking skills. Check out our
+            Descubra as influências culturais e históricas que moldaram as escolhas de moda da produção.
             </p>
           </div>
         </div>
@@ -134,7 +130,7 @@ require_once "templates/header.php";
         <p id="style-timeline">Linha do tempo</p>
       </div>
       <br>
-      <p class="style-minimal" style="color: #FFF">textotextotexto</p>
+      <p class="style-minimal" style="color: #FFF">De forma visual e direta saiba como a moda foi construida através da história</p>
     </div>
   </div>
 
@@ -161,7 +157,7 @@ require_once "templates/header.php";
         <div class="div-text-card">
           <p class="style-minimal">1/1</p>
           <p class="style-regulartext">Linha do Tempo</p>
-          <p class="style-minimal">textotextotexto</p>
+          <p class="style-minimal">De forma visual e direta saiba como a moda foi construida através da história</p>
         </div>
       </div>
 
@@ -191,7 +187,7 @@ require_once "templates/header.php";
         <div class="div-text-card">
           <p class="style-minimal">1/4</p>
           <p class="style-regulartext">StreetWear</p>
-          <p class="style-minimal">textotextotexto</p>
+          <p class="style-minimal">Influências do cotidiano urbano.</p>
         </div>
       </div>
 
@@ -202,7 +198,7 @@ require_once "templates/header.php";
         <div class="div-text-card">
           <p class="style-minimal">2/4</p>
           <p class="style-regulartext">Y2K</p>
-          <p class="style-minimal">textotextotexto</p>
+          <p class="style-minimal">Dos anos 2000, expressa o exagero</p>
         </div>
       </div>
 
