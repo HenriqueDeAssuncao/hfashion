@@ -63,6 +63,11 @@
 
 /* Quizzes */
 
+.quizzes a {
+  text-decoration: none;
+  color: black;
+}
+
 h2 {
   font-size: 18px;
   font-weight: 600;

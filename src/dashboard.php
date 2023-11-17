@@ -57,16 +57,15 @@ $quizzes = $quizDao->getQuizzes($userId);
             <h2>Quizzes</h2>
             <div class="quizzes">
                 <?php foreach ($quizzes as $quiz): ?>
-                    <div class="container-quiz">
-    
-                        <img src="<?= $CURRENT_URL ?>/<?= $quiz->getIconPath() ?>" alt="ícone do quiz" class="icons">
-    
-                        <div class="quiz-text">
-                            <p class="p-quiz-name"><?= $quiz->getQuizName() ?></p>
-                            <p>Veja suas respostas</p>
+                    <a href="<?=$CURRENT_URL?>/user_answers.php?quizId=<?=$quiz->getQuizId()?>">
+                        <div class="container-quiz">
+                            <img src="<?= $CURRENT_URL ?>/<?= $quiz->getIconPath() ?>" alt="ícone do quiz" class="icons">
+                            <div class="quiz-text">
+                                <p class="p-quiz-name"><?= $quiz->getQuizName() ?></p>
+                                <p>Veja suas respostas</p>
+                            </div>
                         </div>
-    
-                    </div>
+                    </a>
                 <?php endforeach; ?>
             </div>
     
