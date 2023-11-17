@@ -4,7 +4,7 @@
 
 *COPIAR E COLAR NO PHPMYADMIN PARA CRIAR O BANCO DE DADOS:*
 
-          create database fashion;
+          create database hifashion;
           
           commit;
           
