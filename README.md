@@ -39,6 +39,7 @@
           tries int(1),
           quiz_status int(1),
           score int(11),
+          user_answers varchar(100),
           score_portion varchar(7)
           );
           
