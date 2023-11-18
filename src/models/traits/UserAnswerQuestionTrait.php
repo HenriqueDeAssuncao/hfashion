@@ -7,6 +7,7 @@ trait UserAnswerQuestionTrait
   private $quizStatus; //Se o usuário desbloqueou ou não o quiz
   private $score;
   private $tries;
+  private $userAnswers;
   private $scorePortion;
   public function getUserId()
   {
@@ -47,6 +48,12 @@ trait UserAnswerQuestionTrait
   public function setTries($tries)
   {
     $this->tries = $tries;
+  }
+  public function getUserAnswers() {
+    return $this->userAnswers;
+  }
+  public function setUserAnswers($userAnswers) {
+    $this->userAnswers = $userAnswers;
   }
   public function getScorePortion()
   {

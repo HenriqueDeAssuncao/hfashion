@@ -32,6 +32,10 @@ $quizzes = $quizDao->getQuizzes($userId);
 
 <link rel="stylesheet" type="text/css" href="css/dashboard.css">
 
+<?php
+    require_once "templates/message.php";
+?>
+
 <div class="container-dashboard">
     <section class="container-user">
         <div class="container-img-user">
@@ -57,7 +61,7 @@ $quizzes = $quizDao->getQuizzes($userId);
             <h2>Quizzes</h2>
             <div class="quizzes">
                 <?php foreach ($quizzes as $quiz): ?>
-                    <a href="<?=$CURRENT_URL?>/user_answers.php?quizId=<?=$quiz->getQuizId()?>">
+                    <a href="<?=$CURRENT_URL?>/user_answers.php?quizToken=<?=$quiz->getQuizToken()?>&quizId=<?=$quiz->getQuizId()?>">
                         <div class="container-quiz">
                             <img src="<?= $CURRENT_URL ?>/<?= $quiz->getIconPath() ?>" alt="ícone do quiz" class="icons">
                             <div class="quiz-text">

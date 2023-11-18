@@ -2,6 +2,10 @@
   border: 1px solid black;
 } */
 
+.msg {
+  margin-top: 20px;
+}
+
 .container-dashboard {
   margin: auto;
   width: 365px;

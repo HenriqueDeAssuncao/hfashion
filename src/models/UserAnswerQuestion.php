@@ -16,6 +16,8 @@ class UserAnswerQuestion
 }
 interface UserAnswerQuestionDAOInterface
 {
+    public function buildUserAnswerQuestion($userAnswerQuestion);
+    public function getUserAnswerQuestion($userId, $quizId); 
     public function setStatusToAvailable(UserAnswerQuestion $userAnswerQuestion);
     public function isQuizAvailable($userId, $quizId);
     public function updateScore(UserAnswerQuestion $userAnswerQuestion);

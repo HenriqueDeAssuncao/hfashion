@@ -51,6 +51,7 @@ if ($userData) {
             $userId = $userData->getId();
 
             //Preenchendo o objeto userAnswerQuestion:
+            $userAnswerQuestion->setUserAnswers($stringUserAnswers);
             $userAnswerQuestion->setScorePortion($scorePortion);
             $userAnswerQuestion->setQuizId($quizId);
             $userAnswerQuestion->setUserId($userId);

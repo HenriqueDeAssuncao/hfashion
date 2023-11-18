@@ -16,6 +16,35 @@ class UserAnswerQuestionDAO implements UserAnswerQuestionDAOInterface
         $this->url = $url;
         $this->message = new Message($url);
     }
+    public function buildUserAnswerQuestion($userAnswerQuestionArr) {
+        $userAnswerQuestion = new UserAnswerQuestion();
+        $userAnswerQuestion->setId($userAnswerQuestionArr["id_user_answer_question"]);
+        $userAnswerQuestion->setUserId($userAnswerQuestionArr["user_id"]);
+        $userAnswerQuestion->setQuizId($userAnswerQuestionArr["quiz_id"]);
+        $userAnswerQuestion->setTries($userAnswerQuestionArr["tries"]);
+        $userAnswerQuestion->setQuizStatus($userAnswerQuestionArr["quiz_status"]);
+        $userAnswerQuestion->setScore($userAnswerQuestionArr["score"]);
+        $userAnswerQuestion->setScorePortion($userAnswerQuestionArr["score_portion"]);
+        $userAnswerQuestion->setUserAnswers($userAnswerQuestionArr["user_answers"]);
+        return $userAnswerQuestion;
+    }
+    public function getUserAnswerQuestion($userId, $quizId) {
+        $stmt = $this->conn->prepare("SELECT * FROM users_answer_questions
+                WHERE user_id = :user_id AND quiz_id = :quiz_id
+            ");
+        $stmt->bindParam(":user_id", $userId);
+        $stmt->bindParam(":quiz_id", $quizId);
+        $stmt->execute();
+        $userAnswerQuestionArr = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if(!empty($userAnswerQuestionArr)) {
+            $userAnswerQuestion = $this->buildUserAnswerQuestion($userAnswerQuestionArr);
+            return $userAnswerQuestion;
+        } else {
+            return false;
+        }
+        
+    }
     public function setStatusToAvailable(UserAnswerQuestion $userAnswerQuestion)
     {
         $userId = $userAnswerQuestion->getUserId();
@@ -57,6 +86,7 @@ class UserAnswerQuestionDAO implements UserAnswerQuestionDAOInterface
         }
         $tries = 1;
         $quizStatus = 0;
+        $userAnswers = $userAnswerQuestion->getUserAnswers();
         $scorePortion = $userAnswerQuestion->getScorePortion();
         $userId = $userAnswerQuestion->getUserId();
         $quizId = $userAnswerQuestion->getQuizId();
@@ -65,6 +95,7 @@ class UserAnswerQuestionDAO implements UserAnswerQuestionDAOInterface
                 tries = :tries,
                 quiz_status = :quiz_status,
                 score = :score,
+                user_answers = :user_answers,
                 score_portion = :score_portion
 
                 WHERE user_id = :user_id AND quiz_id = :quiz_id
@@ -73,6 +104,7 @@ class UserAnswerQuestionDAO implements UserAnswerQuestionDAOInterface
         $stmt->bindParam(":tries", $tries);
         $stmt->bindParam(":quiz_status", $quizStatus);
         $stmt->bindParam(":score", $score);
+        $stmt->bindParam(":user_answers", $userAnswers);
         $stmt->bindParam(":score_portion", $scorePortion);
         $stmt->bindParam(":user_id", $userId);
         $stmt->bindParam(":quiz_id", $quizId);
