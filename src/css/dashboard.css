@@ -62,7 +62,7 @@
 
 .emblems {
   width: 56px;
-  /* transition: .5s; */
+  cursor: pointer;
 }
 
 /* Quizzes */

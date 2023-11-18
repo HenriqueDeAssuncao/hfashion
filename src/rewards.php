@@ -36,39 +36,94 @@
     }
 ?>
 
-<?php
-    require_once "templates/message.php";
-?>
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-<div class="container-awards">
-    <div class="container-avatars">
-        <?php if($type === "avatars"):?>
-            <?php if(!empty($avatars)):?>
-                <p>Parabéns! Escolha um dos avatares como recompensa!</p>
-                <form action="<?=$CURRENT_URL?>/process/rewards_process.php" method="POST">
-                    <input type="hidden" value="<?=$type?>" name="type">
-                    <input type="hidden" value="<?=$userId?>" name="user-id">
-                    <?php foreach($avatars as $avatar): ?>
-                        <label for="avatar-id"><img src="<?=$CURRENT_URL?>/<?=$avatar["avatar_path"]?>" alt="Imagem avatar"></label>
-                        <input type="radio" name="avatar-id" value="<?=$avatar["avatar_id"]?>">
-                    <?php endforeach;?>
-                    <input type="submit" value="enviar">
-                </form>
-            <?php endif;?>
-        <?php endif;?>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HiFashion</title>
+    <link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/global.css">
+    <link rel="stylesheet" href="<?=$CURRENT_URL?>/css/rewards.css">
+</head>
+
+<body>
+
+    <div class="rewards Flex">
+
+        <div class="container-rewards Hidden">
+
+            <div class="container-emblem">
+                <?php if(!empty($emblem)):?>
+                    <p>Você desbloqueou o emblema <?=$emblem["emblem_name"]?></p>
+                    <div class="Flex">
+                        <img src="<?=$CURRENT_URL?>/<?=$emblem["emblem_path"]?>" alt="Imagem emblema" class="emblem">
+                    </div>
+                    <div class="container-btn">
+                        <?php if($type !== "avatars"):?>
+                            <button class="btn-continuar btn-resgatar">Resgatar</button>
+                        <?php endif;?>
+                    </div>
+                <?php endif;?>
+            </div>
+
+            <div class="container-avatars">
+
+                <?php if($type === "avatars"):?>
+
+                    <?php if(!empty($avatars)):?>
+
+                        <p>Parabéns! Escolha um dos avatares como recompensa!</p>
+                        <form action="<?=$CURRENT_URL?>/process/rewards_process.php" method="POST">
+                            <input type="hidden" value="<?=$type?>" name="type">
+                            <input type="hidden" value="<?=$userId?>" name="user-id">
+                            <div class="avatars Flex">
+                                <?php foreach($avatars as $avatar): ?>
+                                    <label for="avatar<?=$avatar["avatar_id"]?>">
+                                        <img src="<?=$CURRENT_URL?>/<?=$avatar["avatar_path"]?>" alt="Imagem avatar" class="avatar">
+                                    </label>
+                                    <input id="avatar<?=$avatar["avatar_id"]?>" class="Hidden" type="radio" name="avatar-id" value="<?=$avatar["avatar_id"]?>">
+                                <?php endforeach;?>
+                            </div>
+                            <input class="btn-continuar" type="submit" value="Resgatar">
+                        </form>
+
+                    <?php endif;?>
+
+                <?php endif;?>
+
+            </div>
+
+        </div>
+
     </div>
-    <div class="container-emblem">
-        <?php if(!empty($emblem)):?>
-            <p>Você desbloqueou o emblema <?=$emblem["emblem_name"]?></p>
-            <img src="<?=$CURRENT_URL?>/<?=$emblem["emblem_path"]?>" alt="Imagem emblema">
-        <?php endif;?>
+
+    <div class="Container Flex">
+
+        <div class="container-feedback">  
+
+            <?php
+                require_once "templates/message.php";
+            ?>
+
+            <div class="feedback">
+                <p class="p-title">Resultados</p>
+                <div class="feedback-content Flex">
+                    <p class="p-feedback">Você acertou <?=$rightAnswers?> perguntas de <?=$questionsNumber?>.</p>
+                    <p class="p-feedback">Você marcou <?=$score?> pontos!</p>
+                </div>
+            </div>
+
+            <div>
+                <button class="btn-show-rewards">Continuar</button>
+            </div>
+                
+        </div>
+
     </div>
-</div>
 
-<p>Parabéns! Você concluiu o quiz.</p>
-<p>Você acertou <?=$rightAnswers?> de <?=$questionsNumber?> questões</p>
-<p>Você marcou <?=$score?> pontos!</p>
+</body>
 
-<?php
-    require_once "templates/footer.php";
-?>
+<script src="<?= $CURRENT_URL ?>/script/rewards.js"></script>
+
+</html>

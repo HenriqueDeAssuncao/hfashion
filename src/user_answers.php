@@ -29,7 +29,7 @@ if (!empty($_GET["quizToken"] && !empty($_GET["quizId"]))) {
     $quizStatus = $userAnswerQuestion->getQuizStatus();
 
     if ($tries === 1) {
-      $userAnswers = $userAnswerQuestion->getUserAnswers();
+      $userAnswers = $userAnswerQuestion->getUserAnswersArray();
       $questions = $quizDao->getQuestions($quizToken);
     } else if ($tries === 0) {
       $message->setMessage("Conclua o quiz para ver suas respostas", "error", "back");
@@ -42,9 +42,11 @@ if (!empty($_GET["quizToken"] && !empty($_GET["quizId"]))) {
   $message->setMessage("Você não tem permissão para acessar essa página", "error", "back");
 }
 
-$i = 1;
+$i = 0;
 
 ?>
+
+<link rel="stylesheet" href="<?=$CURRENT_URL?>/css/user_answers.css">
 
 <a href="<?=$CURRENT_URL?>/dashboard.php"><img class="back-icon" src="<?= $CURRENT_URL ?>/img/dashboard/back-icon.svg" alt="ícone voltar"></a>
 
@@ -52,15 +54,56 @@ $i = 1;
 
   <?php foreach($questions as $question):?>
 
-    <?php
-      $options = $question->getOptionsArray();
-    ?>
+    <div class="questions">
 
-    <p><?=$question->getQuestion()?></p>
-    <hr>
-    <?php foreach($options as $option):?>
-      <p><?=$option?></p>
-    <?php endforeach;?>
+      <p class="p-question"><?=$question->getQuestion()?></p>
+      
+      <?php
+        $options = $question->getOptionsArray();
+      ?>
+      
+      <div class="options">
+
+        <?php for($c=0; $c < count($options) ; $c++):?>
+          <?php
+              if($c == $userAnswers[$i]) {
+                $selected = "selected";
+              } else {
+                $selected = "";
+              }
+        
+              if ($question->isAnswerCorrect($c)) {
+                $answerStatus = "correct";
+                if ($c == $userAnswers[$i]) {
+                  $feedback = "Você acertou.";
+                  $feedbackClass = "green-txt";
+                } else {
+                  $feedback = "Você errou.";
+                  $feedbackClass = "red-txt";
+                }
+      
+              } else {
+                $answerStatus = "wrong";   
+              }
+          ?>
+          <div class="options-container <?=$answerStatus?> <?=$selected?> Box-shadow">
+            <div class="p-container Flex">
+              <p class="p-options"><?=$options[$c]?></p>
+            </div>
+          </div>
+        <?php endfor;?>
+        
+      </div>
+
+      <p class="p-feedback <?=$feedbackClass?>">
+        <?=$feedback?>
+      </p>
+      
+      <?php
+        $i++;
+      ?>
+
+    </div>
 
   <?php endforeach;?>
   

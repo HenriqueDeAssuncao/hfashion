@@ -36,6 +36,10 @@ $quizzes = $quizDao->getQuizzes($userId);
     require_once "templates/message.php";
 ?>
 
+<div class="user-popup">
+    
+</div>
+
 <div class="container-dashboard">
     <section class="container-user">
         <div class="container-img-user">
@@ -50,7 +54,7 @@ $quizzes = $quizDao->getQuizzes($userId);
             </div>
             <div class="info-emblems">
                 <?php foreach ($userEmblems as $emblem): ?>
-                    <img src="<?= $CURRENT_URL ?>/<?= $emblem["emblem_path"] ?>" alt="Emblema <?= $emblem["emblem_name"] ?>" class="emblems">
+                    <img src="<?= $CURRENT_URL ?>/<?= $emblem["emblem_path"] ?>" alt="Emblema <?= $emblem["emblem_name"] ?>" class="emblems" title="<?=$emblem["emblem_name"]?>">
                 <?php endforeach; ?>
             </div>
         </div>

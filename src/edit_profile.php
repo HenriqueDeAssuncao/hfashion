@@ -36,7 +36,7 @@ $userAvatars = $UserAvatarDao->findAvatars($userData->getId());
                                 <label for="avatar<?= $UserAvatar->getAvatarId() ?>">
                                     <div class="profile-img img"
                                         style="background-image: url('<?= $CURRENT_URL ?>/<?= $UserAvatar->getAvatarPath() ?>')"
-                                        alt="Avatar">
+                                        alt="Avatar" title="<?=$UserAvatar->getAvatarName()?>">
                                     </div>
                                 </label>
                                 <input id="avatar<?= $UserAvatar->getAvatarId() ?>" type="radio" name="avatar-path"

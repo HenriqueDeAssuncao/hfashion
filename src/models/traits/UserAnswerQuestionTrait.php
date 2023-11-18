@@ -63,4 +63,12 @@ trait UserAnswerQuestionTrait
   {
     $this->scorePortion = $scorePortion;
   }
+
+  //Funções que não interagem com o banco
+  public function getUserAnswersArray()
+  {
+    $userAnswers = $this->getUserAnswers();
+    $userAnswersArray = explode(",", $userAnswers);
+    return $userAnswersArray;
+  }
 }

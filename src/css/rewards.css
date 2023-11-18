@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Poppins;
+  overflow: hidden;
+}
+
+.Container {
+  height: 100vh;
+}
+
+.rewards {
+  width: 100%;
+}
+
+.container-rewards {
+  position: absolute;
+  width: 305px;
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.464);
+  padding: 20px;
+  animation: translateX .5s forwards;
+  background-color: white;
+}
+
+.rewards p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.btn-resgatar {
+  margin: 10px 0px;
+  border: none;
+}
+
+.emblem {
+  width: 70px;
+  margin: auto;
+}
+
+.avatar {
+  width: 90px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container-feedback {
+  width: 305px;
+}
+
+.feedback {
+  margin-bottom: 60px;
+}
+
+.p-title {
+  text-align: center;
+  font-size: 22px; 
+  font-family: Roboto; 
+  font-weight: 600; 
+  margin-top: 5px;
+  margin-bottom: 25px;
+}
+
+.p-feedback {
+  font-size: 16px; 
+  font-weight: 600; 
+
+  color: #333333; 
+}
+
+.btn-show-rewards, .btn-continuar {
+  width: 100%;
+  height: 57px;
+  background: linear-gradient(180deg, #C02425 53.65%, #7B0B0A 100%);
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border: 0;
+}
+
+.full-vh {
+  height: 100vh;
+}
+
+.border {
+  border: 4px solid black;
+}
