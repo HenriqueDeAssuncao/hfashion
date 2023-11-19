@@ -36,7 +36,7 @@ $quizzes = $quizDao->getQuizzes($userId);
     require_once "templates/message.php";
 ?>
 
-<div class="user-popup">
+<div class="user-popup Box-shadow Flex">
     
 </div>
 
@@ -146,6 +146,7 @@ $quizzes = $quizDao->getQuizzes($userId);
 </div>
 
 <script src="<?= $CURRENT_URL ?>/script/dashboard.js"></script>
+<script src="<?= $CURRENT_URL ?>/script/user_popup.js"></script>
 
 <?php
 require_once("templates/footer.php");

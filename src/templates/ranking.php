@@ -25,8 +25,10 @@ $counter = 1;
 <p class="p-rankig-name"> <?= $quizName ?> </p>
 
 <?php foreach ($quizRanking as $userAnswerQuestion): ?>
+
     <div class="ranking js-ranking Auto">
-        <button class="ranking-row Button Flex">
+
+        <button class="ranking-row Button Flex" data-parameter="<?= $userAnswerQuestion->getUserId(); ?>">
             <span class="number">
                 <?= $counter ?>
             </span>
@@ -37,6 +39,7 @@ $counter = 1;
             </div>
             <p class="p-score"><?= $userAnswerQuestion->getScore() ?> pontos</p>
         </button>
+        
     </div>
 
     <?php

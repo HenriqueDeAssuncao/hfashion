@@ -1,9 +1,33 @@
-/* * {
-  border: 1px solid black;
-} */
-
 .msg {
   margin-top: 20px;
+}
+
+.user-popup, .user-content {
+  width: 100%;
+  height: 100%;
+}
+
+.container-user-popup {
+  top: 90px;
+  width: 80%;
+  height: 80%;
+  z-index: 1;
+  background-color: white;
+  position: fixed;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.close-icon {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 35px;
+  cursor: pointer;
+}
+
+.user-content {
+  flex-direction: column;
 }
 
 .container-dashboard {
@@ -184,6 +208,11 @@ h2 {
   justify-content: space-around;
   border-radius: 10px;
   width: 100%;
+  cursor: pointer;
+}
+
+.ranking-row:hover {
+  border: 1px solid black;
 }
 
 .number {
@@ -283,6 +312,11 @@ h2 {
 @media (min-width: 992px) {
   .container-dashboard {
     width: 960px;
+  }
+
+  .user-content {
+    flex-direction: row;
+    gap: 40px;
   }
 
   .container-user {
