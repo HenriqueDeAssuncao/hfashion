@@ -396,6 +396,12 @@ h2 {
     border-radius: 7px;
     padding: 10px;
   }
+
+  .container-ranking {
+    min-height: 693px;
+    max-height: 693px;
+    overflow: auto;
+  }
 }
 
 /* PC (>= 1200px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
