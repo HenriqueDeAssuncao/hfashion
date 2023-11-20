@@ -1,12 +1,11 @@
+const buttons = document.querySelectorAll(".btn-settings");
 
-const buttons = document.querySelectorAll(".btn-show-features");
-
-function showFeatures(e) {
+function toggleFeatures(e) {
     let quizFeatures = e.currentTarget.nextElementSibling;
     quizFeatures.classList.toggle("Hidden");
 }
 
 buttons.forEach((button) => {
-    button.addEventListener("click", showFeatures);
+    button.addEventListener("click", toggleFeatures);
 });
 

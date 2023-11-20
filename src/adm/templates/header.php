@@ -37,18 +37,23 @@ $Adm = new Adm($CURRENT_URL);
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="<?= $CURRENT_URL ?>/../css/global.css">
   <link rel="stylesheet" href="<?= $CURRENT_URL ?>/../css/message.css">
+  <link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/header.css">
   <link rel="shortcut icon" href="<?= $CURRENT_URL ?>/../img/header/logo-mobile.png" type="image/x-icon">
 </head>
 
 <body>
 
-  <header>
+  <header class="Box-shadow">
     <div class="Container">
       <nav>
         <ul>
           <ul>
-            <li><a href="<?= $CURRENT_URL ?>/quiz.php">Novo quiz</a></li>
-            <li><a href="<?= $CURRENT_URL ?>/my_quizzes.php">Meus quizzes</a></li>
+            <li>
+              <a href="<?= $CURRENT_URL ?>/../" style="color: #C02425">Sair</a>
+            </li>
+            <li>
+              <a href="<?= $CURRENT_URL ?>/quiz.php">Novo quiz</a>
+            </li>
           </ul>
         </ul>
       </nav>

@@ -1,11 +1,76 @@
-/* Smartphone Portrait (ATÉ 576px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+/* CONFIGURAÇÃO */
+@charset "UTF-8";
 
-.form-group {
-    margin-top: 15px;
+.quizzes-container {
+    flex-direction: column;
 }
 
-#avatars input {
-    display: block;
+.quiz-container {
+    margin-top: 20px;
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+    border: 1px solid #7B0B0A;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.quiz-content {
+    width: 100%;
+    border-bottom: 1px solid #7B0B0A;
+}
+
+.container-image {
+    border: 1px solid black;
+    width: 80px;
+    height: 80px;
+}
+
+.up-side, .down-side {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.container-down-side {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.down-side p {
+    height: fit-content;
+}
+
+.quiz-features {
+    padding: 10px;
+    width: 100%;
+}
+
+.features {
+    animation: translateX .5s forwards;
+}
+
+.btn-settings {
+    position: relative;
+    cursor: pointer;
+    
+}
+
+.btn-settings i {
+    font-size: 18px;
+}
+
+.btn {
+    background: linear-gradient(180deg, #C02425 53.65%, #7B0B0A 100%);
+    width: 100%;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px; 
+    margin-top: 10px;
+    cursor: pointer;
 }
 
 /* Smartphone landscape (ATÉ 768px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/

@@ -3,9 +3,9 @@
 .msg {
     justify-content: space-between;
     height: fit-content;
-    width: fit-content;
+    max-width: 300px;
     padding: 10px 19px;
-    margin: 0 auto;
+    margin: 10px auto;
     margin-bottom: 8px;
     border-style: solid;
     border-width: 1px;

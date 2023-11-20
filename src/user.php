@@ -30,6 +30,7 @@
     <a href="<?=$CURRENT_URL?>/dashboard.php" class="btn-close-user-popup">
         <img src="<?=$CURRENT_URL?>/img/dashboard/back-icon.svg" alt="Ícone de voltar" class="back-icon">
     </a>
+    
     <div class="user-content Flex">
         <div class="container-img-user">
             <div class="img-user profile-img" style="background-image: url('<?= $CURRENT_URL ?>/<?= $userData->getImage() ?>')" alt="Avatar do usuário"> </div>

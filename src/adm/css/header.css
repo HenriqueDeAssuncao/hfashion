@@ -1,0 +1,25 @@
+header {
+  position: fixed;
+  background-color: white;
+}
+
+ul {
+  padding: 10px;
+  list-style-type: none;
+  justify-content: left;
+}
+
+.btn-settings {
+  margin-top: 10px;
+}
+
+ul a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
+ul li {
+  display: inline;
+  margin-right: 10px;
+}

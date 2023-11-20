@@ -63,7 +63,7 @@ if (!empty($_SESSION["quizToken"])) {
         }
 
         $_SESSION["quizToken"] = "";
-        $message->setMessage("As questões foram adicionadas!", "success", "/../../quizzes.php");
+        $message->setMessage("As questões foram adicionadas!", "success", "../adm/my_quizzes.php");
 
     } else {
         $message->setMessage("Ocorreu algum erro.", "error", "back");
