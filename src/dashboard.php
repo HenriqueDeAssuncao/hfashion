@@ -4,7 +4,6 @@
 require_once "templates/header.php";
 
 //Emblemas
-require_once "models/Emblem.php";
 require_once "dao/EmblemDAO.php";
 require_once "models/UserEmblem.php";
 require_once "dao/UserEmblemDAO.php";
@@ -17,7 +16,6 @@ require_once "dao/QuizDAO.php";
 $userData = $userDao->verifyToken(true);
 
 //Emblemas
-$Emblem = new Emblem;
 $EmblemDao = new EmblemDAO($conn, $CURRENT_URL);
 $UserEmblemDao = new UserEmblemDAO($conn, $CURRENT_URL);
 $userEmblems = $UserEmblemDao->findEmblems($userId, $EmblemDao);
@@ -35,10 +33,6 @@ $quizzes = $quizDao->getQuizzes($userId);
 <?php
     require_once "templates/message.php";
 ?>
-
-<div class="user-popup Box-shadow Flex">
-    
-</div>
 
 <div class="container-dashboard">
     <section class="container-user">

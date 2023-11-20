@@ -28,17 +28,18 @@ $counter = 1;
 
     <div class="ranking js-ranking Auto">
 
-        <button class="ranking-row Button Flex" data-parameter="<?= $userAnswerQuestion->getUserId(); ?>">
+        <a href="user.php?userId=<?=$userAnswerQuestion->getUserId()?>" class="ranking-row Button Flex" data-parameter="<?= $userAnswerQuestion->getUserId(); ?>">
             <span class="number">
                 <?= $counter ?>
             </span>
             <div class="Flex">
                 <div class="img-user-ranking profile-img"
-                    style="background-image: url('<?= $userAnswerQuestion->getImage() ?>')" alt="Avatar do usuário"> </div>
+                    style="background-image: url('<?= $userAnswerQuestion->getImage() ?>')" alt="Avatar do usuário"> 
+                </div>
                 <p class="p-ranking-nickname"><?= $userAnswerQuestion->getNickname() ?></p>
             </div>
             <p class="p-score"><?= $userAnswerQuestion->getScore() ?> pontos</p>
-        </button>
+        </a>
         
     </div>
 
