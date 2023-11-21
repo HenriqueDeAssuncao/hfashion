@@ -2,6 +2,8 @@
 require_once "templates/header.php";
 ?>
 
+<link rel="stylesheet" href="<?=$CURRENT_URL?>/css/y2k.css">
+
  <center>
  <div class="container-banner" style="background-image: url(<?= $CURRENT_URL ?>/img/y2k/y2k.png);">
 
@@ -77,13 +79,6 @@ require_once "templates/header.php";
     
   </div>
 
-
-
-
-
-
-
-    <link rel="stylesheet" href="<?=$CURRENT_URL?>/css/y2k.css">
 <?php
 require_once "templates/footer.php";
 ?>

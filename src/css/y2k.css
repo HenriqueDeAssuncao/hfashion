@@ -1,358 +1,116 @@
-/* Tablet Landscape (ATÉ 992px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-@media (max-width: 992px) {
-    .Container {
-        width: 90%;
-    }
-        hr {
-            box-sizing: border-box;
-            margin: 0 auto;
-            width: 1065px;
-            border: 2px solid #E5E5E5;
-        }
-        #img-banner {
-            width: 100%;
-        }
-        #div-img-banner {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-        }
-        
-        #titulo{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        #titulo-y2k{
-            font-family: 'Poppins';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 30px;
-            line-height: 60%;
-            text-transform: uppercase;
-            letter-spacing: 0.2vw;
-            color: white;
-        }
-        
-        .container-primeiro-pag {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-            width: 80%;
-            margin: 0 auto;
-            margin-top: 30px;
-          }
-        
-          #img-primeiro-pag{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 233px;
-        }
-        
-          #img-mto-legal{
-            width: 100%;
-          }
-        
-        .container-banner{
-            width: 90%;
-            height: 80px;
-            margin-top: 70px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 15px;
-        }
-          
-        #div-primeiro-pag {
-            display: flex;
-            width: 100%;
-            text-align: justify;
-            align-items: center;
-            margin-top: 30px
-        } 
-        
-        
-        .txt-pag {
-            font-family: 'Poppins';
-            font-style: normal;
-            text-align: justify;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 105%;
-            color: #3C3C3C;
-            
-          }
-          .img-pag{
-            height: 80%;
-            width: 75%;
-            margin-top: 50px;
-          }
+.Container {
+  width: 90%;
+}
 
-          .container-segundo-pag{
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-            width: 80%;
-            margin: 0 auto;
-            margin-top: 100px;
-          }
-          #img-segundo-pag{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 233px;
-          }
-          #div-segundo-pag {
-            display: flex;
-            width: 100%;
-            text-align: justify;
-            align-items: center;
-            margin-top: 30px
-        } 
+hr {
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 1065px;
+  border: 2px solid #E5E5E5;
+}
 
-        .container-terceiro-pag{
-          display: flex;
-          justify-content: center;
-          flex-direction: column;
-          align-items: center;
-          width: 80%;
-          margin: 0 auto;
-          margin-top: 100px;
-        }
-        #img-terceiro-pag{
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 233px;
-        }
-        #div-terceiro-pag {
-          display: flex;
-          width: 100%;
-          text-align: justify;
-          align-items: center;
-          margin-top: 30px
-      } 
-      .container-quarto-pag{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        width: 80%;
-        margin: 0 auto;
-        margin-top: 100px;
-      }
-      #img-quarto-pag{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 233px;
-      }
-      #div-quarto-pag {
-        display: flex;
-        width: 100%;
-        text-align: justify;
-        align-items: center;
-        margin-top: 30px
-    } 
-        
-          
-    
-    
-    
+.div-img-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.titulo-artigo {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 60%;
+  text-transform: uppercase;
+  letter-spacing: 0.2vw;
+  color: white;
+}
+
+.container-pag {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.img-pag {
+  height: 80%;
+  width: 75%;
+  margin-top: 50px;
+}
+
+.img-mto-legal {
+  width: 100%;
+}
+
+.container-banner {
+  width: 90%;
+  height: 80px;
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+
+.div-pag {
+  display: flex;
+  width: 100%;
+  text-align: justify;
+  align-items: center;
+  margin-top: 30px
+}
+
+.txt-pag {
+  font-family: 'Poppins';
+  font-style: normal;
+  text-align: justify;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 105%;
+  color: #3C3C3C;
 }
 
 /* PC (>= 1200px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 992px) {
-    .Container {
-        width: 90%;
-    }
-        hr {
-            box-sizing: border-box;
-            margin: 0 auto;
-            width: 1065px;
-            border: 2px solid #E5E5E5;
-        }
-        #img-banner {
-            width: 100%;
-            height: 6.790123456790123%;
-        }
-        #div-img-banner {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-        }
-        
-        #titulo{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        #titulo-y2k{
-            font-family: 'Poppins';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 63px;
-            line-height: 60%;
-            text-transform: uppercase;
-            letter-spacing: 0.2vw;
-            color: white;
-        }
-        
-        .container-primeiro-pag {
-            display: inline-block;
-            justify-content: center;
-            width: 80%;
-            margin: 0 auto;
-            margin-top: 10%;
-            margin-left: 10%;
-            
-          
-            justify-content: space-between;
-          }
-        
-          #img-primeiro-pag{
-            display: inline-block;
-            float: left;
-            align-items: center;
-            justify-content: center;
-            width: 30%;
-          }
-        
-          #img-mto-legal{
-            width: 100%;
-          }
-        
-        .container-banner{
-            width: 90%;
-            height: 150px;
-            margin-top: 70px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 15px;
-        }
-          
-        #div-primeiro-pag {
-            display: inline-block;
-            float: right;
-            width: 65%;
-            text-align: justify;
-            align-items: center;
-            margin-top: 7%;
-        } 
-        
-        
-        .txt-pag {
-            font-family: 'Poppins';
-            font-style: normal;
-            text-align: justify;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 105%;
-            color: #3C3C3C;
-            
-          }
-          .img-pag{
-            height: 80%;
-            width: 75%;
-            margin-top: 50px;
-          }
 
-          .container-segundo-pag {
-            display: inline-block;
-            justify-content: center;
-            width: 80%;
-            margin: 0 auto;
-            margin-top: 10%;
-            margin-left: 10%;
-            justify-content: space-between;
-          }
+  .container-banner {
+    width: 90%;
+    height: 150px;
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+  }
 
-          #img-segundo-pag{
-            float: right;
-            display: inline-block;
-            align-items: center;
-            justify-content: center;
-            width: 30%;
-          }
+  .container-pag {
+    display: inline-block;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 10%;
+    margin-left: 10%;
+    justify-content: space-between;
+  }
 
-          #div-segundo-pag {
-            float: left;
-            display: inline-block;
-            width: 65%;
-            text-align: left;
-            align-items: center;
-            margin-top: 7%;
-        } 
+  .div-pag {
+    display: inline-block;
+    float: right;
+    width: 65%;
+    margin-top: 7%;
+  }
 
-        .container-terceiro-pag {
-          display: inline-block;
-          justify-content: center;
-          width: 80%;
-          margin: 0 auto;
-          margin-top: 10%;
-          margin-left: 10%;
-          justify-content: space-between;
-        }
+  .img-pag {
+    display: inline-block;
+    float: left;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+  }
 
-        #img-terceiro-pag{
-          display: inline-block;
-          float: left;
-          align-items: center;
-          justify-content: center;
-          width: 30%;
-        }
-
-        #div-terceiro-pag {
-          display: inline-block;
-          float: right;
-          width: 65%;
-          text-align: left;
-          align-items: center;
-          margin-top: 7%;
-      }
-      
-      .container-quarto-pag {
-        display: inline-block;
-        justify-content: center;
-        width: 80%;
-        margin: 0 auto;
-        margin-top: 10%;
-        margin-left: 10%;
-        justify-content: space-between;
-      }
-
-      #img-quarto-pag{
-        display: inline-block;
-        float: right;
-        align-items: center;
-        justify-content: center;
-        width: 30%;
-      }
-
-      #div-quarto-pag {
-        display: inline-block;
-        float: left;
-        width: 65%;
-        text-align: left;
-        align-items: center;
-        margin-top: 7%;
-    } 
-
-
-
-
-
-
-    
-        
-        }
-    
-    
+}

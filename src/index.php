@@ -1,6 +1,7 @@
 
 <?php
 require_once "templates/header.php";
+require_once "data/articles.php";
 ?>
 
 </div>
@@ -191,7 +192,7 @@ require_once "templates/header.php";
         </div>
       </div>
 
-      <div class="card">
+      <a href="<?= $CURRENT_URL ?>/article.php?id=2" class="card">
         <div class="div-img-card"
           style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/y2k.png); background-repeat: no-repeat;">
         </div>
@@ -200,7 +201,7 @@ require_once "templates/header.php";
           <p class="style-regulartext">Y2K</p>
           <p class="style-minimal">Dos anos 2000, expressa o exagero</p>
         </div>
-      </div>
+      </a>
 
       <div class="card">
         <div class="div-img-card"
