@@ -1,0 +1,80 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  /* border: 1px solid black; */
+}
+
+.Container{
+  width: 350px;
+}
+
+input[type=text] {
+  background-color: #E7E7E7;
+  border-radius: 10px;
+  border: none;
+  height: 37px;
+box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+input[type=text]:not(.names){
+  margin-left: 2%;
+}
+
+::placeholder{
+  padding: 10px;
+
+}
+
+select{
+  margin-left: 2%;
+}
+
+hr{
+  border: 1px solid #E7E7E7;
+  margin-top: 5%;
+}
+
+label{
+  font-family: Roboto;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.names:last-of-type{
+ margin-top: 4%;
+}
+
+select{
+  background-color: #E7E7E7;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  height: 37px;
+  width: 50px;
+}
+
+/* Smartphone landscape (ATÉ 768px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+@media (min-width: 576px) {
+ /* .Container {
+      width: 540px;
+  }
+}*/
+
+/* Tablet Portrait (ATÉ 992px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 992px) {
+}
+
+/* PC (>= 1200px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+@media (min-width: 1200px) {
+    .Container {
+        width: 90%;
+    }
+}
+}
