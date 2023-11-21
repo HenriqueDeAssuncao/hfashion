@@ -4,7 +4,7 @@
 * {
   padding: 0;
   margin: 0;
-  /* border: 1px solid black; */
+ /*border: 1px solid black;*/
 }
 
 .Container{
@@ -13,10 +13,11 @@
 
 input[type=text] {
   background-color: #E7E7E7;
-  border-radius: 10px;
+  border-radius: 8px;
   border: none;
   height: 37px;
-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.25);
+  margin-bottom: 20px;
 }
 
 ::placeholder{
@@ -49,6 +50,7 @@ select{
   cursor: pointer;
   height: 37px;
   width: 50px;
+  margin-left: 2%;
 }
 
 .avatars-names, .names{
@@ -62,23 +64,26 @@ select{
   border-radius: 4px;
 }
 
-/*.inputfile{
-  width: 0.1px;
-  height: 0.1px;
-  opacity: 0;
-  overflow: hidden;
-  position: absolute;
-  z-index: -1;
+
+input[type=text]:not(.names){
+  margin-left: 2%;
 }
 
-.inputfile + label {
-  font-size: 1.25em;
-  color: black;
-  background-color: aqua;
+input[type=file]::file-selector-button{
+  background-color: white;
   display: inline-block;
-  font-weight: 700;
-}*/
+width: auto;
+border-radius: 8px;
+height: 37px;
+padding: 0px 20px;
+cursor:pointer;
+  border: 2.5px solid #E7E7E7 ;
+}
 
+@media print{
+.avatars{break-after: always;
+}
+}
 
 /* Smartphone landscape (ATÉ 768px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
@@ -87,18 +92,6 @@ select{
       width: 540px;
   }
 }*/
-
-input[type=text] {
-  margin-bottom: 5%;
-}
-
-input[type=text]:not(.names){
-  margin-left: 2%;
-}
-
-select{
-  margin-left: 2%;
-}
 
 
 /* Tablet Portrait (ATÉ 992px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/

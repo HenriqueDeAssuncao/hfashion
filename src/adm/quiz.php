@@ -1,5 +1,5 @@
 <?php
-require_once "../templates/header.php";
+require_once "templates/header.php";
 ?>
 
 <?php
@@ -45,9 +45,9 @@ require_once __DIR__ . "/../templates/message.php";
 
         <div id="avatars" class="form-group">
             <div class="form-section">
-                <label for="avatars">Insira os avatares:</label>
-                <input type="file" name="first-avatar" id="avatars" class="inputfile">
-                <input type="file" name="second-avatar" id="avatars" class="inputfile">
+                <label for="avatars" style="display: block;">Insira os avatares:</label>
+                <input type="file" name="first-avatar" id="avatars" class="avatars" style="width: 100%;">
+                <input type="file" name="second-avatar" id="avatars" class="avatars" style="width: 100%;">
             </div>
             <div class="form-section names">
                 <label for="avatars-names">Nomes:</label>
