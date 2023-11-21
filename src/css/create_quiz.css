@@ -19,22 +19,15 @@ input[type=text] {
 box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.25);
 }
 
-input[type=text]:not(.names){
-  margin-left: 2%;
-}
-
 ::placeholder{
   padding: 10px;
 
 }
 
-select{
-  margin-left: 2%;
-}
-
 hr{
   border: 1px solid #E7E7E7;
   margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 label{
@@ -58,6 +51,35 @@ select{
   width: 50px;
 }
 
+.avatars-names, .names{
+  display: block;
+}
+
+.form-submit input[type=submit]{
+  width: 100px;
+  background-color: #808080;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+/*.inputfile{
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.inputfile + label {
+  font-size: 1.25em;
+  color: black;
+  background-color: aqua;
+  display: inline-block;
+  font-weight: 700;
+}*/
+
+
 /* Smartphone landscape (ATÉ 768px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
 @media (min-width: 576px) {
@@ -65,6 +87,19 @@ select{
       width: 540px;
   }
 }*/
+
+input[type=text] {
+  margin-bottom: 5%;
+}
+
+input[type=text]:not(.names){
+  margin-left: 2%;
+}
+
+select{
+  margin-left: 2%;
+}
+
 
 /* Tablet Portrait (ATÉ 992px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 992px) {

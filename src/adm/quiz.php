@@ -45,9 +45,9 @@ require_once __DIR__ . "/../templates/message.php";
 
         <div id="avatars" class="form-group">
             <div class="form-section">
-                <label for="avatars" class="custom-file-upload">Insira os avatares:</label>
-                <input type="file" name="first-avatar" id="file-upload">
-                <input type="file" name="second-avatar" id="file-upload">
+                <label for="avatars">Insira os avatares:</label>
+                <input type="file" name="first-avatar" id="avatars" class="inputfile">
+                <input type="file" name="second-avatar" id="avatars" class="inputfile">
             </div>
             <div class="form-section names">
                 <label for="avatars-names">Nomes:</label>
@@ -55,7 +55,9 @@ require_once __DIR__ . "/../templates/message.php";
                 <input type="text" name="avatars-names[]" class="names">
             </div>
         </div>
+        <div class="form-submit">
         <input type="submit" class="Button" value="Criar Quiz!">
+        </div>
     </form>
 </div>
 
