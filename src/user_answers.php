@@ -82,18 +82,16 @@ $i = 0;
 
               } else {
                 $feedbackIcon = '';
-                $feedbackClass = "";
                 $answerStatus = "";
 
                 if($question->isAnswerCorrect($c)) {
-                  $feedbackClass = "green-txt";
                   $answerStatus = "correct";  
                   $feedback = "";
                 }
               }
     
           ?>
-          <div class="options-container <?=$answerStatus?> Box-shadow">
+          <div class="options-container <?=$answerStatus?>">
             <div class="p-container Flex">
               <p class="p-options"><?=$options[$c]?> <?=$feedbackIcon?> </p>
             </div>

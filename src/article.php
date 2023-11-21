@@ -17,7 +17,7 @@ if (isset($_GET['id'])) {
 
 ?>
 
-<link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/y2k.css">
+<link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/article.css">
 
 
 <div class="Container Flex">
@@ -34,11 +34,11 @@ if (isset($_GET['id'])) {
 </div>
 
 <?php foreach ($currentArticle["content"] as $section): ?>
-   <div class="container-pag">
-      <div class="img-pag">
+  
+   <div class="container-pag <?=$bgColor?>">
+      <div class="img-pag Auto">
          <img src="img/<?=$currentArticle["folder"]?>/<?=$section["img"]?>" class="img-mto-legal">
       </div>
-
       <div class="div-pag">
          <div class="Flex">
             <p class="txt-pag">
@@ -48,8 +48,11 @@ if (isset($_GET['id'])) {
          </div>
       </div>
    </div>
+
 <?php endforeach; ?>
 
+
+<script src="<?= $CURRENT_URL ?>/script/article.js"></script>
 <?php
 require_once "templates/footer.php";
 ?>
