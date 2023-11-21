@@ -197,7 +197,7 @@ h2 {
   border-radius: 100%;
   color: #CE3C3C;
   font-size: 19px;
-  width: 36px;
+  width: 27px;
   text-align: center;
 }
 
@@ -267,14 +267,17 @@ h2 {
 
 .st {
   background-color: #FFC800;
+  color: #8f7002;
 }
 
 .nd {
-  background-color: #8f7b67b6;
+  background-color: #CDCDCD;
+  color: #6f6f6f;
 }
 
 .rd {
-  background-color: #8f6d5b;
+  background-color: #8F7B67;
+  color: #5a4539;
 }
 
 @media (min-width: 576px) {
@@ -401,6 +404,10 @@ h2 {
     min-height: 693px;
     max-height: 693px;
     overflow: auto;
+  }
+
+  .number {
+    width: 35px;
   }
 }
 

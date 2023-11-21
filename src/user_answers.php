@@ -67,28 +67,35 @@ $i = 0;
         <?php for($c=0; $c < count($options) ; $c++):?>
           <?php
               if($c == $userAnswers[$i]) {
-                $selected = "selected";
-              } else {
-                $selected = "";
-              }
-        
-              if ($question->isAnswerCorrect($c)) {
-                $answerStatus = "correct";
-                if ($c == $userAnswers[$i]) {
-                  $feedback = "Você acertou.";
+                
+                if($question->isAnswerCorrect($c)) {
+                  $feedbackIcon = '<i class="fa-solid fa-check"></i>';
                   $feedbackClass = "green-txt";
+                  $answerStatus = "correct";
+                  $feedback = "Você acertou";
                 } else {
-                  $feedback = "Você errou.";
+                  $feedbackIcon = '<i class="fa-solid fa-xmark"></i>';
                   $feedbackClass = "red-txt";
+                  $answerStatus = "wrong";  
+                  $feedback = "Você errou";
                 }
-      
+
               } else {
-                $answerStatus = "wrong";   
+                $feedbackIcon = '';
+                $feedbackClass = "";
+                $answerStatus = "";
+
+                if($question->isAnswerCorrect($c)) {
+                  $feedbackClass = "green-txt";
+                  $answerStatus = "correct";  
+                  $feedback = "";
+                }
               }
+    
           ?>
-          <div class="options-container <?=$answerStatus?> <?=$selected?> Box-shadow">
+          <div class="options-container <?=$answerStatus?> Box-shadow">
             <div class="p-container Flex">
-              <p class="p-options"><?=$options[$c]?></p>
+              <p class="p-options"><?=$options[$c]?> <?=$feedbackIcon?> </p>
             </div>
           </div>
         <?php endfor;?>
