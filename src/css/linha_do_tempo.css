@@ -108,7 +108,7 @@
             margin-top: 50px;
           }
 
-          /* 1º TOPICO - ERA BIZANTINA */
+          /* 1º TOPICO */
 
           .container-primeiro-topico{
             display: flex;
@@ -134,7 +134,7 @@
             margin-top: 30px
         } 
 
-        /* 2º TOPICO - ERA MEDIEVAL */
+        /* 2º TOPICO */
 
         .container-segundo-topico{
           display: flex;
@@ -160,7 +160,7 @@
           margin-top: 50px
       }
 
-      /* 3º TOPICO - RENASCENTISMO ITALIANO */
+      /* 3º TOPICO */
 
       .container-terceiro-topico{
         display: flex;
@@ -184,7 +184,10 @@
         text-align: justify;
         align-items: center;
         margin-top: 50px
-    } 
+    }
+
+
+    
         
           
     

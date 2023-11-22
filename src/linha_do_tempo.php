@@ -12,6 +12,7 @@ require_once "templates/header.php";
    </div>
 </center>
 
+<!-- INTRODUÇÃO -->
 
  <div class="container-intro">
 
@@ -24,6 +25,8 @@ require_once "templates/header.php";
          </p>
       </div>
   </div>
+
+<!-- 1º TÓPICO - ERA BIZANTINA -->
 
   <div class="container-primeiro-topico">
     <div class="container-banner-artigo" style="background-image: url(<?= $CURRENT_URL ?>/img/linha_do_tempo/bizantina-artigo.jpg);">
@@ -48,6 +51,8 @@ require_once "templates/header.php";
       </div>
     
   </div>
+
+<!-- 2º TÓPICO - ERA MEDIEVAL -->
 
   <div class="container-segundo-topico">
     <div class="container-banner-artigo" style="background-image: url(<?= $CURRENT_URL ?>/img/linha_do_tempo/medieval-artigo.jpg);">
@@ -77,17 +82,19 @@ require_once "templates/header.php";
     
   </div>
 
+<!-- 3º TÓPICO - RENASCIMENTO ITALIANO -->
+
   <div class="container-terceiro-topico">
     <div class="container-banner-artigo" style="background-image: url(<?= $CURRENT_URL ?>/img/linha_do_tempo/italiano-artigo.jpg);">
      
      <div id="titulo">
-       <p id="titulo-linha_do_tempo">RENASCENTISMO <br><br> ITALIANO</p>
+       <p id="titulo-linha_do_tempo">RENASCIMENTO <br><br> ITALIANO</p>
      </div>
 
    </div>
 
       <div id="div-terceiro-topico">
-         <p class="txt-pag">No renascentismo italiano (séculos XIV - XVI) a arte e a cultura
+         <p class="txt-pag">No Renascimento Italiano (séculos XIV - XVI) a arte e a cultura
              clássica greco-romano floresciam, o que se refletiu na moda, a qual passou a valorizar
              a harmonia. As roupas tornaram-se mais ajustadas ao corpo e cores vibrantes e tecidos finos 
              como a seda eram amplamente utilizados. 
@@ -100,6 +107,34 @@ require_once "templates/header.php";
       </div>
     
   </div>
+
+<!-- 4º TÓPICO - RENASCIMENTO NORTE EUROPEU -->
+
+ <div class="container-terceiro-topico">
+    <div class="container-banner-artigo" style="background-image: url(<?= $CURRENT_URL ?>/img/linha_do_tempo/norte_europeu-artigo.jpg);">
+     
+     <div id="titulo">
+       <p id="titulo-linha_do_tempo">RENASCIMENTO <br><br> NORTE EUROPEU</p>
+     </div>
+
+   </div>
+
+      <div id="div-terceiro-topico">
+         <p class="txt-pag">O renascimento Norte Europeu ocorreu no mesmo período do
+             italiano, porém com influência distinta; refletia o crescimento do comércio
+             e seu renascimento cultural. As roupas eram volumosas e esculpidas com uso de
+             espartilhos e armações para criar uma forma ampla. As roupas femininas eram marcadas
+             por saias longas e corpetes justos, enquanto a masculina por cortes amplos e 
+             peças sobrepostas.
+           </p>
+
+      </div> 
+      
+      <div id="img-terceiro-topico">
+         <img src="img/linha_do_tempo/italiano.png" class="img-artigo">
+      </div>
+    
+  </div> 
 
 
 
