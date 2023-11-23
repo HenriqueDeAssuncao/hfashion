@@ -111,7 +111,7 @@ require_once "templates/header.php";
 <!-- 4º TÓPICO - RENASCIMENTO NORTE EUROPEU -->
 
  <div class="container-terceiro-topico">
-    <div class="container-banner-artigo" style="background-image: url(<?= $CURRENT_URL ?>/img/linha_do_tempo/norte_europeu-artigo.jpg);">
+    <div class="container-banner-artigo" style="background-image: url(<?= $CURRENT_URL ?>/img/linha_do_tempo/europeu-artigo.jpg);">
      
      <div id="titulo">
        <p id="titulo-linha_do_tempo">RENASCIMENTO <br><br> NORTE EUROPEU</p>
@@ -131,13 +131,11 @@ require_once "templates/header.php";
       </div> 
       
       <div id="img-terceiro-topico">
-         <img src="img/linha_do_tempo/italiano.png" class="img-artigo">
+         <img src="img/linha_do_tempo/europeu.png" class="img-artigo">
       </div>
     
   </div> 
-
-
-
+  
 
 
 
