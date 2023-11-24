@@ -110,7 +110,7 @@ require_once "templates/header.php";
 
 <!-- 4º TÓPICO - RENASCIMENTO NORTE EUROPEU -->
 
- <div class="container-terceiro-topico">
+ <div class="container-quarto-topico">
     <div class="container-banner-artigo" style="background-image: url(<?= $CURRENT_URL ?>/img/linha_do_tempo/europeu-artigo.jpg);">
      
      <div id="titulo">
@@ -119,7 +119,7 @@ require_once "templates/header.php";
 
    </div>
 
-      <div id="div-terceiro-topico">
+      <div id="div-quarto-topico">
          <p class="txt-pag">O renascimento Norte Europeu ocorreu no mesmo período do
              italiano, porém com influência distinta; refletia o crescimento do comércio
              e seu renascimento cultural. As roupas eram volumosas e esculpidas com uso de
@@ -130,7 +130,7 @@ require_once "templates/header.php";
 
       </div> 
       
-      <div id="img-terceiro-topico">
+      <div id="img-quarto-topico">
          <img src="img/linha_do_tempo/europeu.png" class="img-artigo">
       </div>
     
