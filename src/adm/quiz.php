@@ -6,16 +6,17 @@ require_once "templates/header.php";
 require_once __DIR__ . "/../templates/message.php";
 ?>
 </head>
-
 <div class="Container">
-    <h1>Criar quiz</h1>
+<a href="<?= $CURRENT_URL ?>/index.php">  </a>
+        <img class="back" src="<?= $CURRENT_URL ?>/../img/login/Back.svg" alt="">
+   <h1>Criar quiz</h1>
     <form action="process/adm_quiz_process.php" method="POST" enctype="multipart/form-data">
         <div class="form-group">
             <label for="quiz-name">Nome:</label>
             <input type="text" name="quiz-name" placeholder="Digite o nome do quiz" class="type">
         </div>
         <div class="form-group">
-            <label for="quiz-description">Descrição</label>
+            <label for="quiz-description">Descrição:</label>
             <input type="text" name="quiz-description" placeholder="Crie uma descrção para o quiz" class="type">
         </div>
         <div class="form-group">
@@ -33,12 +34,12 @@ require_once __DIR__ . "/../templates/message.php";
                 <input type="file" name="emblem">
             </div>
             <div class="form-section">
-                <label for="emblem-name">Nome:</label>
+                <label for="emblem-name">Nome do emblema:</label>
                 <input type="text" name="emblem-name" class="type">
             </div>
         </div>
         <div class="form-group">
-            <label for="quiz-icon">ícone:</label>
+            <label for="quiz-icon">Ícone:</label>
             <input type="file" name="icon">
             <hr>
         </div>

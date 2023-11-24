@@ -4,7 +4,8 @@
 * {
   padding: 0;
   margin: 0;
- /*border: 1px solid black;*/
+  overflow-x: hidden;
+  /*border: 1px solid black;*/
 }
 
 .Container{
@@ -17,7 +18,10 @@ input[type=text] {
   border: none;
   height: 37px;
   box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.25);
-  margin-bottom: 20px;
+}
+
+.form-section.names{
+  height: 14.5vh;
 }
 
 ::placeholder{
@@ -27,8 +31,8 @@ input[type=text] {
 
 hr{
   border: 1px solid #E7E7E7;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 label{
@@ -40,7 +44,8 @@ label{
 }
 
 .names:last-of-type{
- margin-top: 4%;
+ margin-top: 15px;
+
 }
 
 select{
@@ -50,23 +55,37 @@ select{
   cursor: pointer;
   height: 37px;
   width: 50px;
-  margin-left: 2%;
+  margin-left: 3px;
 }
 
-.avatars-names, .names{
+.avatars-names, .names:not(.form-section){
   display: block;
 }
 
 .form-submit input[type=submit]{
-  width: 100px;
+  width: 145px;
   background-color: #808080;
   padding: 10px;
   border-radius: 4px;
+  margin-top: 20px;
+color: #FFF;
+text-align: center;
+font-family: Poppins;
+font-size: 13.977px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin-bottom: 30px;
 }
 
 
 input[type=text]:not(.names){
-  margin-left: 2%;
+  margin-left: 5px;
+  margin-bottom: 20px;
+}
+
+label + input[type=file]{
+  margin-top: 2px;
 }
 
 input[type=file]::file-selector-button{
@@ -80,22 +99,28 @@ cursor:pointer;
   border: 2.5px solid #E7E7E7 ;
 }
 
-@media print{
-.avatars{break-after: always;
+  h1{
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  
+.back{
+  display: none;
 }
-}
+
 
 /* Smartphone landscape (ATÉ 768px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
 @media (min-width: 576px) {
- /* .Container {
-      width: 540px;
-  }
-}*/
+
+}
 
 
 /* Tablet Portrait (ATÉ 992px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 992px) {
+
+
 }
 
 /* PC (>= 1200px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
@@ -104,5 +129,16 @@ cursor:pointer;
     .Container {
         width: 90%;
     }
-}
+    .back, h1{
+      display: inline-flex;
+      text-decoration: none;
+    }
+  
+    .back a{
+      text-decoration: none;
+    }
+
+    .form-section.names{
+      height: 16vh;
+    }
 }
