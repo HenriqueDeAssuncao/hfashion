@@ -25,6 +25,27 @@
                     "p" => 'A estética Y2K pode ser vista como uma forma de escapismo nostálgico para uma época mais simples e inocente. Ela também pode ser vista como uma crítica à cultura contemporânea, que muitas vezes é vista como excessivamente sombria e negativa. De qualquer forma, a estética Y2K é uma forma popular de autoexpressão para muitas pessoas que buscam uma alternativa ao estilo convencional.'
                 ]
             ]
+        ],
+
+        [
+            "id" => 1,
+            "title" => "StreetWear",
+            "description" => "Influências do cotidiano urbano.",
+            "banner" => "",
+            "folder" => "streetwear",
+            "content" => 
+            [
+                [
+                    "p" => "Caracterizado pelo conforto e um toque urbano, o streetwear é um estilo de roupa casual que evoluiu para incorporar a essência cultural de grandes metrópoles, deixando de ser apenas uma moda de rua e tornando-se um meio de autoexpressão, permitindo que os indivíduos mostrem sua personalidade por meio de roupas e acessórios, com uma mistura diversificada de música, esportes, arte, política e vida cotidiana.",
+                ],
+                [
+                    "p" => "É um estilo de roupa que existe a quase 40 anos, no começo, o streetwear era simples e fugia do padrão dos estilos elaborados e complicados que estavam na moda da época. As pessoas usavam camisetas e moletons, porque era disso que gostavam, além de estar ligado ao conforto e à autoexpressão.",
+                ],
+                [
+                    "p" => "Caracterizado pelo conforto e um toque urbano, o streetwear é um estilo de roupa casual que evoluiu para incorporar a essência cultural de grandes metrópoles, deixando de ser apenas uma moda de rua e tornando-se um meio de autoexpressão, permitindo que os indivíduos mostrem sua personalidade por meio de roupas e acessórios, com uma mistura diversificada de música, esportes, arte, política e vida cotidiana.",
+                ],
+                
+            ]
         ]
     ];
  
