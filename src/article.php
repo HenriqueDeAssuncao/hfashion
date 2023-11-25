@@ -19,7 +19,6 @@ if (isset($_GET['id'])) {
 
 <link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/article.css">
 
-
 <div class="Container Flex">
    <div class="container-banner"
       style="background-image: url(<?= $CURRENT_URL ?>/img/<?= $currentArticle["folder"] ?>/<?= $currentArticle["banner"] ?>);">
@@ -35,24 +34,29 @@ if (isset($_GET['id'])) {
 
 <?php foreach ($currentArticle["content"] as $section): ?>
   
-   <div class="container-pag <?=$bgColor?>">
-      <div class="img-pag Auto">
-         <img src="img/<?=$currentArticle["folder"]?>/<?=$section["img"]?>" class="img-mto-legal">
-      </div>
-      <div class="div-pag">
-         <div class="Flex">
-            <p class="txt-pag">
-               <?=$section["p"]?>
-               <br>
-            </p>
+   <div class="container-pag">
+
+      <?php if(!empty($section["img"])):?>
+         <div class="img-pag Auto Flex">
+            <img src="img/<?=$currentArticle["folder"]?>/<?=$section["img"]?>" class="img-mto-legal">
          </div>
+      <?php endif;?>
+      
+      <div class="div-pag Flex">
+         <p class="txt-pag">
+            <?=$section["p"]?>
+         </p>
       </div>
+
    </div>
+
+   <hr>
 
 <?php endforeach; ?>
 
 
 <script src="<?= $CURRENT_URL ?>/script/article.js"></script>
+
 <?php
 require_once "templates/footer.php";
 ?>

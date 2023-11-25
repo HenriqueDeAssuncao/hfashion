@@ -2,18 +2,15 @@
   width: 90%;
 }
 
-hr {
-  box-sizing: border-box;
-  margin: 0 auto;
-  width: 1065px;
-  border: 2px solid #E5E5E5;
-}
-
-.div-img-banner {
+/* Banner */
+.container-banner {
+  width: 90%;
+  height: 80px;
+  margin-top: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  border-radius: 15px;
 }
 
 .titulo-artigo {
@@ -27,40 +24,32 @@ hr {
   color: white;
 }
 
-.container-pag {
-  width: 80%;
-  margin: 30px auto 0px auto;
+hr {
+  box-sizing: border-box;
+  margin: 0 auto;
+  border: 2px solid #E5E5E5;
 }
 
-.img-pag {  
-  height: 80%;
-  width: 75%;
-  margin-top: 50px;
+.container-pag {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 80%;
+  margin: 80px auto 80px auto;
+}
+
+.img-pag { 
+  width: fit-content;
 }
 
 .img-mto-legal {
-  width: 100%;
-}
-
-.container-banner {
-  width: 90%;
-  height: 80px;
-  margin-top: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 15px;
-}
-
-.div-pag {
-  display: flex;
-  width: 100%;
-  text-align: justify;
-  align-items: center;
-  margin-top: 30px
+  width: 330px;
+  border-radius: 10px;
 }
 
 .txt-pag {
+  width: fit-content;
+  height: fit-content;
   font-family: 'Poppins';
   font-style: normal;
   text-align: justify;
@@ -68,6 +57,14 @@ hr {
   font-size: 16px;
   line-height: 105%;
   color: #3C3C3C;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
 }
 
 /* PC (>= 1200px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
@@ -84,28 +81,28 @@ hr {
   }
 
   .container-pag {
-    display: inline-block;
-    justify-content: center;
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 10%;
-    margin-left: 10%;
-    justify-content: space-between;
+    margin: 50px auto 50px auto;
   }
 
-  .div-pag {
-    display: inline-block;
-    float: right;
-    width: 65%;
-    margin-top: 7%;
+  .img-pag { 
+    width: fit-content;
   }
-
-  .img-pag {
-    display: inline-block;
-    float: left;
-    align-items: center;
-    justify-content: center;
-    width: 30%;
+  
+  .img-mto-legal {
+    width: 330px;
+    border-radius: 10px;
+  }
+  
+  .txt-pag {
+    width: fit-content;
+    height: fit-content;
+    font-family: 'Poppins';
+    font-style: normal;
+    text-align: justify;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 105%;
+    color: #3C3C3C;
   }
 
 }
