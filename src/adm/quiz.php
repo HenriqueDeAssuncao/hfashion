@@ -26,11 +26,11 @@ require_once "templates/header.php";
         <form action="process/adm_quiz_process.php" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="quiz-name">Nome:</label>
-                <input type="text" name="quiz-name" placeholder="Digite o nome do quiz" class="type">
+                <input type="text" name="quiz-name" class="type">
             </div>
             <div class="form-group">
                 <label for="quiz-description">Descrição:</label>
-                <input type="text" name="quiz-description" placeholder="Crie uma descrção para o quiz" class="type">
+                <input type="text" name="quiz-description" class="type">
             </div>
             <div class="form-group">
                 <label for="question-weight" class="type">Peso das questões:</label>
@@ -44,7 +44,7 @@ require_once "templates/header.php";
             <div class="form-group" id="emblem">
                 <div class="form-section">
                     <label for="emblem">Emblema:</label>
-                    <input type="file" name="emblem">
+                    <input type="file" name="emblem" style="width: 100%;">
                 </div>
                 <div class="form-section">
                     <label for="emblem-name">Nome do emblema:</label>
@@ -53,7 +53,7 @@ require_once "templates/header.php";
             </div>
             <div class="form-group">
                 <label for="quiz-icon">Ícone:</label>
-                <input type="file" name="icon">
+                <input type="file" name="icon" style="width: 100%;">
                 <hr>
             </div>
             <div id="avatars" class="form-group">

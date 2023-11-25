@@ -179,6 +179,15 @@ input[type="file"]:focus::file-selector-button {
     margin-right: 1.5rem;
 }
 
+select {
+    background-color: #E7E7E7;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    height: 37px;
+    width: 50px;
+    margin-left: 3px;
+  }
 /* Smartphone landscape (ATÉ 768px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 576px) {
     .Container {

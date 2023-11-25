@@ -9,8 +9,10 @@ require_once __DIR__ . "/../templates/message.php";
 <link rel="stylesheet" href="css/adm_question_form.css">
 
 <div class="header">
-    <button><i class="fa-solid fa-chevron-left"></i></button>
-    <h1>Criar Perguntas:</h1>
+    <button><a href="<?= $CURRENT_URL ?>/quiz.php" class="back">
+                <img src="<?= $CURRENT_URL ?>/../img/login/Back.svg" alt="">
+            </a></button>
+    <h1>Criar Perguntas</h1>
 </div>
 
 <main class="container">
