@@ -25,6 +25,16 @@ if ($userData) {
     $userId = 0;
 }
 
+//Imagem do usuário
+if (empty($userData)) {
+    $image = "img/system/avatars/user.svg";
+} else {
+    $image = $userData->getImage();
+    if (!$image) {
+        $image = "img/system/avatars/user.svg";
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -84,7 +94,7 @@ if ($userData) {
                 <div class="nav-2">
                     <button class="btn-dropdown Button">
                         <div class="profile-pic-header profile-img"
-                            style="background-image: url(<?= $CURRENT_URL ?>/<?=$userData->getImage()?>)" alt="Foto de Perfil"></div>
+                            style="background-image: url(<?= $CURRENT_URL ?>/<?= $image ?>)" alt="Foto de Perfil"></div>
                     </button>
                     <div class="dropdown-rect Hidden">
                         <div class="dropdown-tri">

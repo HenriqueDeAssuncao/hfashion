@@ -37,7 +37,7 @@ $quizzes = $quizDao->getQuizzes($userId);
 <div class="container-dashboard">
     <section class="container-user">
         <div class="container-img-user">
-            <div class="img-user profile-img" style="background-image: url('<?= $CURRENT_URL ?>/<?=$userData->getImage()?>')" alt="Avatar do usuário"> </div>
+            <div class="img-user profile-img" style="background-image: url('<?= $CURRENT_URL ?>/<?= $image ?>')" alt="Avatar do usuário"> </div>
         </div>
         <div class="user-info">
             <div class="info-text">

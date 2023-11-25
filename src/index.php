@@ -1,4 +1,3 @@
-
 <?php
 require_once "templates/header.php";
 require_once "data/articles.php";
@@ -37,8 +36,11 @@ require_once "data/articles.php";
         De onde surgiu o HiFashion?
       </p>
       <p class="style-regulartext">
-      O HiFashion é uma iniciativa destinada a explorar e analisar as origens e inspirações por trás das tendências de moda apresentadas nessa icônica produção cinematográfica. "High School Musical", filme que tornou-se um fenômeno cultural, principalmente entre o público jovem, impactando não apenas a música e o entretenimento, mas também ditando estilos de moda que marcaram uma era.
-    </p>
+        O HiFashion é uma iniciativa destinada a explorar e analisar as origens e inspirações por trás das tendências de
+        moda apresentadas nessa icônica produção cinematográfica. "High School Musical", filme que tornou-se um fenômeno
+        cultural, principalmente entre o público jovem, impactando não apenas a música e o entretenimento, mas também
+        ditando estilos de moda que marcaram uma era.
+      </p>
     </div>
   </div>
 </div>
@@ -69,7 +71,7 @@ require_once "data/articles.php";
           </div>
           <div class="text-cursos">
             <p class="style-regulartext">
-            Confira a evolução da moda, abordando estilos, movimentos culturais e influências chave.
+              Confira a evolução da moda, abordando estilos, movimentos culturais e influências chave.
             </p>
           </div>
         </div>
@@ -81,7 +83,8 @@ require_once "data/articles.php";
           </div>
           <div class="text-cursos">
             <p class="style-regulartext">
-            Revele como as estéticas históricas contribuiram para construção de identidades dos personagens e para a narrativa da produção.
+              Revele como as estéticas históricas contribuiram para construção de identidades dos personagens e para a
+              narrativa da produção.
             </p>
           </div>
         </div>
@@ -94,7 +97,7 @@ require_once "data/articles.php";
           </div>
           <div class="text-cursos">
             <p class="style-regulartext">
-            Descubra as influências culturais e históricas que moldaram as escolhas de moda da produção.
+              Descubra as influências culturais e históricas que moldaram as escolhas de moda da produção.
             </p>
           </div>
         </div>
@@ -123,15 +126,15 @@ require_once "data/articles.php";
   </p>
 
   <!-- DIV LINK TIMELINE -->
-  <div id="div-timeline"
-    style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/teatro.png);">
+  <div id="div-timeline" style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/teatro.png);">
     <div id="div-text-timeline">
       <p class="style-minimal" style="color: #FFF">1/4</p><br>
       <div id="timeline-text-limitacion">
         <p id="style-timeline">Linha do tempo</p>
       </div>
       <br>
-      <p class="style-minimal" style="color: #FFF">De forma visual e direta saiba como a moda foi construida através da história</p>
+      <p class="style-minimal" style="color: #FFF">De forma visual e direta saiba como a moda foi construida através da
+        história</p>
     </div>
   </div>
 
@@ -181,18 +184,16 @@ require_once "data/articles.php";
 
     <!-- DIV CARDS -->
     <div class="div-cards-cursos js-scroll">
-      <a href="<?= $CURRENT_URL ?>/article.php?id=1">
-        <div class="card">
-          <div class="div-img-card"
-            style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/street.png); background-repeat: no-repeat;">
-          </div>
-          <div class="div-text-card">
-            <p class="style-minimal">1/4</p>
-            <p class="style-regulartext">StreetWear</p>
-            <p class="style-minimal">Influências do cotidiano urbano.</p>
-          </div>
+      <div class="card">
+        <div class="div-img-card"
+          style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/street.png); background-repeat: no-repeat;">
         </div>
-      </a>
+        <div class="div-text-card">
+          <p class="style-minimal">1/4</p>
+          <p class="style-regulartext">StreetWear</p>
+          <p class="style-minimal">Influências do cotidiano urbano.</p>
+        </div>
+      </div>
 
       <a href="<?= $CURRENT_URL ?>/article.php?id=2" class="card">
         <div class="div-img-card"
@@ -205,31 +206,27 @@ require_once "data/articles.php";
         </div>
       </a>
 
-      <a href="<?= $CURRENT_URL ?>/article.php?id=3">
-        <div class="card">
-          <div class="div-img-card"
-            style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/mc.png); background-repeat: no-repeat;">
-          </div>
-          <div class="div-text-card">
-            <p class="style-minimal">3/4</p>
-            <p class="style-regulartext">McBling</p>
-            <p class="style-minimal">textotextotexto</p>
-          </div>
+      <div class="card">
+        <div class="div-img-card"
+          style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/mc.png); background-repeat: no-repeat;">
         </div>
-      </a>
+        <div class="div-text-card">
+          <p class="style-minimal">3/4</p>
+          <p class="style-regulartext">McBling</p>
+          <p class="style-minimal">textotextotexto</p>
+        </div>
+      </div>
 
-      <a href="<?= $CURRENT_URL ?>/article.php?id=4">
-        <div class="card">
-          <div class="div-img-card"
-            style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/uni.png); background-repeat: no-repeat;">
-          </div>
-          <div class="div-text-card">
-            <p class="style-minimal">4/4</p>
-            <p class="style-regulartext">Uniforme Escolar</p>
-            <p class="style-minimal">textotextotexto</p>
-          </div>
+      <div class="card">
+        <div class="div-img-card"
+          style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/uni.png); background-repeat: no-repeat;">
         </div>
-      </a>
+        <div class="div-text-card">
+          <p class="style-minimal">4/4</p>
+          <p class="style-regulartext">Uniforme Escolar</p>
+          <p class="style-minimal">textotextotexto</p>
+        </div>
+      </div>
 
     </div>
   </div>
@@ -254,7 +251,7 @@ require_once "data/articles.php";
         <div class="div-img-card"
           style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/musica.png); background-repeat: no-repeat;">
         </div>
-          <div class="div-text-card">
+        <div class="div-text-card">
           <p class="style-minimal">1/3</p>
           <p class="style-regulartext">Música</p>
           <p class="style-minimal">textotextotexto</p>
@@ -275,7 +272,7 @@ require_once "data/articles.php";
       <div class="card">
         <div class="div-img-card"
           style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/cinema.png); background-repeat: no-repeat;">
-        </div> 
+        </div>
         <div class="div-text-card">
           <p class="style-minimal">3/3</p>
           <p class="style-regulartext">Cinema</p>
