@@ -34,17 +34,19 @@ class UserDAO implements UserDAOinterface
         $nickname = $user->getNickname();
         $email = $user->getEmail();
         $password = $user->getPassword();
+        $image = "img/system/avatars/user.svg";
         $token = $user->getToken();
 
         $stmt = $this->conn->prepare("INSERT INTO users (
-                nickname, email, password, token
+                nickname, email, password, image, token
                 ) VALUES (
-                    :nickname, :email, :password, :token
+                    :nickname, :email, :password, :image , :token
                 )");
 
         $stmt->bindParam(":nickname", $nickname);
         $stmt->bindParam(":email", $email);
         $stmt->bindParam(":password", $password);
+        $stmt->bindParam(":image", $image);
         $stmt->bindParam(":token", $token);
         $stmt->execute();
 

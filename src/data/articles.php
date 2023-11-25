@@ -57,7 +57,7 @@ $articles = [
     [
         "id" => 4,
         "title" => "Uniforme Escolar",
-        "description" => "",
+        "description" => "Uniforme escolar: o comum transformado em extraordinário.",
         "banner" => "",
         "folder" => "uniforme",
         "content" =>
@@ -78,7 +78,7 @@ $articles = [
     [
         "id" => 3,
         "title" => "Mc Bling",
-        "description" => "",
+        "description" => "McBling: o retorno do brilho e da confiança.",
         "banner" => "",
         "folder" => "mc_bling",
         "content" =>

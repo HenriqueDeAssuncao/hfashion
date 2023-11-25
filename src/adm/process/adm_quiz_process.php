@@ -99,7 +99,7 @@ if ((!empty($_POST)) && (!empty($_FILES))) {
                     $i++;
                 }
 
-                $message->setMessage("O quiz foi adicionado à sua lista!", "success", "../adm/my_quizzes.php");
+                $message->setMessage("O quiz foi adicionado à sua lista!", "success", "../adm/index.php");
 
             } else {
                 $message->setMessage("Não foi possível registrar o quiz.", "error", "back");

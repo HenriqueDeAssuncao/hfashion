@@ -1,0 +1,190 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.Container {
+  width: 350px;
+}
+
+.container-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.msg {
+  margin-bottom: 30px;
+}
+
+.menu {
+  display: flex;
+  margin: 20px 0px;
+}
+
+.back {
+  margin-top: 5px;
+}
+
+h1 {
+  font-size: 25px;
+  text-align: left;
+  margin-left: 35px;
+}
+
+input[type=text] {
+  background-color: #E7E7E7;
+  border-radius: 8px;
+  border: none;
+  height: 37px;
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+::placeholder {
+  padding: 10px;
+}
+
+hr {
+  border: 1px solid #E7E7E7;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+label {
+  font-family: Roboto;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.names:last-of-type {
+  margin-top: 15px;
+
+}
+
+select {
+  background-color: #E7E7E7;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  height: 37px;
+  width: 50px;
+  margin-left: 3px;
+}
+
+.avatars-names,
+.names:not(.form-section) {
+  display: block;
+}
+
+.form-submit input[type=submit] {
+  width: 145px;
+  background-color: #808080;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 20px;
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 13.977px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition: .4s;
+}
+
+.form-submit input[type=submit]:hover {
+  background: linear-gradient(180deg, #C02425 53.65%, #7B0B0A 100%);
+}
+
+input[type=text]:not(.names) {
+  margin-left: 5px;
+  margin-bottom: 20px;
+}
+
+label+input[type=file] {
+  margin-top: 2px;
+}
+
+input[type=file]::file-selector-button {
+  background-color: white;
+  display: inline-block;
+  width: auto;
+  border-radius: 8px;
+  height: 37px;
+  padding: 0px 20px;
+  cursor: pointer;
+  border: 2.5px solid #E7E7E7;
+}
+
+#emblem hr {
+  margin-top: 0;
+}
+
+#emblem input[type=file]::file-selector-button {
+  margin-bottom: 15px;
+}
+
+#avatars input[type=file]::file-selector-button {
+  margin-bottom: 8px;
+}
+
+/* Smartphone landscape (ATÉ 768px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 576px) {
+  .Container {
+      width: 540px;
+  }
+}
+
+/* Tablet Portrait (ATÉ 992px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 768px) {
+  .Container {
+      width: 720px;
+  }
+}
+
+/* DESKTOP (>= 992px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+@media (min-width: 992px) {
+
+  .Container {
+    width: 90%;
+  }
+
+  .back {
+    text-decoration: none;
+  }
+
+  .back a {
+    text-decoration: none;
+  }
+
+  .form-section.names {
+    height: 16vh;
+  }
+
+  .Container {
+    display: flex;
+  }
+
+  .form-submit input[type=submit] {
+    position: absolute;
+    top: 77px;
+    right: 50px;
+  }
+}
+
+/* PC (>= 1200px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 1200px) {
+  .Container {
+      width: 90%;
+  }
+}
