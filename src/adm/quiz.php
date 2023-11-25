@@ -28,7 +28,7 @@ require_once __DIR__ . "/../templates/message.php";
             </select>
             <hr>
         </div>
-        <div class="form-group">
+        <div class="form-group" id="emblem">
             <div class="form-section">
                 <label for="emblem">Emblema:</label>
                 <input type="file" name="emblem">

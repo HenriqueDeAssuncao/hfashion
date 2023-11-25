@@ -5,7 +5,7 @@
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-  /*border: 1px solid black;*/
+  border: 1px solid black;
 }
 
 .Container{
@@ -104,10 +104,24 @@ cursor:pointer;
     margin-bottom: 20px;
   }
 
-  
+#emblem hr{
+  margin-top: 0;
+
+}
+
+#emblem input[type=file]::file-selector-button{
+  margin-bottom: 15px;
+}
+
+#avatars input[type=file]::file-selector-button{
+ margin-bottom: 8px;
+}
+
 .back{
   display: none;
 }
+
+
 
 
 /* Smartphone landscape (ATÉ 768px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
@@ -126,19 +140,48 @@ cursor:pointer;
 /* PC (>= 1200px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
 @media (min-width: 1200px) {
-    .Container {
+  
+  .Container {
         width: 90%;
     }
-    .back, h1{
+
+    .back{
       display: inline-flex;
       text-decoration: none;
+      position: absolute;
     }
   
     .back a{
       text-decoration: none;
     }
 
+    .back{
+      margin-top: -50px;
+    }
+
+    h1{
+      margin-top: -20px;
+      z-index: -9999;
+    }
     .form-section.names{
       height: 16vh;
     }
+
+    h1{
+      margin-left: 30px;
+      margin-bottom: 30px;
+    }
+
+    .Container{
+      display: flex;
+      margin-top: 90px;
+    }
+
+    .form-submit input[type=submit]{
+      position: absolute;
+      margin-top: -660px;
+     margin-right: 600px;
+    }
+
+
 }
