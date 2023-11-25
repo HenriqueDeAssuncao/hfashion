@@ -1,12 +1,12 @@
 <?php
-    $articles = [
-        [
-            "id" => 2,
-            "title" => "Y2K",
-            "description" => "Dos anos 2000, expressa o exagero",
-            "banner" => "y2k.png",
-            "folder" => "y2k",
-            "content" =>
+$articles = [
+    [
+        "id" => 2,
+        "title" => "Y2K",
+        "description" => "Dos anos 2000, expressa o exagero.",
+        "banner" => "y2k.png",
+        "folder" => "y2k",
+        "content" =>
             [
                 [
                     "img" => "y2k_artigo.png",
@@ -25,28 +25,87 @@
                     "p" => 'A estética Y2K pode ser vista como uma forma de escapismo nostálgico para uma época mais simples e inocente. Ela também pode ser vista como uma crítica à cultura contemporânea, que muitas vezes é vista como excessivamente sombria e negativa. De qualquer forma, a estética Y2K é uma forma popular de autoexpressão para muitas pessoas que buscam uma alternativa ao estilo convencional.'
                 ]
             ]
-        ],
+    ],
 
-        [
-            "id" => 1,
-            "title" => "StreetWear",
-            "description" => "Influências do cotidiano urbano.",
-            "banner" => "",
-            "folder" => "streetwear",
-            "content" => 
+    [
+        "id" => 1,
+        "title" => "StreetWear",
+        "description" => "Influências do cotidiano urbano.",
+        "banner" => "streetwear.webp",
+        "folder" => "streetwear",
+        "content" =>
             [
                 [
-                    "p" => "Caracterizado pelo conforto e um toque urbano, o streetwear é um estilo de roupa casual que evoluiu para incorporar a essência cultural de grandes metrópoles, deixando de ser apenas uma moda de rua e tornando-se um meio de autoexpressão, permitindo que os indivíduos mostrem sua personalidade por meio de roupas e acessórios, com uma mistura diversificada de música, esportes, arte, política e vida cotidiana.",
+                    "p" => "Caracterizado pelo conforto e um toque urbano, o streetwear é um estilo de roupa casual que evoluiu para incorporar a essência cultural de grandes metrópoles, deixando de ser apenas uma moda de rua e tornando-se um meio de autoexpressão, permitindo que os indivíduos mostrem sua personalidade por meio de roupas e acessórios, com uma mistura diversificada de música, esportes, arte, política e vida cotidiana."
                 ],
                 [
-                    "p" => "É um estilo de roupa que existe a quase 40 anos, no começo, o streetwear era simples e fugia do padrão dos estilos elaborados e complicados que estavam na moda da época. As pessoas usavam camisetas e moletons, porque era disso que gostavam, além de estar ligado ao conforto e à autoexpressão.",
+                    "p" => "É um estilo de roupa que existe a quase 40 anos, no começo, o streetwear era simples e fugia do padrão dos estilos elaborados e complicados que estavam na moda da época. As pessoas usavam camisetas e moletons, porque era disso que gostavam, além de estar ligado ao conforto e à autoexpressão."
                 ],
                 [
-                    "p" => "Caracterizado pelo conforto e um toque urbano, o streetwear é um estilo de roupa casual que evoluiu para incorporar a essência cultural de grandes metrópoles, deixando de ser apenas uma moda de rua e tornando-se um meio de autoexpressão, permitindo que os indivíduos mostrem sua personalidade por meio de roupas e acessórios, com uma mistura diversificada de música, esportes, arte, política e vida cotidiana.",
+                    "p" => "Esse estilo se tornou global na década de 1990 e se popularizou a partir da moda hip hop de Nova York e da cultura surfista na Califórnia. Alguns jovens de baixa renda começaram a abandonar a estética padrão da época para criar suas próprias formas de se vestir, inclusive incorporando mensagens polêmicas da sociedade, incluindo um papel social, cultural e político. Eram comuns protestos culturais e sociais entre os jovens que negavam alguns atos consumistas de outros jovens mais endinheirados."
                 ],
+                [
+                    "p" => "O DIY (Faça Você Mesmo) também estava em alta, e consistia em peças fabricadas manualmente, que eram uma febre entre os jovens que queriam expressar sua personalidade."
+                ],
+                [
+                    "p" => "Em High School Musical, o estilo é apresentado pelos skatistas no refeitório, onde eles se encontram em roupas casuais e despojadas. A contradição vem quando um deles diz que para tocar violoncelo, seria preciso usar terno e gravata, o que deixa todos chocados pelo contraste entre as duas estéticas."
+                ]
+
+            ]
+    ],
+
+    [
+        "id" => 4,
+        "title" => "Uniforme Escolar",
+        "description" => "",
+        "banner" => "",
+        "folder" => "uniforme",
+        "content" =>
+            [
+                [
+                    "p" => "A estética dos uniformes escolares na época de 2006 no oeste dos Estados Unidos, como mostrado no filme High School Musical, era caracterizada por cores vibrantes e estilos modernos, e variava bastante de acordo com a região e a escola específica. No entanto, de forma geral, a estética dessas roupas nessa época costumava ter um estilo mais conservador e formal. No filme, os uniformes escolares eram usados pelos personagens durante as cenas de aula e ensaios de música. Isso refletia uma tendência mais tradicional na moda e na sociedade americana da época, em que a formalidade e a sobriedade eram valorizadas em muitas áreas, inclusive na educação. No entanto, em algumas escolas e regiões, começava a surgir uma tendência de uniformes mais modernos e descontraídos."
+                ],
+                [
+                    "p" => "Os uniformes eram compostos por camisas pólo com cores vibrantes, como azul-claro e branco e essas camisas eram geralmente usadas por dentro de calças jeans justas e de cintura baixa, dando um toque moderno ao uniforme. O casaco vermelho que acompanha a parte superior do uniforme, possuíam linhas verticais brancas."
+                ],
+                [
+                    "p" => "Além disso, os uniformes apresentavam uma variedade de acessórios, como gravatas, laços, pulseiras e tiaras, para dar um toque pessoal ao uniform. 
+                    Isso pode ser interpretado como uma resposta à cultura popular da época, que valorizava a individualidade e a criatividade, especialmente na música e na moda. Também pode refletir uma tentativa das escolas de se adaptarem a essa cultura popular e tornarem-se mais atraentes para os alunos. No geral, a estética dos uniformes escolares nessa época refletia uma tendência de moda jovem e vibrante, com cores ousadas e acessórios divertidos."
+                ]
+            ]
+    ],
+
+    [
+        "id" => 3,
+        "title" => "Mc Bling",
+        "description" => "",
+        "banner" => "",
+        "folder" => "mc_bling",
+        "content" =>
+            [
+                [
+                    "p" => 'O McBling se popularizou entre 2003 e 2008, com o auxilio de artistas como Missy Elliot e LL Cool J, assim como famosos como Paris Hilton e Nicole Richie, em seu reality show "The Simple Life".'
+                ],
+                [
+                    "p" => "O estilo é marcado principalmente por tracksuits, conjuntos, roupas cheias de pedrarias e vestimentas características do streetwear, porém mais coloridas."
+                ],
+                [
+                    "p" => "Marcas como Baby Phat, Von Dutch, Juicy Couture e Victoria's Secrets ajudaram a popularizá-lo, abraçando uma das ideias populares no período, a confiança e a falta de medo de chamar atenção para si mesmo."
+                ],
+                [
+                    "p" => 'Uma das principais tendências decorrentes disso eram camisas com frases baseadas nesses aspectos, cuja principal expoente foi a socialite Paris Hilton, com camisas estampadas com "Rainha do Universo!" Ou "Não sinta inveja!"'
+                ],
+                [
+                    "p" => 'A estética surge devido à uma nova forma de consumir e produzir culura. entre 2002 e 2003 a empresa Blackberry lançou o primeiro teclado funcional e, também em 2003, surgia o Myspace, a primeira rede social. O período também foi marcado pelo início da conexão com celebridades que temos até os dias atuais, ali se iniciaram os paparazzi e as revistas de fofoca, além de programas virais como a MTV Cribs, centrado na vida pessoal dos famosos.'
+                ],
+                [
+                    "p" => 'Segundo o historiador de moda James Laver, as tendências se repetiam depois de um período de 150 anos, porém, atualmente a estimativa é que a repetição ocorra após cerca de 20, e como tudo no mundo da moda é cíclico, atualmente vemos uma crescente popularidade do mcbling, tanto para o consumidor comum, quanto nas passarelas, como é o caso das bolsas de mão coloridas da louis vuitton, populares no período e presentes no desfile de Primavera/verão de 2021 da marca.'
+                ]
                 
             ]
-        ]
-    ];
- 
+    ]
+
+
+];
+
 ?>
