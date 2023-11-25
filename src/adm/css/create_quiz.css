@@ -88,6 +88,7 @@ select {
   background-color: #808080;
   padding: 10px;
   border-radius: 4px;
+
   margin-top: 20px;
   color: #FFF;
   text-align: center;
@@ -133,6 +134,13 @@ input[type=file]::file-selector-button {
   margin-bottom: 8px;
 }
 
+.back{
+  display: none;
+}
+
+h1{
+  margin-left: 0;
+}
 /* Smartphone landscape (ATÉ 768px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 576px) {
   .Container {
@@ -175,6 +183,14 @@ input[type=file]::file-selector-button {
     position: absolute;
     top: 77px;
     right: 50px;
+  }
+
+  .back{
+    display: inline-flex;
+  }
+
+  h1{
+    margin-left: 50px;
   }
 }
 
