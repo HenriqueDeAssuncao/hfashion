@@ -184,7 +184,9 @@ require_once "data/articles.php";
 
     <!-- DIV CARDS -->
     <div class="div-cards-cursos js-scroll">
-      <div class="card">
+
+    
+      <a href="<?= $CURRENT_URL ?>/article.php?id=1" class="card">
         <div class="div-img-card"
           style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/street.png); background-repeat: no-repeat;">
         </div>
@@ -193,7 +195,7 @@ require_once "data/articles.php";
           <p class="style-regulartext">StreetWear</p>
           <p class="style-minimal">Influências do cotidiano urbano.</p>
         </div>
-      </div>
+      </a>
 
       <a href="<?= $CURRENT_URL ?>/article.php?id=2" class="card">
         <div class="div-img-card"
@@ -206,7 +208,7 @@ require_once "data/articles.php";
         </div>
       </a>
 
-      <div class="card">
+      <a href="<?= $CURRENT_URL ?>/article.php?id=3" class="card">
         <div class="div-img-card"
           style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/mc.png); background-repeat: no-repeat;">
         </div>
@@ -215,9 +217,9 @@ require_once "data/articles.php";
           <p class="style-regulartext">McBling</p>
           <p class="style-minimal">textotextotexto</p>
         </div>
-      </div>
+      </a>
 
-      <div class="card">
+      <a href="<?= $CURRENT_URL ?>/article.php?id=4" class="card">
         <div class="div-img-card"
           style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/uni.png); background-repeat: no-repeat;">
         </div>
@@ -226,7 +228,7 @@ require_once "data/articles.php";
           <p class="style-regulartext">Uniforme Escolar</p>
           <p class="style-minimal">textotextotexto</p>
         </div>
-      </div>
+      </a>
 
     </div>
   </div>

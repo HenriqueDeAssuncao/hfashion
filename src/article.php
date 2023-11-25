@@ -15,13 +15,15 @@ if (isset($_GET['id'])) {
 
 }
 
+$class = "full";
+
 ?>
 
 <link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/article.css">
 
 <div class="Container Flex">
    <div class="container-banner"
-      style="background-image: url(<?= $CURRENT_URL ?>/img/<?= $currentArticle["folder"] ?>/<?= $currentArticle["banner"] ?>);">
+      style="background-image: url(<?= $CURRENT_URL ?>/img/artigos/<?= $currentArticle["folder"] ?>/<?= $currentArticle["banner"] ?>);">
 
       <div class="titulo Flex">
          <p class="titulo-artigo">
@@ -37,12 +39,17 @@ if (isset($_GET['id'])) {
    <div class="container-pag">
 
       <?php if(!empty($section["img"])):?>
-         <div class="img-pag Auto Flex">
-            <img src="img/<?=$currentArticle["folder"]?>/<?=$section["img"]?>" class="img-mto-legal">
+         <div class="img-pag Auto"
+            style="background-image: url(<?= $CURRENT_URL ?>/img/artigos/<?=$currentArticle["folder"]?>/<?=$section["img"]?>);">
+            
          </div>
+
+         <?php
+            $class = "not-full";
+         ?>
       <?php endif;?>
       
-      <div class="div-pag Flex">
+      <div class="div-pag <?=  $class ?> Flex" style="width: <?= $width ?>">
          <p class="txt-pag">
             <?=$section["p"]?>
          </p>
