@@ -101,10 +101,6 @@ select {
   transition: .4s;
 }
 
-.form-submit input[type=submit]:hover {
-  background: linear-gradient(180deg, #C02425 53.65%, #7B0B0A 100%);
-}
-
 input[type=text]:not(.names) {
   margin-left: 5px;
   margin-bottom: 20px;

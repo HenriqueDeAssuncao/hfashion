@@ -1,6 +1,182 @@
 /* Smartphone Portrait (ATÉ 576px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+:root {
+    --input: #e7e7e7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a,
+button {
+    cursor: pointer;
+}
+
+a,
+button,
+input {
+    font-family: inherit;
+    color: inherit;
+    font-size: 16px;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+}
+
+.header h1 {
+    font-size: 25px;
+}
+
+.header button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.75rem;
+    width: 1.75rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.header button:hover {
+    background-color: #e4e4e4;
+}
+
+.container {
+    display: block;
+    width: 100%;
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 2rem 4rem;
+}
+
 .form-group {
-    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.form-group label {
+    font-size: 1.375rem;
+    font-weight: 600;
+}
+
+.form-group input[type="text"] {
+    display: block;
+    width: 100%;
+    max-width: 24rem;
+    height: 3rem;
+    padding: 0 1rem;
+    background-color: var(--input);
+    border-radius: 0.625rem;
+    border: none;
+    outline: none;
+}
+
+.form-group input[type="text"]:focus {
+    box-shadow: 0 0.5rem 0.625rem rgba(0, 0, 0, 0.25);
+}
+
+.answers {
+    display: block;
+}
+
+.answers label {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.input-container span {
+    font-weight: 600;
+}
+
+input[type="file"] {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    color: #7a7a7a;
+    outline: none;
+}
+
+input[type="file"]::file-selector-button {
+    cursor: pointer;
+    margin-right: 1.5rem;
+}
+
+.btn-delete-template-question {
+    border: 3px solid #ff0000;
+    border-radius: 0.5rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    background: none;
+    transition: all 0.2s;
+}
+
+.removeBtn i {
+    color: #ff0000;
+    transition: all 0.2s;
+}
+
+.removeBtn:hover {
+    border-color: #df1111;
+}
+
+.removeBtn:hover i {
+    color: #df1111;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 4.5rem;
+}
+
+.controls button,
+input[type="file"]::file-selector-button {
+    display: inline-block;
+    height: 2.8rem;
+    border: 3px solid #cdcdcd;
+    border-radius: 0.5rem;
+    padding: 0 1.25rem;
+    color: #787878;
+    font-weight: 600;
+    background: transparent;
+    transition: background-color 0.2s;
+    outline: none;
+}
+
+.controls button:hover,
+.controls button:focus,
+input[type="file"]::file-selector-button:hover,
+input[type="file"]:focus::file-selector-button {
+    background-color: #f5f4f4;
+}
+
+.controls button:fo input[type="file"]::file-selector-button {
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: inherit;
+    margin-right: 1.5rem;
 }
 
 /* Smartphone landscape (ATÉ 768px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
@@ -15,6 +191,13 @@
     .Container {
         width: 720px;
     }
+
+    .btn-submit {
+        position: fixed;
+        top: 77px;
+        right: 50px;
+    }
+
 }
 
 /* Tablet Landscape (ATÉ 992px) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
