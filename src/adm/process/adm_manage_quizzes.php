@@ -26,6 +26,7 @@ if (!empty($_POST)) {
 
     } elseif ($type === "article") {
 
+        $quizId = $_POST["quizId"];
         $articleId = $_POST["articleId"][0];
 
         $QuizDao->attachToArticle($quizId, $articleId);
@@ -42,8 +43,14 @@ if (!empty($_POST)) {
             $questionsNumber = $QuizDao->getQuestionsNumber($quizId);
 
             if ($questionsNumber) {
-                $QuizDao->setQuizStatusToActive($quizId);
-                $Message->setMessage("O quiz está disponivel para os usuários!", "success", "back");
+
+                if($articleId) {
+                    $QuizDao->setQuizStatusToActive($quizId);
+                    $Message->setMessage("O quiz está disponivel para os usuários!", "success", "back");
+                } else {
+                    $Message->setMessage("O quiz deve estar relacionado com algum artigo para ser ativado!", "error", "back");
+                }
+                
             } else {
                 $Message->setMessage("O quiz deve conter pelo menos 5 perguntas para ser ativado!", "error", "back");
             }

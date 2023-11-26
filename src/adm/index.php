@@ -52,7 +52,7 @@ require_once __DIR__ . "/../templates/message.php";
                 </div>
                 <div class="down-side">
                     <div class="container-down-side">
-                        <p>5 perguntas</p>
+                        <p><?= $Quiz->getQuestionsNumber() ?> perguntas</p>
                         <p>Nível
                             <?= $Quiz->getQuestionWeight() ?>
                         </p>
@@ -74,7 +74,7 @@ require_once __DIR__ . "/../templates/message.php";
                         <input type="submit" value="Adicionar perguntas" class="btn">
                     </form>
          
-                    <button class="btn btn-add-form" data-parameter="<?= $Quiz->getQuizId();?>">Relacionar com o artigo</button>
+                    <button class="btn btn-add-form" data-parameter="<?= $Quiz->getQuizId() ?>">Relacionar com o artigo</button>
                
                     <form action="process/adm_manage_quizzes.php" method="post">
                         <input type="hidden" name="type" value="active">

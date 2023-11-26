@@ -1,7 +1,9 @@
 <?php
 require_once "templates/header.php";
 
-
+if (empty($_SESSION["quizToken"])) {
+    $message->setMessage("Você não tem permissão para acessar essa página", "error", "kick");
+} 
 
 ?>
 

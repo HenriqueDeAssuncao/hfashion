@@ -23,12 +23,11 @@ class AdmDAO
         $stmt->bindParam(":user_id", $userId);
         $stmt->execute();
         $quizzesArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        $stmt = "";
+
         $AdmQuizzes = [];
         foreach ($quizzesArray as $quiz) {
             $Quiz = new Quiz($this->message);
             $Quiz->setQuizId($quiz["quiz_id"]);
-            $Quiz->setQuizId($quiz["article_id"]);
             $Quiz->setQuizName($quiz["quiz_name"]);
             $Quiz->setQuizDescription($quiz["quiz_description"]);
             $Quiz->setQuestionsNumber($quiz["questions_number"]);
@@ -36,7 +35,8 @@ class AdmDAO
             $Quiz->setQuizToken($quiz["quiz_token"]);
             $Quiz->setIconPath($quiz["icon"]);
             $Quiz->setStatus($quiz["status"]);
-
+            $Quiz->setArticleId($quiz["article_id"]);
+            
             $AdmQuizzes[] = $Quiz;
         }
 
