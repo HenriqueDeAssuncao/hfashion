@@ -1,9 +1,11 @@
 <?php
+
 require_once "templates/header.php";
 require_once __DIR__ . "/../dao/AdmDAO.php";
 
 $AdmDao = new AdmDAO($conn, $CURRENT_URL);
 $Quizzes = $AdmDao->findQuizzes($userData->getId());
+
 ?>
 
 <link rel="stylesheet" href="css/index.css">
@@ -12,10 +14,29 @@ $Quizzes = $AdmDao->findQuizzes($userData->getId());
 require_once __DIR__ . "/../templates/message.php";
 ?>
 
-<div class="quizzes-container Flex">
+<div class="container-article-form Container Flex Hidden">
+
+    <div class="form-content">
+
+        <button class="btn-close-form Button">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="container-form Flex Auto">
+            <div class="form">
+            
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="quizzes-container Auto">
 
     <?php foreach ($Quizzes as $Quiz): ?>
-        <div class="quiz-container Flex">
+        
+        <div class="quiz-container Flex Auto">
             <div class="quiz-content">
                 <div class="up-side">
                     <div class="container-image profile-img"
@@ -41,7 +62,7 @@ require_once __DIR__ . "/../templates/message.php";
 
             <div class="quiz-features">
 
-                <button class="btn-settings Button">
+                <button data-parameter="<?= $Quiz->getQuizId(); ?>" class="btn-settings Button">
                     <i class="fa-solid fa-gear"></i>
                 </button>
 
@@ -52,13 +73,12 @@ require_once __DIR__ . "/../templates/message.php";
                         <input type="hidden" name="quizToken" value="<?= $Quiz->getQuizToken() ?>">
                         <input type="submit" value="Adicionar perguntas" class="btn">
                     </form>
-                    <form action="process/adm_manage_quizzes.php" method="post">
-                        <input type="hidden" name="type" value="article">
-                        <input type="hidden" name="quizId" value="<?= $Quiz->getQuizId() ?>">
-                        <input type="submit" value="Adicionar ao artigo" class="btn">
-                    </form>
+         
+                    <button class="btn btn-add-form" data-parameter="<?= $Quiz->getQuizId();?>">Relacionar com o artigo</button>
+               
                     <form action="process/adm_manage_quizzes.php" method="post">
                         <input type="hidden" name="type" value="active">
+                        <input type="hidden" name="article-id" value="<?= $Quiz->getArticleId() ?>">
                         <input type="hidden" name="quizId" value="<?= $Quiz->getQuizId() ?>">
                         <input type="submit" value="Ativar" class="btn">
                     </form>
@@ -71,12 +91,8 @@ require_once __DIR__ . "/../templates/message.php";
     <?php endforeach; ?>
 </div>
 
-<link rel="stylesheet" href="css/index.css">
-<link rel="stylesheet" href="<?= $CURRENT_URL ?>/../css/global.css">
-<link rel="stylesheet" href="<?= $CURRENT_URL ?>/../css/message.css">
-<script src="<?= $CURRENT_URL ?>/../script/message.js"></script>
-<script src="<?= $CURRENT_URL ?>/script/my_quizzes.js"></script>
+<script src="<?= $CURRENT_URL ?>/script/index.js"></script>
 
 <?php
-require_once __DIR__ . "/../templates/footer.php";
+require_once "templates/footer.php";
 ?>

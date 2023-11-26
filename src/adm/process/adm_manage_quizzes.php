@@ -4,22 +4,53 @@ require_once __DIR__ . "/../../helpers/db.php";
 require_once __DIR__ . "/../../dao/QuizDAO.php";
 require_once __DIR__ . "/../../models/Message.php";
 
-$Meessage = new Message($CURRENT_URL);
+$Message = new Message($CURRENT_URL);
 
 $QuizDao = new QuizDAO($conn, $CURRENT_URL);
 
-    if (!empty($_POST)) {
-        $type = $_POST["type"];
-        $quizId = $_POST["quizId"];
+if (!empty($_POST)) {
+    $type = $_POST["type"];
+    $quizId = $_POST["quizId"];
 
-        if ($type === "questions") {
+    if ($type === "questions") {
+
+        $questionsNumber = $QuizDao->getQuestionsNumber($quizId);
+
+        if (!$questionsNumber) {
             $quizToken = $_POST["quizToken"];
             $_SESSION["quizToken"] = $quizToken;
             header("Location: " . "$CURRENT_URL/../questions.php");
-        } elseif ($type === "article") {
-
-        } elseif ($type === "active") {
-            $QuizDao->setQuizStatusToActive($quizId);
-            $Meessage->setMessage("O quiz está disponivel para os usuários!", "success", "back");
+        } else {
+            $Message->setMessage("O quiz já possui perguntas!", "error", "back");
         }
+
+    } elseif ($type === "article") {
+
+        $articleId = $_POST["articleId"][0];
+
+        $QuizDao->attachToArticle($quizId, $articleId);
+
+        $Message->setMessage("O quiz foi relacionado com sucesso.", "success", "back");
+
+    } elseif ($type === "active") {
+
+        $articleId = $_POST["article-id"];
+        $quizStatus = $QuizDao->findQuizStatus($quizId);
+
+        if (!$quizStatus) {
+
+            $questionsNumber = $QuizDao->getQuestionsNumber($quizId);
+
+            if ($questionsNumber) {
+                $QuizDao->setQuizStatusToActive($quizId);
+                $Message->setMessage("O quiz está disponivel para os usuários!", "success", "back");
+            } else {
+                $Message->setMessage("O quiz deve conter pelo menos 5 perguntas para ser ativado!", "error", "back");
+            }
+
+        } else {
+            $Message->setMessage("O quiz já está ativo!", "error", "back");
+        }
+
     }
+}

@@ -191,4 +191,19 @@ class QuizDAO implements QuizDAOInterface
         return $questions;
 
     }
+    public function findQuizStatus($quizId)
+    {
+        $stmt = $this->conn->prepare("SELECT status FROM quizzes WHERE quiz_id = :quiz_id");
+        $stmt->bindParam(":quiz_id", $quizId);
+        $stmt->execute();
+        $quizStatus = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $quizStatus["status"];
+    }
+    public function attachToArticle($quizId, $articleId)
+    {
+        $stmt = $this->conn->prepare("UPDATE quizzes SET article_id = :article_id WHERE quiz_id = :quiz_id");
+        $stmt->bindParam(":article_id", $articleId);
+        $stmt->bindParam(":quiz_id", $quizId);
+        $stmt->execute();
+    }
 }

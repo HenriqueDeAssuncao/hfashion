@@ -28,6 +28,7 @@ class AdmDAO
         foreach ($quizzesArray as $quiz) {
             $Quiz = new Quiz($this->message);
             $Quiz->setQuizId($quiz["quiz_id"]);
+            $Quiz->setQuizId($quiz["article_id"]);
             $Quiz->setQuizName($quiz["quiz_name"]);
             $Quiz->setQuizDescription($quiz["quiz_description"]);
             $Quiz->setQuestionsNumber($quiz["questions_number"]);
@@ -40,6 +41,29 @@ class AdmDAO
         }
 
         return $AdmQuizzes;
+    }
+
+    public function findUnvailableArticles() {
+        $stmt = $this->conn->prepare("SELECT article_id FROM quizzes");
+        $stmt->execute();
+        $articlesIdsArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $articlesIds = [];
+        foreach ($articlesIdsArray as $articleIdArray) {
+            $articleId = $articleIdArray["article_id"];
+            $articlesIds[] = $articleId;
+        }
+        return $articlesIds;
+    }
+
+    public function getAvailableIds($allArticlesIds) {
+ 
+        $unavailableIds = $this->findUnvailableArticles();
+        $availableIds = array_diff($allArticlesIds, $unavailableIds);
+
+        sort($availableIds);
+
+        return $availableIds;
+
     }
 
 }

@@ -52,7 +52,7 @@ $Adm = new Adm($CURRENT_URL);
               <a href="<?= $CURRENT_URL ?>/../" style="color: #C02425">Sair</a>
             </li>
             <li>
-              <a href="<?= $CURRENT_URL ?>/quiz.php">Novo quiz</a>
+              <a href="<?= $CURRENT_URL ?>/quiz.php">Criar quiz</a>
             </li>
           </ul>
         </ul>

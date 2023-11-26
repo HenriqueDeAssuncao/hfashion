@@ -141,14 +141,6 @@ input[type=file]::file-selector-button {
   margin-bottom: 8px;
 }
 
-.back{
-  display: none;
-}
-
-h1{
-  margin-left: 0;
-}
-
 input[type="file"]{
   color: #787878;
 }
@@ -194,14 +186,6 @@ input[type="file"]{
     position: absolute;
     top: 77px;
     right: 50px;
-  }
-
-  .back{
-    display: inline-flex;
-  }
-
-  h1{
-    margin-left: 50px;
   }
 
 input[type=file]::file-selector-button{
