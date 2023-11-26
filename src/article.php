@@ -15,20 +15,7 @@ if (isset($_GET['id'])) {
 
 }
 
-$class = "full";
-
 ?>
-
-<div vw class="enabled">
-  <div vw-access-button class="active"></div>
-  <div vw-plugin-wrapper>
-    <div class="vw-plugin-top-wrapper"></div>
-  </div>
-</div>
-<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-<script>
-  new window.VLibras.Widget();
-</script>
 
 <link rel="stylesheet" href="<?= $CURRENT_URL ?>/css/article.css">
 
@@ -54,10 +41,6 @@ $class = "full";
             style="background-image: url(<?= $CURRENT_URL ?>/img/artigos/<?=$currentArticle["folder"]?>/<?=$section["img"]?>);">
             
          </div>
-
-         <?php
-            $class = "not-full";
-         ?>
       <?php endif;?>
       
       <div class="div-pag <?=  $class ?> Flex" style="width: <?= $width ?>">
