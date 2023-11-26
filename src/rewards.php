@@ -2,8 +2,12 @@
     require_once "helpers/url.php";
     require_once "helpers/db.php";
     require_once "dao/UserDAO.php";
+    require_once "models/Message.php";
+
     $userDao = new UserDAO($conn, $CURRENT_URL);
     $userData = $userDao->verifyToken(true);
+
+    $message = new Message($CURRENT_URL);
 
     if (!empty($userData)) {
         if (isset($_SESSION["rewards"]) && $_SESSION["rewards"]["auth"] === "true") {

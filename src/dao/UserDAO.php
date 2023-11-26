@@ -83,7 +83,7 @@ class UserDAO implements UserDAOinterface
 
         if ($redirect) {
             //Redirecionapara o perfil do usuário
-            $this->message->setMessage("Dados atualizados com sucesso.", "success");
+            $this->message->setMessage("Dados atualizados com sucesso.", "success", "back");
         }
     }
     public function verifyToken($protected = false)
@@ -224,7 +224,7 @@ class UserDAO implements UserDAOinterface
             $stmt->bindParam(":id", $id);
             $stmt->execute();
 
-            $this->message->setMessage("Senha atualizada com sucesso.", "success");
+            $this->message->setMessage("Senha atualizada com sucesso.", "success" , "back");
         }
     }
 }
