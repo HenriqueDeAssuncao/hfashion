@@ -46,6 +46,17 @@ $i = 0;
 
 ?>
 
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  new window.VLibras.Widget();
+</script>
+
 <link rel="stylesheet" href="<?=$CURRENT_URL?>/css/user_answers.css">
 
 <a href="<?=$CURRENT_URL?>/dashboard.php"><img class="back-icon" src="<?= $CURRENT_URL ?>/img/dashboard/back-icon.svg" alt="ícone voltar"></a>
