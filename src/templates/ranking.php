@@ -28,7 +28,7 @@ $counter = 1;
 
     <div class="ranking js-ranking Auto">
 
-        <a href="user.php?userId=<?=$userAnswerQuestion->getUserId()?>" class="ranking-row Button Flex" data-parameter="<?= $userAnswerQuestion->getUserId(); ?>">
+        <a href="user.php?userId=<?=$userAnswerQuestion->getUserId()?>" class="ranking-row Button Flex">
             <span class="number">
                 <?= $counter ?>
             </span>

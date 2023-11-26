@@ -78,11 +78,12 @@ interface QuizDAOInterface
     public function setQuizTokenToSession($quizToken);
     public function getQuizStatusByToken($quizToken);
     public function setQuizStatusToActive($quizId);
-    //ESSAS DUAS FUNÇÕES "getQuestionsNumber" e "update" deveriam ser triggers!
     public function getQuestionsNumber($quizId);
     public function update($quiz_id);
     public function findUserQuizData($quizId, $userId);
     public function getQuiz($quizId);
     public function getQuizzes($userId);
     public function getQuestions($quizToken); //Retorna um array com os objetos questions
+    public function findQuizStatus($quizId);
+    public function attachToArticle($quizId, $articleId);
 }

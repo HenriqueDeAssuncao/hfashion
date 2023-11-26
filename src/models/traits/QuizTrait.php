@@ -4,6 +4,7 @@ trait QuizTrait
   private $message;
   private $emblemId;
   private $quizToken; //Hash pra usar de url
+  private $articleId;
   private $quizName;
   private $quizDescription;
   private $questionsNumber;
@@ -16,6 +17,14 @@ trait QuizTrait
   public function __construct(Message $message)
   {
     $this->message = $message;
+  }
+  public function getArticleId()
+  {
+    return $this->articleId;
+  }
+  public function setArticleId($articleId)
+  {
+    $this->articleId = $articleId;
   }
   public function getQuizToken()
   {

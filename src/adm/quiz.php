@@ -77,8 +77,6 @@ require_once "templates/header.php";
 
 </div>
 
-<script src="<?= $CURRENT_URL ?>/../script/message.js"></script>
-
 <?php
-require_once __DIR__ . "/../templates/footer.php";
+require_once "templates/footer.php";
 ?>
