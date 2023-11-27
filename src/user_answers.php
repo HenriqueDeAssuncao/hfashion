@@ -24,6 +24,7 @@ if (!empty($_GET["quizToken"] && !empty($_GET["quizId"]))) {
   $userAnswerQuestion = $userAnswerQuestionDao->getUserAnswerQuestion($userId, $quizId);
 
   //Variáveis sobre o userAnswerQuestion que vou utilizar no desvio condicional
+
   if($userAnswerQuestion) {
     $tries = $userAnswerQuestion->getTries();
     $quizStatus = $userAnswerQuestion->getQuizStatus();
@@ -43,6 +44,10 @@ if (!empty($_GET["quizToken"] && !empty($_GET["quizId"]))) {
 }
 
 $i = 0;
+
+if(!$questions) {
+  $message->setMessage("Conclua o quiz para ver suas respostas", "error", "back");
+}
 
 ?>
 
