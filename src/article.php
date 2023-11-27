@@ -31,8 +31,10 @@ if (isset($_GET['id'])) {
          $userId = $userData->getId();
 
          if(!$userAnswerQuestionDao->isQuizAvailable($userId, $quizId)) {
+
             $class = "Fixed";
          } else {
+            
             $class = "Hidden";
          }
 

@@ -208,11 +208,18 @@ class QuizDAO implements QuizDAOInterface
         $stmt->execute();
     }
     public function findQuizByArticleId($articleId) {
+
         $stmt = $this->conn->prepare("SELECT * FROM quizzes WHERE article_id = :article_id");
         $stmt->bindParam(":article_id", $articleId);
         $stmt->execute();
         $QuizArray = $stmt->fetch(PDO::FETCH_ASSOC);
-        $Quiz = $this->buildQuiz($QuizArray);
-        return $Quiz;
+
+        if (!empty($QuizArray)) {
+            $Quiz = $this->buildQuiz($QuizArray);
+            return $Quiz;
+        } else {
+            return 0;
+        }
+
     }
 }

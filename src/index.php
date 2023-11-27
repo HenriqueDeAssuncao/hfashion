@@ -127,15 +127,15 @@ require_once "data/articles.php";
 
   <!-- DIV LINK TIMELINE -->
   <div id="div-timeline" style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/teatro.png);">
-    <div id="div-text-timeline">
+    <a href="<?= $CURRENT_URL ?>/timeline.php" id="div-text-timeline">
       <p class="style-minimal" style="color: #FFF">1/4</p><br>
       <div id="timeline-text-limitacion">
         <p id="style-timeline">Linha do tempo</p>
       </div>
       <br>
       <p class="style-minimal" style="color: #FFF">Como a moda foi construida através da
-        história</p>
-    </div>
+        história.</p>
+    </a>
   </div>
 
 </div>
@@ -154,16 +154,16 @@ require_once "data/articles.php";
 
     <!-- DIV CARDS -->
     <div class="div-cards-cursos-influ js-scroll">
-      <div class="card">
+      <a href="<?= $CURRENT_URL ?>/timeline.php" class="card">
         <div class="div-img-card"
           style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/teat.png); background-repeat: no-repeat;">
         </div>
         <div class="div-text-card">
           <p class="style-minimal">1/1</p>
           <p class="style-regulartext">Linha do Tempo</p>
-          <p class="style-minimal">Como a moda foi construida através da história</p>
+          <p class="style-minimal">Como a moda foi construida através da história.</p>
         </div>
-      </div>
+      </a>
 
     </div>
   </div>
@@ -215,7 +215,7 @@ require_once "data/articles.php";
         <div class="div-text-card">
           <p class="style-minimal">3/4</p>
           <p class="style-regulartext">McBling</p>
-          <p class="style-minimal">textotextotexto</p>
+          <p class="style-minimal">O retorno do brilho e da confiança</p>
         </div>
       </a>
 
@@ -226,7 +226,7 @@ require_once "data/articles.php";
         <div class="div-text-card">
           <p class="style-minimal">4/4</p>
           <p class="style-regulartext">Uniforme Escolar</p>
-          <p class="style-minimal">textotextotexto</p>
+          <p class="style-minimal">Do comum ao extraordinário</p>
         </div>
       </a>
 
@@ -249,38 +249,38 @@ require_once "data/articles.php";
 
     <!-- DIV CARDS -->
     <div class="div-cards-cursos-influ js-scroll">
-      <div class="card">
+      <a href="<?= $CURRENT_URL ?>/article.php?id=5" class="card">
         <div class="div-img-card"
           style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/musica.png); background-repeat: no-repeat;">
         </div>
         <div class="div-text-card">
           <p class="style-minimal">1/3</p>
           <p class="style-regulartext">Música</p>
-          <p class="style-minimal">textotextotexto</p>
+          <p class="style-minimal">O impacto da música na moda</p>
         </div>
-      </div>
+      </a>
 
-      <div class="card">
+      <a href="<?= $CURRENT_URL ?>/article.php?id=6" class="card">
         <div class="div-img-card"
           style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/esporte.png); background-repeat: no-repeat;">
         </div>
         <div class="div-text-card">
           <p class="style-minimal">2/3</p>
           <p class="style-regulartext">Esporte</p>
-          <p class="style-minimal">textotextotexto</p>
+          <p class="style-minimal">Quando o esporte inspira a moda</p>
         </div>
-      </div>
+      </a>
 
-      <div class="card">
+      <a href="<?= $CURRENT_URL ?>/article.php?id=7" class="card">
         <div class="div-img-card"
           style="background-image: url(<?= $CURRENT_URL ?>/img/index/btn/cinema.png); background-repeat: no-repeat;">
         </div>
         <div class="div-text-card">
           <p class="style-minimal">3/3</p>
           <p class="style-regulartext">Cinema</p>
-          <p class="style-minimal">textotextotexto</p>
+          <p class="style-minimal">A arte do vestir e a magia do cinema</p>
         </div>
-      </div>
+      </a>
 
     </div>
   </div>
