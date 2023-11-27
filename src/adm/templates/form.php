@@ -22,14 +22,14 @@ $availableArticle = ["id" => "", "title" => ""];
 
 foreach ($availableIds as $availableId) {
 
-  for ($i=0; $i < count($articles) ; $i++) { 
+  for ($i = 0; $i < count($articles); $i++) {
 
     if ($articles[$i]["id"] === $availableId) {
 
       $availableArticle["id"] = $availableId;
       $availableArticle["title"] = $articles[$i]["title"];
       $availableArticles[] = $availableArticle;
-      
+
     }
 
   }
@@ -49,11 +49,19 @@ $quizId = $_GET["quizId"];
 
     <label for="articleId[]">Selecione o artigo:</label>
 
-    <select name="articleId[]"  style="margin-top: 25px;">
-      <?php for($i = 0; $i < count($availableArticles); $i++):?>
-        <option value="<?= $availableArticles[$i]["id"] ?>"><?= $availableArticles[$i]["title"] ?></option>
-      <?php endfor;?>
-    </select>
+    <?php if (count($availableArticles) === 0): ?>
+      <p style="color: red">Não há artigos disponíveis.</p>
+    <?php endif; ?>
+
+    <?php if (count($availableArticles) > 0): ?>
+      <select name="articleId[]" style="margin-top: 25px;">
+        <?php for ($i = 0; $i < count($availableArticles); $i++): ?>
+          <option value="<?= $availableArticles[$i]["id"] ?>">
+            <?= $availableArticles[$i]["title"] ?>
+          </option>
+        <?php endfor; ?>
+      </select>
+    <?php endif; ?>
 
   </div>
 

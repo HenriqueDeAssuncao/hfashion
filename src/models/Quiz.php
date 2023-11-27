@@ -86,4 +86,5 @@ interface QuizDAOInterface
     public function getQuestions($quizToken); //Retorna um array com os objetos questions
     public function findQuizStatus($quizId);
     public function attachToArticle($quizId, $articleId);
+    public function findQuizByArticleId($articleId);
 }

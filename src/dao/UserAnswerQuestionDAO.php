@@ -69,8 +69,13 @@ class UserAnswerQuestionDAO implements UserAnswerQuestionDAOInterface
         $stmt->bindParam(":quiz_id", $quizId);
         $stmt->execute();
         $statusArr = $stmt->fetch(PDO::FETCH_ASSOC);
+        if ($statusArr) {
+            $status = $statusArr["quiz_status"];
+        } else {
+            $status = 0;
+        }
 
-        if($statusArr["quiz_status"] === 1) {
+        if($status) {
             return true;
         } else {
             return false;

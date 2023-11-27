@@ -133,7 +133,7 @@ require_once "data/articles.php";
         <p id="style-timeline">Linha do tempo</p>
       </div>
       <br>
-      <p class="style-minimal" style="color: #FFF">De forma visual e direta saiba como a moda foi construida através da
+      <p class="style-minimal" style="color: #FFF">Como a moda foi construida através da
         história</p>
     </div>
   </div>
@@ -161,7 +161,7 @@ require_once "data/articles.php";
         <div class="div-text-card">
           <p class="style-minimal">1/1</p>
           <p class="style-regulartext">Linha do Tempo</p>
-          <p class="style-minimal">De forma visual e direta saiba como a moda foi construida através da história</p>
+          <p class="style-minimal">Como a moda foi construida através da história</p>
         </div>
       </div>
 

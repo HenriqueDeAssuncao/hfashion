@@ -26,6 +26,7 @@ class QuizDAO implements QuizDAOInterface
         }
 
         $Quiz->setQuizId($quiz["quiz_id"]);
+        $Quiz->setArticleId($quiz["article_id"]);
         $Quiz->setQuizName($quiz["quiz_name"]);
         $Quiz->setQuizDescription($quiz["quiz_description"]);
         $Quiz->setQuestionsNumber($quiz["questions_number"]);
@@ -205,5 +206,13 @@ class QuizDAO implements QuizDAOInterface
         $stmt->bindParam(":article_id", $articleId);
         $stmt->bindParam(":quiz_id", $quizId);
         $stmt->execute();
+    }
+    public function findQuizByArticleId($articleId) {
+        $stmt = $this->conn->prepare("SELECT * FROM quizzes WHERE article_id = :article_id");
+        $stmt->bindParam(":article_id", $articleId);
+        $stmt->execute();
+        $QuizArray = $stmt->fetch(PDO::FETCH_ASSOC);
+        $Quiz = $this->buildQuiz($QuizArray);
+        return $Quiz;
     }
 }

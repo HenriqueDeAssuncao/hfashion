@@ -1,13 +1,17 @@
-/* For mobile phones: */ 
-/*fonts:*/ 
+/* For mobile phones: */
+/*fonts:*/
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@700&display=swap');
+
+/* * {
+    border: 1px solid black;
+} */
 
 .msg {
     margin-bottom: 30px;
 }
 
-#main{
+#main {
     padding-top: 44px;
     display: flex;
     flex-direction: column;
@@ -15,7 +19,7 @@
     align-items: center;
 }
 
-#maintxt{
+#maintxt {
     width: 266px;
     display: flex;
     flex-direction: column;
@@ -23,98 +27,102 @@
     margin-bottom: 30px;
 }
 
-#maintitle{
-    color: black; 
-    font-size: 22px; 
-    font-family: Roboto; 
-    font-weight: 600; 
+#maintitle {
+    color: black;
+    font-size: 22px;
+    font-family: Roboto;
+    font-weight: 600;
     word-wrap: break-word;
     margin: auto;
     margin-left: 0;
 }
 
-#maintext{
-    color: #333333; 
-    font-size: 14px; 
-    font-family: Poppins; 
-    font-weight: 600; 
+#maintext {
+    color: #333333;
+    font-size: 14px;
+    font-family: Poppins;
+    font-weight: 600;
     word-wrap: break-word;
     margin: auto;
     margin-left: 0;
     margin-top: 5px;
 }
 
-.topics{
+.topics {
     height: 143.88px;
     padding-top: 30px;
     display: flex;
     justify-content: center;
 }
 
-.card{
-    width: 266px; 
-    height: 107.88px; 
+.card {
+    width: 266px;
+    height: 107.88px;
     position: relative;
     text-decoration: none;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(180deg, #C02425 54%, #7B0B0A 100%); 
+    background: linear-gradient(180deg, #C02425 54%, #7B0B0A 100%);
     border-radius: 20px;
     border: none;
     transition: .5s;
 }
 
-.card:hover{
+.card:hover {
     box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.25);
 }
 
-.text{
-    width: 224px; 
-    height: 27.97px; 
+.text {
+    width: 224px;
+    height: 27.97px;
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     align-items: center;
-    justify-content:space-between;
+    justify-content: space-between;
     margin: auto;
     padding-bottom: -10px;
 }
 
-.title{
-    color: white; 
-    font-size: 22px; 
-    font-family: Roboto; 
-    font-weight: 600; 
+.title {
+    color: white;
+    font-size: 22px;
+    font-family: Roboto;
+    font-weight: 600;
     word-wrap: break-word;
 }
 
 
-.quests{
-    color: white; 
-    font-size: 16px; 
-    font-family: Poppins; 
-    font-weight: 600; 
+.quests {
+    color: white;
+    font-size: 16px;
+    font-family: Poppins;
+    font-weight: 600;
     word-wrap: break-word;
 }
 
 
-.icon{
-    width: 224px; 
+.icon {
+    width: 224px;
     height: 23px;
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     align-items: center;
     margin: auto;
 }
 
-.status{
-    width: 23px; 
+.status {
+    width: 23px;
     height: 23px;
 }
 
-.image{
-    width: 109px; 
+.image {
+    width: 109px;
     height: 109px;
-    left: 152px; 
+    left: 152px;
     bottom: 36px;
     position: absolute;
+}
+
+@media (min-width: 992px) {
+
 }

@@ -27,9 +27,12 @@
 
 .btn-close-form {
     margin-left: 10px;
-    font-size: 20px;
     color: #7B0B0A;
     cursor: pointer;
+}
+
+.btn-close-form i {
+    font-size: 20px;
 }
 
 .container-form {

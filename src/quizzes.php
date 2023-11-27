@@ -54,6 +54,7 @@ $quizzes = $quizDao->getQuizzes($userId);
             ?>
 
             <div class="topics">
+
                 <a class="card" href="<?= $CURRENT_URL ?>/<?= $quizUrl ?>" data-parameter="<?= $quiz->getQuizId(); ?>">
                     <input class="quizId" type="hidden" value="<?= $quiz->getQuizId(); ?>">
                     <img class="image" src="<?= $CURRENT_URL ?>/<?= $quiz->getIconPath(); ?>" alt="Ícone do quiz">
@@ -69,6 +70,7 @@ $quizzes = $quizDao->getQuizzes($userId);
                         </p>
                     </div>
                 </a>
+                
             </div>
 
         <?php endforeach; ?>

@@ -96,10 +96,10 @@ class UserDAO implements UserDAOinterface
             if ($user) {
                 return $user;
             } else if ($protected) {
-                $this->message->setMessage("Faça <a href='$this->url/signup.php'>autenticação</a> para acessar esta página", "error", "kick");
+                $this->message->setMessage("Faça <a href='$this->url/signup.php'>autenticação</a> para acessar a página.", "error", "kick");
             }
         } else if ($protected) {
-            $this->message->setMessage("Faça <a href='$this->url/signup.php'>autenticação</a> para acessar esta página", "error", "kick");
+            $this->message->setMessage("Faça <a href='$this->url/signup.php'>autenticação</a> para acessar a página.", "error", "kick");
         }
     }
     public function setTokenToSession($token, $redirect = true)
