@@ -193,7 +193,7 @@ require_once "data/articles.php";
         <div class="div-text-card">
           <p class="style-minimal">1/4</p>
           <p class="style-regulartext">StreetWear</p>
-          <p class="style-minimal">Influências do cotidiano urbano.</p>
+          <p class="style-minimal">Influências do cotidiano urbano</p>
         </div>
       </a>
 

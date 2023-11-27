@@ -5,9 +5,9 @@
         private $url;
         private $message; 
         private $admins = [
-            "teste@teste",
-            "capivara@gorda",
-            "capivara@batman"
+            "henrique@adm",
+            "erika@adm",
+            "jessica@adm"
         ];
 
         public function __construct($url) {
