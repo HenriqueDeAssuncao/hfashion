@@ -30,7 +30,7 @@
           question_weight int (1),
           icon varchar(100),
           status int(1),
-          article_id int not
+          article_id int
           );
           
           create table users_answer_questions (
