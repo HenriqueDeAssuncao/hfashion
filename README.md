@@ -29,7 +29,8 @@
           questions_number int,
           question_weight int (1),
           icon varchar(100),
-          status int(1)
+          status int(1),
+          article_id int not
           );
           
           create table users_answer_questions (
@@ -102,6 +103,29 @@
           alter table users_emblems add CONSTRAINT fk_emblem_user_emblem FOREIGN KEY (emblem_id) references emblems(emblem_id);
           
           alter table quizzes add CONSTRAINT fk_user_quiz FOREIGN KEY (user_id) references users(id);
+
+
+          DELIMITER $$
+          CREATE TRIGGER tr_register_total_score AFTER UPDATE ON users_answer_questions
+           FOR EACH ROW BEGIN
+              UPDATE users_total_score
+              SET total_score = total_score + NEW.score
+              WHERE user_id = NEW.user_id; 
+          END
+          $$
+          DELIMITER ;
+          
+          
+          DELIMITER $$
+          CREATE TRIGGER tr_create_total_score AFTER INSERT ON users
+           FOR EACH ROW BEGIN
+              INSERT INTO users_total_score 
+              	(user_id, total_score)
+              VALUES 
+              	(NEW.id, 0);
+          END
+          $$
+          DELIMITER ;
 
  
 
