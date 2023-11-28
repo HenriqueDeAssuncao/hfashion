@@ -8,29 +8,42 @@ require_once "dao/QuizDAO.php";
 require_once "dao/UserAnswerQuestionDAO.php";
 
 $Message = new Message($CURRENT_URL);
-
 $userDao = new UserDAO($conn, $CURRENT_URL);
+$userAnswerQuestionDao = new UserAnswerQuestionDAO($conn, $CURRENT_URL);
+$quizDao = new QuizDAO($conn, $CURRENT_URL);
+
 $userData = $userDao->verifyToken(true);
 
 if (!empty($userData)) {
-    if (!empty($_GET["token"])) {
-        $quizToken = $_GET["token"];
-        $quizDao = new QuizDAO($conn, $CURRENT_URL);
-        $userAnswerQuestionDao = new UserAnswerQuestionDAO($conn, $CURRENT_URL);
 
-        $quizId = $quizDao->findQuizIdByToken($quizToken);
-        if ($userAnswerQuestionDao->isQuizAvailable($userData->getId(), $quizId)) {
+    if (!empty($_GET["token"])) {
+
+        $quizToken = $_GET["token"];
+        $Quiz = $quizDao->findQuizByToken($quizToken);
+        
+        $userAnswerQuestion = $userAnswerQuestionDao->getUserAnswerQuestion($userData->getId(), $Quiz->getQuizId());
+  
+        if ($userAnswerQuestionDao->isQuizAvailable($userData->getId(), $Quiz->getQuizId())) {
+
             $questions = $quizDao->getQuestions($quizToken);
             $_SESSION["questions"] = $questions;
             $_SESSION["quizToken"] = $quizToken;
+
         } else {
-            $Message->setMessage("Quiz não disponível", "error", "back");
+
+            if($userAnswerQuestion) {
+                $Message->setMessage("O quiz já foi concluído", "error", "back");
+            } else {
+                $quizName = $Quiz->getQuizName();
+                $Message->setMessage("Leia o artigo sobre '$quizName' para desbloquear o quiz.", "error", "back");
+            }
+
         }
     } else {
         $Message->setMessage("Página não encontrada", "error", "back");
     }
 } else {
-    $Message->setMessage("Faça login para entrar na página", "error", "back");
+    $Message->setMessage("Faça login para poder responder quizzes!", "error", "back");
 }
 
 ?>

@@ -59,14 +59,14 @@ class QuizDAO implements QuizDAOInterface
         $stmt->execute();
 
     }
-    public function findQuizIdByToken($quizToken)
+    public function findQuizByToken($quizToken)
     {
-        $stmt = $this->conn->prepare("SELECT quiz_id FROM quizzes WHERE quiz_token = :quiz_token");
+        $stmt = $this->conn->prepare("SELECT * FROM quizzes WHERE quiz_token = :quiz_token");
         $stmt->bindParam(":quiz_token", $quizToken);
         $stmt->execute();
-        $quizIdArr = $stmt->fetch(PDO::FETCH_ASSOC);
-        $quizId = $quizIdArr["quiz_id"];
-        return $quizId;
+        $quiz = $stmt->fetch(PDO::FETCH_ASSOC);
+        $Quiz = $this->buildQuiz($quiz);
+        return $Quiz;
     }
     public function setQuizTokenToSession($quizToken)
     {
@@ -174,7 +174,8 @@ class QuizDAO implements QuizDAOInterface
     }
     public function getQuestions($quizToken)
     {
-        $quizId = $this->findQuizIdByToken($quizToken);
+        $Quiz = $this->findQuizByToken($quizToken);
+        $quizId = $Quiz->getQuizId();
 
         $stmt = $this->conn->prepare("SELECT * FROM questions WHERE quiz_id = $quizId");
         $stmt->execute();

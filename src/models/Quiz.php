@@ -74,7 +74,7 @@ interface QuizDAOInterface
 {
     public function buildQuiz($quiz, $UserQuiz = false);
     public function createQuiz(Quiz $Quiz);
-    public function findQuizIdByToken($quizToken);
+    public function findQuizByToken($quizToken);
     public function setQuizTokenToSession($quizToken);
     public function getQuizStatusByToken($quizToken);
     public function setQuizStatusToActive($quizId);

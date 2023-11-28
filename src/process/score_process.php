@@ -47,7 +47,8 @@ if ($userData) {
             }
             $scorePortion = "$rightAnswers/$i";
 
-            $quizId = $quizDao->findQuizIdByToken($quizToken);
+            $Quiz = $quizDao->findQuizByToken($quizToken);
+            $quizId = $Quiz->getQuizId();
             $userId = $userData->getId();
 
             //Preenchendo o objeto userAnswerQuestion:
